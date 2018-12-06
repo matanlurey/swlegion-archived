@@ -4,19 +4,15 @@ import 'package:built_value/serializer.dart';
 
 part 'attack_surge.g.dart';
 
-/// Represents possible results for the _surge_ icon for attacks.
+/// Represents possible results for the surge icon for attacks.
 class AttackSurge extends EnumClass {
-  /// No attack surge.
-  @BuiltValueEnumConst(wireName: 'NONE')
-  static const AttackSurge none = _$none;
-
   /// Attack surge to hits.
   @BuiltValueEnumConst(wireName: 'HIT')
-  static const AttackSurge black = _$hit;
+  static const AttackSurge hit = _$hit;
 
   /// Attack surge to crits.
   @BuiltValueEnumConst(wireName: 'CRIT')
-  static const AttackSurge red = _$crit;
+  static const AttackSurge critical = _$crit;
 
   const AttackSurge._(String name) : super(name);
 

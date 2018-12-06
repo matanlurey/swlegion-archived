@@ -8,11 +8,11 @@ part 'faction.g.dart';
 class Faction extends EnumClass {
   /// Light side faction.
   @BuiltValueEnumConst(wireName: 'LIGHT_SIDE')
-  static const Faction white = _$lightSide;
+  static const Faction lightSide = _$lightSide;
 
   /// Dark side faction.
   @BuiltValueEnumConst(wireName: 'DARK_SIDE')
-  static const Faction red = _$darkSide;
+  static const Faction darkSide = _$darkSide;
 
   const Faction._(String name) : super(name);
 

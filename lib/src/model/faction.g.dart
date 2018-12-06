@@ -19,14 +19,14 @@ part of 'faction.dart';
 // ignore_for_file: unnecessary_new
 // ignore_for_file: test_types_in_equals
 
-const Faction _$lightSide = const Faction._('white');
-const Faction _$darkSide = const Faction._('red');
+const Faction _$lightSide = const Faction._('lightSide');
+const Faction _$darkSide = const Faction._('darkSide');
 
 Faction _$valueOf(String name) {
   switch (name) {
-    case 'white':
+    case 'lightSide':
       return _$lightSide;
-    case 'red':
+    case 'darkSide':
       return _$darkSide;
     default:
       throw new ArgumentError(name);
@@ -42,12 +42,12 @@ Serializer<Faction> _$factionSerializer = new _$FactionSerializer();
 
 class _$FactionSerializer implements PrimitiveSerializer<Faction> {
   static const Map<String, String> _toWire = const <String, String>{
-    'white': 'LIGHT_SIDE',
-    'red': 'DARK_SIDE',
+    'lightSide': 'LIGHT_SIDE',
+    'darkSide': 'DARK_SIDE',
   };
   static const Map<String, String> _fromWire = const <String, String>{
-    'LIGHT_SIDE': 'white',
-    'DARK_SIDE': 'red',
+    'LIGHT_SIDE': 'lightSide',
+    'DARK_SIDE': 'darkSide',
   };
 
   @override

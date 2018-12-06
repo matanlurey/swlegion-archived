@@ -367,7 +367,7 @@ class Keyword extends EnumClass {
   const Keyword._(String name) : super(name);
 
   /// A description of this keyword.
-  String get description => _description[this];
+  String get description => _description[this].trim();
 
   /// Whether this keyword must be triggered to use.
   bool get isActivated => _isActivated.contains(this);

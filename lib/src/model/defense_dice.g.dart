@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'defence_dice.dart';
+part of 'defense_dice.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
@@ -19,10 +19,10 @@ part of 'defence_dice.dart';
 // ignore_for_file: unnecessary_new
 // ignore_for_file: test_types_in_equals
 
-const DefenceDice _$white = const DefenceDice._('white');
-const DefenceDice _$red = const DefenceDice._('red');
+const DefenseDice _$white = const DefenseDice._('white');
+const DefenseDice _$red = const DefenseDice._('red');
 
-DefenceDice _$valueOf(String name) {
+DefenseDice _$valueOf(String name) {
   switch (name) {
     case 'white':
       return _$white;
@@ -33,15 +33,15 @@ DefenceDice _$valueOf(String name) {
   }
 }
 
-final BuiltSet<DefenceDice> _$values =
-    new BuiltSet<DefenceDice>(const <DefenceDice>[
+final BuiltSet<DefenseDice> _$values =
+    new BuiltSet<DefenseDice>(const <DefenseDice>[
   _$white,
   _$red,
 ]);
 
-Serializer<DefenceDice> _$defenceDiceSerializer = new _$DefenceDiceSerializer();
+Serializer<DefenseDice> _$defenseDiceSerializer = new _$DefenseDiceSerializer();
 
-class _$DefenceDiceSerializer implements PrimitiveSerializer<DefenceDice> {
+class _$DefenseDiceSerializer implements PrimitiveSerializer<DefenseDice> {
   static const Map<String, String> _toWire = const <String, String>{
     'white': 'WHITE',
     'red': 'RED',
@@ -52,17 +52,17 @@ class _$DefenceDiceSerializer implements PrimitiveSerializer<DefenceDice> {
   };
 
   @override
-  final Iterable<Type> types = const <Type>[DefenceDice];
+  final Iterable<Type> types = const <Type>[DefenseDice];
   @override
-  final String wireName = 'DefenceDice';
+  final String wireName = 'DefenseDice';
 
   @override
-  Object serialize(Serializers serializers, DefenceDice object,
+  Object serialize(Serializers serializers, DefenseDice object,
           {FullType specifiedType = FullType.unspecified}) =>
       _toWire[object.name] ?? object.name;
 
   @override
-  DefenceDice deserialize(Serializers serializers, Object serialized,
+  DefenseDice deserialize(Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
-      DefenceDice.valueOf(_fromWire[serialized] ?? serialized as String);
+      DefenseDice.valueOf(_fromWire[serialized] ?? serialized as String);
 }

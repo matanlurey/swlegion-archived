@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'attack_surge.dart';
+part of 'unit_type.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
@@ -19,50 +19,55 @@ part of 'attack_surge.dart';
 // ignore_for_file: unnecessary_new
 // ignore_for_file: test_types_in_equals
 
-const AttackSurge _$hit = const AttackSurge._('hit');
-const AttackSurge _$crit = const AttackSurge._('critical');
+const UnitType _$trooper = const UnitType._('trooper');
+const UnitType _$emplacementTrooper = const UnitType._('empalcementTrooper');
+const UnitType _$vehicle = const UnitType._('vehicle');
 
-AttackSurge _$valueOf(String name) {
+UnitType _$valueOf(String name) {
   switch (name) {
-    case 'hit':
-      return _$hit;
-    case 'critical':
-      return _$crit;
+    case 'trooper':
+      return _$trooper;
+    case 'empalcementTrooper':
+      return _$emplacementTrooper;
+    case 'vehicle':
+      return _$vehicle;
     default:
       throw new ArgumentError(name);
   }
 }
 
-final BuiltSet<AttackSurge> _$values =
-    new BuiltSet<AttackSurge>(const <AttackSurge>[
-  _$hit,
-  _$crit,
+final BuiltSet<UnitType> _$values = new BuiltSet<UnitType>(const <UnitType>[
+  _$trooper,
+  _$emplacementTrooper,
+  _$vehicle,
 ]);
 
-Serializer<AttackSurge> _$attackSurgeSerializer = new _$AttackSurgeSerializer();
+Serializer<UnitType> _$unitTypeSerializer = new _$UnitTypeSerializer();
 
-class _$AttackSurgeSerializer implements PrimitiveSerializer<AttackSurge> {
+class _$UnitTypeSerializer implements PrimitiveSerializer<UnitType> {
   static const Map<String, String> _toWire = const <String, String>{
-    'hit': 'HIT',
-    'critical': 'CRIT',
+    'trooper': 'TROOPER',
+    'empalcementTrooper': 'EMPLACEMENT_TROOPER',
+    'vehicle': 'VEHICLE',
   };
   static const Map<String, String> _fromWire = const <String, String>{
-    'HIT': 'hit',
-    'CRIT': 'critical',
+    'TROOPER': 'trooper',
+    'EMPLACEMENT_TROOPER': 'empalcementTrooper',
+    'VEHICLE': 'vehicle',
   };
 
   @override
-  final Iterable<Type> types = const <Type>[AttackSurge];
+  final Iterable<Type> types = const <Type>[UnitType];
   @override
-  final String wireName = 'AttackSurge';
+  final String wireName = 'UnitType';
 
   @override
-  Object serialize(Serializers serializers, AttackSurge object,
+  Object serialize(Serializers serializers, UnitType object,
           {FullType specifiedType = FullType.unspecified}) =>
       _toWire[object.name] ?? object.name;
 
   @override
-  AttackSurge deserialize(Serializers serializers, Object serialized,
+  UnitType deserialize(Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
-      AttackSurge.valueOf(_fromWire[serialized] ?? serialized as String);
+      UnitType.valueOf(_fromWire[serialized] ?? serialized as String);
 }
