@@ -3,7 +3,7 @@ import 'package:swlegion/swlegion.dart';
 import '../weapons/a_280_blaster_rifle.dart';
 import '../weapons/unarmed.dart';
 
-final rebelCommandos = Unit(
+final rebelCommandosStrikeTeam = Unit(
   name: 'Rebel Commandos',
   subTitle: 'Strike Team',
   faction: Faction.lightSide,
