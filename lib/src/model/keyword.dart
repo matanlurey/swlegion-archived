@@ -72,7 +72,7 @@ class Keyword extends EnumClass {
     denotateXY: '''
 
     ''',
-    disciplined: '''
+    disciplinedX: '''
       When you are issued an order, you may remove up to X suppression tokens.
     ''',
     enrageX: '''
@@ -217,6 +217,9 @@ class Keyword extends EnumClass {
   @BuiltValueEnumConst(wireName: 'BLAST')
   static const Keyword blast = _$7;
 
+  @BuiltValueEnumConst(wireName: 'BOUNTY')
+  static const Keyword bounty = _$bounty;
+
   @BuiltValueEnumConst(wireName: 'CHARGE')
   static const Keyword charge = _$8;
 
@@ -248,7 +251,7 @@ class Keyword extends EnumClass {
   static const Keyword denotateXY = _$17;
 
   @BuiltValueEnumConst(wireName: 'DISCIPLINED')
-  static const Keyword disciplined = _$18;
+  static const Keyword disciplinedX = _$18;
 
   @BuiltValueEnumConst(wireName: 'ENRAGE')
   static const Keyword enrageX = _$19;
@@ -282,6 +285,9 @@ class Keyword extends EnumClass {
 
   @BuiltValueEnumConst(wireName: 'IMPACT')
   static const Keyword impactX = _$29;
+
+  @BuiltValueEnumConst(wireName: 'IMPERVIOUS')
+  static const Keyword impervious = _$impervious;
 
   @BuiltValueEnumConst(wireName: 'INDOMITABLE')
   static const Keyword indomitable = _$30;

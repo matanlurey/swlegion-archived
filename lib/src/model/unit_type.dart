@@ -10,10 +10,13 @@ class UnitType extends EnumClass {
   static const UnitType trooper = _$trooper;
 
   @BuiltValueEnumConst(wireName: 'EMPLACEMENT_TROOPER')
-  static const UnitType empalcementTrooper = _$emplacementTrooper;
+  static const UnitType emplacementTrooper = _$emplacementTrooper;
 
   @BuiltValueEnumConst(wireName: 'VEHICLE')
   static const UnitType vehicle = _$vehicle;
+
+  @BuiltValueEnumConst(wireName: 'REPULSOR_VEHICLE')
+  static const UnitType repulsorVehicle = _$repulsorVehicle;
 
   const UnitType._(String name) : super(name);
 

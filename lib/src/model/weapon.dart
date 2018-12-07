@@ -71,4 +71,14 @@ abstract class Weapon implements Built<Weapon, WeaponBuilder> {
 
   /// Keywords on the weapon.
   BuiltMap<Keyword, String> get keywords;
+
+  /// Returns a new weapon as-if [amount] of these weapons are being used.
+  Weapon scale(int amount) {
+    assert(amount > 1);
+    return rebuild((u) {
+      dice.forEach((type, dice) {
+        u.dice[type] = dice * amount;
+      });
+    });
+  }
 }

@@ -27,6 +27,7 @@ const Keyword _$4 = const Keyword._('armXY');
 const Keyword _$5 = const Keyword._('armor');
 const Keyword _$6 = const Keyword._('arsenalX');
 const Keyword _$7 = const Keyword._('blast');
+const Keyword _$bounty = const Keyword._('bounty');
 const Keyword _$8 = const Keyword._('charge');
 const Keyword _$9 = const Keyword._('climbingVehicle');
 const Keyword _$10 = const Keyword._('compel');
@@ -37,7 +38,7 @@ const Keyword _$14 = const Keyword._('dangerSenseX');
 const Keyword _$15 = const Keyword._('dauntless');
 const Keyword _$16 = const Keyword._('deflect');
 const Keyword _$17 = const Keyword._('denotateXY');
-const Keyword _$18 = const Keyword._('disciplined');
+const Keyword _$18 = const Keyword._('disciplinedX');
 const Keyword _$19 = const Keyword._('enrageX');
 const Keyword _$20 = const Keyword._('entourageX');
 const Keyword _$21 = const Keyword._('expertClimber');
@@ -49,6 +50,7 @@ const Keyword _$26 = const Keyword._('heavyWeaponTeam');
 const Keyword _$27 = const Keyword._('highVelocity');
 const Keyword _$28 = const Keyword._('immuneX');
 const Keyword _$29 = const Keyword._('impactX');
+const Keyword _$impervious = const Keyword._('impervious');
 const Keyword _$30 = const Keyword._('indomitable');
 const Keyword _$31 = const Keyword._('ionX');
 const Keyword _$32 = const Keyword._('inspireX');
@@ -95,6 +97,8 @@ Keyword _$valueOf(String name) {
       return _$6;
     case 'blast':
       return _$7;
+    case 'bounty':
+      return _$bounty;
     case 'charge':
       return _$8;
     case 'climbingVehicle':
@@ -115,7 +119,7 @@ Keyword _$valueOf(String name) {
       return _$16;
     case 'denotateXY':
       return _$17;
-    case 'disciplined':
+    case 'disciplinedX':
       return _$18;
     case 'enrageX':
       return _$19;
@@ -139,6 +143,8 @@ Keyword _$valueOf(String name) {
       return _$28;
     case 'impactX':
       return _$29;
+    case 'impervious':
+      return _$impervious;
     case 'indomitable':
       return _$30;
     case 'ionX':
@@ -207,6 +213,7 @@ final BuiltSet<Keyword> _$values = new BuiltSet<Keyword>(const <Keyword>[
   _$5,
   _$6,
   _$7,
+  _$bounty,
   _$8,
   _$9,
   _$10,
@@ -229,6 +236,7 @@ final BuiltSet<Keyword> _$values = new BuiltSet<Keyword>(const <Keyword>[
   _$27,
   _$28,
   _$29,
+  _$impervious,
   _$30,
   _$31,
   _$32,
@@ -270,6 +278,7 @@ class _$KeywordSerializer implements PrimitiveSerializer<Keyword> {
     'armor': 'ARMOR',
     'arsenalX': 'ARSENAL',
     'blast': 'BLAST',
+    'bounty': 'BOUNTY',
     'charge': 'CHARGE',
     'climbingVehicle': 'CLIMBING_VEHICLE',
     'compel': 'COMPEL',
@@ -280,7 +289,7 @@ class _$KeywordSerializer implements PrimitiveSerializer<Keyword> {
     'dauntless': 'DAUNTLESS',
     'deflect': 'DEFLECT',
     'denotateXY': 'DETONATE',
-    'disciplined': 'DISCIPLINED',
+    'disciplinedX': 'DISCIPLINED',
     'enrageX': 'ENRAGE',
     'entourageX': 'ENTOURAGE',
     'expertClimber': 'EXPERT_CLIMBER',
@@ -292,6 +301,7 @@ class _$KeywordSerializer implements PrimitiveSerializer<Keyword> {
     'highVelocity': 'HIGH_VELOCITY',
     'immuneX': 'IMMUNE',
     'impactX': 'IMPACT',
+    'impervious': 'IMPERVIOUS',
     'indomitable': 'INDOMITABLE',
     'ionX': 'ION',
     'inspireX': 'INSPIRE',
@@ -329,6 +339,7 @@ class _$KeywordSerializer implements PrimitiveSerializer<Keyword> {
     'ARMOR': 'armor',
     'ARSENAL': 'arsenalX',
     'BLAST': 'blast',
+    'BOUNTY': 'bounty',
     'CHARGE': 'charge',
     'CLIMBING_VEHICLE': 'climbingVehicle',
     'COMPEL': 'compel',
@@ -339,7 +350,7 @@ class _$KeywordSerializer implements PrimitiveSerializer<Keyword> {
     'DAUNTLESS': 'dauntless',
     'DEFLECT': 'deflect',
     'DETONATE': 'denotateXY',
-    'DISCIPLINED': 'disciplined',
+    'DISCIPLINED': 'disciplinedX',
     'ENRAGE': 'enrageX',
     'ENTOURAGE': 'entourageX',
     'EXPERT_CLIMBER': 'expertClimber',
@@ -351,6 +362,7 @@ class _$KeywordSerializer implements PrimitiveSerializer<Keyword> {
     'HIGH_VELOCITY': 'highVelocity',
     'IMMUNE': 'immuneX',
     'IMPACT': 'impactX',
+    'IMPERVIOUS': 'impervious',
     'INDOMITABLE': 'indomitable',
     'ION': 'ionX',
     'INSPIRE': 'inspireX',
