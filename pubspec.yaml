@@ -4,7 +4,7 @@ homepage: https://github.com/hquplink/swlegion
 description: 'Database and Data Model for Star Wars: Legion'
 authors:
   - Matan Lurey <matan@hquplink.com>
-version: 0.1.0-alpha+3
+version: 0.1.0-alpha+4
 environment:
   sdk: '>=2.0.0 <3.0.0'
 

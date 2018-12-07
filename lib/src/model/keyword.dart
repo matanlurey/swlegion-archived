@@ -111,14 +111,17 @@ class Keyword extends EnumClass {
     indomitable: '''
       During the Rally step, roll red defense dice instead of white.
     ''',
-    ionX: '''
-      A vehicle wounded by an attack that includes this weapon gains X ion token(s).
+    impervious: '''
+      While defending, if the attack pool has Pierce X, roll x additional dice.
     ''',
     inspireX: '''
       After your rally step, remove X suppression token(s) from another friendly unit at range 1-2.
     ''',
     infilitrate: '''
       You may deploy anywhere beyond range 3 of all enemy units.
+    ''',
+    ionX: '''
+      A vehicle wounded by an attack that includes this weapon gains X ion token(s).
     ''',
     lowProfile: '''
       While defending, if you have light cover, improve your cover by 1.
@@ -373,7 +376,7 @@ class Keyword extends EnumClass {
   const Keyword._(String name) : super(name);
 
   /// A description of this keyword.
-  String get description => _description[this].trim();
+  String get description => (_description[this] ?? '').trim();
 
   /// Whether this keyword must be triggered to use.
   bool get isActivated => _isActivated.contains(this);
