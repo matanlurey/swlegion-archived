@@ -20,17 +20,20 @@ part of 'unit_type.dart';
 // ignore_for_file: test_types_in_equals
 
 const UnitType _$trooper = const UnitType._('trooper');
-const UnitType _$emplacementTrooper = const UnitType._('empalcementTrooper');
+const UnitType _$emplacementTrooper = const UnitType._('emplacementTrooper');
 const UnitType _$vehicle = const UnitType._('vehicle');
+const UnitType _$repulsorVehicle = const UnitType._('repulsorVehicle');
 
 UnitType _$valueOf(String name) {
   switch (name) {
     case 'trooper':
       return _$trooper;
-    case 'empalcementTrooper':
+    case 'emplacementTrooper':
       return _$emplacementTrooper;
     case 'vehicle':
       return _$vehicle;
+    case 'repulsorVehicle':
+      return _$repulsorVehicle;
     default:
       throw new ArgumentError(name);
   }
@@ -40,6 +43,7 @@ final BuiltSet<UnitType> _$values = new BuiltSet<UnitType>(const <UnitType>[
   _$trooper,
   _$emplacementTrooper,
   _$vehicle,
+  _$repulsorVehicle,
 ]);
 
 Serializer<UnitType> _$unitTypeSerializer = new _$UnitTypeSerializer();
@@ -47,13 +51,15 @@ Serializer<UnitType> _$unitTypeSerializer = new _$UnitTypeSerializer();
 class _$UnitTypeSerializer implements PrimitiveSerializer<UnitType> {
   static const Map<String, String> _toWire = const <String, String>{
     'trooper': 'TROOPER',
-    'empalcementTrooper': 'EMPLACEMENT_TROOPER',
+    'emplacementTrooper': 'EMPLACEMENT_TROOPER',
     'vehicle': 'VEHICLE',
+    'repulsorVehicle': 'REPULSOR_VEHICLE',
   };
   static const Map<String, String> _fromWire = const <String, String>{
     'TROOPER': 'trooper',
-    'EMPLACEMENT_TROOPER': 'empalcementTrooper',
+    'EMPLACEMENT_TROOPER': 'emplacementTrooper',
     'VEHICLE': 'vehicle',
+    'REPULSOR_VEHICLE': 'repulsorVehicle',
   };
 
   @override
