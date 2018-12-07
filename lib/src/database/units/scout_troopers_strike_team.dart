@@ -3,7 +3,7 @@ import 'package:swlegion/swlegion.dart';
 import '../weapons/ec_17_hold_out_blaster.dart';
 import '../weapons/unarmed.dart';
 
-final scoutTroopers = Unit(
+final scoutTroopersStrikeTeam = Unit(
   name: 'Scout Troopers',
   subTitle: 'Strike Team',
   faction: Faction.darkSide,
