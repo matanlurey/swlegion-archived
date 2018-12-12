@@ -1,0 +1,64 @@
+# This breaks the package into 4 sub-parts:
+#
+# 1. Builders
+# 2. Models (which need built_value)
+# 3. Database (which don't need generators)
+# 4. Importable Libraries [$default] (which need aggregate_database)
+#
+# ... the reason for this complexity is basically ensuring built_value runs 1st.
+targets:
+  _aggregate_database:
+    sources:
+      - tool/src/aggregate_database.dart
+    dependencies:
+      - build
+      - glob
+      - path
+  _models:
+    sources:
+      - lib/src/model/**.dart
+      - lib/src/all_models.dart
+    dependencies:
+      - built_collection
+      - built_value
+    builders:
+      built_value_generator|built_value:
+        enabled: true
+        generate_for:
+          - lib/src/model/**.dart
+  _database:
+    sources:
+      - lib/src/database/**.dart
+    dependencies:
+      - ":_models"
+    builders:
+      built_value_generator|built_value:
+        enabled: false
+      "swlegion|_aggregate_database":
+        enabled: true
+  $default:
+    sources:
+      - lib/*.dart
+    dependencies:
+      - ":_database"
+      - ":_models"
+    builders:
+      built_value_generator|built_value:
+        enabled: false
+      "swlegion|_aggregate_database":
+        enabled: true
+
+builders:
+  _aggregate_database:
+    import: tool/src/aggregate_database.dart
+    builder_factories:
+      - aggregateDatabase
+    
+    # Build extensions that will impact ordering.
+    build_extensions:
+      $lib$:
+        - src/all_units.dart
+        - src/all_weapons.dart
+
+    build_to: source
+    auto_apply: none
