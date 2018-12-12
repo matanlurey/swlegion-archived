@@ -1,5 +1,7 @@
 Database and Data Model for [Star Wars: Legion][1].
 
+[![Build Status](https://travis-ci.org/hquplink/swlegion.svg?branch=master)](https://travis-ci.org/hquplink/swlegion)
+
 This package is written and maintained in [Dart][2] for maintainability. Future
 versions will have `JSON`-formatted build artifacts as well for use within other
 systems.
