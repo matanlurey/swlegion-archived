@@ -22,6 +22,8 @@ part 'all_models.g.dart';
 
 /// A [Serializers] for the models provided by this package.
 @SerializersFor([
+  Army,
+  ArmyUnit,
   AttackDice,
   AttackSurge,
   DefenseDice,
@@ -30,6 +32,7 @@ part 'all_models.g.dart';
   Rank,
   UnitType,
   Unit,
+  Upgrade,
   UpgradeSlot,
   Weapon,
 ])

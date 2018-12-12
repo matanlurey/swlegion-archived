@@ -25,7 +25,7 @@ abstract class Upgrade implements Built<Upgrade, UpgradeBuilder> {
     Faction restrictedToFaction,
     Unit restrictedToUnit,
     UnitType restrictedToType,
-    @required String title,
+    @required String name,
     String text = '',
     @required UpgradeSlot type,
     Weapon weapon,
@@ -36,12 +36,12 @@ abstract class Upgrade implements Built<Upgrade, UpgradeBuilder> {
         ..points = points
         ..keywords.addAll(keywords)
         ..restrictedToFaction = restrictedToFaction
-        ..restrictedToUnit = restrictedToUnit.toBuilder()
+        ..restrictedToUnit = restrictedToUnit?.toBuilder()
         ..restrictedToType = restrictedToType
-        ..title = title
+        ..name = name
         ..text = text
         ..type = type
-        ..weapon = weapon.toBuilder());
+        ..weapon = weapon?.toBuilder());
 
   factory Upgrade._builder(void Function(UpgradeBuilder) build) = _$Upgrade;
   Upgrade._();
@@ -83,9 +83,9 @@ abstract class Upgrade implements Built<Upgrade, UpgradeBuilder> {
   @BuiltValueField(wireName: 'restricted_to_type')
   UnitType get restrictedToType;
 
-  /// Title of the upgrade card.
-  @BuiltValueField(wireName: 'title')
-  String get title;
+  /// Name of the upgrade card.
+  @BuiltValueField(wireName: 'name')
+  String get name;
 
   /// Text of the upgrade card.
   @BuiltValueField(wireName: 'text')

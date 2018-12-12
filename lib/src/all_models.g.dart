@@ -20,6 +20,8 @@ part of 'all_models.dart';
 // ignore_for_file: test_types_in_equals
 
 Serializers _$serializers = (new Serializers().toBuilder()
+      ..add(Army.serializer)
+      ..add(ArmyUnit.serializer)
       ..add(AttackDice.serializer)
       ..add(AttackSurge.serializer)
       ..add(DefenseDice.serializer)
@@ -28,12 +30,17 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(Rank.serializer)
       ..add(Unit.serializer)
       ..add(UnitType.serializer)
+      ..add(Upgrade.serializer)
       ..add(UpgradeSlot.serializer)
       ..add(Weapon.serializer)
       ..addBuilderFactory(
           const FullType(BuiltMap,
               const [const FullType(AttackDice), const FullType(int)]),
           () => new MapBuilder<AttackDice, int>())
+      ..addBuilderFactory(
+          const FullType(BuiltMap,
+              const [const FullType(Keyword), const FullType(String)]),
+          () => new MapBuilder<Keyword, String>())
       ..addBuilderFactory(
           const FullType(BuiltMap,
               const [const FullType(Keyword), const FullType(String)]),
@@ -48,5 +55,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltMap,
               const [const FullType(Keyword), const FullType(String)]),
-          () => new MapBuilder<Keyword, String>()))
+          () => new MapBuilder<Keyword, String>())
+      ..addBuilderFactory(
+          const FullType(BuiltSet, const [const FullType(Upgrade)]),
+          () => new SetBuilder<Upgrade>()))
     .build();

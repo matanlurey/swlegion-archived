@@ -1,7 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final tenacity = Upgrade(
-  title: 'Tenacity',
+  name: 'Tenacity',
   type: UpgradeSlot.elite,
   points: 4,
   text: r'''

@@ -1,7 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final battleMeditation = Upgrade(
-  title: 'Battle Meditation',
+  name: 'Battle Meditation',
   type: UpgradeSlot.force,
   points: 10,
   text: r'''
