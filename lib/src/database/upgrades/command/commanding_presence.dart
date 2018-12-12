@@ -1,7 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final commandingPresence = Upgrade(
-  title: 'Commanding Presence',
+  name: 'Commanding Presence',
   type: UpgradeSlot.command,
   points: 10,
   text: r'''

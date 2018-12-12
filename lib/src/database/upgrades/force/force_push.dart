@@ -1,7 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final forcePush = Upgrade(
-  title: 'Force Push',
+  name: 'Force Push',
   type: UpgradeSlot.force,
   isExhaustible: true,
   points: 10,

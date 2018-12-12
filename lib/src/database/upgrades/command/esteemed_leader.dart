@@ -1,7 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final estmeedLeader = Upgrade(
-  title: 'Esteemed Leader',
+  name: 'Esteemed Leader',
   type: UpgradeSlot.command,
   points: 10,
   text: r'''

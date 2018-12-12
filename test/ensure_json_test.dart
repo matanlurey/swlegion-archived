@@ -20,6 +20,14 @@ void main() {
     });
   }
 
+  for (final upgrade in upgrades) {
+    test('should serialize/deserialize "${upgrade.name}"', () {
+      final text = json.serialize(upgrade);
+      final data = json.deserialize(text);
+      expect(upgrade, data);
+    });
+  }
+
   for (final weapon in weapons) {
     test('should serialize/deserialize "${weapon.name}"', () {
       final text = json.serialize(weapon);

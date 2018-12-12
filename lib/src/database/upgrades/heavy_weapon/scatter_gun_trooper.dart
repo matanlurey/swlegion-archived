@@ -4,7 +4,7 @@ import '../../units/fleet_troopers.dart' as unit;
 import '../../weapons/upgrades/scatter_gun.dart' as weapon;
 
 final scatterGunTrooper = Upgrade(
-  title: 'Scatter Gun Trooper',
+  name: 'Scatter Gun Trooper',
   type: UpgradeSlot.heavyWeapon,
   restrictedToUnit: unit.fleetTroopers,
   addsMiniature: true,

@@ -1,7 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final commsJammer = Upgrade(
-  title: 'Comms Jammer',
+  name: 'Comms Jammer',
   type: UpgradeSlot.comms,
   points: 15,
   text: r'''

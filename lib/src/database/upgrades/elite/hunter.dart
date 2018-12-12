@@ -1,7 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final hunter = Upgrade(
-  title: 'Hunter',
+  name: 'Hunter',
   type: UpgradeSlot.elite,
   points: 6,
   text: r'''

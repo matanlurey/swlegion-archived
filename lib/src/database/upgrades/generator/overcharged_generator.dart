@@ -1,7 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final overchargedGenerator = Upgrade(
-  title: 'Overcharged Generator',
+  name: 'Overcharged Generator',
   type: UpgradeSlot.generator,
   isExhaustible: true,
   points: 10,

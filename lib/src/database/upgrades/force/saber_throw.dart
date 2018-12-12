@@ -1,7 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final saberThrow = Upgrade(
-  title: 'Saber Throw',
+  name: 'Saber Throw',
   type: UpgradeSlot.force,
   isExhaustible: true,
   points: 10,

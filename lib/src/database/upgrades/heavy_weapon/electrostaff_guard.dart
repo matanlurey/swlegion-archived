@@ -4,7 +4,7 @@ import '../../units/imperial_royal_guards.dart' as unit;
 import '../../weapons/upgrades/electrostaff.dart' as weapon;
 
 final electrostaffGuard = Upgrade(
-  title: 'Electrostaff Guard',
+  name: 'Electrostaff Guard',
   type: UpgradeSlot.heavyWeapon,
   restrictedToUnit: unit.imperialRoyalGuards,
   addsMiniature: true,

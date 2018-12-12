@@ -1,7 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final forceChoke = Upgrade(
-  title: 'Force Choke',
+  name: 'Force Choke',
   type: UpgradeSlot.force,
   isExhaustible: true,
   restrictedToFaction: Faction.darkSide,

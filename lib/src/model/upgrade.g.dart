@@ -43,9 +43,8 @@ class _$UpgradeSerializer implements StructuredSerializer<Upgrade> {
       serializers.serialize(object.keywords,
           specifiedType: const FullType(BuiltMap,
               const [const FullType(Keyword), const FullType(String)])),
-      'title',
-      serializers.serialize(object.title,
-          specifiedType: const FullType(String)),
+      'name',
+      serializers.serialize(object.name, specifiedType: const FullType(String)),
       'text',
       serializers.serialize(object.text, specifiedType: const FullType(String)),
       'type',
@@ -122,8 +121,8 @@ class _$UpgradeSerializer implements StructuredSerializer<Upgrade> {
           result.restrictedToType = serializers.deserialize(value,
               specifiedType: const FullType(UnitType)) as UnitType;
           break;
-        case 'title':
-          result.title = serializers.deserialize(value,
+        case 'name':
+          result.name = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
         case 'text':
@@ -161,7 +160,7 @@ class _$Upgrade extends Upgrade {
   @override
   final UnitType restrictedToType;
   @override
-  final String title;
+  final String name;
   @override
   final String text;
   @override
@@ -180,7 +179,7 @@ class _$Upgrade extends Upgrade {
       this.restrictedToFaction,
       this.restrictedToUnit,
       this.restrictedToType,
-      this.title,
+      this.name,
       this.text,
       this.type,
       this.weapon})
@@ -197,8 +196,8 @@ class _$Upgrade extends Upgrade {
     if (keywords == null) {
       throw new BuiltValueNullFieldError('Upgrade', 'keywords');
     }
-    if (title == null) {
-      throw new BuiltValueNullFieldError('Upgrade', 'title');
+    if (name == null) {
+      throw new BuiltValueNullFieldError('Upgrade', 'name');
     }
     if (text == null) {
       throw new BuiltValueNullFieldError('Upgrade', 'text');
@@ -226,7 +225,7 @@ class _$Upgrade extends Upgrade {
         restrictedToFaction == other.restrictedToFaction &&
         restrictedToUnit == other.restrictedToUnit &&
         restrictedToType == other.restrictedToType &&
-        title == other.title &&
+        name == other.name &&
         text == other.text &&
         type == other.type &&
         weapon == other.weapon;
@@ -250,7 +249,7 @@ class _$Upgrade extends Upgrade {
                                 restrictedToFaction.hashCode),
                             restrictedToUnit.hashCode),
                         restrictedToType.hashCode),
-                    title.hashCode),
+                    name.hashCode),
                 text.hashCode),
             type.hashCode),
         weapon.hashCode));
@@ -266,7 +265,7 @@ class _$Upgrade extends Upgrade {
           ..add('restrictedToFaction', restrictedToFaction)
           ..add('restrictedToUnit', restrictedToUnit)
           ..add('restrictedToType', restrictedToType)
-          ..add('title', title)
+          ..add('name', name)
           ..add('text', text)
           ..add('type', type)
           ..add('weapon', weapon))
@@ -313,9 +312,9 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
   set restrictedToType(UnitType restrictedToType) =>
       _$this._restrictedToType = restrictedToType;
 
-  String _title;
-  String get title => _$this._title;
-  set title(String title) => _$this._title = title;
+  String _name;
+  String get name => _$this._name;
+  set name(String name) => _$this._name = name;
 
   String _text;
   String get text => _$this._text;
@@ -340,7 +339,7 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
       _restrictedToFaction = _$v.restrictedToFaction;
       _restrictedToUnit = _$v.restrictedToUnit?.toBuilder();
       _restrictedToType = _$v.restrictedToType;
-      _title = _$v.title;
+      _name = _$v.name;
       _text = _$v.text;
       _type = _$v.type;
       _weapon = _$v.weapon?.toBuilder();
@@ -375,7 +374,7 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
               restrictedToFaction: restrictedToFaction,
               restrictedToUnit: _restrictedToUnit?.build(),
               restrictedToType: restrictedToType,
-              title: title,
+              name: name,
               text: text,
               type: type,
               weapon: _weapon?.build());
