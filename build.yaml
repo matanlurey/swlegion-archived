@@ -49,6 +49,7 @@ builders:
     build_extensions:
       $lib$:
         - src/all_units.dart
+        - src/all_upgrades.dart
         - src/all_weapons.dart
     build_to: source
     auto_apply: none
