@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:collection';
 
 import 'package:build/build.dart';
 import 'package:glob/glob.dart';
@@ -10,12 +11,10 @@ class _AggregateDatabase extends Builder {
   static final _outputs = {
     p.join(
       'src',
-      'database',
       'all_units.dart',
     ): Glob('lib/src/database/units/**.dart'),
     p.join(
       'src',
-      'database',
       'all_weapons.dart',
     ): Glob('lib/src/database/weapons/**.dart'),
   };
@@ -27,18 +26,18 @@ class _AggregateDatabase extends Builder {
         buildStep.inputId.package,
         p.join('lib', entry.key),
       );
-      final aggregate = <String, String>{};
+      final aggregate = new SplayTreeMap<String, String>();
       await for (final input in buildStep.findAssets(entry.value)) {
         final library = await buildStep.resolver.libraryFor(input);
         final topLevel = library.definingCompilationUnit.topLevelVariables;
         final model = topLevel.first.name;
-        aggregate[input.path] = model;
+        aggregate[p.joinAll(input.pathSegments.skip(2))] = model;
       }
       final imports = aggregate.keys.map((i) => "import '$i';").join('\n');
       final models = aggregate.values.map((name) => '  $name').join(',\n');
       await buildStep.writeAsString(
         output,
-        '$imports\nfinal allUnits = [\n$models\n];\n',
+        '$imports\n\nfinal aggregate = [\n$models\n];\n',
       );
     }
   }
