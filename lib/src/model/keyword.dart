@@ -159,6 +159,9 @@ class Keyword extends EnumClass {
     sharpshooterX: '''
       While performing a ranged attack, reduce the defender’s cover by X.
     ''',
+    sidearmX: '''
+      While perming an attack of type X, this mini can only use this weapon on this card.
+    ''',
     speederX: '''
       While moving, ignore terrain that is height X or lower. When you activate, perform a compulsory move.
     ''',
@@ -339,6 +342,9 @@ class Keyword extends EnumClass {
 
   @BuiltValueEnumConst(wireName: 'SHARPSHOOTER')
   static const Keyword sharpshooterX = _$45;
+
+  @BuiltValueEnumConst(wireName: 'SIDEARM')
+  static const Keyword sidearmX = _$sidearmX;
 
   @BuiltValueEnumConst(wireName: 'SPEEDER')
   static const Keyword speederX = _$46;

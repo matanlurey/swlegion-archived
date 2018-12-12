@@ -67,6 +67,7 @@ const Keyword _$42 = const Keyword._('reposition');
 const Keyword _$43 = const Keyword._('scoutX');
 const Keyword _$44 = const Keyword._('sentinel');
 const Keyword _$45 = const Keyword._('sharpshooterX');
+const Keyword _$sidearmX = const Keyword._('sidearmX');
 const Keyword _$46 = const Keyword._('speederX');
 const Keyword _$47 = const Keyword._('spray');
 const Keyword _$48 = const Keyword._('stationary');
@@ -177,6 +178,8 @@ Keyword _$valueOf(String name) {
       return _$44;
     case 'sharpshooterX':
       return _$45;
+    case 'sidearmX':
+      return _$sidearmX;
     case 'speederX':
       return _$46;
     case 'spray':
@@ -253,6 +256,7 @@ final BuiltSet<Keyword> _$values = new BuiltSet<Keyword>(const <Keyword>[
   _$43,
   _$44,
   _$45,
+  _$sidearmX,
   _$46,
   _$47,
   _$48,
@@ -318,6 +322,7 @@ class _$KeywordSerializer implements PrimitiveSerializer<Keyword> {
     'scoutX': 'SCOUT',
     'sentinel': 'SENTINEL',
     'sharpshooterX': 'SHARPSHOOTER',
+    'sidearmX': 'SIDEARM',
     'speederX': 'SPEEDER',
     'spray': 'SPRAY',
     'stationary': 'STATIONARY',
@@ -379,6 +384,7 @@ class _$KeywordSerializer implements PrimitiveSerializer<Keyword> {
     'SCOUT': 'scoutX',
     'SENTINEL': 'sentinel',
     'SHARPSHOOTER': 'sharpshooterX',
+    'SIDEARM': 'sidearmX',
     'SPEEDER': 'speederX',
     'SPRAY': 'spray',
     'STATIONARY': 'stationary',

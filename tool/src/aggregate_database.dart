@@ -15,6 +15,10 @@ class _AggregateDatabase extends Builder {
     ): Glob('lib/src/database/units/**.dart'),
     p.join(
       'src',
+      'all_upgrades.dart',
+    ): Glob('lib/src/database/upgrades/**.dart'),
+    p.join(
+      'src',
       'all_weapons.dart',
     ): Glob('lib/src/database/weapons/**.dart'),
   };
@@ -30,6 +34,10 @@ class _AggregateDatabase extends Builder {
       await for (final input in buildStep.findAssets(entry.value)) {
         final library = await buildStep.resolver.libraryFor(input);
         final topLevel = library.definingCompilationUnit.topLevelVariables;
+        if (topLevel.isEmpty) {
+          log.warning('Skpping ${input.path} due to no top-level fields');
+          continue;
+        }
         final model = topLevel.first.name;
         aggregate[p.joinAll(input.pathSegments.skip(2))] = model;
       }
