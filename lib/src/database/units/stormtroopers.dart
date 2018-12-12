@@ -1,6 +1,6 @@
 import 'package:swlegion/swlegion.dart';
 
-import '../weapons/e_11_blaster_Rifle.dart';
+import '../weapons/e_11_blaster_rifle.dart';
 import '../weapons/unarmed.dart';
 
 final stormtroopers = Unit(
