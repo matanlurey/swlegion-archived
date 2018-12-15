@@ -1,6 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final anger = Upgrade(
+  id: 'ANGER',
   name: 'Anger',
   type: UpgradeSlot.force,
   restrictedToFaction: Faction.darkSide,

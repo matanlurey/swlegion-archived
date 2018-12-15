@@ -1,6 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final improvisedOrders = Upgrade(
+  id: 'IMPROVISED_ORDERS',
   name: 'Improvised Orders',
   type: UpgradeSlot.command,
   points: 10,

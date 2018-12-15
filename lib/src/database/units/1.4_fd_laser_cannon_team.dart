@@ -5,6 +5,7 @@ import '../weapons/dh_17_blaster_pistol.dart';
 import '../weapons/unarmed.dart';
 
 final $1dot4FDLaserCannonTeam = Unit(
+  id: '1_4_FD_LASER_CANNON_TEAM',
   name: '1.4 FD Laser Cannon Team',
   faction: Faction.lightSide,
   miniatures: 1,

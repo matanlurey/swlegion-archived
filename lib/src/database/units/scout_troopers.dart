@@ -4,6 +4,7 @@ import '../weapons/ec_17_hold_out_blaster.dart';
 import '../weapons/unarmed.dart';
 
 final scoutTroopers = Unit(
+  id: 'SCOUT_TROOPERS',
   name: 'Scout Troopers',
   faction: Faction.darkSide,
   miniatures: 4,

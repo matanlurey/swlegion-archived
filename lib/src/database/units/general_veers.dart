@@ -4,6 +4,7 @@ import '../weapons/combat_expertise.dart';
 import '../weapons/veers_e_11_blaster_rifle.dart';
 
 final generalVeers = Unit(
+  id: 'GENERAL_VEERS',
   name: 'General Veers',
   subTitle: 'Master Tactician',
   faction: Faction.darkSide,

@@ -1,6 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final hqUplink = Upgrade(
+  id: 'HQ_UPLINK',
   name: 'HQ Uplink',
   type: UpgradeSlot.comms,
   isExhaustible: true,

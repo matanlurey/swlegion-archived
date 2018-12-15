@@ -4,6 +4,7 @@ import '../weapons/ax_20_blaster_cannon.dart';
 import '../weapons/ec_17_hold_out_blaster.dart';
 
 final $74ZSpeederBikes = Unit(
+  id: '74_Z_SPEEDER_BIKES',
   name: '74-Z Speeder Bikes',
   faction: Faction.darkSide,
   miniatures: 2,

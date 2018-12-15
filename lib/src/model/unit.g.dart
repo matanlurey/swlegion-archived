@@ -31,6 +31,8 @@ class _$UnitSerializer implements StructuredSerializer<Unit> {
   Iterable serialize(Serializers serializers, Unit object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[
+      'id',
+      serializers.serialize(object.id, specifiedType: const FullType(String)),
       'name',
       serializers.serialize(object.name, specifiedType: const FullType(String)),
       'is_unique',
@@ -111,6 +113,10 @@ class _$UnitSerializer implements StructuredSerializer<Unit> {
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'name':
           result.name = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -200,6 +206,8 @@ class _$UnitSerializer implements StructuredSerializer<Unit> {
 
 class _$Unit extends Unit {
   @override
+  final String id;
+  @override
   final String name;
   @override
   final bool isUnique;
@@ -240,7 +248,8 @@ class _$Unit extends Unit {
       (new UnitBuilder()..update(updates)).build();
 
   _$Unit._(
-      {this.name,
+      {this.id,
+      this.name,
       this.isUnique,
       this.subTitle,
       this.faction,
@@ -259,6 +268,9 @@ class _$Unit extends Unit {
       this.weapons,
       this.keywords})
       : super._() {
+    if (id == null) {
+      throw new BuiltValueNullFieldError('Unit', 'id');
+    }
     if (name == null) {
       throw new BuiltValueNullFieldError('Unit', 'name');
     }
@@ -314,6 +326,7 @@ class _$Unit extends Unit {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is Unit &&
+        id == other.id &&
         name == other.name &&
         isUnique == other.isUnique &&
         subTitle == other.subTitle &&
@@ -354,7 +367,10 @@ class _$Unit extends Unit {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            0,
+                                                                            $jc(
+                                                                                0,
+                                                                                id
+                                                                                    .hashCode),
                                                                             name
                                                                                 .hashCode),
                                                                         isUnique
@@ -382,6 +398,7 @@ class _$Unit extends Unit {
   @override
   String toString() {
     return (newBuiltValueToStringHelper('Unit')
+          ..add('id', id)
           ..add('name', name)
           ..add('isUnique', isUnique)
           ..add('subTitle', subTitle)
@@ -406,6 +423,10 @@ class _$Unit extends Unit {
 
 class UnitBuilder implements Builder<Unit, UnitBuilder> {
   _$Unit _$v;
+
+  String _id;
+  String get id => _$this._id;
+  set id(String id) => _$this._id = id;
 
   String _name;
   String get name => _$this._name;
@@ -489,6 +510,7 @@ class UnitBuilder implements Builder<Unit, UnitBuilder> {
 
   UnitBuilder get _$this {
     if (_$v != null) {
+      _id = _$v.id;
       _name = _$v.name;
       _isUnique = _$v.isUnique;
       _subTitle = _$v.subTitle;
@@ -531,6 +553,7 @@ class UnitBuilder implements Builder<Unit, UnitBuilder> {
     try {
       _$result = _$v ??
           new _$Unit._(
+              id: id,
               name: name,
               isUnique: isUnique,
               subTitle: subTitle,

@@ -1,6 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final forceReflexes = Upgrade(
+  id: 'FORCE_REFLEXES',
   name: 'Saber Throw',
   type: UpgradeSlot.force,
   isExhaustible: true,
