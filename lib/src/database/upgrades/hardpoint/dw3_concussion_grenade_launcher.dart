@@ -5,6 +5,7 @@ import '../../weapons/upgrades/hardpoints/dw_3_concussion_grenade_launcher.dart'
     as weapon;
 
 final dw3ConcussionGrenadeLauncher = Upgrade(
+  id: 'DS3_CONCUSSION_GRENADE_LAUNCHER',
   name: 'DW-3 Concussion Grenade Launcher',
   type: UpgradeSlot.hardPoint,
   restrictedToUnit: unit.atSt,

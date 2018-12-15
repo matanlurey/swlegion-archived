@@ -3,6 +3,7 @@ import 'package:swlegion/swlegion.dart';
 import '../weapons/vaders_lightsaber.dart';
 
 final darthVader = Unit(
+  id: 'DARTH_VADER',
   name: 'Darth Vader',
   subTitle: 'Dark Lord of the Sith',
   faction: Faction.darkSide,

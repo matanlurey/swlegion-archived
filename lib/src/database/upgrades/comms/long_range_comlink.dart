@@ -1,6 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final longRangeComlink = Upgrade(
+  id: 'LONG_RANGE_COMLINK',
   name: 'Long-Range Comlink',
   type: UpgradeSlot.comms,
   points: 10,

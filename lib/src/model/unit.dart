@@ -22,6 +22,7 @@ abstract class Unit implements Built<Unit, UnitBuilder> {
   /// Create a new [Unit] with the defined characteristics.
   factory Unit({
     @required String name,
+    @required String id,
     bool isUnique = false,
     String subTitle,
     @required Faction faction,
@@ -41,6 +42,7 @@ abstract class Unit implements Built<Unit, UnitBuilder> {
     Map<Keyword, String> keywords = const {},
   }) =>
       Unit._builder((b) => b
+        ..id = id
         ..name = name
         ..isUnique = isUnique
         ..subTitle = subTitle
@@ -68,6 +70,9 @@ abstract class Unit implements Built<Unit, UnitBuilder> {
   // units do not exist in the game (all the data is pre-known and is either
   // defined directly or deserialized via JSON).
   factory Unit._builder(void Function(UnitBuilder) build) = _$Unit;
+
+  /// Unique ID for the unit.
+  String get id;
 
   /// Name of the unit.
   String get name;

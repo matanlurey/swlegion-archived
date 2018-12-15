@@ -5,6 +5,7 @@ import '../weapons/fetts_ee_3_carbine.dart';
 import '../weapons/wrist_rocket.dart';
 
 final bobaFett = Unit(
+  id: 'BOBA_FETT',
   name: 'Boba Fett',
   subTitle: 'Infamous Bounty Hunter',
   faction: Faction.darkSide,

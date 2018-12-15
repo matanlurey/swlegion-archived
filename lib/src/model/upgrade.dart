@@ -25,6 +25,7 @@ abstract class Upgrade implements Built<Upgrade, UpgradeBuilder> {
     Faction restrictedToFaction,
     Unit restrictedToUnit,
     UnitType restrictedToType,
+    @required String id,
     @required String name,
     String text = '',
     @required UpgradeSlot type,
@@ -38,6 +39,7 @@ abstract class Upgrade implements Built<Upgrade, UpgradeBuilder> {
         ..restrictedToFaction = restrictedToFaction
         ..restrictedToUnit = restrictedToUnit?.toBuilder()
         ..restrictedToType = restrictedToType
+        ..id = id
         ..name = name
         ..text = text
         ..type = type
@@ -82,6 +84,9 @@ abstract class Upgrade implements Built<Upgrade, UpgradeBuilder> {
   @nullable
   @BuiltValueField(wireName: 'restricted_to_type')
   UnitType get restrictedToType;
+
+  /// Unique ID for the upgrade.
+  String get id;
 
   /// Name of the upgrade card.
   @BuiltValueField(wireName: 'name')

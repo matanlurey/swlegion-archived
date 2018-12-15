@@ -43,6 +43,8 @@ class _$UpgradeSerializer implements StructuredSerializer<Upgrade> {
       serializers.serialize(object.keywords,
           specifiedType: const FullType(BuiltMap,
               const [const FullType(Keyword), const FullType(String)])),
+      'id',
+      serializers.serialize(object.id, specifiedType: const FullType(String)),
       'name',
       serializers.serialize(object.name, specifiedType: const FullType(String)),
       'text',
@@ -121,6 +123,10 @@ class _$UpgradeSerializer implements StructuredSerializer<Upgrade> {
           result.restrictedToType = serializers.deserialize(value,
               specifiedType: const FullType(UnitType)) as UnitType;
           break;
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'name':
           result.name = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -160,6 +166,8 @@ class _$Upgrade extends Upgrade {
   @override
   final UnitType restrictedToType;
   @override
+  final String id;
+  @override
   final String name;
   @override
   final String text;
@@ -179,6 +187,7 @@ class _$Upgrade extends Upgrade {
       this.restrictedToFaction,
       this.restrictedToUnit,
       this.restrictedToType,
+      this.id,
       this.name,
       this.text,
       this.type,
@@ -195,6 +204,9 @@ class _$Upgrade extends Upgrade {
     }
     if (keywords == null) {
       throw new BuiltValueNullFieldError('Upgrade', 'keywords');
+    }
+    if (id == null) {
+      throw new BuiltValueNullFieldError('Upgrade', 'id');
     }
     if (name == null) {
       throw new BuiltValueNullFieldError('Upgrade', 'name');
@@ -225,6 +237,7 @@ class _$Upgrade extends Upgrade {
         restrictedToFaction == other.restrictedToFaction &&
         restrictedToUnit == other.restrictedToUnit &&
         restrictedToType == other.restrictedToType &&
+        id == other.id &&
         name == other.name &&
         text == other.text &&
         type == other.type &&
@@ -242,13 +255,15 @@ class _$Upgrade extends Upgrade {
                             $jc(
                                 $jc(
                                     $jc(
-                                        $jc($jc(0, addsMiniature.hashCode),
-                                            isExhaustible.hashCode),
-                                        points.hashCode),
-                                    keywords.hashCode),
-                                restrictedToFaction.hashCode),
-                            restrictedToUnit.hashCode),
-                        restrictedToType.hashCode),
+                                        $jc(
+                                            $jc($jc(0, addsMiniature.hashCode),
+                                                isExhaustible.hashCode),
+                                            points.hashCode),
+                                        keywords.hashCode),
+                                    restrictedToFaction.hashCode),
+                                restrictedToUnit.hashCode),
+                            restrictedToType.hashCode),
+                        id.hashCode),
                     name.hashCode),
                 text.hashCode),
             type.hashCode),
@@ -265,6 +280,7 @@ class _$Upgrade extends Upgrade {
           ..add('restrictedToFaction', restrictedToFaction)
           ..add('restrictedToUnit', restrictedToUnit)
           ..add('restrictedToType', restrictedToType)
+          ..add('id', id)
           ..add('name', name)
           ..add('text', text)
           ..add('type', type)
@@ -312,6 +328,10 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
   set restrictedToType(UnitType restrictedToType) =>
       _$this._restrictedToType = restrictedToType;
 
+  String _id;
+  String get id => _$this._id;
+  set id(String id) => _$this._id = id;
+
   String _name;
   String get name => _$this._name;
   set name(String name) => _$this._name = name;
@@ -339,6 +359,7 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
       _restrictedToFaction = _$v.restrictedToFaction;
       _restrictedToUnit = _$v.restrictedToUnit?.toBuilder();
       _restrictedToType = _$v.restrictedToType;
+      _id = _$v.id;
       _name = _$v.name;
       _text = _$v.text;
       _type = _$v.type;
@@ -374,6 +395,7 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
               restrictedToFaction: restrictedToFaction,
               restrictedToUnit: _restrictedToUnit?.build(),
               restrictedToType: restrictedToType,
+              id: id,
               name: name,
               text: text,
               type: type,

@@ -4,6 +4,7 @@ import '../weapons/e_11_blaster_rifle.dart';
 import '../weapons/unarmed.dart';
 
 final snowtroopers = Unit(
+  id: 'SNOWTROOPERS',
   name: 'Snowtroopers',
   faction: Faction.darkSide,
   miniatures: 4,

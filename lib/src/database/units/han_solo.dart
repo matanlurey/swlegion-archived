@@ -4,6 +4,7 @@ import '../weapons/brawl.dart';
 import '../weapons/hans_dl_44_blaster_pistol.dart';
 
 final hanSolo = Unit(
+  id: 'HAN_SOLO',
   name: 'Han Solo',
   subTitle: 'Unorthodox General',
   faction: Faction.lightSide,

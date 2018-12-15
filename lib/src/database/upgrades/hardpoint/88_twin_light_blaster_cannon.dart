@@ -5,7 +5,8 @@ import '../../weapons/upgrades/hardpoints/88_twin_light_blaster_cannon.dart'
     as weapon;
 
 final $88TwinLightBlasterCannon = Upgrade(
-  name: 'DW-3 Concussion Grenade Launcher',
+  id: '88_TWIN_LIGHT_BLASTER_CANNON',
+  name: '88 Twin Light Blaster Cannon',
   type: UpgradeSlot.hardPoint,
   restrictedToUnit: unit.atSt,
   weapon: weapon.$88TwinLightBlasterCannon,

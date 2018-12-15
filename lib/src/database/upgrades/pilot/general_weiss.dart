@@ -1,6 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final generalWeiss = Upgrade(
+  id: 'GENERAL_WEISS',
   name: 'General Weiss',
   type: UpgradeSlot.pilot,
   restrictedToFaction: Faction.darkSide,

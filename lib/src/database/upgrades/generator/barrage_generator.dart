@@ -1,6 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final barrageGenerator = Upgrade(
+  id: 'BARRAGE_GENERATOR',
   name: 'Barrage Generator',
   type: UpgradeSlot.generator,
   isExhaustible: true,

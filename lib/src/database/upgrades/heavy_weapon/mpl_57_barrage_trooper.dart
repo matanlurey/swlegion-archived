@@ -4,7 +4,8 @@ import '../../units/fleet_troopers.dart' as unit;
 import '../../weapons/upgrades/mpl_57_barrage_launcher.dart' as weapon;
 
 final mpl57BarrageTrooper = Upgrade(
-  name: 'Scatter Gun Trooper',
+  id: 'MPL_57_BARRAGE_TROOPER',
+  name: 'MPL-57 Barrage Trooper',
   type: UpgradeSlot.heavyWeapon,
   isExhaustible: true,
   restrictedToUnit: unit.fleetTroopers,
