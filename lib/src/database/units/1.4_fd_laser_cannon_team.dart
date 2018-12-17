@@ -16,7 +16,7 @@ final $1dot4FDLaserCannonTeam = Unit(
   defense: DefenseDice.white,
   hasDefenseSurge: true,
   attackSurge: AttackSurge.hit,
-  speed: 1,
+  speed: 0,
   points: 70,
   upgrades: {
     UpgradeSlot.comms: 1,

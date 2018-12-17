@@ -9,7 +9,7 @@ final atSt = Unit(
   faction: Faction.darkSide,
   miniatures: 1,
   rank: Rank.heavy,
-  type: UnitType.vehicle,
+  type: UnitType.groundVehicle,
   wounds: 11,
   resilience: 8,
   defense: DefenseDice.white,

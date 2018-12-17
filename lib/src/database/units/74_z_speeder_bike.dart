@@ -9,7 +9,7 @@ final $74ZSpeederBikes = Unit(
   faction: Faction.darkSide,
   miniatures: 2,
   rank: Rank.support,
-  type: UnitType.vehicle,
+  type: UnitType.groundVehicle,
   wounds: 3,
   defense: DefenseDice.white,
   attackSurge: AttackSurge.hit,

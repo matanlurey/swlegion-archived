@@ -44,6 +44,8 @@ import 'database/upgrades/personnel/fleet_trooper.dart';
 import 'database/upgrades/personnel/rebel_trooper.dart';
 import 'database/upgrades/personnel/snowtrooper.dart';
 import 'database/upgrades/personnel/stormtrooper.dart';
+import 'database/upgrades/pilot/general_weiss.dart';
+import 'database/upgrades/pilot/wedge_antilles.dart';
 
 final aggregate = [
   commandingPresence,
@@ -91,5 +93,7 @@ final aggregate = [
   fleetTrooper,
   rebelTrooper,
   snowtrooper,
-  stormtrooper
+  stormtrooper,
+  generalWeiss,
+  wedgeAntilles
 ];
