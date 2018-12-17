@@ -9,7 +9,7 @@ final atRt = Unit(
   faction: Faction.lightSide,
   miniatures: 1,
   rank: Rank.support,
-  type: UnitType.vehicle,
+  type: UnitType.groundVehicle,
   wounds: 6,
   resilience: 4,
   defense: DefenseDice.white,

@@ -12,8 +12,8 @@ class UnitType extends EnumClass {
   @BuiltValueEnumConst(wireName: 'EMPLACEMENT_TROOPER')
   static const UnitType emplacementTrooper = _$emplacementTrooper;
 
-  @BuiltValueEnumConst(wireName: 'VEHICLE')
-  static const UnitType vehicle = _$vehicle;
+  @BuiltValueEnumConst(wireName: 'GROUND_VEHICLE')
+  static const UnitType groundVehicle = _$groundVehicle;
 
   @BuiltValueEnumConst(wireName: 'REPULSOR_VEHICLE')
   static const UnitType repulsorVehicle = _$repulsorVehicle;
