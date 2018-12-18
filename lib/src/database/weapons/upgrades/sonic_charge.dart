@@ -1,6 +1,5 @@
 import 'package:swlegion/swlegion.dart';
 
-// TODO: Add AOE.
 final sonicCharge = Weapon(
   name: 'Sonic Charge',
   dice: {
@@ -9,6 +8,7 @@ final sonicCharge = Weapon(
   },
   minRange: 1,
   maxRange: 1,
+  areaOfEffect: 1,
   keywords: {
     Keyword.armXY: '1, Sonic Charge',
     Keyword.denotateXY: '1, Sonic Charge',

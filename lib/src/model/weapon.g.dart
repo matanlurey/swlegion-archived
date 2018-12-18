@@ -6,6 +6,19 @@ part of 'weapon.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
+// ignore_for_file: always_put_control_body_on_new_line
+// ignore_for_file: annotate_overrides
+// ignore_for_file: avoid_annotating_with_dynamic
+// ignore_for_file: avoid_catches_without_on_clauses
+// ignore_for_file: avoid_returning_this
+// ignore_for_file: lines_longer_than_80_chars
+// ignore_for_file: omit_local_variable_types
+// ignore_for_file: prefer_expression_function_bodies
+// ignore_for_file: sort_constructors_first
+// ignore_for_file: unnecessary_const
+// ignore_for_file: unnecessary_new
+// ignore_for_file: test_types_in_equals
+
 Serializer<Weapon> _$weaponSerializer = new _$WeaponSerializer();
 
 class _$WeaponSerializer implements StructuredSerializer<Weapon> {
@@ -24,6 +37,9 @@ class _$WeaponSerializer implements StructuredSerializer<Weapon> {
       serializers.serialize(object.dice,
           specifiedType: const FullType(BuiltMap,
               const [const FullType(AttackDice), const FullType(int)])),
+      'area_of_effect',
+      serializers.serialize(object.areaOfEffect,
+          specifiedType: const FullType(int)),
       'min_range',
       serializers.serialize(object.minRange,
           specifiedType: const FullType(int)),
@@ -64,6 +80,10 @@ class _$WeaponSerializer implements StructuredSerializer<Weapon> {
                 const FullType(int)
               ])) as BuiltMap);
           break;
+        case 'area_of_effect':
+          result.areaOfEffect = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
         case 'min_range':
           result.minRange = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
@@ -92,6 +112,8 @@ class _$Weapon extends Weapon {
   @override
   final BuiltMap<AttackDice, int> dice;
   @override
+  final int areaOfEffect;
+  @override
   final int minRange;
   @override
   final int maxRange;
@@ -102,13 +124,21 @@ class _$Weapon extends Weapon {
       (new WeaponBuilder()..update(updates)).build();
 
   _$Weapon._(
-      {this.name, this.dice, this.minRange, this.maxRange, this.keywords})
+      {this.name,
+      this.dice,
+      this.areaOfEffect,
+      this.minRange,
+      this.maxRange,
+      this.keywords})
       : super._() {
     if (name == null) {
       throw new BuiltValueNullFieldError('Weapon', 'name');
     }
     if (dice == null) {
       throw new BuiltValueNullFieldError('Weapon', 'dice');
+    }
+    if (areaOfEffect == null) {
+      throw new BuiltValueNullFieldError('Weapon', 'areaOfEffect');
     }
     if (minRange == null) {
       throw new BuiltValueNullFieldError('Weapon', 'minRange');
@@ -131,6 +161,7 @@ class _$Weapon extends Weapon {
     return other is Weapon &&
         name == other.name &&
         dice == other.dice &&
+        areaOfEffect == other.areaOfEffect &&
         minRange == other.minRange &&
         maxRange == other.maxRange &&
         keywords == other.keywords;
@@ -139,7 +170,11 @@ class _$Weapon extends Weapon {
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc($jc(0, name.hashCode), dice.hashCode), minRange.hashCode),
+        $jc(
+            $jc(
+                $jc($jc($jc(0, name.hashCode), dice.hashCode),
+                    areaOfEffect.hashCode),
+                minRange.hashCode),
             maxRange.hashCode),
         keywords.hashCode));
   }
@@ -149,6 +184,7 @@ class _$Weapon extends Weapon {
     return (newBuiltValueToStringHelper('Weapon')
           ..add('name', name)
           ..add('dice', dice)
+          ..add('areaOfEffect', areaOfEffect)
           ..add('minRange', minRange)
           ..add('maxRange', maxRange)
           ..add('keywords', keywords))
@@ -167,6 +203,10 @@ class WeaponBuilder implements Builder<Weapon, WeaponBuilder> {
   MapBuilder<AttackDice, int> get dice =>
       _$this._dice ??= new MapBuilder<AttackDice, int>();
   set dice(MapBuilder<AttackDice, int> dice) => _$this._dice = dice;
+
+  int _areaOfEffect;
+  int get areaOfEffect => _$this._areaOfEffect;
+  set areaOfEffect(int areaOfEffect) => _$this._areaOfEffect = areaOfEffect;
 
   int _minRange;
   int get minRange => _$this._minRange;
@@ -188,6 +228,7 @@ class WeaponBuilder implements Builder<Weapon, WeaponBuilder> {
     if (_$v != null) {
       _name = _$v.name;
       _dice = _$v.dice?.toBuilder();
+      _areaOfEffect = _$v.areaOfEffect;
       _minRange = _$v.minRange;
       _maxRange = _$v.maxRange;
       _keywords = _$v.keywords?.toBuilder();
@@ -217,6 +258,7 @@ class WeaponBuilder implements Builder<Weapon, WeaponBuilder> {
           new _$Weapon._(
               name: name,
               dice: dice.build(),
+              areaOfEffect: areaOfEffect,
               minRange: minRange,
               maxRange: maxRange,
               keywords: keywords.build());
@@ -238,5 +280,3 @@ class WeaponBuilder implements Builder<Weapon, WeaponBuilder> {
     return _$result;
   }
 }
-
-// ignore_for_file: always_put_control_body_on_new_line,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new

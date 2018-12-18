@@ -7,7 +7,7 @@ final scatterGunTrooper = Upgrade(
   id: 'SCATTER_GUN_TROOPER',
   name: 'Scatter Gun Trooper',
   type: UpgradeSlot.heavyWeapon,
-  restrictedToUnit: unit.fleetTroopers,
+  restrictedToUnit: [unit.fleetTroopers],
   addsMiniature: true,
   weapon: weapon.scatterGun,
   points: 23,

@@ -7,7 +7,7 @@ final ax108GroundBuzzer = Upgrade(
   id: 'AX108_GROUND_BUZZER',
   name: 'AX108 \"Ground Buzzer\"',
   type: UpgradeSlot.hardPoint,
-  restrictedToUnit: unit.t47Airspeeder,
+  restrictedToUnit: [unit.t47Airspeeder],
   weapon: weapon.ax108GroundBuzzer,
   points: 20,
 );

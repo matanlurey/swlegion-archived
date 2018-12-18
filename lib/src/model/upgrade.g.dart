@@ -43,6 +43,10 @@ class _$UpgradeSerializer implements StructuredSerializer<Upgrade> {
       serializers.serialize(object.keywords,
           specifiedType: const FullType(BuiltMap,
               const [const FullType(Keyword), const FullType(String)])),
+      'restricted_to_unit',
+      serializers.serialize(object.restrictedToUnit,
+          specifiedType:
+              const FullType(BuiltSet, const [const FullType(Unit)])),
       'id',
       serializers.serialize(object.id, specifiedType: const FullType(String)),
       'name',
@@ -58,12 +62,6 @@ class _$UpgradeSerializer implements StructuredSerializer<Upgrade> {
         ..add('restricted_to_faction')
         ..add(serializers.serialize(object.restrictedToFaction,
             specifiedType: const FullType(Faction)));
-    }
-    if (object.restrictedToUnit != null) {
-      result
-        ..add('restricted_to_unit')
-        ..add(serializers.serialize(object.restrictedToUnit,
-            specifiedType: const FullType(Unit)));
     }
     if (object.restrictedToType != null) {
       result
@@ -117,7 +115,9 @@ class _$UpgradeSerializer implements StructuredSerializer<Upgrade> {
           break;
         case 'restricted_to_unit':
           result.restrictedToUnit.replace(serializers.deserialize(value,
-              specifiedType: const FullType(Unit)) as Unit);
+                  specifiedType:
+                      const FullType(BuiltSet, const [const FullType(Unit)]))
+              as BuiltSet);
           break;
         case 'restricted_to_type':
           result.restrictedToType = serializers.deserialize(value,
@@ -162,7 +162,7 @@ class _$Upgrade extends Upgrade {
   @override
   final Faction restrictedToFaction;
   @override
-  final Unit restrictedToUnit;
+  final BuiltSet<Unit> restrictedToUnit;
   @override
   final UnitType restrictedToType;
   @override
@@ -204,6 +204,9 @@ class _$Upgrade extends Upgrade {
     }
     if (keywords == null) {
       throw new BuiltValueNullFieldError('Upgrade', 'keywords');
+    }
+    if (restrictedToUnit == null) {
+      throw new BuiltValueNullFieldError('Upgrade', 'restrictedToUnit');
     }
     if (id == null) {
       throw new BuiltValueNullFieldError('Upgrade', 'id');
@@ -317,10 +320,10 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
   set restrictedToFaction(Faction restrictedToFaction) =>
       _$this._restrictedToFaction = restrictedToFaction;
 
-  UnitBuilder _restrictedToUnit;
-  UnitBuilder get restrictedToUnit =>
-      _$this._restrictedToUnit ??= new UnitBuilder();
-  set restrictedToUnit(UnitBuilder restrictedToUnit) =>
+  SetBuilder<Unit> _restrictedToUnit;
+  SetBuilder<Unit> get restrictedToUnit =>
+      _$this._restrictedToUnit ??= new SetBuilder<Unit>();
+  set restrictedToUnit(SetBuilder<Unit> restrictedToUnit) =>
       _$this._restrictedToUnit = restrictedToUnit;
 
   UnitType _restrictedToType;
@@ -393,7 +396,7 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
               points: points,
               keywords: keywords.build(),
               restrictedToFaction: restrictedToFaction,
-              restrictedToUnit: _restrictedToUnit?.build(),
+              restrictedToUnit: restrictedToUnit.build(),
               restrictedToType: restrictedToType,
               id: id,
               name: name,
@@ -407,7 +410,7 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
         keywords.build();
 
         _$failedField = 'restrictedToUnit';
-        _restrictedToUnit?.build();
+        restrictedToUnit.build();
 
         _$failedField = 'weapon';
         _weapon?.build();

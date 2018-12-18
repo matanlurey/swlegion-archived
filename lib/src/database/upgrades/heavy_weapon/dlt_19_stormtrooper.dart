@@ -7,7 +7,7 @@ final dlt19Stormtrooper = Upgrade(
   id: 'DLT_19_STORMTROOPER',
   name: 'DLT-19 Stormtrooper',
   type: UpgradeSlot.heavyWeapon,
-  restrictedToUnit: unit.stormtroopers,
+  restrictedToUnit: [unit.stormtroopers],
   addsMiniature: true,
   weapon: weapon.dlt19HHeavyBlasterRifle,
   points: 24,

@@ -19,10 +19,12 @@ abstract class Weapon implements Built<Weapon, WeaponBuilder> {
     @required Map<AttackDice, int> dice,
     @required int minRange,
     int maxRange,
+    int areaOfEffect = 0,
     Map<Keyword, String> keywords = const {},
   }) =>
       Weapon._build((b) => b
         ..name = name
+        ..areaOfEffect = areaOfEffect
         ..dice.addAll(dice)
         ..minRange = minRange
         ..maxRange = maxRange
@@ -55,6 +57,12 @@ abstract class Weapon implements Built<Weapon, WeaponBuilder> {
 
   /// Attack dice for the weapon.
   BuiltMap<AttackDice, int> get dice;
+
+  /// Whether this weapon triggers an AOE radius.
+  ///
+  /// A range of `0` is considered non-AEO.
+  @BuiltValueField(wireName: 'area_of_effect')
+  int get areaOfEffect;
 
   /// Minimum range of the weapon.
   ///

@@ -7,6 +7,6 @@ final fleetTrooper = Upgrade(
   name: 'Fleet Trooper',
   type: UpgradeSlot.personnel,
   addsMiniature: true,
-  restrictedToUnit: unit.fleetTroopers,
+  restrictedToUnit: [unit.fleetTroopers],
   points: 11,
 );

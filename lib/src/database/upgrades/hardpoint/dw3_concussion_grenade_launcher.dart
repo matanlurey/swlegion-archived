@@ -8,7 +8,7 @@ final dw3ConcussionGrenadeLauncher = Upgrade(
   id: 'DS3_CONCUSSION_GRENADE_LAUNCHER',
   name: 'DW-3 Concussion Grenade Launcher',
   type: UpgradeSlot.hardPoint,
-  restrictedToUnit: unit.atSt,
+  restrictedToUnit: [unit.atSt],
   weapon: weapon.dw3ConcussionGrenadeLauncher,
   points: 15,
 );

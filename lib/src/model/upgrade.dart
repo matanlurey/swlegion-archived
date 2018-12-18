@@ -23,7 +23,7 @@ abstract class Upgrade implements Built<Upgrade, UpgradeBuilder> {
     @required int points,
     Map<Keyword, String> keywords = const {},
     Faction restrictedToFaction,
-    Unit restrictedToUnit,
+    List<Unit> restrictedToUnit = const [],
     UnitType restrictedToType,
     @required String id,
     @required String name,
@@ -37,7 +37,7 @@ abstract class Upgrade implements Built<Upgrade, UpgradeBuilder> {
         ..points = points
         ..keywords.addAll(keywords)
         ..restrictedToFaction = restrictedToFaction
-        ..restrictedToUnit = restrictedToUnit?.toBuilder()
+        ..restrictedToUnit.addAll(restrictedToUnit)
         ..restrictedToType = restrictedToType
         ..id = id
         ..name = name
@@ -71,12 +71,9 @@ abstract class Upgrade implements Built<Upgrade, UpgradeBuilder> {
   @BuiltValueField(wireName: 'restricted_to_faction')
   Faction get restrictedToFaction;
 
-  /// Unit this upgrade is restricted to.
-  ///
-  /// May be `null` if this upgrade may be applied on any unit.
-  @nullable
+  /// Units this upgrade is restricted to.
   @BuiltValueField(wireName: 'restricted_to_unit')
-  Unit get restrictedToUnit;
+  BuiltSet<Unit> get restrictedToUnit;
 
   /// Unit type this upgrade is restricted to.
   ///

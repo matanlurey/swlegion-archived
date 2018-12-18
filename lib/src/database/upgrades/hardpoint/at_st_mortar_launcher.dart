@@ -7,7 +7,7 @@ final atStMortarLauncher = Upgrade(
   id: 'AT_ST_MORTAR_LAUNCHER',
   name: 'AT-ST Mortar Launcher',
   type: UpgradeSlot.hardPoint,
-  restrictedToUnit: unit.atSt,
+  restrictedToUnit: [unit.atSt],
   weapon: weapon.atStMortarLauncher,
   points: 10,
 );
