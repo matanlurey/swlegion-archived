@@ -7,7 +7,7 @@ final atRtFlamethrower = Upgrade(
   id: 'AT_RT_FLAMETHROWER',
   name: 'AT-RT Flamethrower',
   type: UpgradeSlot.hardPoint,
-  restrictedToUnit: unit.atRt,
+  restrictedToUnit: [unit.atRt],
   weapon: weapon.atRtFlamethrower,
   points: 25,
 );

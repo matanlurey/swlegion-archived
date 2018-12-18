@@ -31,13 +31,17 @@ import 'database/upgrades/hardpoint/at_st_mortar_launcher.dart';
 import 'database/upgrades/hardpoint/ax_108_ground_buzzer.dart';
 import 'database/upgrades/hardpoint/dw3_concussion_grenade_launcher.dart';
 import 'database/upgrades/hardpoint/mo_dk_power_harpoon.dart';
+import 'database/upgrades/heavy_weapon/dh_447_sniper.dart';
 import 'database/upgrades/heavy_weapon/dlt_19_stormtrooper.dart';
+import 'database/upgrades/heavy_weapon/dlt_19_x_sniper.dart';
 import 'database/upgrades/heavy_weapon/electrostaff_guard.dart';
 import 'database/upgrades/heavy_weapon/flametrooper.dart';
 import 'database/upgrades/heavy_weapon/hh_12_stormtrooper.dart';
 import 'database/upgrades/heavy_weapon/mpl_57_barrage_trooper.dart';
 import 'database/upgrades/heavy_weapon/mpl_57_ion_trooper.dart';
+import 'database/upgrades/heavy_weapon/proton_charge_saboteur.dart';
 import 'database/upgrades/heavy_weapon/scatter_gun_trooper.dart';
+import 'database/upgrades/heavy_weapon/sonic_charge_saboteur.dart';
 import 'database/upgrades/heavy_weapon/t_7_ion_snowtrooper.dart';
 import 'database/upgrades/heavy_weapon/z_6_trooper.dart';
 import 'database/upgrades/personnel/fleet_trooper.dart';
@@ -81,13 +85,17 @@ final aggregate = [
   ax108GroundBuzzer,
   dw3ConcussionGrenadeLauncher,
   moDkPowerHarpoon,
+  dh447Sniper,
   dlt19Stormtrooper,
+  dlt19XSniper,
   electrostaffGuard,
   flametrooper,
   hh12Stormtrooper,
   mpl57BarrageTrooper,
   mpl57IonTrooper,
+  protonChargeSaboteur,
   scatterGunTrooper,
+  sonicChargeSaboteur,
   t7IonSnowtrooper,
   z6Trooper,
   fleetTrooper,

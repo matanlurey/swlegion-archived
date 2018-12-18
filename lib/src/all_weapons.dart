@@ -22,7 +22,9 @@ import 'database/weapons/lukes_dl_44_blaster_pistol.dart';
 import 'database/weapons/martial_arts.dart';
 import 'database/weapons/ms_4_twin_blaster_cannon.dart';
 import 'database/weapons/unarmed.dart';
+import 'database/weapons/upgrades/dh_447_sniper_rifle.dart';
 import 'database/weapons/upgrades/dlt_19_heavy_blaster_rifle.dart';
+import 'database/weapons/upgrades/dlt_19x_sniper_rifle.dart';
 import 'database/weapons/upgrades/electrostaff.dart';
 import 'database/weapons/upgrades/flamethrower.dart';
 import 'database/weapons/upgrades/grenades/concussion_grenades.dart';
@@ -39,7 +41,9 @@ import 'database/weapons/upgrades/hardpoints/mo_dk_power_harpoon.dart';
 import 'database/weapons/upgrades/hh_12_rocket_launcher.dart';
 import 'database/weapons/upgrades/mpl_57_barrage_launcher.dart';
 import 'database/weapons/upgrades/mpl_57_ion_launcher.dart';
+import 'database/weapons/upgrades/proton_charge.dart';
 import 'database/weapons/upgrades/scatter_gun.dart';
+import 'database/weapons/upgrades/sonic_charge.dart';
 import 'database/weapons/upgrades/t_7_ion_disrupter_rifle.dart';
 import 'database/weapons/upgrades/z_6_rotary_blaster_cannon.dart';
 import 'database/weapons/vaders_lightsaber.dart';
@@ -71,7 +75,9 @@ final aggregate = [
   martialArts,
   ms4TwinBlasterCannon,
   unarmed,
+  dh447SniperRifle,
   dlt19HHeavyBlasterRifle,
+  dlt19XSniperRifle,
   electrostaff,
   flamethrower,
   concussionGrenades,
@@ -88,7 +94,9 @@ final aggregate = [
   hh12RocketLauncher,
   mpl57BarrageLauncher,
   mpl57IonLauncher,
+  protonCharge,
   scatterGun,
+  sonicCharge,
   t7IonDisrupterRifle,
   z6RotaryBlaster,
   vadersLightsaber,

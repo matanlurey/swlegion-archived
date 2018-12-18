@@ -7,7 +7,7 @@ final z6Trooper = Upgrade(
   id: 'Z_6_TROOPER',
   name: 'Z-6 Trooper',
   type: UpgradeSlot.heavyWeapon,
-  restrictedToUnit: unit.rebelTroopers,
+  restrictedToUnit: [unit.rebelTroopers],
   addsMiniature: true,
   weapon: weapon.z6RotaryBlaster,
   points: 22,

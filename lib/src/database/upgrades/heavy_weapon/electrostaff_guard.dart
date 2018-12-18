@@ -7,7 +7,7 @@ final electrostaffGuard = Upgrade(
   id: 'ELECTROSTAFF_GUARD',
   name: 'Electrostaff Guard',
   type: UpgradeSlot.heavyWeapon,
-  restrictedToUnit: unit.imperialRoyalGuards,
+  restrictedToUnit: [unit.imperialRoyalGuards],
   addsMiniature: true,
   weapon: weapon.electrostaff,
   points: 25,

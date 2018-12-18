@@ -8,7 +8,7 @@ final hh12Stormtrooper = Upgrade(
   name: 'HH-12 Stormtrooper',
   type: UpgradeSlot.heavyWeapon,
   isExhaustible: true,
-  restrictedToUnit: unit.stormtroopers,
+  restrictedToUnit: [unit.stormtroopers],
   addsMiniature: true,
   weapon: weapon.hh12RocketLauncher,
   points: 34,
