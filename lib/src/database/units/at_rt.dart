@@ -18,6 +18,7 @@ final atRt = Unit(
   points: 55,
   upgrades: {
     UpgradeSlot.comms: 1,
+    UpgradeSlot.hardPoint: 1,
   },
   weapons: [
     grapplingClaws,
