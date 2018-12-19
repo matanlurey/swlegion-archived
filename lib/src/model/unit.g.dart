@@ -56,7 +56,7 @@ class _$UnitSerializer implements StructuredSerializer<Unit> {
       'defense',
       serializers.serialize(object.defense,
           specifiedType: const FullType(DefenseDice)),
-      'hasDefenseSurge',
+      'has_defense_surge',
       serializers.serialize(object.hasDefenseSurge,
           specifiedType: const FullType(bool)),
       'speed',
@@ -169,7 +169,7 @@ class _$UnitSerializer implements StructuredSerializer<Unit> {
           result.attackSurge = serializers.deserialize(value,
               specifiedType: const FullType(AttackSurge)) as AttackSurge;
           break;
-        case 'hasDefenseSurge':
+        case 'has_defense_surge':
           result.hasDefenseSurge = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;

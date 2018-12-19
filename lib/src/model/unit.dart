@@ -129,6 +129,7 @@ abstract class Unit implements Built<Unit, UnitBuilder> {
   AttackSurge get attackSurge;
 
   /// Whether the _surge_ icon converts for _defence_.
+  @BuiltValueField(wireName: 'has_defense_surge')
   bool get hasDefenseSurge;
 
   /// Speed of the unit when moving.

@@ -11,6 +11,8 @@ targets:
         enabled: false
       swlegion|_aggregate_database:
         enabled: true
+      swlegion|_build_json_catalog:
+        enabled: true
     dependencies:
       - :_database
       - :_models
@@ -32,9 +34,9 @@ targets:
         generate_for:
           - lib/src/model/**.dart
           - lib/src/all_models.dart
-  _builders:
+  _aggregate_database:
     sources:
-      - tool/src/**.dart
+      - tool/src/aggregate_database.dart
     dependencies:
       - build
       - glob
@@ -42,7 +44,7 @@ targets:
 
 builders:
   _aggregate_database:
-    target: "_builders"
+    target: "_aggregate_database"
     import: tool/src/aggregate_database.dart
     builder_factories:
       - aggregateDatabase
