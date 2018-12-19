@@ -3,6 +3,7 @@ import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 import 'army_unit.dart';
+import 'faction.dart';
 
 part 'army.g.dart';
 
@@ -13,6 +14,9 @@ abstract class Army implements Built<Army, ArmyBuilder> {
 
   factory Army(void Function(ArmyBuilder) build) = _$Army;
   Army._();
+
+  /// Faction of the army.
+  Faction get faction;
 
   /// Units in the army.
   BuiltList<ArmyUnit> get units;

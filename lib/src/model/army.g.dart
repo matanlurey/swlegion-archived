@@ -18,6 +18,9 @@ class _$ArmySerializer implements StructuredSerializer<Army> {
   Iterable serialize(Serializers serializers, Army object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[
+      'faction',
+      serializers.serialize(object.faction,
+          specifiedType: const FullType(Faction)),
       'units',
       serializers.serialize(object.units,
           specifiedType:
@@ -38,6 +41,10 @@ class _$ArmySerializer implements StructuredSerializer<Army> {
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'faction':
+          result.faction = serializers.deserialize(value,
+              specifiedType: const FullType(Faction)) as Faction;
+          break;
         case 'units':
           result.units.replace(serializers.deserialize(value,
               specifiedType: const FullType(
@@ -52,12 +59,17 @@ class _$ArmySerializer implements StructuredSerializer<Army> {
 
 class _$Army extends Army {
   @override
+  final Faction faction;
+  @override
   final BuiltList<ArmyUnit> units;
 
   factory _$Army([void updates(ArmyBuilder b)]) =>
       (new ArmyBuilder()..update(updates)).build();
 
-  _$Army._({this.units}) : super._() {
+  _$Army._({this.faction, this.units}) : super._() {
+    if (faction == null) {
+      throw new BuiltValueNullFieldError('Army', 'faction');
+    }
     if (units == null) {
       throw new BuiltValueNullFieldError('Army', 'units');
     }
@@ -73,23 +85,29 @@ class _$Army extends Army {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is Army && units == other.units;
+    return other is Army && faction == other.faction && units == other.units;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(0, units.hashCode));
+    return $jf($jc($jc(0, faction.hashCode), units.hashCode));
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('Army')..add('units', units))
+    return (newBuiltValueToStringHelper('Army')
+          ..add('faction', faction)
+          ..add('units', units))
         .toString();
   }
 }
 
 class ArmyBuilder implements Builder<Army, ArmyBuilder> {
   _$Army _$v;
+
+  Faction _faction;
+  Faction get faction => _$this._faction;
+  set faction(Faction faction) => _$this._faction = faction;
 
   ListBuilder<ArmyUnit> _units;
   ListBuilder<ArmyUnit> get units =>
@@ -100,6 +118,7 @@ class ArmyBuilder implements Builder<Army, ArmyBuilder> {
 
   ArmyBuilder get _$this {
     if (_$v != null) {
+      _faction = _$v.faction;
       _units = _$v.units?.toBuilder();
       _$v = null;
     }
@@ -123,7 +142,7 @@ class ArmyBuilder implements Builder<Army, ArmyBuilder> {
   _$Army build() {
     _$Army _$result;
     try {
-      _$result = _$v ?? new _$Army._(units: units.build());
+      _$result = _$v ?? new _$Army._(faction: faction, units: units.build());
     } catch (_) {
       String _$failedField;
       try {
