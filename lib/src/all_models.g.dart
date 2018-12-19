@@ -29,6 +29,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(Keyword.serializer)
       ..add(Rank.serializer)
       ..add(Unit.serializer)
+      ..add(Unit.serializer)
       ..add(UnitType.serializer)
       ..add(Upgrade.serializer)
       ..add(UpgradeSlot.serializer)
@@ -48,6 +49,17 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltSet, const [const FullType(Unit)]),
           () => new SetBuilder<Unit>())
+      ..addBuilderFactory(
+          const FullType(BuiltMap,
+              const [const FullType(UpgradeSlot), const FullType(int)]),
+          () => new MapBuilder<UpgradeSlot, int>())
+      ..addBuilderFactory(
+          const FullType(BuiltSet, const [const FullType(Weapon)]),
+          () => new SetBuilder<Weapon>())
+      ..addBuilderFactory(
+          const FullType(BuiltMap,
+              const [const FullType(Keyword), const FullType(String)]),
+          () => new MapBuilder<Keyword, String>())
       ..addBuilderFactory(
           const FullType(BuiltMap,
               const [const FullType(UpgradeSlot), const FullType(int)]),

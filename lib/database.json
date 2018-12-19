@@ -1,0 +1,4041 @@
+{
+  "units": [
+    {
+      "id": "1_4_FD_LASER_CANNON_TEAM",
+      "name": "1.4 FD Laser Cannon Team",
+      "is_unique": false,
+      "faction": "LIGHT_SIDE",
+      "type": "EMPLACEMENT_TROOPER",
+      "points": 70,
+      "rank": "SUPPORT",
+      "miniatures": 1,
+      "wounds": 6,
+      "defense": "WHITE",
+      "has_defense_surge": true,
+      "speed": 0,
+      "upgrades": {
+        "COMMS": 1,
+        "GENERATOR": 1
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "dice": {
+            "BLACK": 2
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {},
+          "max_range": 0
+        },
+        {
+          "name": "DH-17 Blaster Pistol",
+          "dice": {
+            "WHITE": 4
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {},
+          "max_range": 2
+        },
+        {
+          "name": "1.4 FD Laser Canon",
+          "dice": {
+            "BLACK": 5
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {
+            "FIXED": "Front",
+            "IMPACT": "2"
+          },
+          "max_range": 4
+        }
+      ],
+      "keywords": {
+        "FULL_PIVOT": "",
+        "SENTINEL": "",
+        "STATIONARY": ""
+      },
+      "courage": 2,
+      "attack_surge": "HIT"
+    },
+    {
+      "id": "74_Z_SPEEDER_BIKES",
+      "name": "74-Z Speeder Bikes",
+      "is_unique": false,
+      "faction": "DARK_SIDE",
+      "type": "GROUND_VEHICLE",
+      "points": 90,
+      "rank": "SUPPORT",
+      "miniatures": 2,
+      "wounds": 3,
+      "defense": "WHITE",
+      "has_defense_surge": true,
+      "speed": 3,
+      "upgrades": {
+        "COMMS": 1
+      },
+      "weapons": [
+        {
+          "name": "EC-17 Hold-Out Blaster",
+          "dice": {
+            "BLACK": 2
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {},
+          "max_range": 2
+        },
+        {
+          "name": "AX-20 Blaster Cannon",
+          "dice": {
+            "WHITE": 1,
+            "BLACK": 1,
+            "RED": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {
+            "FIXED": "Front",
+            "IMPACT": "1"
+          },
+          "max_range": 3
+        }
+      ],
+      "keywords": {
+        "COVER": "1",
+        "SPEEDER": "1"
+      },
+      "attack_surge": "HIT"
+    },
+    {
+      "id": "AT_RT",
+      "name": "AT-RT",
+      "is_unique": false,
+      "faction": "LIGHT_SIDE",
+      "type": "GROUND_VEHICLE",
+      "points": 55,
+      "rank": "SUPPORT",
+      "miniatures": 1,
+      "wounds": 6,
+      "defense": "WHITE",
+      "has_defense_surge": false,
+      "speed": 2,
+      "upgrades": {
+        "COMMS": 1,
+        "HARD_POINT": 1
+      },
+      "weapons": [
+        {
+          "name": "Grapping Claws",
+          "dice": {
+            "RED": 3
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {
+            "IMPACT": "1"
+          },
+          "max_range": 0
+        },
+        {
+          "name": "A-300 Blaster Rifle",
+          "dice": {
+            "WHITE": 2
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {},
+          "max_range": 3
+        }
+      ],
+      "keywords": {
+        "COVER": "1",
+        "SPEEDER": "1"
+      },
+      "resilience": 4,
+      "attack_surge": "CRIT"
+    },
+    {
+      "id": "AT_ST",
+      "name": "AT-ST",
+      "is_unique": false,
+      "faction": "DARK_SIDE",
+      "type": "GROUND_VEHICLE",
+      "points": 195,
+      "rank": "HEAVY",
+      "miniatures": 1,
+      "wounds": 11,
+      "defense": "WHITE",
+      "has_defense_surge": true,
+      "speed": 2,
+      "upgrades": {
+        "COMMS": 1,
+        "HARD_POINT": 3,
+        "PILOT": 1
+      },
+      "weapons": [
+        {
+          "name": "Fence-Cutting Blades",
+          "dice": {
+            "RED": 4
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {},
+          "max_range": 0
+        },
+        {
+          "name": "MS-4 Twin Blaster Cannon",
+          "dice": {
+            "RED": 2,
+            "BLACK": 2,
+            "WHITE": 2
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {
+            "FIXED": "Front",
+            "IMPACT": "3"
+          },
+          "max_range": 4
+        }
+      ],
+      "keywords": {
+        "ARMOR": "",
+        "ARSENAL": "2",
+        "WEAK_POINT": "1, Rear"
+      },
+      "resilience": 8
+    },
+    {
+      "id": "BOBA_FETT",
+      "name": "Boba Fett",
+      "is_unique": false,
+      "faction": "DARK_SIDE",
+      "type": "TROOPER",
+      "points": 140,
+      "rank": "OPERATIVE",
+      "miniatures": 1,
+      "wounds": 5,
+      "defense": "RED",
+      "has_defense_surge": true,
+      "speed": 3,
+      "upgrades": {
+        "ELITE": 2,
+        "GEAR": 2
+      },
+      "weapons": [
+        {
+          "name": "Boot Spikes",
+          "dice": {
+            "RED": 2
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {},
+          "max_range": 0
+        },
+        {
+          "name": "Fett's EE-3 Carbine",
+          "dice": {
+            "BLACK": 2
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {
+            "PIERCE": "1"
+          },
+          "max_range": 3
+        },
+        {
+          "name": "Wrist Rocket",
+          "dice": {
+            "BLACK": 2
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {
+            "IMPACT": "1"
+          },
+          "max_range": 2
+        }
+      ],
+      "keywords": {
+        "JUMP": "2",
+        "ARSENAL": "2",
+        "BOUNTY": "",
+        "IMPERVIOUS": "",
+        "SHARPSHOOTER": "2"
+      },
+      "sub_title": "Infamous Bounty Hunter",
+      "courage": 3,
+      "attack_surge": "CRIT"
+    },
+    {
+      "id": "DARTH_VADER",
+      "name": "Darth Vader",
+      "is_unique": false,
+      "faction": "DARK_SIDE",
+      "type": "TROOPER",
+      "points": 200,
+      "rank": "COMMANDER",
+      "miniatures": 1,
+      "wounds": 8,
+      "defense": "RED",
+      "has_defense_surge": false,
+      "speed": 1,
+      "upgrades": {
+        "FORCE": 3
+      },
+      "weapons": [
+        {
+          "name": "Vader's Lightsaber",
+          "dice": {
+            "RED": 6
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {
+            "IMPACT": "3",
+            "PIERCE": "3"
+          },
+          "max_range": 0
+        }
+      ],
+      "keywords": {
+        "DEFLECT": "",
+        "IMMUNE": "Pierce",
+        "MASTER_OF_THE_FORCE": "1",
+        "RELENTLESS": ""
+      },
+      "sub_title": "Dark Lord of the Sith"
+    },
+    {
+      "id": "E_WEB_HEAVY_BLASTER_TEAM",
+      "name": "E-Web Heavy Blaster Team",
+      "is_unique": false,
+      "faction": "DARK_SIDE",
+      "type": "EMPLACEMENT_TROOPER",
+      "points": 55,
+      "rank": "SUPPORT",
+      "miniatures": 1,
+      "wounds": 4,
+      "defense": "RED",
+      "has_defense_surge": false,
+      "speed": 1,
+      "upgrades": {
+        "COMMS": 1,
+        "GENERATOR": 1
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "dice": {
+            "BLACK": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {},
+          "max_range": 0
+        },
+        {
+          "name": "E-11 Blaster Rifle",
+          "dice": {
+            "WHITE": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {},
+          "max_range": 3
+        },
+        {
+          "name": "E-Web Heavy Blaster",
+          "dice": {
+            "RED": 1,
+            "BLACK": 2,
+            "WHITE": 2
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {
+            "CUMBERSOME": "",
+            "FIXED": "Front"
+          },
+          "max_range": 3
+        }
+      ],
+      "keywords": {
+        "FULL_PIVOT": "",
+        "PLODDING": "",
+        "REPOSITION": "",
+        "SENTINEL": ""
+      },
+      "courage": 2,
+      "attack_surge": "CRIT"
+    },
+    {
+      "id": "EMPEROR_PALPATINE",
+      "name": "Emperor Palpatine",
+      "is_unique": false,
+      "faction": "DARK_SIDE",
+      "type": "TROOPER",
+      "points": 210,
+      "rank": "COMMANDER",
+      "miniatures": 1,
+      "wounds": 5,
+      "defense": "RED",
+      "has_defense_surge": true,
+      "speed": 1,
+      "upgrades": {
+        "FORCE": 3,
+        "COMMAND": 1
+      },
+      "weapons": [
+        {
+          "name": "Force Lightning",
+          "dice": {
+            "RED": 2,
+            "BLACK": 2,
+            "WHITE": 2
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {
+            "PIERCE": "2",
+            "SUPPRESSIVE": ""
+          },
+          "max_range": 2
+        }
+      ],
+      "keywords": {
+        "PULLING_THE_STRINGS": "",
+        "ENTOURAGE": "Imperial Royal Guards",
+        "IMMUNE": "Pierce",
+        "MASTER_OF_THE_FORCE": "2"
+      },
+      "sub_title": "Ruler of the Galactic Empire",
+      "courage": 4,
+      "attack_surge": "CRIT"
+    },
+    {
+      "id": "FLEET_TROOPERS",
+      "name": "Fleet Troopers",
+      "is_unique": false,
+      "faction": "LIGHT_SIDE",
+      "type": "TROOPER",
+      "points": 44,
+      "rank": "CORPS",
+      "miniatures": 4,
+      "wounds": 1,
+      "defense": "WHITE",
+      "has_defense_surge": true,
+      "speed": 2,
+      "upgrades": {
+        "PERSONNEL": 1,
+        "HEAVY_WEAPON": 1,
+        "GEAR": 1,
+        "GRENADES": 1
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "dice": {
+            "BLACK": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {},
+          "max_range": 0
+        },
+        {
+          "name": "DH-17 Blaster Pistol",
+          "dice": {
+            "WHITE": 2
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {},
+          "max_range": 2
+        }
+      ],
+      "keywords": {
+        "READY": "1"
+      },
+      "courage": 1,
+      "attack_surge": "HIT"
+    },
+    {
+      "id": "GENERAL_VEERS",
+      "name": "General Veers",
+      "is_unique": false,
+      "faction": "DARK_SIDE",
+      "type": "TROOPER",
+      "points": 80,
+      "rank": "COMMANDER",
+      "miniatures": 1,
+      "wounds": 5,
+      "defense": "RED",
+      "has_defense_surge": false,
+      "speed": 2,
+      "upgrades": {
+        "COMMAND": 2,
+        "GEAR": 1
+      },
+      "weapons": [
+        {
+          "name": "Combat Expertise",
+          "dice": {
+            "BLACK": 2
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {},
+          "max_range": 0
+        },
+        {
+          "name": "Veers' E-11 Blaster Rifle",
+          "dice": {
+            "WHITE": 3
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {
+            "PIERCE": "1"
+          },
+          "max_range": 3
+        }
+      ],
+      "keywords": {
+        "SPOTTER": "2",
+        "INSPIRE": "1",
+        "PRECISE": "1",
+        "SHARPSHOOTER": "1"
+      },
+      "sub_title": "Master Tactician",
+      "courage": 2,
+      "attack_surge": "CRIT"
+    },
+    {
+      "id": "HAN_SOLO",
+      "name": "Han Solo",
+      "is_unique": false,
+      "faction": "LIGHT_SIDE",
+      "type": "TROOPER",
+      "points": 120,
+      "rank": "COMMANDER",
+      "miniatures": 1,
+      "wounds": 6,
+      "defense": "WHITE",
+      "has_defense_surge": true,
+      "speed": 2,
+      "upgrades": {
+        "COMMAND": 1,
+        "ELITE": 1,
+        "GEAR": 1
+      },
+      "weapons": [
+        {
+          "name": "Brawl",
+          "dice": {
+            "WHITE": 3
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {},
+          "max_range": 0
+        },
+        {
+          "name": "Han's DL-44 Blaster Pistol",
+          "dice": {
+            "RED": 2
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {},
+          "max_range": 2
+        }
+      ],
+      "keywords": {
+        "TAKE_COVER": "2",
+        "INSPIRE": "2",
+        "NIMBLE": "",
+        "SHARPSHOOTER": "2"
+      },
+      "sub_title": "Unorthodox General",
+      "courage": 2,
+      "attack_surge": "CRIT"
+    },
+    {
+      "id": "IMPERIAL_ROYAL_GUARDS",
+      "name": "Imperial Royal Guards",
+      "is_unique": false,
+      "faction": "DARK_SIDE",
+      "type": "TROOPER",
+      "points": 75,
+      "rank": "SPECIAL_FORCES",
+      "miniatures": 3,
+      "wounds": 2,
+      "defense": "RED",
+      "has_defense_surge": false,
+      "speed": 2,
+      "upgrades": {
+        "ELITE": 2,
+        "GEAR": 1,
+        "GRENADES": 1,
+        "HEAVY_WEAPON": 1
+      },
+      "weapons": [
+        {
+          "name": "Force Pike",
+          "dice": {
+            "RED": 1,
+            "BLACK": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {},
+          "max_range": 0
+        },
+        {
+          "name": "EC-17 Hold-Out Blaster",
+          "dice": {
+            "BLACK": 2
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {},
+          "max_range": 2
+        }
+      ],
+      "keywords": {
+        "CHARGE": "",
+        "DISCIPLINED": "2",
+        "GUARDIAN": "2"
+      },
+      "courage": 2
+    },
+    {
+      "id": "LEIA_ORGANA",
+      "name": "Leia Organa",
+      "is_unique": false,
+      "faction": "LIGHT_SIDE",
+      "type": "TROOPER",
+      "points": 90,
+      "rank": "COMMANDER",
+      "miniatures": 1,
+      "wounds": 6,
+      "defense": "WHITE",
+      "has_defense_surge": true,
+      "speed": 2,
+      "upgrades": {
+        "COMMAND": 2,
+        "GEAR": 1
+      },
+      "weapons": [
+        {
+          "name": "Martial Arts",
+          "dice": {
+            "BLACK": 3
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {},
+          "max_range": 0
+        },
+        {
+          "name": "Leia's Defender Sporting Blaster",
+          "dice": {
+            "BLACK": 3
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {
+            "PIERCE": "1"
+          },
+          "max_range": 2
+        }
+      ],
+      "keywords": {
+        "TAKE_COVER": "2",
+        "INSPIRE": "2",
+        "NIMBLE": "",
+        "SHARPSHOOTER": "2"
+      },
+      "sub_title": "Fearless and Inventive",
+      "courage": 2,
+      "attack_surge": "CRIT"
+    },
+    {
+      "id": "LUKE_SKYWALKER",
+      "name": "Luke Skywalker",
+      "is_unique": false,
+      "faction": "LIGHT_SIDE",
+      "type": "TROOPER",
+      "points": 160,
+      "rank": "COMMANDER",
+      "miniatures": 1,
+      "wounds": 6,
+      "defense": "RED",
+      "has_defense_surge": false,
+      "speed": 2,
+      "upgrades": {
+        "FORCE": 2,
+        "GEAR": 1
+      },
+      "weapons": [
+        {
+          "name": "Anakin's Lightsaber",
+          "dice": {
+            "BLACK": 6
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {
+            "IMPACT": "2",
+            "PIERCE": "2"
+          },
+          "max_range": 0
+        }
+      ],
+      "keywords": {
+        "JUMP": "1",
+        "CHARGE": "",
+        "DEFLECT": "",
+        "IMMUNE": "Pierce"
+      },
+      "sub_title": "Hero of the Rebellion",
+      "courage": 3,
+      "attack_surge": "CRIT"
+    },
+    {
+      "id": "REBEL_COMMANDOS",
+      "name": "Rebel Commandos",
+      "is_unique": false,
+      "faction": "LIGHT_SIDE",
+      "type": "TROOPER",
+      "points": 60,
+      "rank": "SPECIAL_FORCES",
+      "miniatures": 4,
+      "wounds": 1,
+      "defense": "WHITE",
+      "has_defense_surge": true,
+      "speed": 2,
+      "upgrades": {
+        "COMMS": 1,
+        "ELITE": 1,
+        "GEAR": 1,
+        "GRENADES": 1,
+        "HEAVY_WEAPON": 1
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "dice": {
+            "BLACK": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {},
+          "max_range": 0
+        },
+        {
+          "name": "A-280 Blaster Rifle",
+          "dice": {
+            "BLACK": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {},
+          "max_range": 3
+        }
+      ],
+      "keywords": {
+        "LOW_PROFILE": "",
+        "SCOUT": "2",
+        "SHARPSHOOTER": "1"
+      },
+      "courage": 2,
+      "attack_surge": "HIT"
+    },
+    {
+      "id": "REBEL_COMMANDOS_STRIKE_TEAM",
+      "name": "Rebel Commandos",
+      "is_unique": false,
+      "faction": "LIGHT_SIDE",
+      "type": "TROOPER",
+      "points": 16,
+      "rank": "SPECIAL_FORCES",
+      "miniatures": 1,
+      "wounds": 1,
+      "defense": "WHITE",
+      "has_defense_surge": true,
+      "speed": 2,
+      "upgrades": {
+        "COMMS": 1,
+        "ELITE": 1,
+        "GEAR": 1,
+        "GRENADES": 1,
+        "HEAVY_WEAPON": 1
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "dice": {
+            "BLACK": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {},
+          "max_range": 0
+        },
+        {
+          "name": "A-280 Blaster Rifle",
+          "dice": {
+            "BLACK": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {},
+          "max_range": 3
+        }
+      ],
+      "keywords": {
+        "HEAVY_WEAPON_TEAM": "",
+        "LOW_PROFILE": "",
+        "SCOUT": "2",
+        "SHARPSHOOTER": "1"
+      },
+      "sub_title": "Strike Team",
+      "courage": 2,
+      "attack_surge": "HIT"
+    },
+    {
+      "id": "REBEL_TROOPERS",
+      "name": "Rebel Troopers",
+      "is_unique": false,
+      "faction": "LIGHT_SIDE",
+      "type": "TROOPER",
+      "points": 40,
+      "rank": "CORPS",
+      "miniatures": 4,
+      "wounds": 1,
+      "defense": "WHITE",
+      "has_defense_surge": true,
+      "speed": 2,
+      "upgrades": {
+        "PERSONNEL": 1,
+        "HEAVY_WEAPON": 1,
+        "GEAR": 1,
+        "GRENADES": 1
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "dice": {
+            "BLACK": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {},
+          "max_range": 0
+        },
+        {
+          "name": "A-280 Blaster Rifle",
+          "dice": {
+            "BLACK": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {},
+          "max_range": 3
+        }
+      ],
+      "keywords": {
+        "NIMBLE": ""
+      },
+      "courage": 1
+    },
+    {
+      "id": "SCOUT_TROOPERS",
+      "name": "Scout Troopers",
+      "is_unique": false,
+      "faction": "DARK_SIDE",
+      "type": "TROOPER",
+      "points": 60,
+      "rank": "SPECIAL_FORCES",
+      "miniatures": 4,
+      "wounds": 1,
+      "defense": "WHITE",
+      "has_defense_surge": true,
+      "speed": 2,
+      "upgrades": {
+        "COMMS": 1,
+        "ELITE": 1,
+        "GEAR": 1,
+        "GRENADES": 1,
+        "HEAVY_WEAPON": 1
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "dice": {
+            "BLACK": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {},
+          "max_range": 0
+        },
+        {
+          "name": "EC-17 Hold-Out Blaster",
+          "dice": {
+            "BLACK": 2
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {},
+          "max_range": 2
+        }
+      ],
+      "keywords": {
+        "LOW_PROFILE": "",
+        "SCOUT": "1",
+        "SHARPSHOOTER": "1"
+      },
+      "courage": 2
+    },
+    {
+      "id": "SCOUT_TROOPERS_STRIKE_TEAM",
+      "name": "Scout Troopers",
+      "is_unique": false,
+      "faction": "DARK_SIDE",
+      "type": "TROOPER",
+      "points": 16,
+      "rank": "SPECIAL_FORCES",
+      "miniatures": 1,
+      "wounds": 1,
+      "defense": "WHITE",
+      "has_defense_surge": true,
+      "speed": 2,
+      "upgrades": {
+        "COMMS": 1,
+        "ELITE": 1,
+        "GEAR": 1,
+        "GRENADES": 1,
+        "HEAVY_WEAPON": 1
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "dice": {
+            "BLACK": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {},
+          "max_range": 0
+        },
+        {
+          "name": "EC-17 Hold-Out Blaster",
+          "dice": {
+            "BLACK": 2
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {},
+          "max_range": 2
+        }
+      ],
+      "keywords": {
+        "HEAVY_WEAPON_TEAM": "",
+        "LOW_PROFILE": "",
+        "SCOUT": "1",
+        "SHARPSHOOTER": "1"
+      },
+      "sub_title": "Strike Team",
+      "courage": 2
+    },
+    {
+      "id": "SNOWTROOPERS",
+      "name": "Snowtroopers",
+      "is_unique": false,
+      "faction": "DARK_SIDE",
+      "type": "TROOPER",
+      "points": 48,
+      "rank": "CORPS",
+      "miniatures": 4,
+      "wounds": 1,
+      "defense": "RED",
+      "has_defense_surge": false,
+      "speed": 1,
+      "upgrades": {
+        "PERSONNEL": 1,
+        "HEAVY_WEAPON": 1,
+        "GEAR": 1,
+        "GRENADES": 1
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "dice": {
+            "BLACK": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {},
+          "max_range": 0
+        },
+        {
+          "name": "E-11 Blaster Rifle",
+          "dice": {
+            "WHITE": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {},
+          "max_range": 3
+        }
+      ],
+      "keywords": {
+        "STEADY": ""
+      },
+      "courage": 1,
+      "attack_surge": "HIT"
+    },
+    {
+      "id": "STORMTROOPERS",
+      "name": "Stormtroopers",
+      "is_unique": false,
+      "faction": "DARK_SIDE",
+      "type": "TROOPER",
+      "points": 44,
+      "rank": "CORPS",
+      "miniatures": 4,
+      "wounds": 1,
+      "defense": "RED",
+      "has_defense_surge": false,
+      "speed": 2,
+      "upgrades": {
+        "PERSONNEL": 1,
+        "HEAVY_WEAPON": 1,
+        "GEAR": 1,
+        "GRENADES": 1
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "dice": {
+            "BLACK": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {},
+          "max_range": 0
+        },
+        {
+          "name": "E-11 Blaster Rifle",
+          "dice": {
+            "WHITE": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {},
+          "max_range": 3
+        }
+      ],
+      "keywords": {
+        "PRECISE": "1"
+      },
+      "courage": 1,
+      "attack_surge": "HIT"
+    },
+    {
+      "id": "T_47_AIRSPEEDER",
+      "name": "T-47 Airspeeder",
+      "is_unique": false,
+      "faction": "LIGHT_SIDE",
+      "type": "REPULSOR_VEHICLE",
+      "points": 175,
+      "rank": "HEAVY",
+      "miniatures": 1,
+      "wounds": 7,
+      "defense": "WHITE",
+      "has_defense_surge": true,
+      "speed": 3,
+      "upgrades": {
+        "COMMS": 1,
+        "HARD_POINT": 1,
+        "PILOT": 1
+      },
+      "weapons": [
+        {
+          "name": "AP/11 Double Laster Cannon",
+          "dice": {
+            "RED": 3,
+            "BLACK": 3
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {
+            "FIXED": "Front",
+            "IMPACT": "3"
+          },
+          "max_range": 3
+        }
+      ],
+      "keywords": {
+        "ARMOR": "",
+        "ARSENAL": "2",
+        "COVER": "1",
+        "IMMUNE": "Blast, Melee",
+        "SPEEDER": "2"
+      },
+      "resilience": 5
+    }
+  ],
+  "upgrades": [
+    {
+      "adds_miniature": false,
+      "is_exhaustible": false,
+      "points": 10,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "COMMANDING_PRESENCE",
+      "name": "Commanding Presence",
+      "text": "    When issuing orders, you can issue orders at range 4.\n  ",
+      "type": "COMMAND"
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": false,
+      "points": 10,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "ESTEEMED_LEADER",
+      "name": "Esteemed Leader",
+      "text": "    While you are defending, each friendly corps trooper unit at range 1 gains Guardian 1.\n  ",
+      "type": "COMMAND"
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": true,
+      "points": 10,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "IMPROVISED_ORDERS",
+      "name": "Improvised Orders",
+      "text": "    After an order token is drawn from a friendly order pool, draw a second order token from that pool. Choose 1 to use and shuffle the other back into the order pool. If you do, during the End Phase, ready this card.\n  ",
+      "type": "COMMAND"
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": false,
+      "points": 15,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "COMMS_JAMMER",
+      "name": "Comms Jammer",
+      "text": "    Enemy units at range 1 cannot be issued orders, unless they are issuing an order to themselves.\n  ",
+      "type": "COMMS"
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": true,
+      "points": 10,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "HQ_UPLINK",
+      "name": "HQ Uplink",
+      "text": "    During the Issue Orders step of the Command Phase, issue an order to yourself.\n  ",
+      "type": "COMMS"
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": false,
+      "points": 10,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "LONG_RANGE_COMLINK",
+      "name": "Long-Range Comlink",
+      "text": "    During the command phase, you may be issued orders as though you are in range of the nominated commander.\n  ",
+      "type": "COMMS"
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": false,
+      "points": 8,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "DUCK_AND_COVER",
+      "name": "Duck and Cover",
+      "text": "    When defending from a Ranged Attack, during the Apply Cover and Dodge tokens step, you may assign yourself 1 Suppression token.\n  ",
+      "type": "ELITE"
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": false,
+      "points": 6,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "HUNTER",
+      "name": "Hunter",
+      "text": "    While attacking a wounded trooper unit, during the Roll Attack Dice step, you may gain 1 aim token.\n  ",
+      "type": "ELITE"
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": false,
+      "points": 4,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "TENACITY",
+      "name": "Tenacity",
+      "text": "    While performing a melee attack, if you are wounded or if one or more of your minis have been defeated, add 1 red attack die to your attack pool.\n  ",
+      "type": "ELITE"
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": false,
+      "points": 5,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "ANGER",
+      "name": "Anger",
+      "text": "    After you suffer 1 or more wounds, gain 1 aim token.\n  ",
+      "type": "FORCE",
+      "restricted_to_faction": "DARK_SIDE"
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": false,
+      "points": 10,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "BATTLE_MEDITATION",
+      "name": "Battle Meditation",
+      "text": "    When you issue orders, one of those orders can be issued to any friendly unit on the battlefield.\n  ",
+      "type": "FORCE"
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": true,
+      "points": 5,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "FORCE_CHOKE",
+      "name": "Force Choke",
+      "text": "    Choose an enemy trooper mini at range 1 that is not a commander. It suffers 1 wound.\n  ",
+      "type": "FORCE",
+      "restricted_to_faction": "DARK_SIDE"
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": true,
+      "points": 10,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "FORCE_PUSH",
+      "name": "Force Push",
+      "text": "    Action: Choose an enemy trooper unit at range 1. Perform a speed-1 move with that unit, even if it is engaged.\n  ",
+      "type": "FORCE"
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": true,
+      "points": 15,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "FORCE_REFLEXES",
+      "name": "Saber Throw",
+      "text": "    Action: Gain 1 dodge token.\n  ",
+      "type": "FORCE"
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": true,
+      "points": 5,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "JEDI_MIND_TRICK",
+      "name": "Jedi Mind Trick",
+      "text": "    Action: Choose an enemy trooper at range 1-2. It gains 2 suppression tokens.\n  ",
+      "type": "FORCE",
+      "restricted_to_faction": "LIGHT_SIDE"
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": true,
+      "points": 10,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "SABER_THROW",
+      "name": "Saber Throw",
+      "text": "    Action: Choose 1 of your melee weapons. Perform a ranged attack with that weapon against an enemy at range 1-2, using half of that weapon's dice, rounded up. This is treated as an attack action.\n  ",
+      "type": "FORCE"
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": false,
+      "points": 3,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "ENVIRONMENTAL_GEAR",
+      "name": "Environmental Gear",
+      "text": "    You gain Unhindered.\n  ",
+      "type": "GEAR"
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": false,
+      "points": 3,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "GRAPPLING_HOOKS",
+      "name": "Grappling Hooks",
+      "text": "    You gain Expert Climber.\n  ",
+      "type": "GEAR"
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": false,
+      "points": 2,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "RECON_INTEL",
+      "name": "Recon Intel",
+      "text": "    You gain Scout 1.\n  ",
+      "type": "GEAR"
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": false,
+      "points": 6,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "TARGETING_SCOPES",
+      "name": "Targeting Scopes",
+      "text": "    You gain Precise 1.\n  ",
+      "type": "GEAR"
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": true,
+      "points": 10,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "BARRAGE_GENERATOR",
+      "name": "Barrage Generator",
+      "text": "    While performing a ranged attack with a weapon that has FIXED, add 2 white attack dice and apply SUPPRESSIVE to your attack pool.\n  ",
+      "type": "GENERATOR"
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": true,
+      "points": 10,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "OVERCHARGED_GENERATOR",
+      "name": "Overcharged Generator",
+      "text": "    While performing a ranged attack with a weapon that has FIXED, add 1 black attack dice and apply IMPACT 1 to your attack pool.\n  ",
+      "type": "GENERATOR"
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": false,
+      "points": 5,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "CONCUSSION_GRENADES",
+      "name": "Concussion Grenades",
+      "text": "",
+      "type": "GRENADES",
+      "weapon": {
+        "name": "Concussion Grenades",
+        "dice": {
+          "BLACK": 1
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {
+          "BLAST": ""
+        },
+        "max_range": 1
+      }
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": false,
+      "points": 5,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "FRAGMENTATION_GRENADES",
+      "name": "Fragmentation Grenades",
+      "text": "",
+      "type": "GRENADES",
+      "weapon": {
+        "name": "Fragmentation Grenades",
+        "dice": {
+          "RED": 1
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {},
+        "max_range": 1
+      }
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": false,
+      "points": 5,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "IMPACT_GRENADES",
+      "name": "Impact Grenades",
+      "text": "",
+      "type": "GRENADES",
+      "weapon": {
+        "name": "Impact Grenades",
+        "dice": {
+          "BLACK": 1
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {
+          "IMPACT": "1"
+        },
+        "max_range": 1
+      }
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": false,
+      "points": 20,
+      "keywords": {},
+      "restricted_to_unit": [
+        {
+          "id": "AT_ST",
+          "name": "AT-ST",
+          "is_unique": false,
+          "faction": "DARK_SIDE",
+          "type": "GROUND_VEHICLE",
+          "points": 195,
+          "rank": "HEAVY",
+          "miniatures": 1,
+          "wounds": 11,
+          "defense": "WHITE",
+          "has_defense_surge": true,
+          "speed": 2,
+          "upgrades": {
+            "COMMS": 1,
+            "HARD_POINT": 3,
+            "PILOT": 1
+          },
+          "weapons": [
+            {
+              "name": "Fence-Cutting Blades",
+              "dice": {
+                "RED": 4
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {},
+              "max_range": 0
+            },
+            {
+              "name": "MS-4 Twin Blaster Cannon",
+              "dice": {
+                "RED": 2,
+                "BLACK": 2,
+                "WHITE": 2
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {
+                "FIXED": "Front",
+                "IMPACT": "3"
+              },
+              "max_range": 4
+            }
+          ],
+          "keywords": {
+            "ARMOR": "",
+            "ARSENAL": "2",
+            "WEAK_POINT": "1, Rear"
+          },
+          "resilience": 8
+        }
+      ],
+      "id": "88_TWIN_LIGHT_BLASTER_CANNON",
+      "name": "88 Twin Light Blaster Cannon",
+      "text": "",
+      "type": "HARD_POINT",
+      "weapon": {
+        "name": "88 Twin Light Blaster Cannon",
+        "dice": {
+          "RED": 1,
+          "BLACK": 1,
+          "WHITE": 1
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {
+          "FIXED": "Front",
+          "IMPACT": "1"
+        },
+        "max_range": 3
+      }
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": false,
+      "points": 25,
+      "keywords": {},
+      "restricted_to_unit": [
+        {
+          "id": "AT_RT",
+          "name": "AT-RT",
+          "is_unique": false,
+          "faction": "LIGHT_SIDE",
+          "type": "GROUND_VEHICLE",
+          "points": 55,
+          "rank": "SUPPORT",
+          "miniatures": 1,
+          "wounds": 6,
+          "defense": "WHITE",
+          "has_defense_surge": false,
+          "speed": 2,
+          "upgrades": {
+            "COMMS": 1,
+            "HARD_POINT": 1
+          },
+          "weapons": [
+            {
+              "name": "Grapping Claws",
+              "dice": {
+                "RED": 3
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {
+                "IMPACT": "1"
+              },
+              "max_range": 0
+            },
+            {
+              "name": "A-300 Blaster Rifle",
+              "dice": {
+                "WHITE": 2
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {},
+              "max_range": 3
+            }
+          ],
+          "keywords": {
+            "COVER": "1",
+            "SPEEDER": "1"
+          },
+          "resilience": 4,
+          "attack_surge": "CRIT"
+        }
+      ],
+      "id": "AT_RT_FLAMETHROWER",
+      "name": "AT-RT Flamethrower",
+      "text": "",
+      "type": "HARD_POINT",
+      "weapon": {
+        "name": "AT-RT Flamethrower",
+        "dice": {
+          "BLACK": 2
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {
+          "BLAST": "",
+          "FIXED": "Front",
+          "SPRAY": ""
+        },
+        "max_range": 1
+      }
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": false,
+      "points": 35,
+      "keywords": {},
+      "restricted_to_unit": [
+        {
+          "id": "AT_RT",
+          "name": "AT-RT",
+          "is_unique": false,
+          "faction": "LIGHT_SIDE",
+          "type": "GROUND_VEHICLE",
+          "points": 55,
+          "rank": "SUPPORT",
+          "miniatures": 1,
+          "wounds": 6,
+          "defense": "WHITE",
+          "has_defense_surge": false,
+          "speed": 2,
+          "upgrades": {
+            "COMMS": 1,
+            "HARD_POINT": 1
+          },
+          "weapons": [
+            {
+              "name": "Grapping Claws",
+              "dice": {
+                "RED": 3
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {
+                "IMPACT": "1"
+              },
+              "max_range": 0
+            },
+            {
+              "name": "A-300 Blaster Rifle",
+              "dice": {
+                "WHITE": 2
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {},
+              "max_range": 3
+            }
+          ],
+          "keywords": {
+            "COVER": "1",
+            "SPEEDER": "1"
+          },
+          "resilience": 4,
+          "attack_surge": "CRIT"
+        }
+      ],
+      "id": "AT_RT_LASER_CANNON",
+      "name": "AT-RT Laser Cannon",
+      "text": "",
+      "type": "HARD_POINT",
+      "weapon": {
+        "name": "AT-RT Laser Cannon",
+        "dice": {
+          "RED": 1,
+          "BLACK": 2
+        },
+        "area_of_effect": 0,
+        "min_range": 2,
+        "keywords": {
+          "IMPACT": "3",
+          "FIXED": "Front"
+        },
+        "max_range": 4
+      }
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": false,
+      "points": 30,
+      "keywords": {},
+      "restricted_to_unit": [
+        {
+          "id": "AT_RT",
+          "name": "AT-RT",
+          "is_unique": false,
+          "faction": "LIGHT_SIDE",
+          "type": "GROUND_VEHICLE",
+          "points": 55,
+          "rank": "SUPPORT",
+          "miniatures": 1,
+          "wounds": 6,
+          "defense": "WHITE",
+          "has_defense_surge": false,
+          "speed": 2,
+          "upgrades": {
+            "COMMS": 1,
+            "HARD_POINT": 1
+          },
+          "weapons": [
+            {
+              "name": "Grapping Claws",
+              "dice": {
+                "RED": 3
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {
+                "IMPACT": "1"
+              },
+              "max_range": 0
+            },
+            {
+              "name": "A-300 Blaster Rifle",
+              "dice": {
+                "WHITE": 2
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {},
+              "max_range": 3
+            }
+          ],
+          "keywords": {
+            "COVER": "1",
+            "SPEEDER": "1"
+          },
+          "resilience": 4,
+          "attack_surge": "CRIT"
+        }
+      ],
+      "id": "AT_RT_ROTARY_BLASTER",
+      "name": "AT-RT Rotary Blaster",
+      "text": "",
+      "type": "HARD_POINT",
+      "weapon": {
+        "name": "AT-RT Rotary Blaster",
+        "dice": {
+          "BLACK": 5
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {
+          "FIXED": "Front"
+        },
+        "max_range": 3
+      }
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": false,
+      "points": 10,
+      "keywords": {},
+      "restricted_to_unit": [
+        {
+          "id": "AT_ST",
+          "name": "AT-ST",
+          "is_unique": false,
+          "faction": "DARK_SIDE",
+          "type": "GROUND_VEHICLE",
+          "points": 195,
+          "rank": "HEAVY",
+          "miniatures": 1,
+          "wounds": 11,
+          "defense": "WHITE",
+          "has_defense_surge": true,
+          "speed": 2,
+          "upgrades": {
+            "COMMS": 1,
+            "HARD_POINT": 3,
+            "PILOT": 1
+          },
+          "weapons": [
+            {
+              "name": "Fence-Cutting Blades",
+              "dice": {
+                "RED": 4
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {},
+              "max_range": 0
+            },
+            {
+              "name": "MS-4 Twin Blaster Cannon",
+              "dice": {
+                "RED": 2,
+                "BLACK": 2,
+                "WHITE": 2
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {
+                "FIXED": "Front",
+                "IMPACT": "3"
+              },
+              "max_range": 4
+            }
+          ],
+          "keywords": {
+            "ARMOR": "",
+            "ARSENAL": "2",
+            "WEAK_POINT": "1, Rear"
+          },
+          "resilience": 8
+        }
+      ],
+      "id": "AT_ST_MORTAR_LAUNCHER",
+      "name": "AT-ST Mortar Launcher",
+      "text": "",
+      "type": "HARD_POINT",
+      "weapon": {
+        "name": "AT-ST Mortar Launcher",
+        "dice": {
+          "WHITE": 3
+        },
+        "area_of_effect": 0,
+        "min_range": 4,
+        "keywords": {
+          "FIXED": "Front",
+          "SUPPRESSIVE": ""
+        }
+      }
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": false,
+      "points": 20,
+      "keywords": {},
+      "restricted_to_unit": [
+        {
+          "id": "T_47_AIRSPEEDER",
+          "name": "T-47 Airspeeder",
+          "is_unique": false,
+          "faction": "LIGHT_SIDE",
+          "type": "REPULSOR_VEHICLE",
+          "points": 175,
+          "rank": "HEAVY",
+          "miniatures": 1,
+          "wounds": 7,
+          "defense": "WHITE",
+          "has_defense_surge": true,
+          "speed": 3,
+          "upgrades": {
+            "COMMS": 1,
+            "HARD_POINT": 1,
+            "PILOT": 1
+          },
+          "weapons": [
+            {
+              "name": "AP/11 Double Laster Cannon",
+              "dice": {
+                "RED": 3,
+                "BLACK": 3
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {
+                "FIXED": "Front",
+                "IMPACT": "3"
+              },
+              "max_range": 3
+            }
+          ],
+          "keywords": {
+            "ARMOR": "",
+            "ARSENAL": "2",
+            "COVER": "1",
+            "IMMUNE": "Blast, Melee",
+            "SPEEDER": "2"
+          },
+          "resilience": 5
+        }
+      ],
+      "id": "AX_108_GROUND_BUZZER",
+      "name": "AX108 Ground Buzzer",
+      "text": "",
+      "type": "HARD_POINT",
+      "weapon": {
+        "name": "AX-108 Ground Buzzer",
+        "dice": {
+          "BLACK": 4
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {
+          "FIXED": "Rear"
+        },
+        "max_range": 2
+      }
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": false,
+      "points": 15,
+      "keywords": {},
+      "restricted_to_unit": [
+        {
+          "id": "AT_ST",
+          "name": "AT-ST",
+          "is_unique": false,
+          "faction": "DARK_SIDE",
+          "type": "GROUND_VEHICLE",
+          "points": 195,
+          "rank": "HEAVY",
+          "miniatures": 1,
+          "wounds": 11,
+          "defense": "WHITE",
+          "has_defense_surge": true,
+          "speed": 2,
+          "upgrades": {
+            "COMMS": 1,
+            "HARD_POINT": 3,
+            "PILOT": 1
+          },
+          "weapons": [
+            {
+              "name": "Fence-Cutting Blades",
+              "dice": {
+                "RED": 4
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {},
+              "max_range": 0
+            },
+            {
+              "name": "MS-4 Twin Blaster Cannon",
+              "dice": {
+                "RED": 2,
+                "BLACK": 2,
+                "WHITE": 2
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {
+                "FIXED": "Front",
+                "IMPACT": "3"
+              },
+              "max_range": 4
+            }
+          ],
+          "keywords": {
+            "ARMOR": "",
+            "ARSENAL": "2",
+            "WEAK_POINT": "1, Rear"
+          },
+          "resilience": 8
+        }
+      ],
+      "id": "DW_3_CONCUSSION_GRENADE_LAUNCHER",
+      "name": "DW-3 Concussion Grenade Launcher",
+      "text": "",
+      "type": "HARD_POINT",
+      "weapon": {
+        "name": "DW3-Concussion Grenade Launcher",
+        "dice": {
+          "BLACK": 2
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {
+          "BLAST": "",
+          "FIXED": "Front"
+        },
+        "max_range": 2
+      }
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": false,
+      "points": 8,
+      "keywords": {},
+      "restricted_to_unit": [
+        {
+          "id": "T_47_AIRSPEEDER",
+          "name": "T-47 Airspeeder",
+          "is_unique": false,
+          "faction": "LIGHT_SIDE",
+          "type": "REPULSOR_VEHICLE",
+          "points": 175,
+          "rank": "HEAVY",
+          "miniatures": 1,
+          "wounds": 7,
+          "defense": "WHITE",
+          "has_defense_surge": true,
+          "speed": 3,
+          "upgrades": {
+            "COMMS": 1,
+            "HARD_POINT": 1,
+            "PILOT": 1
+          },
+          "weapons": [
+            {
+              "name": "AP/11 Double Laster Cannon",
+              "dice": {
+                "RED": 3,
+                "BLACK": 3
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {
+                "FIXED": "Front",
+                "IMPACT": "3"
+              },
+              "max_range": 3
+            }
+          ],
+          "keywords": {
+            "ARMOR": "",
+            "ARSENAL": "2",
+            "COVER": "1",
+            "IMMUNE": "Blast, Melee",
+            "SPEEDER": "2"
+          },
+          "resilience": 5
+        }
+      ],
+      "id": "MO_DK_POWER_HARPOON",
+      "name": "Mo/DK Power Harpoon",
+      "text": "",
+      "type": "HARD_POINT",
+      "weapon": {
+        "name": "Mo/Dk Power Harpoon",
+        "dice": {
+          "RED": 2
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {
+          "IMPACT": "1",
+          "FIXED": "Rear",
+          "TOW_CABLE": ""
+        },
+        "max_range": 2
+      }
+    },
+    {
+      "adds_miniature": true,
+      "is_exhaustible": false,
+      "points": 28,
+      "keywords": {},
+      "restricted_to_unit": [
+        {
+          "id": "REBEL_COMMANDOS",
+          "name": "Rebel Commandos",
+          "is_unique": false,
+          "faction": "LIGHT_SIDE",
+          "type": "TROOPER",
+          "points": 60,
+          "rank": "SPECIAL_FORCES",
+          "miniatures": 4,
+          "wounds": 1,
+          "defense": "WHITE",
+          "has_defense_surge": true,
+          "speed": 2,
+          "upgrades": {
+            "COMMS": 1,
+            "ELITE": 1,
+            "GEAR": 1,
+            "GRENADES": 1,
+            "HEAVY_WEAPON": 1
+          },
+          "weapons": [
+            {
+              "name": "Unarmed",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {},
+              "max_range": 0
+            },
+            {
+              "name": "A-280 Blaster Rifle",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {},
+              "max_range": 3
+            }
+          ],
+          "keywords": {
+            "LOW_PROFILE": "",
+            "SCOUT": "2",
+            "SHARPSHOOTER": "1"
+          },
+          "courage": 2,
+          "attack_surge": "HIT"
+        },
+        {
+          "id": "REBEL_COMMANDOS_STRIKE_TEAM",
+          "name": "Rebel Commandos",
+          "is_unique": false,
+          "faction": "LIGHT_SIDE",
+          "type": "TROOPER",
+          "points": 16,
+          "rank": "SPECIAL_FORCES",
+          "miniatures": 1,
+          "wounds": 1,
+          "defense": "WHITE",
+          "has_defense_surge": true,
+          "speed": 2,
+          "upgrades": {
+            "COMMS": 1,
+            "ELITE": 1,
+            "GEAR": 1,
+            "GRENADES": 1,
+            "HEAVY_WEAPON": 1
+          },
+          "weapons": [
+            {
+              "name": "Unarmed",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {},
+              "max_range": 0
+            },
+            {
+              "name": "A-280 Blaster Rifle",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {},
+              "max_range": 3
+            }
+          ],
+          "keywords": {
+            "HEAVY_WEAPON_TEAM": "",
+            "LOW_PROFILE": "",
+            "SCOUT": "2",
+            "SHARPSHOOTER": "1"
+          },
+          "sub_title": "Strike Team",
+          "courage": 2,
+          "attack_surge": "HIT"
+        }
+      ],
+      "id": "DH_447_SNIPER",
+      "name": "DH-447 Sniper",
+      "text": "",
+      "type": "HEAVY_WEAPON",
+      "weapon": {
+        "name": "DH-447 Sniper Rifle",
+        "dice": {
+          "BLACK": 1,
+          "WHITE": 1
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {
+          "HIGH_VELOCITY": "",
+          "PIERCE": "1"
+        }
+      }
+    },
+    {
+      "adds_miniature": true,
+      "is_exhaustible": false,
+      "points": 24,
+      "keywords": {},
+      "restricted_to_unit": [
+        {
+          "id": "STORMTROOPERS",
+          "name": "Stormtroopers",
+          "is_unique": false,
+          "faction": "DARK_SIDE",
+          "type": "TROOPER",
+          "points": 44,
+          "rank": "CORPS",
+          "miniatures": 4,
+          "wounds": 1,
+          "defense": "RED",
+          "has_defense_surge": false,
+          "speed": 2,
+          "upgrades": {
+            "PERSONNEL": 1,
+            "HEAVY_WEAPON": 1,
+            "GEAR": 1,
+            "GRENADES": 1
+          },
+          "weapons": [
+            {
+              "name": "Unarmed",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {},
+              "max_range": 0
+            },
+            {
+              "name": "E-11 Blaster Rifle",
+              "dice": {
+                "WHITE": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {},
+              "max_range": 3
+            }
+          ],
+          "keywords": {
+            "PRECISE": "1"
+          },
+          "courage": 1,
+          "attack_surge": "HIT"
+        }
+      ],
+      "id": "DLT_19_STORMTROOPER",
+      "name": "DLT-19 Stormtrooper",
+      "text": "",
+      "type": "HEAVY_WEAPON",
+      "weapon": {
+        "name": "DLT-19 Heavy Blaster Rifle",
+        "dice": {
+          "RED": 2
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {
+          "IMPACT": "1"
+        },
+        "max_range": 4
+      }
+    },
+    {
+      "adds_miniature": true,
+      "is_exhaustible": false,
+      "points": 28,
+      "keywords": {},
+      "restricted_to_unit": [
+        {
+          "id": "SCOUT_TROOPERS",
+          "name": "Scout Troopers",
+          "is_unique": false,
+          "faction": "DARK_SIDE",
+          "type": "TROOPER",
+          "points": 60,
+          "rank": "SPECIAL_FORCES",
+          "miniatures": 4,
+          "wounds": 1,
+          "defense": "WHITE",
+          "has_defense_surge": true,
+          "speed": 2,
+          "upgrades": {
+            "COMMS": 1,
+            "ELITE": 1,
+            "GEAR": 1,
+            "GRENADES": 1,
+            "HEAVY_WEAPON": 1
+          },
+          "weapons": [
+            {
+              "name": "Unarmed",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {},
+              "max_range": 0
+            },
+            {
+              "name": "EC-17 Hold-Out Blaster",
+              "dice": {
+                "BLACK": 2
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {},
+              "max_range": 2
+            }
+          ],
+          "keywords": {
+            "LOW_PROFILE": "",
+            "SCOUT": "1",
+            "SHARPSHOOTER": "1"
+          },
+          "courage": 2
+        },
+        {
+          "id": "SCOUT_TROOPERS_STRIKE_TEAM",
+          "name": "Scout Troopers",
+          "is_unique": false,
+          "faction": "DARK_SIDE",
+          "type": "TROOPER",
+          "points": 16,
+          "rank": "SPECIAL_FORCES",
+          "miniatures": 1,
+          "wounds": 1,
+          "defense": "WHITE",
+          "has_defense_surge": true,
+          "speed": 2,
+          "upgrades": {
+            "COMMS": 1,
+            "ELITE": 1,
+            "GEAR": 1,
+            "GRENADES": 1,
+            "HEAVY_WEAPON": 1
+          },
+          "weapons": [
+            {
+              "name": "Unarmed",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {},
+              "max_range": 0
+            },
+            {
+              "name": "EC-17 Hold-Out Blaster",
+              "dice": {
+                "BLACK": 2
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {},
+              "max_range": 2
+            }
+          ],
+          "keywords": {
+            "HEAVY_WEAPON_TEAM": "",
+            "LOW_PROFILE": "",
+            "SCOUT": "1",
+            "SHARPSHOOTER": "1"
+          },
+          "sub_title": "Strike Team",
+          "courage": 2
+        }
+      ],
+      "id": "DLT_19_X_SNIPER",
+      "name": "DLT-19x Sniper",
+      "text": "",
+      "type": "HEAVY_WEAPON",
+      "weapon": {
+        "name": "DLT-19x Sniper Rifle",
+        "dice": {
+          "BLACK": 2
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {
+          "HIGH_VELOCITY": "",
+          "PIERCE": "1"
+        }
+      }
+    },
+    {
+      "adds_miniature": true,
+      "is_exhaustible": false,
+      "points": 25,
+      "keywords": {
+        "SIDEARM": "Melee"
+      },
+      "restricted_to_unit": [
+        {
+          "id": "IMPERIAL_ROYAL_GUARDS",
+          "name": "Imperial Royal Guards",
+          "is_unique": false,
+          "faction": "DARK_SIDE",
+          "type": "TROOPER",
+          "points": 75,
+          "rank": "SPECIAL_FORCES",
+          "miniatures": 3,
+          "wounds": 2,
+          "defense": "RED",
+          "has_defense_surge": false,
+          "speed": 2,
+          "upgrades": {
+            "ELITE": 2,
+            "GEAR": 1,
+            "GRENADES": 1,
+            "HEAVY_WEAPON": 1
+          },
+          "weapons": [
+            {
+              "name": "Force Pike",
+              "dice": {
+                "RED": 1,
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {},
+              "max_range": 0
+            },
+            {
+              "name": "EC-17 Hold-Out Blaster",
+              "dice": {
+                "BLACK": 2
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {},
+              "max_range": 2
+            }
+          ],
+          "keywords": {
+            "CHARGE": "",
+            "DISCIPLINED": "2",
+            "GUARDIAN": "2"
+          },
+          "courage": 2
+        }
+      ],
+      "id": "ELECTROSTAFF_GUARD",
+      "name": "Electrostaff Guard",
+      "text": "",
+      "type": "HEAVY_WEAPON",
+      "weapon": {
+        "name": "Electrostaff",
+        "dice": {
+          "BLACK": 2
+        },
+        "area_of_effect": 0,
+        "min_range": 0,
+        "keywords": {},
+        "max_range": 0
+      }
+    },
+    {
+      "adds_miniature": true,
+      "is_exhaustible": false,
+      "points": 20,
+      "keywords": {},
+      "restricted_to_unit": [
+        {
+          "id": "SNOWTROOPERS",
+          "name": "Snowtroopers",
+          "is_unique": false,
+          "faction": "DARK_SIDE",
+          "type": "TROOPER",
+          "points": 48,
+          "rank": "CORPS",
+          "miniatures": 4,
+          "wounds": 1,
+          "defense": "RED",
+          "has_defense_surge": false,
+          "speed": 1,
+          "upgrades": {
+            "PERSONNEL": 1,
+            "HEAVY_WEAPON": 1,
+            "GEAR": 1,
+            "GRENADES": 1
+          },
+          "weapons": [
+            {
+              "name": "Unarmed",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {},
+              "max_range": 0
+            },
+            {
+              "name": "E-11 Blaster Rifle",
+              "dice": {
+                "WHITE": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {},
+              "max_range": 3
+            }
+          ],
+          "keywords": {
+            "STEADY": ""
+          },
+          "courage": 1,
+          "attack_surge": "HIT"
+        }
+      ],
+      "id": "FLAMETROOPER",
+      "name": "Flametrooper",
+      "text": "",
+      "type": "HEAVY_WEAPON",
+      "weapon": {
+        "name": "Flamethrower",
+        "dice": {
+          "BLACK": 1
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {
+          "BLAST": "",
+          "SPRAY": ""
+        },
+        "max_range": 1
+      }
+    },
+    {
+      "adds_miniature": true,
+      "is_exhaustible": true,
+      "points": 34,
+      "keywords": {},
+      "restricted_to_unit": [
+        {
+          "id": "STORMTROOPERS",
+          "name": "Stormtroopers",
+          "is_unique": false,
+          "faction": "DARK_SIDE",
+          "type": "TROOPER",
+          "points": 44,
+          "rank": "CORPS",
+          "miniatures": 4,
+          "wounds": 1,
+          "defense": "RED",
+          "has_defense_surge": false,
+          "speed": 2,
+          "upgrades": {
+            "PERSONNEL": 1,
+            "HEAVY_WEAPON": 1,
+            "GEAR": 1,
+            "GRENADES": 1
+          },
+          "weapons": [
+            {
+              "name": "Unarmed",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {},
+              "max_range": 0
+            },
+            {
+              "name": "E-11 Blaster Rifle",
+              "dice": {
+                "WHITE": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {},
+              "max_range": 3
+            }
+          ],
+          "keywords": {
+            "PRECISE": "1"
+          },
+          "courage": 1,
+          "attack_surge": "HIT"
+        }
+      ],
+      "id": "HH_12_STORMTROOPER",
+      "name": "HH-12 Stormtrooper",
+      "text": "",
+      "type": "HEAVY_WEAPON",
+      "weapon": {
+        "name": "HH-12 Rocket Launcher",
+        "dice": {
+          "BLACK": 3
+        },
+        "area_of_effect": 0,
+        "min_range": 2,
+        "keywords": {
+          "CUMBERSOME": "",
+          "IMPACT": "3"
+        },
+        "max_range": 4
+      }
+    },
+    {
+      "adds_miniature": true,
+      "is_exhaustible": true,
+      "points": 33,
+      "keywords": {},
+      "restricted_to_unit": [
+        {
+          "id": "FLEET_TROOPERS",
+          "name": "Fleet Troopers",
+          "is_unique": false,
+          "faction": "LIGHT_SIDE",
+          "type": "TROOPER",
+          "points": 44,
+          "rank": "CORPS",
+          "miniatures": 4,
+          "wounds": 1,
+          "defense": "WHITE",
+          "has_defense_surge": true,
+          "speed": 2,
+          "upgrades": {
+            "PERSONNEL": 1,
+            "HEAVY_WEAPON": 1,
+            "GEAR": 1,
+            "GRENADES": 1
+          },
+          "weapons": [
+            {
+              "name": "Unarmed",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {},
+              "max_range": 0
+            },
+            {
+              "name": "DH-17 Blaster Pistol",
+              "dice": {
+                "WHITE": 2
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {},
+              "max_range": 2
+            }
+          ],
+          "keywords": {
+            "READY": "1"
+          },
+          "courage": 1,
+          "attack_surge": "HIT"
+        }
+      ],
+      "id": "MPL_57_BARRAGE_TROOPER",
+      "name": "MPL-57 Barrage Trooper",
+      "text": "",
+      "type": "HEAVY_WEAPON",
+      "weapon": {
+        "name": "MPL-57 Barrage Launcher",
+        "dice": {
+          "BLACK": 1,
+          "WHITE": 2
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {
+          "BLAST": "",
+          "IMPACT": "2"
+        },
+        "max_range": 3
+      }
+    },
+    {
+      "adds_miniature": true,
+      "is_exhaustible": true,
+      "points": 32,
+      "keywords": {},
+      "restricted_to_unit": [
+        {
+          "id": "REBEL_TROOPERS",
+          "name": "Rebel Troopers",
+          "is_unique": false,
+          "faction": "LIGHT_SIDE",
+          "type": "TROOPER",
+          "points": 40,
+          "rank": "CORPS",
+          "miniatures": 4,
+          "wounds": 1,
+          "defense": "WHITE",
+          "has_defense_surge": true,
+          "speed": 2,
+          "upgrades": {
+            "PERSONNEL": 1,
+            "HEAVY_WEAPON": 1,
+            "GEAR": 1,
+            "GRENADES": 1
+          },
+          "weapons": [
+            {
+              "name": "Unarmed",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {},
+              "max_range": 0
+            },
+            {
+              "name": "A-280 Blaster Rifle",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {},
+              "max_range": 3
+            }
+          ],
+          "keywords": {
+            "NIMBLE": ""
+          },
+          "courage": 1
+        }
+      ],
+      "id": "MPL_57_ION_TROOPER",
+      "name": "MPL-57 Ion Trooper",
+      "text": "",
+      "type": "HEAVY_WEAPON",
+      "weapon": {
+        "name": "MPL-57 Icon Launcher",
+        "dice": {
+          "RED": 2
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {
+          "ION": "1",
+          "IMPACT": "1"
+        },
+        "max_range": 3
+      }
+    },
+    {
+      "adds_miniature": true,
+      "is_exhaustible": false,
+      "points": 26,
+      "keywords": {},
+      "restricted_to_unit": [
+        {
+          "id": "REBEL_COMMANDOS",
+          "name": "Rebel Commandos",
+          "is_unique": false,
+          "faction": "LIGHT_SIDE",
+          "type": "TROOPER",
+          "points": 60,
+          "rank": "SPECIAL_FORCES",
+          "miniatures": 4,
+          "wounds": 1,
+          "defense": "WHITE",
+          "has_defense_surge": true,
+          "speed": 2,
+          "upgrades": {
+            "COMMS": 1,
+            "ELITE": 1,
+            "GEAR": 1,
+            "GRENADES": 1,
+            "HEAVY_WEAPON": 1
+          },
+          "weapons": [
+            {
+              "name": "Unarmed",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {},
+              "max_range": 0
+            },
+            {
+              "name": "A-280 Blaster Rifle",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {},
+              "max_range": 3
+            }
+          ],
+          "keywords": {
+            "LOW_PROFILE": "",
+            "SCOUT": "2",
+            "SHARPSHOOTER": "1"
+          },
+          "courage": 2,
+          "attack_surge": "HIT"
+        },
+        {
+          "id": "REBEL_COMMANDOS_STRIKE_TEAM",
+          "name": "Rebel Commandos",
+          "is_unique": false,
+          "faction": "LIGHT_SIDE",
+          "type": "TROOPER",
+          "points": 16,
+          "rank": "SPECIAL_FORCES",
+          "miniatures": 1,
+          "wounds": 1,
+          "defense": "WHITE",
+          "has_defense_surge": true,
+          "speed": 2,
+          "upgrades": {
+            "COMMS": 1,
+            "ELITE": 1,
+            "GEAR": 1,
+            "GRENADES": 1,
+            "HEAVY_WEAPON": 1
+          },
+          "weapons": [
+            {
+              "name": "Unarmed",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {},
+              "max_range": 0
+            },
+            {
+              "name": "A-280 Blaster Rifle",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {},
+              "max_range": 3
+            }
+          ],
+          "keywords": {
+            "HEAVY_WEAPON_TEAM": "",
+            "LOW_PROFILE": "",
+            "SCOUT": "2",
+            "SHARPSHOOTER": "1"
+          },
+          "sub_title": "Strike Team",
+          "courage": 2,
+          "attack_surge": "HIT"
+        }
+      ],
+      "id": "PROTON_CHARGE_SABOTEUR",
+      "name": "Proton Charge Saboteur",
+      "text": "",
+      "type": "HEAVY_WEAPON",
+      "weapon": {
+        "name": "Sonic Charge",
+        "dice": {
+          "RED": 1,
+          "WHITE": 2
+        },
+        "area_of_effect": 1,
+        "min_range": 1,
+        "keywords": {
+          "ARM": "1, Proton Charge",
+          "DETONATE": "1, Proton Charge",
+          "BLAST": "",
+          "IMPACT": "1"
+        },
+        "max_range": 1
+      }
+    },
+    {
+      "adds_miniature": true,
+      "is_exhaustible": false,
+      "points": 23,
+      "keywords": {},
+      "restricted_to_unit": [
+        {
+          "id": "FLEET_TROOPERS",
+          "name": "Fleet Troopers",
+          "is_unique": false,
+          "faction": "LIGHT_SIDE",
+          "type": "TROOPER",
+          "points": 44,
+          "rank": "CORPS",
+          "miniatures": 4,
+          "wounds": 1,
+          "defense": "WHITE",
+          "has_defense_surge": true,
+          "speed": 2,
+          "upgrades": {
+            "PERSONNEL": 1,
+            "HEAVY_WEAPON": 1,
+            "GEAR": 1,
+            "GRENADES": 1
+          },
+          "weapons": [
+            {
+              "name": "Unarmed",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {},
+              "max_range": 0
+            },
+            {
+              "name": "DH-17 Blaster Pistol",
+              "dice": {
+                "WHITE": 2
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {},
+              "max_range": 2
+            }
+          ],
+          "keywords": {
+            "READY": "1"
+          },
+          "courage": 1,
+          "attack_surge": "HIT"
+        }
+      ],
+      "id": "SCATTER_GUN_TROOPER",
+      "name": "Scatter Gun Trooper",
+      "text": "",
+      "type": "HEAVY_WEAPON",
+      "weapon": {
+        "name": "Scatter Gun",
+        "dice": {
+          "RED": 2
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {
+          "PIERCE": "1"
+        },
+        "max_range": 2
+      }
+    },
+    {
+      "adds_miniature": true,
+      "is_exhaustible": false,
+      "points": 26,
+      "keywords": {},
+      "restricted_to_unit": [
+        {
+          "id": "SCOUT_TROOPERS",
+          "name": "Scout Troopers",
+          "is_unique": false,
+          "faction": "DARK_SIDE",
+          "type": "TROOPER",
+          "points": 60,
+          "rank": "SPECIAL_FORCES",
+          "miniatures": 4,
+          "wounds": 1,
+          "defense": "WHITE",
+          "has_defense_surge": true,
+          "speed": 2,
+          "upgrades": {
+            "COMMS": 1,
+            "ELITE": 1,
+            "GEAR": 1,
+            "GRENADES": 1,
+            "HEAVY_WEAPON": 1
+          },
+          "weapons": [
+            {
+              "name": "Unarmed",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {},
+              "max_range": 0
+            },
+            {
+              "name": "EC-17 Hold-Out Blaster",
+              "dice": {
+                "BLACK": 2
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {},
+              "max_range": 2
+            }
+          ],
+          "keywords": {
+            "LOW_PROFILE": "",
+            "SCOUT": "1",
+            "SHARPSHOOTER": "1"
+          },
+          "courage": 2
+        },
+        {
+          "id": "SCOUT_TROOPERS_STRIKE_TEAM",
+          "name": "Scout Troopers",
+          "is_unique": false,
+          "faction": "DARK_SIDE",
+          "type": "TROOPER",
+          "points": 16,
+          "rank": "SPECIAL_FORCES",
+          "miniatures": 1,
+          "wounds": 1,
+          "defense": "WHITE",
+          "has_defense_surge": true,
+          "speed": 2,
+          "upgrades": {
+            "COMMS": 1,
+            "ELITE": 1,
+            "GEAR": 1,
+            "GRENADES": 1,
+            "HEAVY_WEAPON": 1
+          },
+          "weapons": [
+            {
+              "name": "Unarmed",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {},
+              "max_range": 0
+            },
+            {
+              "name": "EC-17 Hold-Out Blaster",
+              "dice": {
+                "BLACK": 2
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {},
+              "max_range": 2
+            }
+          ],
+          "keywords": {
+            "HEAVY_WEAPON_TEAM": "",
+            "LOW_PROFILE": "",
+            "SCOUT": "1",
+            "SHARPSHOOTER": "1"
+          },
+          "sub_title": "Strike Team",
+          "courage": 2
+        }
+      ],
+      "id": "SONIC_CHARGE_SABOTEUR",
+      "name": "Sonic Charge Saboteur",
+      "text": "",
+      "type": "HEAVY_WEAPON",
+      "weapon": {
+        "name": "Sonic Charge",
+        "dice": {
+          "RED": 1,
+          "BLACK": 1
+        },
+        "area_of_effect": 1,
+        "min_range": 1,
+        "keywords": {
+          "ARM": "1, Sonic Charge",
+          "DETONATE": "1, Sonic Charge",
+          "BLAST": "",
+          "SUPPRESSIVE": ""
+        },
+        "max_range": 1
+      }
+    },
+    {
+      "adds_miniature": true,
+      "is_exhaustible": true,
+      "points": 34,
+      "keywords": {},
+      "restricted_to_unit": [
+        {
+          "id": "SNOWTROOPERS",
+          "name": "Snowtroopers",
+          "is_unique": false,
+          "faction": "DARK_SIDE",
+          "type": "TROOPER",
+          "points": 48,
+          "rank": "CORPS",
+          "miniatures": 4,
+          "wounds": 1,
+          "defense": "RED",
+          "has_defense_surge": false,
+          "speed": 1,
+          "upgrades": {
+            "PERSONNEL": 1,
+            "HEAVY_WEAPON": 1,
+            "GEAR": 1,
+            "GRENADES": 1
+          },
+          "weapons": [
+            {
+              "name": "Unarmed",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {},
+              "max_range": 0
+            },
+            {
+              "name": "E-11 Blaster Rifle",
+              "dice": {
+                "WHITE": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {},
+              "max_range": 3
+            }
+          ],
+          "keywords": {
+            "STEADY": ""
+          },
+          "courage": 1,
+          "attack_surge": "HIT"
+        }
+      ],
+      "id": "T_7_ION_SNOWTROOPER",
+      "name": "T-7 Ion Snowtrooper",
+      "text": "",
+      "type": "HEAVY_WEAPON",
+      "weapon": {
+        "name": "T-7 Ion Disrupter Rifle",
+        "dice": {
+          "BLACK": 1,
+          "WHITE": 2
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {
+          "ION": "1",
+          "IMPACT": "1"
+        },
+        "max_range": 2
+      }
+    },
+    {
+      "adds_miniature": true,
+      "is_exhaustible": false,
+      "points": 22,
+      "keywords": {},
+      "restricted_to_unit": [
+        {
+          "id": "REBEL_TROOPERS",
+          "name": "Rebel Troopers",
+          "is_unique": false,
+          "faction": "LIGHT_SIDE",
+          "type": "TROOPER",
+          "points": 40,
+          "rank": "CORPS",
+          "miniatures": 4,
+          "wounds": 1,
+          "defense": "WHITE",
+          "has_defense_surge": true,
+          "speed": 2,
+          "upgrades": {
+            "PERSONNEL": 1,
+            "HEAVY_WEAPON": 1,
+            "GEAR": 1,
+            "GRENADES": 1
+          },
+          "weapons": [
+            {
+              "name": "Unarmed",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {},
+              "max_range": 0
+            },
+            {
+              "name": "A-280 Blaster Rifle",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {},
+              "max_range": 3
+            }
+          ],
+          "keywords": {
+            "NIMBLE": ""
+          },
+          "courage": 1
+        }
+      ],
+      "id": "Z_6_TROOPER",
+      "name": "Z-6 Trooper",
+      "text": "",
+      "type": "HEAVY_WEAPON",
+      "weapon": {
+        "name": "Z-6 Rotary Blaster Cannon",
+        "dice": {
+          "WHITE": 6
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {},
+        "max_range": 3
+      }
+    },
+    {
+      "adds_miniature": true,
+      "is_exhaustible": false,
+      "points": 11,
+      "keywords": {},
+      "restricted_to_unit": [
+        {
+          "id": "FLEET_TROOPERS",
+          "name": "Fleet Troopers",
+          "is_unique": false,
+          "faction": "LIGHT_SIDE",
+          "type": "TROOPER",
+          "points": 44,
+          "rank": "CORPS",
+          "miniatures": 4,
+          "wounds": 1,
+          "defense": "WHITE",
+          "has_defense_surge": true,
+          "speed": 2,
+          "upgrades": {
+            "PERSONNEL": 1,
+            "HEAVY_WEAPON": 1,
+            "GEAR": 1,
+            "GRENADES": 1
+          },
+          "weapons": [
+            {
+              "name": "Unarmed",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {},
+              "max_range": 0
+            },
+            {
+              "name": "DH-17 Blaster Pistol",
+              "dice": {
+                "WHITE": 2
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {},
+              "max_range": 2
+            }
+          ],
+          "keywords": {
+            "READY": "1"
+          },
+          "courage": 1,
+          "attack_surge": "HIT"
+        }
+      ],
+      "id": "FLEET_TROOPER",
+      "name": "Fleet Trooper",
+      "text": "",
+      "type": "PERSONNEL"
+    },
+    {
+      "adds_miniature": true,
+      "is_exhaustible": false,
+      "points": 10,
+      "keywords": {},
+      "restricted_to_unit": [
+        {
+          "id": "REBEL_TROOPERS",
+          "name": "Rebel Troopers",
+          "is_unique": false,
+          "faction": "LIGHT_SIDE",
+          "type": "TROOPER",
+          "points": 40,
+          "rank": "CORPS",
+          "miniatures": 4,
+          "wounds": 1,
+          "defense": "WHITE",
+          "has_defense_surge": true,
+          "speed": 2,
+          "upgrades": {
+            "PERSONNEL": 1,
+            "HEAVY_WEAPON": 1,
+            "GEAR": 1,
+            "GRENADES": 1
+          },
+          "weapons": [
+            {
+              "name": "Unarmed",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {},
+              "max_range": 0
+            },
+            {
+              "name": "A-280 Blaster Rifle",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {},
+              "max_range": 3
+            }
+          ],
+          "keywords": {
+            "NIMBLE": ""
+          },
+          "courage": 1
+        }
+      ],
+      "id": "REBEL_TROOPER",
+      "name": "Rebel Trooper",
+      "text": "",
+      "type": "PERSONNEL"
+    },
+    {
+      "adds_miniature": true,
+      "is_exhaustible": false,
+      "points": 12,
+      "keywords": {},
+      "restricted_to_unit": [
+        {
+          "id": "SNOWTROOPERS",
+          "name": "Snowtroopers",
+          "is_unique": false,
+          "faction": "DARK_SIDE",
+          "type": "TROOPER",
+          "points": 48,
+          "rank": "CORPS",
+          "miniatures": 4,
+          "wounds": 1,
+          "defense": "RED",
+          "has_defense_surge": false,
+          "speed": 1,
+          "upgrades": {
+            "PERSONNEL": 1,
+            "HEAVY_WEAPON": 1,
+            "GEAR": 1,
+            "GRENADES": 1
+          },
+          "weapons": [
+            {
+              "name": "Unarmed",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {},
+              "max_range": 0
+            },
+            {
+              "name": "E-11 Blaster Rifle",
+              "dice": {
+                "WHITE": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {},
+              "max_range": 3
+            }
+          ],
+          "keywords": {
+            "STEADY": ""
+          },
+          "courage": 1,
+          "attack_surge": "HIT"
+        }
+      ],
+      "id": "SNOWTROOPER",
+      "name": "Snowtrooper",
+      "text": "",
+      "type": "PERSONNEL"
+    },
+    {
+      "adds_miniature": true,
+      "is_exhaustible": false,
+      "points": 11,
+      "keywords": {},
+      "restricted_to_unit": [
+        {
+          "id": "STORMTROOPERS",
+          "name": "Stormtroopers",
+          "is_unique": false,
+          "faction": "DARK_SIDE",
+          "type": "TROOPER",
+          "points": 44,
+          "rank": "CORPS",
+          "miniatures": 4,
+          "wounds": 1,
+          "defense": "RED",
+          "has_defense_surge": false,
+          "speed": 2,
+          "upgrades": {
+            "PERSONNEL": 1,
+            "HEAVY_WEAPON": 1,
+            "GEAR": 1,
+            "GRENADES": 1
+          },
+          "weapons": [
+            {
+              "name": "Unarmed",
+              "dice": {
+                "BLACK": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 0,
+              "keywords": {},
+              "max_range": 0
+            },
+            {
+              "name": "E-11 Blaster Rifle",
+              "dice": {
+                "WHITE": 1
+              },
+              "area_of_effect": 0,
+              "min_range": 1,
+              "keywords": {},
+              "max_range": 3
+            }
+          ],
+          "keywords": {
+            "PRECISE": "1"
+          },
+          "courage": 1,
+          "attack_surge": "HIT"
+        }
+      ],
+      "id": "STORMTROOPER",
+      "name": "Stormtrooper",
+      "text": "",
+      "type": "PERSONNEL"
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": true,
+      "points": 10,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "GENERAL_WEISS",
+      "name": "General Weiss",
+      "text": "    Exhaust Action: Until the end of your activation, you gain Arsenal 2.\n  ",
+      "type": "PILOT",
+      "restricted_to_faction": "DARK_SIDE",
+      "restricted_to_type": "GROUND_VEHICLE"
+    },
+    {
+      "adds_miniature": false,
+      "is_exhaustible": true,
+      "points": 5,
+      "keywords": {},
+      "restricted_to_unit": [],
+      "id": "WEDGE_ANTILLES",
+      "name": "Wedge Antilles",
+      "text": "    Exhaust Action: Until the end of your activation, you gain Full Pivot.\n  ",
+      "type": "PILOT",
+      "restricted_to_faction": "LIGHT_SIDE",
+      "restricted_to_type": "REPULSOR_VEHICLE"
+    }
+  ],
+  "weapons": [
+    {
+      "name": "1.4 FD Laser Canon",
+      "dice": {
+        "BLACK": 5
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "FIXED": "Front",
+        "IMPACT": "2"
+      },
+      "max_range": 4
+    },
+    {
+      "name": "A-280 Blaster Rifle",
+      "dice": {
+        "BLACK": 1
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {},
+      "max_range": 3
+    },
+    {
+      "name": "A-300 Blaster Rifle",
+      "dice": {
+        "WHITE": 2
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {},
+      "max_range": 3
+    },
+    {
+      "name": "Anakin's Lightsaber",
+      "dice": {
+        "BLACK": 6
+      },
+      "area_of_effect": 0,
+      "min_range": 0,
+      "keywords": {
+        "IMPACT": "2",
+        "PIERCE": "2"
+      },
+      "max_range": 0
+    },
+    {
+      "name": "AP/11 Double Laster Cannon",
+      "dice": {
+        "RED": 3,
+        "BLACK": 3
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "FIXED": "Front",
+        "IMPACT": "3"
+      },
+      "max_range": 3
+    },
+    {
+      "name": "AX-20 Blaster Cannon",
+      "dice": {
+        "WHITE": 1,
+        "BLACK": 1,
+        "RED": 1
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "FIXED": "Front",
+        "IMPACT": "1"
+      },
+      "max_range": 3
+    },
+    {
+      "name": "Boot Spikes",
+      "dice": {
+        "RED": 2
+      },
+      "area_of_effect": 0,
+      "min_range": 0,
+      "keywords": {},
+      "max_range": 0
+    },
+    {
+      "name": "Brawl",
+      "dice": {
+        "WHITE": 3
+      },
+      "area_of_effect": 0,
+      "min_range": 0,
+      "keywords": {},
+      "max_range": 0
+    },
+    {
+      "name": "Combat Expertise",
+      "dice": {
+        "BLACK": 2
+      },
+      "area_of_effect": 0,
+      "min_range": 0,
+      "keywords": {},
+      "max_range": 0
+    },
+    {
+      "name": "DH-17 Blaster Pistol",
+      "dice": {
+        "WHITE": 2
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {},
+      "max_range": 2
+    },
+    {
+      "name": "E-11 Blaster Rifle",
+      "dice": {
+        "WHITE": 1
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {},
+      "max_range": 3
+    },
+    {
+      "name": "E-Web Heavy Blaster",
+      "dice": {
+        "RED": 1,
+        "BLACK": 2,
+        "WHITE": 2
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "CUMBERSOME": "",
+        "FIXED": "Front"
+      },
+      "max_range": 3
+    },
+    {
+      "name": "EC-17 Hold-Out Blaster",
+      "dice": {
+        "BLACK": 2
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {},
+      "max_range": 2
+    },
+    {
+      "name": "Fence-Cutting Blades",
+      "dice": {
+        "RED": 4
+      },
+      "area_of_effect": 0,
+      "min_range": 0,
+      "keywords": {},
+      "max_range": 0
+    },
+    {
+      "name": "Fett's EE-3 Carbine",
+      "dice": {
+        "BLACK": 2
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "PIERCE": "1"
+      },
+      "max_range": 3
+    },
+    {
+      "name": "Force Lightning",
+      "dice": {
+        "RED": 2,
+        "BLACK": 2,
+        "WHITE": 2
+      },
+      "area_of_effect": 0,
+      "min_range": 0,
+      "keywords": {
+        "PIERCE": "2",
+        "SUPPRESSIVE": ""
+      },
+      "max_range": 2
+    },
+    {
+      "name": "Force Pike",
+      "dice": {
+        "RED": 1,
+        "BLACK": 1
+      },
+      "area_of_effect": 0,
+      "min_range": 0,
+      "keywords": {},
+      "max_range": 0
+    },
+    {
+      "name": "Grapping Claws",
+      "dice": {
+        "RED": 3
+      },
+      "area_of_effect": 0,
+      "min_range": 0,
+      "keywords": {
+        "IMPACT": "1"
+      },
+      "max_range": 0
+    },
+    {
+      "name": "Han's DL-44 Blaster Pistol",
+      "dice": {
+        "RED": 2
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {},
+      "max_range": 2
+    },
+    {
+      "name": "Leia's Defender Sporting Blaster",
+      "dice": {
+        "BLACK": 3
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "PIERCE": "1"
+      },
+      "max_range": 2
+    },
+    {
+      "name": "Luke's DL-44 Blaster Pistol",
+      "dice": {
+        "RED": 2
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "PIERCE": "2"
+      },
+      "max_range": 2
+    },
+    {
+      "name": "Martial Arts",
+      "dice": {
+        "BLACK": 3
+      },
+      "area_of_effect": 0,
+      "min_range": 0,
+      "keywords": {},
+      "max_range": 0
+    },
+    {
+      "name": "MS-4 Twin Blaster Cannon",
+      "dice": {
+        "RED": 2,
+        "BLACK": 2,
+        "WHITE": 2
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "FIXED": "Front",
+        "IMPACT": "3"
+      },
+      "max_range": 4
+    },
+    {
+      "name": "Unarmed",
+      "dice": {
+        "BLACK": 1
+      },
+      "area_of_effect": 0,
+      "min_range": 0,
+      "keywords": {},
+      "max_range": 0
+    },
+    {
+      "name": "DH-447 Sniper Rifle",
+      "dice": {
+        "BLACK": 1,
+        "WHITE": 1
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "HIGH_VELOCITY": "",
+        "PIERCE": "1"
+      }
+    },
+    {
+      "name": "DLT-19 Heavy Blaster Rifle",
+      "dice": {
+        "RED": 2
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "IMPACT": "1"
+      },
+      "max_range": 4
+    },
+    {
+      "name": "DLT-19x Sniper Rifle",
+      "dice": {
+        "BLACK": 2
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "HIGH_VELOCITY": "",
+        "PIERCE": "1"
+      }
+    },
+    {
+      "name": "Electrostaff",
+      "dice": {
+        "BLACK": 2
+      },
+      "area_of_effect": 0,
+      "min_range": 0,
+      "keywords": {},
+      "max_range": 0
+    },
+    {
+      "name": "Flamethrower",
+      "dice": {
+        "BLACK": 1
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "BLAST": "",
+        "SPRAY": ""
+      },
+      "max_range": 1
+    },
+    {
+      "name": "Concussion Grenades",
+      "dice": {
+        "BLACK": 1
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "BLAST": ""
+      },
+      "max_range": 1
+    },
+    {
+      "name": "Fragmentation Grenades",
+      "dice": {
+        "RED": 1
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {},
+      "max_range": 1
+    },
+    {
+      "name": "Impact Grenades",
+      "dice": {
+        "BLACK": 1
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "IMPACT": "1"
+      },
+      "max_range": 1
+    },
+    {
+      "name": "88 Twin Light Blaster Cannon",
+      "dice": {
+        "RED": 1,
+        "BLACK": 1,
+        "WHITE": 1
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "FIXED": "Front",
+        "IMPACT": "1"
+      },
+      "max_range": 3
+    },
+    {
+      "name": "AT-RT Flamethrower",
+      "dice": {
+        "BLACK": 2
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "BLAST": "",
+        "FIXED": "Front",
+        "SPRAY": ""
+      },
+      "max_range": 1
+    },
+    {
+      "name": "AT-RT Laser Cannon",
+      "dice": {
+        "RED": 1,
+        "BLACK": 2
+      },
+      "area_of_effect": 0,
+      "min_range": 2,
+      "keywords": {
+        "IMPACT": "3",
+        "FIXED": "Front"
+      },
+      "max_range": 4
+    },
+    {
+      "name": "AT-RT Rotary Blaster",
+      "dice": {
+        "BLACK": 5
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "FIXED": "Front"
+      },
+      "max_range": 3
+    },
+    {
+      "name": "AT-ST Mortar Launcher",
+      "dice": {
+        "WHITE": 3
+      },
+      "area_of_effect": 0,
+      "min_range": 4,
+      "keywords": {
+        "FIXED": "Front",
+        "SUPPRESSIVE": ""
+      }
+    },
+    {
+      "name": "AX-108 Ground Buzzer",
+      "dice": {
+        "BLACK": 4
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "FIXED": "Rear"
+      },
+      "max_range": 2
+    },
+    {
+      "name": "DW3-Concussion Grenade Launcher",
+      "dice": {
+        "BLACK": 2
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "BLAST": "",
+        "FIXED": "Front"
+      },
+      "max_range": 2
+    },
+    {
+      "name": "Mo/Dk Power Harpoon",
+      "dice": {
+        "RED": 2
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "IMPACT": "1",
+        "FIXED": "Rear",
+        "TOW_CABLE": ""
+      },
+      "max_range": 2
+    },
+    {
+      "name": "HH-12 Rocket Launcher",
+      "dice": {
+        "BLACK": 3
+      },
+      "area_of_effect": 0,
+      "min_range": 2,
+      "keywords": {
+        "CUMBERSOME": "",
+        "IMPACT": "3"
+      },
+      "max_range": 4
+    },
+    {
+      "name": "MPL-57 Barrage Launcher",
+      "dice": {
+        "BLACK": 1,
+        "WHITE": 2
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "BLAST": "",
+        "IMPACT": "2"
+      },
+      "max_range": 3
+    },
+    {
+      "name": "MPL-57 Icon Launcher",
+      "dice": {
+        "RED": 2
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "ION": "1",
+        "IMPACT": "1"
+      },
+      "max_range": 3
+    },
+    {
+      "name": "Sonic Charge",
+      "dice": {
+        "RED": 1,
+        "WHITE": 2
+      },
+      "area_of_effect": 1,
+      "min_range": 1,
+      "keywords": {
+        "ARM": "1, Proton Charge",
+        "DETONATE": "1, Proton Charge",
+        "BLAST": "",
+        "IMPACT": "1"
+      },
+      "max_range": 1
+    },
+    {
+      "name": "Scatter Gun",
+      "dice": {
+        "RED": 2
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "PIERCE": "1"
+      },
+      "max_range": 2
+    },
+    {
+      "name": "Sonic Charge",
+      "dice": {
+        "RED": 1,
+        "BLACK": 1
+      },
+      "area_of_effect": 1,
+      "min_range": 1,
+      "keywords": {
+        "ARM": "1, Sonic Charge",
+        "DETONATE": "1, Sonic Charge",
+        "BLAST": "",
+        "SUPPRESSIVE": ""
+      },
+      "max_range": 1
+    },
+    {
+      "name": "T-7 Ion Disrupter Rifle",
+      "dice": {
+        "BLACK": 1,
+        "WHITE": 2
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "ION": "1",
+        "IMPACT": "1"
+      },
+      "max_range": 2
+    },
+    {
+      "name": "Z-6 Rotary Blaster Cannon",
+      "dice": {
+        "WHITE": 6
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {},
+      "max_range": 3
+    },
+    {
+      "name": "Vader's Lightsaber",
+      "dice": {
+        "RED": 6
+      },
+      "area_of_effect": 0,
+      "min_range": 0,
+      "keywords": {
+        "IMPACT": "3",
+        "PIERCE": "3"
+      },
+      "max_range": 0
+    },
+    {
+      "name": "Veers' E-11 Blaster Rifle",
+      "dice": {
+        "WHITE": 3
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "PIERCE": "1"
+      },
+      "max_range": 3
+    },
+    {
+      "name": "Wrist Rocket",
+      "dice": {
+        "BLACK": 2
+      },
+      "area_of_effect": 0,
+      "min_range": 1,
+      "keywords": {
+        "IMPACT": "1"
+      },
+      "max_range": 2
+    }
+  ],
+  "version": "0.1.0-alpha+4"
+}
