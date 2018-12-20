@@ -28,9 +28,9 @@ final hanSolo = Unit(
     hansDl44BlasterPistol,
   ],
   keywords: {
-    Keyword.takeCoverX: '2',
-    Keyword.inspireX: '2',
-    Keyword.nimble: '',
-    Keyword.sharpshooterX: '2',
+    Keyword.lowProfile: '',
+    Keyword.gunslinger: '',
+    Keyword.sharpshooterX: '1',
+    Keyword.uncannyLuckX: '3',
   },
 );
