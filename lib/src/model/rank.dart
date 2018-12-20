@@ -10,6 +10,7 @@ part 'rank.g.dart';
 class Rank extends EnumClass {
   static const _armyConstraints = {
     commander: [1, 2],
+    operative: [0, 2],
     corps: [3, 6],
     specialForces: [0, 3],
     support: [0, 3],
