@@ -23,4 +23,7 @@ abstract class Army implements Built<Army, ArmyBuilder> {
 
   /// Units in the army.
   BuiltList<ArmyUnit> get units;
+
+  /// Points in the army.
+  int get points => units.fold(0, (p, u) => p + u.points);
 }
