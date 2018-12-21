@@ -27,6 +27,15 @@ abstract class Army implements Built<Army, ArmyBuilder> {
   /// Units in the army.
   BuiltList<ArmyUnit> get units;
 
+  /// How many points maximum this army is intended to have.
+  /// 
+  /// A value of `null` means no maximum.
+  @nullable
+  int get maxPoints;
+
   /// Points in the army.
   int get points => units.fold(0, (p, u) => p + u.points);
+
+  /// Whether this army is within the [maxPoints] boundary.
+  bool get withinMaxPoints => maxPoints == null || points <= maxPoints;
 }
