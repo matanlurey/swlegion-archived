@@ -1,4 +1,3 @@
-import 'package:swlegion/swlegion.dart';
 import 'package:swlegion/database.dart';
 import 'package:test/test.dart';
 
