@@ -4,7 +4,7 @@ import '../weapons/a_300_blaster_rifle.dart';
 import '../weapons/grappling_claws.dart';
 
 final atRt = Unit(
-  id: 'AT_RT',
+  id: 'at-rt',
   name: 'AT-RT',
   faction: Faction.lightSide,
   miniatures: 1,

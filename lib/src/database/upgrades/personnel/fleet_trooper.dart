@@ -3,7 +3,7 @@ import 'package:swlegion/swlegion.dart';
 import '../../units/fleet_troopers.dart' as unit;
 
 final fleetTrooper = Upgrade(
-  id: 'FLEET_TROOPER',
+  id: 'fleet-trooper',
   name: 'Fleet Trooper',
   type: UpgradeSlot.personnel,
   addsMiniature: true,

@@ -4,7 +4,7 @@ import '../weapons/leias_defender_sporting_blaster.dart';
 import '../weapons/martial_arts.dart';
 
 final leiaOrgana = Unit(
-  id: 'LEIA_ORGANA',
+  id: 'leia-organa',
   name: 'Leia Organa',
   subTitle: 'Fearless and Inventive',
   faction: Faction.lightSide,

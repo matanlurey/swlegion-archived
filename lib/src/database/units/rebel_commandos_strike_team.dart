@@ -4,7 +4,7 @@ import '../weapons/a_280_blaster_rifle.dart';
 import '../weapons/unarmed.dart';
 
 final rebelCommandosStrikeTeam = Unit(
-  id: 'REBEL_COMMANDOS_STRIKE_TEAM',
+  id: 'rebel-commandos-strike-team',
   name: 'Rebel Commandos',
   subTitle: 'Strike Team',
   faction: Faction.lightSide,

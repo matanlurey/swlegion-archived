@@ -4,7 +4,7 @@ import '../weapons/a_280_blaster_rifle.dart';
 import '../weapons/unarmed.dart';
 
 final rebelTroopers = Unit(
-  id: 'REBEL_TROOPERS',
+  id: 'rebel-troopers',
   name: 'Rebel Troopers',
   faction: Faction.lightSide,
   miniatures: 4,

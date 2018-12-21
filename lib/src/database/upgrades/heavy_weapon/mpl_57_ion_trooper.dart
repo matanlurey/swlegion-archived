@@ -4,7 +4,7 @@ import '../../units/rebel_troopers.dart' as unit;
 import '../../weapons/upgrades/mpl_57_ion_launcher.dart' as weapon;
 
 final mpl57IonTrooper = Upgrade(
-  id: 'MPL_57_ION_TROOPER',
+  id: 'mpl-57-ion-trooper',
   name: 'MPL-57 Ion Trooper',
   type: UpgradeSlot.heavyWeapon,
   isExhaustible: true,

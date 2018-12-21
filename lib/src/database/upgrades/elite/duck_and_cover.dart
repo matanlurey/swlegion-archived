@@ -1,7 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final duckAndCover = Upgrade(
-  id: 'DUCK_AND_COVER',
+  id: 'duck-and-cover',
   name: 'Duck and Cover',
   type: UpgradeSlot.elite,
   points: 8,

@@ -1,7 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final environmentalGear = Upgrade(
-  id: 'ENVIRONMENTAL_GEAR',
+  id: 'environmental-gear',
   name: 'Environmental Gear',
   type: UpgradeSlot.gear,
   points: 3,

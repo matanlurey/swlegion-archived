@@ -4,7 +4,7 @@ import '../../units/t_47_airspeeder.dart' as unit;
 import '../../weapons/upgrades/hardpoints/mo_dk_power_harpoon.dart' as weapon;
 
 final moDkPowerHarpoon = Upgrade(
-  id: 'MO_DK_POWER_HARPOON',
+  id: 'mo-dk-power-harpoon',
   name: 'Mo/DK Power Harpoon',
   type: UpgradeSlot.hardPoint,
   restrictedToUnit: [unit.t47Airspeeder],

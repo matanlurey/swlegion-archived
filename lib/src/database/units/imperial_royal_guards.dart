@@ -4,7 +4,7 @@ import '../weapons/ec_17_hold_out_blaster.dart';
 import '../weapons/force_pike.dart';
 
 final imperialRoyalGuards = Unit(
-  id: 'IMPERIAL_ROYAL_GUARDS',
+  id: 'imperial-royal-guards',
   name: 'Imperial Royal Guards',
   faction: Faction.darkSide,
   miniatures: 3,

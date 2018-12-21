@@ -4,7 +4,7 @@ import '../weapons/fence_cutting_blades.dart';
 import '../weapons/ms_4_twin_blaster_cannon.dart';
 
 final atSt = Unit(
-  id: 'AT_ST',
+  id: 'at-st',
   name: 'AT-ST',
   faction: Faction.darkSide,
   miniatures: 1,

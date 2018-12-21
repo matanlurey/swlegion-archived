@@ -4,7 +4,7 @@ import '../../units/stormtroopers.dart' as unit;
 import '../../weapons/upgrades/hh_12_rocket_launcher.dart' as weapon;
 
 final hh12Stormtrooper = Upgrade(
-  id: 'HH_12_STORMTROOPER',
+  id: 'hh-12-stormtrooper',
   name: 'HH-12 Stormtrooper',
   type: UpgradeSlot.heavyWeapon,
   isExhaustible: true,
