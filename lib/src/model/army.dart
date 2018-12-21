@@ -28,7 +28,7 @@ abstract class Army implements Built<Army, ArmyBuilder> {
   BuiltList<ArmyUnit> get units;
 
   /// How many points maximum this army is intended to have.
-  /// 
+  ///
   /// A value of `null` means no maximum.
   @nullable
   int get maxPoints;
