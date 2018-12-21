@@ -30,6 +30,12 @@ class _$ArmySerializer implements StructuredSerializer<Army> {
           specifiedType:
               const FullType(BuiltList, const [const FullType(ArmyUnit)])),
     ];
+    if (object.maxPoints != null) {
+      result
+        ..add('maxPoints')
+        ..add(serializers.serialize(object.maxPoints,
+            specifiedType: const FullType(int)));
+    }
 
     return result;
   }
@@ -62,6 +68,10 @@ class _$ArmySerializer implements StructuredSerializer<Army> {
               specifiedType: const FullType(
                   BuiltList, const [const FullType(ArmyUnit)])) as BuiltList);
           break;
+        case 'maxPoints':
+          result.maxPoints = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
       }
     }
 
@@ -78,11 +88,14 @@ class _$Army extends Army {
   final Faction faction;
   @override
   final BuiltList<ArmyUnit> units;
+  @override
+  final int maxPoints;
 
   factory _$Army([void updates(ArmyBuilder b)]) =>
       (new ArmyBuilder()..update(updates)).build();
 
-  _$Army._({this.id, this.name, this.faction, this.units}) : super._() {
+  _$Army._({this.id, this.name, this.faction, this.units, this.maxPoints})
+      : super._() {
     if (id == null) {
       throw new BuiltValueNullFieldError('Army', 'id');
     }
@@ -111,14 +124,16 @@ class _$Army extends Army {
         id == other.id &&
         name == other.name &&
         faction == other.faction &&
-        units == other.units;
+        units == other.units &&
+        maxPoints == other.maxPoints;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, id.hashCode), name.hashCode), faction.hashCode),
-        units.hashCode));
+        $jc($jc($jc($jc(0, id.hashCode), name.hashCode), faction.hashCode),
+            units.hashCode),
+        maxPoints.hashCode));
   }
 
   @override
@@ -127,7 +142,8 @@ class _$Army extends Army {
           ..add('id', id)
           ..add('name', name)
           ..add('faction', faction)
-          ..add('units', units))
+          ..add('units', units)
+          ..add('maxPoints', maxPoints))
         .toString();
   }
 }
@@ -152,6 +168,10 @@ class ArmyBuilder implements Builder<Army, ArmyBuilder> {
       _$this._units ??= new ListBuilder<ArmyUnit>();
   set units(ListBuilder<ArmyUnit> units) => _$this._units = units;
 
+  int _maxPoints;
+  int get maxPoints => _$this._maxPoints;
+  set maxPoints(int maxPoints) => _$this._maxPoints = maxPoints;
+
   ArmyBuilder();
 
   ArmyBuilder get _$this {
@@ -160,6 +180,7 @@ class ArmyBuilder implements Builder<Army, ArmyBuilder> {
       _name = _$v.name;
       _faction = _$v.faction;
       _units = _$v.units?.toBuilder();
+      _maxPoints = _$v.maxPoints;
       _$v = null;
     }
     return this;
@@ -184,7 +205,11 @@ class ArmyBuilder implements Builder<Army, ArmyBuilder> {
     try {
       _$result = _$v ??
           new _$Army._(
-              id: id, name: name, faction: faction, units: units.build());
+              id: id,
+              name: name,
+              faction: faction,
+              units: units.build(),
+              maxPoints: maxPoints);
     } catch (_) {
       String _$failedField;
       try {
