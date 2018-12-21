@@ -4,7 +4,7 @@ import '../../units/at_st.dart' as unit;
 import '../../weapons/upgrades/hardpoints/at_st_mortar_launcher.dart' as weapon;
 
 final atStMortarLauncher = Upgrade(
-  id: 'AT_ST_MORTAR_LAUNCHER',
+  id: 'at-st-mortar-launcher',
   name: 'AT-ST Mortar Launcher',
   type: UpgradeSlot.hardPoint,
   restrictedToUnit: [unit.atSt],

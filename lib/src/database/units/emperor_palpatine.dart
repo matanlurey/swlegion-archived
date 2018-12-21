@@ -3,7 +3,7 @@ import 'package:swlegion/swlegion.dart';
 import '../weapons/force_lightning.dart';
 
 final emperorPalpatine = Unit(
-  id: 'EMPEROR_PALPATINE',
+  id: 'emperor-palpatine',
   name: 'Emperor Palpatine',
   subTitle: 'Ruler of the Galactic Empire',
   faction: Faction.darkSide,

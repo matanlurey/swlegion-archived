@@ -15,6 +15,9 @@ abstract class ArmyUnit implements Built<ArmyUnit, ArmyUnitBuilder> {
   factory ArmyUnit(void Function(ArmyUnitBuilder) build) = _$ArmyUnit;
   ArmyUnit._();
 
+  /// Unique ID for this army unit.
+  String get id;
+
   /// Underlying unit card being used.
   @BuiltValueField(wireName: 'unit')
   Unit get unit;

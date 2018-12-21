@@ -4,7 +4,7 @@ import '../../units/snowtroopers.dart' as unit;
 import '../../weapons/upgrades/flamethrower.dart' as weapon;
 
 final flametrooper = Upgrade(
-  id: 'FLAMETROOPER',
+  id: 'flametrooper',
   name: 'Flametrooper',
   type: UpgradeSlot.heavyWeapon,
   restrictedToUnit: [unit.snowtroopers],

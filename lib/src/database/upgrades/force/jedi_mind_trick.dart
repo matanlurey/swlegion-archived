@@ -1,7 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final jediMindTrick = Upgrade(
-  id: 'JEDI_MIND_TRICK',
+  id: 'jedi-mind-trick',
   name: 'Jedi Mind Trick',
   type: UpgradeSlot.force,
   isExhaustible: true,

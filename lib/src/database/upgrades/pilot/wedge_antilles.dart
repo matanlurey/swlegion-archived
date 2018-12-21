@@ -1,7 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final wedgeAntilles = Upgrade(
-  id: 'WEDGE_ANTILLES',
+  id: 'wedge-antilles',
   name: 'Wedge Antilles',
   type: UpgradeSlot.pilot,
   restrictedToFaction: Faction.lightSide,

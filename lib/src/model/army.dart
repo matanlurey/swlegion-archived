@@ -15,6 +15,9 @@ abstract class Army implements Built<Army, ArmyBuilder> {
   factory Army(void Function(ArmyBuilder) build) = _$Army;
   Army._();
 
+  /// Unique ID for this army.
+  String get id;
+
   /// Name of the army.
   String get name;
 

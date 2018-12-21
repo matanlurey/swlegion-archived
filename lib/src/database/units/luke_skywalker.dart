@@ -3,7 +3,7 @@ import 'package:swlegion/swlegion.dart';
 import '../weapons/anakins_lightsaber.dart';
 
 final lukeSkywalker = Unit(
-  id: 'LUKE_SKYWALKER',
+  id: 'luke-skywalker',
   name: 'Luke Skywalker',
   subTitle: 'Hero of the Rebellion',
   faction: Faction.lightSide,

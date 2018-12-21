@@ -4,7 +4,7 @@ import '../weapons/ec_17_hold_out_blaster.dart';
 import '../weapons/unarmed.dart';
 
 final scoutTroopersStrikeTeam = Unit(
-  id: 'SCOUT_TROOPERS_STRIKE_TEAM',
+  id: 'scout-troopers-strike-team',
   name: 'Scout Troopers',
   subTitle: 'Strike Team',
   faction: Faction.darkSide,

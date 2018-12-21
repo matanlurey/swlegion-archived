@@ -1,7 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final targetingScopes = Upgrade(
-  id: 'TARGETING_SCOPES',
+  id: 'targeting-scopes',
   name: 'Targeting Scopes',
   type: UpgradeSlot.gear,
   points: 6,

@@ -1,7 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final grapplingHooks = Upgrade(
-  id: 'GRAPPLING_HOOKS',
+  id: 'grappling-hooks',
   name: 'Grappling Hooks',
   type: UpgradeSlot.gear,
   points: 3,

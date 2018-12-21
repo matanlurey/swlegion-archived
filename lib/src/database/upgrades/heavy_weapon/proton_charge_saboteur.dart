@@ -5,7 +5,7 @@ import '../../units/rebel_commandos_strike_team.dart' as unit;
 import '../../weapons/upgrades/proton_charge.dart' as weapon;
 
 final protonChargeSaboteur = Upgrade(
-  id: 'PROTON_CHARGE_SABOTEUR',
+  id: 'proton-charge-saboteur',
   name: 'Proton Charge Saboteur',
   type: UpgradeSlot.heavyWeapon,
   restrictedToUnit: [

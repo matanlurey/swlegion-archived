@@ -1,7 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final reconIntel = Upgrade(
-  id: 'RECON_INTEL',
+  id: 'recon-intel',
   name: 'Recon Intel',
   type: UpgradeSlot.gear,
   points: 2,

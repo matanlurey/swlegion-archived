@@ -3,7 +3,7 @@ import 'package:swlegion/swlegion.dart';
 import '../weapons/ap_11_double_laser_cannon.dart';
 
 final t47Airspeeder = Unit(
-  id: 'T_47_AIRSPEEDER',
+  id: 't-47-airspeeder',
   name: 'T-47 Airspeeder',
   faction: Faction.lightSide,
   miniatures: 1,

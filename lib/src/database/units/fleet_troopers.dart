@@ -4,7 +4,7 @@ import '../weapons/dh_17_blaster_pistol.dart';
 import '../weapons/unarmed.dart';
 
 final fleetTroopers = Unit(
-  id: 'FLEET_TROOPERS',
+  id: 'fleet-troopers',
   name: 'Fleet Troopers',
   faction: Faction.lightSide,
   miniatures: 4,
