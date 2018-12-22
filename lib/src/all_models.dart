@@ -12,9 +12,9 @@ export 'model/defense_dice.dart' show DefenseDice, DefenseDiceSide;
 export 'model/faction.dart' show Faction;
 export 'model/keyword.dart' show Keyword;
 export 'model/rank.dart' show Rank;
-export 'model/unit.dart' show Unit;
+export 'model/unit.dart' show Unit, UnitKey;
 export 'model/unit_type.dart' show UnitType;
-export 'model/upgrade.dart' show Upgrade;
+export 'model/upgrade.dart' show Upgrade, UpgradeKey;
 export 'model/upgrade_slot.dart' show UpgradeSlot;
 export 'model/weapon.dart' show Weapon;
 
@@ -32,7 +32,9 @@ part 'all_models.g.dart';
   Rank,
   UnitType,
   Unit,
+  UnitKey,
   Upgrade,
+  UpgradeKey,
   UpgradeSlot,
   Weapon,
 ])

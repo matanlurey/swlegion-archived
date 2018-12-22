@@ -21,11 +21,12 @@ class _$ArmyUnitSerializer implements StructuredSerializer<ArmyUnit> {
       'id',
       serializers.serialize(object.id, specifiedType: const FullType(String)),
       'unit',
-      serializers.serialize(object.unit, specifiedType: const FullType(Unit)),
+      serializers.serialize(object.unit,
+          specifiedType: const FullType(UnitKey)),
       'upgrades',
       serializers.serialize(object.upgrades,
           specifiedType:
-              const FullType(BuiltSet, const [const FullType(Upgrade)])),
+              const FullType(BuiltSet, const [const FullType(UpgradeKey)])),
     ];
 
     return result;
@@ -48,13 +49,12 @@ class _$ArmyUnitSerializer implements StructuredSerializer<ArmyUnit> {
           break;
         case 'unit':
           result.unit.replace(serializers.deserialize(value,
-              specifiedType: const FullType(Unit)) as Unit);
+              specifiedType: const FullType(UnitKey)) as UnitKey);
           break;
         case 'upgrades':
           result.upgrades.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltSet, const [const FullType(Upgrade)]))
-              as BuiltSet);
+              specifiedType: const FullType(
+                  BuiltSet, const [const FullType(UpgradeKey)])) as BuiltSet);
           break;
       }
     }
@@ -67,9 +67,9 @@ class _$ArmyUnit extends ArmyUnit {
   @override
   final String id;
   @override
-  final Unit unit;
+  final UnitKey unit;
   @override
-  final BuiltSet<Upgrade> upgrades;
+  final BuiltSet<UpgradeKey> upgrades;
 
   factory _$ArmyUnit([void updates(ArmyUnitBuilder b)]) =>
       (new ArmyUnitBuilder()..update(updates)).build();
@@ -124,14 +124,14 @@ class ArmyUnitBuilder implements Builder<ArmyUnit, ArmyUnitBuilder> {
   String get id => _$this._id;
   set id(String id) => _$this._id = id;
 
-  UnitBuilder _unit;
-  UnitBuilder get unit => _$this._unit ??= new UnitBuilder();
-  set unit(UnitBuilder unit) => _$this._unit = unit;
+  UnitKeyBuilder _unit;
+  UnitKeyBuilder get unit => _$this._unit ??= new UnitKeyBuilder();
+  set unit(UnitKeyBuilder unit) => _$this._unit = unit;
 
-  SetBuilder<Upgrade> _upgrades;
-  SetBuilder<Upgrade> get upgrades =>
-      _$this._upgrades ??= new SetBuilder<Upgrade>();
-  set upgrades(SetBuilder<Upgrade> upgrades) => _$this._upgrades = upgrades;
+  SetBuilder<UpgradeKey> _upgrades;
+  SetBuilder<UpgradeKey> get upgrades =>
+      _$this._upgrades ??= new SetBuilder<UpgradeKey>();
+  set upgrades(SetBuilder<UpgradeKey> upgrades) => _$this._upgrades = upgrades;
 
   ArmyUnitBuilder();
 

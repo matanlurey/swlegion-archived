@@ -20,12 +20,9 @@ abstract class ArmyUnit implements Built<ArmyUnit, ArmyUnitBuilder> {
 
   /// Underlying unit card being used.
   @BuiltValueField(wireName: 'unit')
-  Unit get unit;
+  UnitKey get unit;
 
   /// Upgrades used on the unit.
   @BuiltValueField(wireName: 'upgrades')
-  BuiltSet<Upgrade> get upgrades;
-
-  /// Amount of points this unit costs after upgrades.
-  int get points => upgrades.fold(unit.points, (p, u) => p + u.points);
+  BuiltSet<UpgradeKey> get upgrades;
 }
