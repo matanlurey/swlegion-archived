@@ -170,8 +170,11 @@ abstract class UnitKey implements Built<UnitKey, UnitKeyBuilder> {
   factory UnitKey({
     @required String id,
     @required String name,
-  }) => UnitKey._build((b) => b..id = id ..name = name);
-  
+  }) =>
+      UnitKey._build((b) => b
+        ..id = id
+        ..name = name);
+
   factory UnitKey._build(void Function(UnitKeyBuilder) b) = _$UnitKey;
   UnitKey._();
 

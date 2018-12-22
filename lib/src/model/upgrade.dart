@@ -117,8 +117,11 @@ abstract class UpgradeKey implements Built<UpgradeKey, UpgradeKeyBuilder> {
   factory UpgradeKey({
     @required String id,
     @required String name,
-  }) => UpgradeKey._build((b) => b..id = id ..name = name);
-  
+  }) =>
+      UpgradeKey._build((b) => b
+        ..id = id
+        ..name = name);
+
   factory UpgradeKey._build(void Function(UpgradeKeyBuilder) b) = _$UpgradeKey;
   UpgradeKey._();
 
