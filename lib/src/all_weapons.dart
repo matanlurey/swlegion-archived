@@ -7,6 +7,10 @@ import 'database/weapons/ax_20_blaster_cannon.dart';
 import 'database/weapons/boot_spikes.dart';
 import 'database/weapons/brawl.dart';
 import 'database/weapons/combat_expertise.dart';
+import 'database/weapons/commands/coordinated_bombardment.dart';
+import 'database/weapons/commands/maximum_firepower.dart';
+import 'database/weapons/commands/z_6_jetpack_launcher.dart';
+import 'database/weapons/commands/zx_flame_projector.dart';
 import 'database/weapons/dh_17_blaster_pistol.dart';
 import 'database/weapons/e_11_blaster_rifle.dart';
 import 'database/weapons/e_web_heavy_blaster.dart';
@@ -60,6 +64,10 @@ final aggregate = [
   bootSpikes,
   brawl,
   combatExpertise,
+  coordinatedBombardment,
+  maximumFirepower,
+  z6JetpackLauncher,
+  zxFlameProjector,
   dh17BlasterPistol,
   e11BlasterRifle,
   eWebHeavyBlaster,

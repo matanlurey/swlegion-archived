@@ -11,6 +11,10 @@ class _AggregateDatabase extends Builder {
   static final _outputs = {
     p.join(
       'src',
+      'all_commands.dart',
+    ): Glob('lib/src/database/commands/**.dart'),
+    p.join(
+      'src',
       'all_units.dart',
     ): Glob('lib/src/database/units/**.dart'),
     p.join(
