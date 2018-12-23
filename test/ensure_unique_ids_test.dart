@@ -4,6 +4,27 @@ import 'package:test/test.dart';
 
 void main() {
   final isValidId = RegExp(r'^[a-zA-Z0-9-\-]+$');
+
+  test('every command should have a valid unique ID', () {
+    final allIds = Set<String>();
+    for (final card in commands) {
+      final id = card.id;
+      expect(id, matches(isValidId));
+      expect(allIds.add(id), isTrue, reason: 'Duplicate ID: $id');
+    }
+    expect(allIds, hasLength(commands.length));
+  });
+
+  test('commands should be compared purely based on ID', () {
+    final commandA = CommandCard(
+      id: 'command-a',
+      name: 'Command A',
+      unitsActivated: '',
+      pips: 1,
+    );
+    final commandB = commandA.rebuild((b) => b..name = 'Command B');
+    expect(commandA, equals(commandB));
+  });
   test('every upgrade should have a valid unique ID', () {
     final allIds = Set<String>();
     for (final upgrade in upgrades) {

@@ -11,6 +11,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(ArmyUnit.serializer)
       ..add(AttackDice.serializer)
       ..add(AttackSurge.serializer)
+      ..add(CommandCard.serializer)
       ..add(DefenseDice.serializer)
       ..add(Faction.serializer)
       ..add(Keyword.serializer)
@@ -51,6 +52,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltMap,
               const [const FullType(Keyword), const FullType(String)]),
           () => new MapBuilder<Keyword, String>())
+      ..addBuilderFactory(
+          const FullType(BuiltSet, const [const FullType(Unit)]),
+          () => new SetBuilder<Unit>())
       ..addBuilderFactory(
           const FullType(BuiltSet, const [const FullType(UpgradeKey)]),
           () => new SetBuilder<UpgradeKey>()))

@@ -8,6 +8,7 @@ export 'model/army.dart' show Army, ArmyBuilder;
 export 'model/army_unit.dart' show ArmyUnit, ArmyUnitBuilder;
 export 'model/attack_dice.dart' show AttackDice, AttackDiceSide;
 export 'model/attack_surge.dart' show AttackSurge;
+export 'model/command_card.dart' show CommandCard;
 export 'model/defense_dice.dart' show DefenseDice, DefenseDiceSide;
 export 'model/faction.dart' show Faction;
 export 'model/keyword.dart' show Keyword;
@@ -26,6 +27,7 @@ part 'all_models.g.dart';
   ArmyUnit,
   AttackDice,
   AttackSurge,
+  CommandCard,
   DefenseDice,
   Faction,
   Keyword,

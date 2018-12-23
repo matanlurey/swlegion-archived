@@ -14,6 +14,7 @@ import 'database/upgrades/force/force_push.dart';
 import 'database/upgrades/force/force_reflexes.dart';
 import 'database/upgrades/force/jedi_mind_trick.dart';
 import 'database/upgrades/force/saber_throw.dart';
+import 'database/upgrades/gear/emergency_stims.dart';
 import 'database/upgrades/gear/environmental_gear.dart';
 import 'database/upgrades/gear/grappling_hooks.dart';
 import 'database/upgrades/gear/recon_intel.dart';
@@ -68,6 +69,7 @@ final aggregate = [
   forceReflexes,
   jediMindTrick,
   saberThrow,
+  emergencyStims,
   environmentalGear,
   grapplingHooks,
   reconIntel,

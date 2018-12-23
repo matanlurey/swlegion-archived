@@ -12,6 +12,14 @@ void main() {
     json = (serializers.toBuilder()..addPlugin(StandardJsonPlugin())).build();
   });
 
+  for (final card in commands) {
+    test('should serialize/deserialize "${card.name}"', () {
+      final text = json.serialize(card);
+      final data = json.deserialize(text);
+      expect(card, data);
+    });
+  }
+
   for (final unit in units) {
     test('should serialize/deserialize "${unit.name}"', () {
       final text = json.serialize(unit);
