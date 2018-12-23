@@ -3,6 +3,7 @@ import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:meta/meta.dart';
 
+import 'entity_key.dart';
 import 'faction.dart';
 import 'keyword.dart';
 import 'unit.dart';
@@ -105,30 +106,6 @@ abstract class Upgrade implements Built<Upgrade, UpgradeBuilder> {
   @BuiltValueField(wireName: 'weapon')
   Weapon get weapon;
 
-  /// Returns a [UpgradeKey] reference for this [Upgrade].
-  UpgradeKey toKey() => UpgradeKey(id: id, name: name);
-}
-
-/// Represents a reference to a [Upgrade] based on [id].
-abstract class UpgradeKey implements Built<UpgradeKey, UpgradeKeyBuilder> {
-  /// Support for serializing instances of [UpgradeKey].
-  static Serializer<UpgradeKey> get serializer => _$upgradeKeySerializer;
-
-  factory UpgradeKey({
-    @required String id,
-    @required String name,
-  }) =>
-      UpgradeKey._build((b) => b
-        ..id = id
-        ..name = name);
-
-  factory UpgradeKey._build(void Function(UpgradeKeyBuilder) b) = _$UpgradeKey;
-  UpgradeKey._();
-
-  /// [Unit.id].
-  String get id;
-
-  /// Name of the upgrade.
-  @BuiltValueField(compare: false)
-  String get name;
+  /// Returns a [EntityKey] reference for this [Upgrade].
+  EntityKey toKey() => EntityKey(id: id, name: name);
 }

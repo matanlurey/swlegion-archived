@@ -7,7 +7,6 @@ part of 'unit.dart';
 // **************************************************************************
 
 Serializer<Unit> _$unitSerializer = new _$UnitSerializer();
-Serializer<UnitKey> _$unitKeySerializer = new _$UnitKeySerializer();
 
 class _$UnitSerializer implements StructuredSerializer<Unit> {
   @override
@@ -184,51 +183,6 @@ class _$UnitSerializer implements StructuredSerializer<Unit> {
                 const FullType(Keyword),
                 const FullType(String)
               ])) as BuiltMap);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$UnitKeySerializer implements StructuredSerializer<UnitKey> {
-  @override
-  final Iterable<Type> types = const [UnitKey, _$UnitKey];
-  @override
-  final String wireName = 'UnitKey';
-
-  @override
-  Iterable serialize(Serializers serializers, UnitKey object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[
-      'id',
-      serializers.serialize(object.id, specifiedType: const FullType(String)),
-      'name',
-      serializers.serialize(object.name, specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  UnitKey deserialize(Serializers serializers, Iterable serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new UnitKeyBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
           break;
       }
     }
@@ -558,94 +512,6 @@ class UnitBuilder implements Builder<Unit, UnitBuilder> {
       }
       rethrow;
     }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$UnitKey extends UnitKey {
-  @override
-  final String id;
-  @override
-  final String name;
-
-  factory _$UnitKey([void updates(UnitKeyBuilder b)]) =>
-      (new UnitKeyBuilder()..update(updates)).build();
-
-  _$UnitKey._({this.id, this.name}) : super._() {
-    if (id == null) {
-      throw new BuiltValueNullFieldError('UnitKey', 'id');
-    }
-    if (name == null) {
-      throw new BuiltValueNullFieldError('UnitKey', 'name');
-    }
-  }
-
-  @override
-  UnitKey rebuild(void updates(UnitKeyBuilder b)) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  UnitKeyBuilder toBuilder() => new UnitKeyBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is UnitKey && id == other.id;
-  }
-
-  @override
-  int get hashCode {
-    return $jf($jc(0, id.hashCode));
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper('UnitKey')
-          ..add('id', id)
-          ..add('name', name))
-        .toString();
-  }
-}
-
-class UnitKeyBuilder implements Builder<UnitKey, UnitKeyBuilder> {
-  _$UnitKey _$v;
-
-  String _id;
-  String get id => _$this._id;
-  set id(String id) => _$this._id = id;
-
-  String _name;
-  String get name => _$this._name;
-  set name(String name) => _$this._name = name;
-
-  UnitKeyBuilder();
-
-  UnitKeyBuilder get _$this {
-    if (_$v != null) {
-      _id = _$v.id;
-      _name = _$v.name;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(UnitKey other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
-    _$v = other as _$UnitKey;
-  }
-
-  @override
-  void update(void updates(UnitKeyBuilder b)) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  _$UnitKey build() {
-    final _$result = _$v ?? new _$UnitKey._(id: id, name: name);
     replace(_$result);
     return _$result;
   }
