@@ -4,8 +4,6 @@ import 'package:built_value/serializer.dart';
 // Import self in order to use in the metadata annotation.
 import 'all_models.dart';
 
-export 'model/army.dart' show Army, ArmyBuilder;
-export 'model/army_unit.dart' show ArmyUnit, ArmyUnitBuilder;
 export 'model/attack_dice.dart' show AttackDice, AttackDiceSide;
 export 'model/attack_surge.dart' show AttackSurge;
 export 'model/command_card.dart' show CommandCard;
@@ -23,8 +21,6 @@ part 'all_models.g.dart';
 
 /// A [Serializers] for the models provided by this package.
 @SerializersFor([
-  Army,
-  ArmyUnit,
   AttackDice,
   AttackSurge,
   CommandCard,

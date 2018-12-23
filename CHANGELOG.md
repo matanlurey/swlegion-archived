@@ -1,10 +1,6 @@
 ## Data Model
 
-* `Army`: Added `.maxPoints` and `.withinMaxPoints`.
-* `Unit` and `Upgrade` now are only compared based on their `.id` field.
-* `ArmyUnit`: `.units` and `.upgrades` now are `UnitKey` and `UpgradeKey`s.
-* `ArmyUnit`: Removed `.points`, which can no longer be computed locally.
-* `Army`: Removed `.points`, which can no longer be computed locally.
+* Moved `Army` and `ArmyUnit` out of this package.
 * `CommandCard`: Added.
 
 ## Database
