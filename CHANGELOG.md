@@ -1,7 +1,7 @@
 ## Data Model
 
 * Moved `Army` and `ArmyUnit` out of this package.
-* `CommandCard`: Added.
+* `CommandCard` and `CommandCardKey` were added.
 
 ## Database
 
