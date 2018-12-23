@@ -7,7 +7,6 @@ part of 'upgrade.dart';
 // **************************************************************************
 
 Serializer<Upgrade> _$upgradeSerializer = new _$UpgradeSerializer();
-Serializer<UpgradeKey> _$upgradeKeySerializer = new _$UpgradeKeySerializer();
 
 class _$UpgradeSerializer implements StructuredSerializer<Upgrade> {
   @override
@@ -130,51 +129,6 @@ class _$UpgradeSerializer implements StructuredSerializer<Upgrade> {
         case 'weapon':
           result.weapon.replace(serializers.deserialize(value,
               specifiedType: const FullType(Weapon)) as Weapon);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$UpgradeKeySerializer implements StructuredSerializer<UpgradeKey> {
-  @override
-  final Iterable<Type> types = const [UpgradeKey, _$UpgradeKey];
-  @override
-  final String wireName = 'UpgradeKey';
-
-  @override
-  Iterable serialize(Serializers serializers, UpgradeKey object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[
-      'id',
-      serializers.serialize(object.id, specifiedType: const FullType(String)),
-      'name',
-      serializers.serialize(object.name, specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  UpgradeKey deserialize(Serializers serializers, Iterable serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new UpgradeKeyBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
           break;
       }
     }
@@ -426,94 +380,6 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
       }
       rethrow;
     }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$UpgradeKey extends UpgradeKey {
-  @override
-  final String id;
-  @override
-  final String name;
-
-  factory _$UpgradeKey([void updates(UpgradeKeyBuilder b)]) =>
-      (new UpgradeKeyBuilder()..update(updates)).build();
-
-  _$UpgradeKey._({this.id, this.name}) : super._() {
-    if (id == null) {
-      throw new BuiltValueNullFieldError('UpgradeKey', 'id');
-    }
-    if (name == null) {
-      throw new BuiltValueNullFieldError('UpgradeKey', 'name');
-    }
-  }
-
-  @override
-  UpgradeKey rebuild(void updates(UpgradeKeyBuilder b)) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  UpgradeKeyBuilder toBuilder() => new UpgradeKeyBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is UpgradeKey && id == other.id;
-  }
-
-  @override
-  int get hashCode {
-    return $jf($jc(0, id.hashCode));
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper('UpgradeKey')
-          ..add('id', id)
-          ..add('name', name))
-        .toString();
-  }
-}
-
-class UpgradeKeyBuilder implements Builder<UpgradeKey, UpgradeKeyBuilder> {
-  _$UpgradeKey _$v;
-
-  String _id;
-  String get id => _$this._id;
-  set id(String id) => _$this._id = id;
-
-  String _name;
-  String get name => _$this._name;
-  set name(String name) => _$this._name = name;
-
-  UpgradeKeyBuilder();
-
-  UpgradeKeyBuilder get _$this {
-    if (_$v != null) {
-      _id = _$v.id;
-      _name = _$v.name;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(UpgradeKey other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
-    _$v = other as _$UpgradeKey;
-  }
-
-  @override
-  void update(void updates(UpgradeKeyBuilder b)) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  _$UpgradeKey build() {
-    final _$result = _$v ?? new _$UpgradeKey._(id: id, name: name);
     replace(_$result);
     return _$result;
   }

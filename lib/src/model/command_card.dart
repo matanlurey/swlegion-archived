@@ -3,6 +3,7 @@ import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:meta/meta.dart';
 
+import 'entity_key.dart';
 import 'unit.dart';
 import 'weapon.dart';
 
@@ -63,33 +64,6 @@ abstract class CommandCard implements Built<CommandCard, CommandCardBuilder> {
   @nullable
   Weapon get weapon;
 
-  /// Returns a [CommandCardKey] reference for this [CommandCard].
-  CommandCardKey toKey() => CommandCardKey(id: id, name: name);
-}
-
-/// Represents a reference to a [CommandCard] based on [id].
-abstract class CommandCardKey
-    implements Built<CommandCardKey, CommandCardKeyBuilder> {
-  /// Support for serializing instances of [CommandCardKey].
-  static Serializer<CommandCardKey> get serializer =>
-      _$commandCardKeySerializer;
-
-  factory CommandCardKey({
-    @required String id,
-    @required String name,
-  }) =>
-      CommandCardKey._build((b) => b
-        ..id = id
-        ..name = name);
-
-  factory CommandCardKey._build(void Function(CommandCardKeyBuilder) b) =
-      _$CommandCardKey;
-  CommandCardKey._();
-
-  /// [CommandCard.id].
-  String get id;
-
-  /// Name of the command card.
-  @BuiltValueField(compare: false)
-  String get name;
+  /// Returns an [EntityKey] reference for this [CommandCard].
+  EntityKey toKey() => EntityKey(id: id, name: name);
 }

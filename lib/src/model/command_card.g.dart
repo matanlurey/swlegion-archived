@@ -7,8 +7,6 @@ part of 'command_card.dart';
 // **************************************************************************
 
 Serializer<CommandCard> _$commandCardSerializer = new _$CommandCardSerializer();
-Serializer<CommandCardKey> _$commandCardKeySerializer =
-    new _$CommandCardKeySerializer();
 
 class _$CommandCardSerializer implements StructuredSerializer<CommandCard> {
   @override
@@ -86,52 +84,6 @@ class _$CommandCardSerializer implements StructuredSerializer<CommandCard> {
         case 'weapon':
           result.weapon.replace(serializers.deserialize(value,
               specifiedType: const FullType(Weapon)) as Weapon);
-          break;
-      }
-    }
-
-    return result.build();
-  }
-}
-
-class _$CommandCardKeySerializer
-    implements StructuredSerializer<CommandCardKey> {
-  @override
-  final Iterable<Type> types = const [CommandCardKey, _$CommandCardKey];
-  @override
-  final String wireName = 'CommandCardKey';
-
-  @override
-  Iterable serialize(Serializers serializers, CommandCardKey object,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[
-      'id',
-      serializers.serialize(object.id, specifiedType: const FullType(String)),
-      'name',
-      serializers.serialize(object.name, specifiedType: const FullType(String)),
-    ];
-
-    return result;
-  }
-
-  @override
-  CommandCardKey deserialize(Serializers serializers, Iterable serialized,
-      {FullType specifiedType = FullType.unspecified}) {
-    final result = new CommandCardKeyBuilder();
-
-    final iterator = serialized.iterator;
-    while (iterator.moveNext()) {
-      final key = iterator.current as String;
-      iterator.moveNext();
-      final dynamic value = iterator.current;
-      switch (key) {
-        case 'id':
-          result.id = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'name':
-          result.name = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
           break;
       }
     }
@@ -309,96 +261,6 @@ class CommandCardBuilder implements Builder<CommandCard, CommandCardBuilder> {
       }
       rethrow;
     }
-    replace(_$result);
-    return _$result;
-  }
-}
-
-class _$CommandCardKey extends CommandCardKey {
-  @override
-  final String id;
-  @override
-  final String name;
-
-  factory _$CommandCardKey([void updates(CommandCardKeyBuilder b)]) =>
-      (new CommandCardKeyBuilder()..update(updates)).build();
-
-  _$CommandCardKey._({this.id, this.name}) : super._() {
-    if (id == null) {
-      throw new BuiltValueNullFieldError('CommandCardKey', 'id');
-    }
-    if (name == null) {
-      throw new BuiltValueNullFieldError('CommandCardKey', 'name');
-    }
-  }
-
-  @override
-  CommandCardKey rebuild(void updates(CommandCardKeyBuilder b)) =>
-      (toBuilder()..update(updates)).build();
-
-  @override
-  CommandCardKeyBuilder toBuilder() =>
-      new CommandCardKeyBuilder()..replace(this);
-
-  @override
-  bool operator ==(Object other) {
-    if (identical(other, this)) return true;
-    return other is CommandCardKey && id == other.id;
-  }
-
-  @override
-  int get hashCode {
-    return $jf($jc(0, id.hashCode));
-  }
-
-  @override
-  String toString() {
-    return (newBuiltValueToStringHelper('CommandCardKey')
-          ..add('id', id)
-          ..add('name', name))
-        .toString();
-  }
-}
-
-class CommandCardKeyBuilder
-    implements Builder<CommandCardKey, CommandCardKeyBuilder> {
-  _$CommandCardKey _$v;
-
-  String _id;
-  String get id => _$this._id;
-  set id(String id) => _$this._id = id;
-
-  String _name;
-  String get name => _$this._name;
-  set name(String name) => _$this._name = name;
-
-  CommandCardKeyBuilder();
-
-  CommandCardKeyBuilder get _$this {
-    if (_$v != null) {
-      _id = _$v.id;
-      _name = _$v.name;
-      _$v = null;
-    }
-    return this;
-  }
-
-  @override
-  void replace(CommandCardKey other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
-    _$v = other as _$CommandCardKey;
-  }
-
-  @override
-  void update(void updates(CommandCardKeyBuilder b)) {
-    if (updates != null) updates(this);
-  }
-
-  @override
-  _$CommandCardKey build() {
-    final _$result = _$v ?? new _$CommandCardKey._(id: id, name: name);
     replace(_$result);
     return _$result;
   }

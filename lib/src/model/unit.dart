@@ -5,6 +5,7 @@ import 'package:meta/meta.dart';
 
 import 'attack_surge.dart';
 import 'defense_dice.dart';
+import 'entity_key.dart';
 import 'faction.dart';
 import 'keyword.dart';
 import 'rank.dart';
@@ -158,30 +159,6 @@ abstract class Unit implements Built<Unit, UnitBuilder> {
   @BuiltValueField(compare: false)
   BuiltMap<Keyword, String> get keywords;
 
-  /// Returns a [UnitKey] reference for this [Unit].
-  UnitKey toKey() => UnitKey(id: id, name: name);
-}
-
-/// Represents a reference to a [Unit] based on [id].
-abstract class UnitKey implements Built<UnitKey, UnitKeyBuilder> {
-  /// Support for serializing instances of [UnitKey].
-  static Serializer<UnitKey> get serializer => _$unitKeySerializer;
-
-  factory UnitKey({
-    @required String id,
-    @required String name,
-  }) =>
-      UnitKey._build((b) => b
-        ..id = id
-        ..name = name);
-
-  factory UnitKey._build(void Function(UnitKeyBuilder) b) = _$UnitKey;
-  UnitKey._();
-
-  /// [Unit.id].
-  String get id;
-
-  /// Name of the unit.
-  @BuiltValueField(compare: false)
-  String get name;
+  /// Returns a [EntityKey] reference for this [Unit].
+  EntityKey toKey() => EntityKey(id: id, name: name);
 }
