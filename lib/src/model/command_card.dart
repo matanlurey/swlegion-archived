@@ -62,6 +62,9 @@ abstract class CommandCard implements Built<CommandCard, CommandCardBuilder> {
   @BuiltValueField(compare: false)
   @nullable
   Weapon get weapon;
+
+  /// Returns a [CommandCardKey] reference for this [CommandCard].
+  CommandCardKey toKey() => CommandCardKey(id: id, name: name);
 }
 
 /// Represents a reference to a [CommandCard] based on [id].
@@ -89,7 +92,4 @@ abstract class CommandCardKey
   /// Name of the command card.
   @BuiltValueField(compare: false)
   String get name;
-
-  /// Returns a [CommandCardKey] reference for this [CommandCard].
-  CommandCardKey toKey() => CommandCardKey(id: id, name: name);
 }
