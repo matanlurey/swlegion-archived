@@ -6,7 +6,7 @@ import 'all_models.dart';
 
 export 'model/attack_dice.dart' show AttackDice, AttackDiceSide;
 export 'model/attack_surge.dart' show AttackSurge;
-export 'model/command_card.dart' show CommandCard;
+export 'model/command_card.dart' show CommandCard, CommandCardKey;
 export 'model/defense_dice.dart' show DefenseDice, DefenseDiceSide;
 export 'model/faction.dart' show Faction;
 export 'model/keyword.dart' show Keyword;
@@ -24,6 +24,7 @@ part 'all_models.g.dart';
   AttackDice,
   AttackSurge,
   CommandCard,
+  CommandCardKey,
   DefenseDice,
   Faction,
   Keyword,
