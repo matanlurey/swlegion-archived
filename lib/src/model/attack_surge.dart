@@ -33,6 +33,6 @@ class AttackSurge extends EnumClass {
   }
 
   /// **WARNING**: Prefer [from].
-  @Deprecated('Use "AttackSurge.from" instead.') 
+  @Deprecated('Use "AttackSurge.from" instead.')
   static AttackSurge valueOf(String name) => _$valueOf(name);
 }

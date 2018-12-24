@@ -55,7 +55,7 @@ class AttackDice extends EnumClass {
 
   const AttackDice._(String name) : super(name);
 
-    @override
+  @override
   String get name => _$AttackDiceSerializer._toWire[super.name];
 
   /// Sides of the dice.
