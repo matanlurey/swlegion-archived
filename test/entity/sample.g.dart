@@ -18,6 +18,18 @@ class _$SampleSerializer implements StructuredSerializer<Sample> {
   Iterable serialize(Serializers serializers, Sample object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[
+      'aCommand',
+      serializers.serialize(object.aCommand,
+          specifiedType:
+              const FullType(Reference, const [const FullType(CommandCard)])),
+      'aUnit',
+      serializers.serialize(object.aUnit,
+          specifiedType:
+              const FullType(Reference, const [const FullType(Unit)])),
+      'aUpgrade',
+      serializers.serialize(object.aUpgrade,
+          specifiedType:
+              const FullType(Reference, const [const FullType(Upgrade)])),
       'commands',
       serializers.serialize(object.commands,
           specifiedType: const FullType(BuiltSet, const [
@@ -49,6 +61,24 @@ class _$SampleSerializer implements StructuredSerializer<Sample> {
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'aCommand':
+          result.aCommand = serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      Reference, const [const FullType(CommandCard)]))
+              as Reference<CommandCard>;
+          break;
+        case 'aUnit':
+          result.aUnit = serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(Reference, const [const FullType(Unit)]))
+              as Reference<Unit>;
+          break;
+        case 'aUpgrade':
+          result.aUpgrade = serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      Reference, const [const FullType(Upgrade)]))
+              as Reference<Upgrade>;
+          break;
         case 'commands':
           result.commands.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltSet, const [
@@ -76,6 +106,12 @@ class _$SampleSerializer implements StructuredSerializer<Sample> {
 
 class _$Sample extends Sample {
   @override
+  final Reference<CommandCard> aCommand;
+  @override
+  final Reference<Unit> aUnit;
+  @override
+  final Reference<Upgrade> aUpgrade;
+  @override
   final BuiltSet<Reference<CommandCard>> commands;
   @override
   final BuiltList<Reference<Unit>> units;
@@ -85,7 +121,23 @@ class _$Sample extends Sample {
   factory _$Sample([void updates(SampleBuilder b)]) =>
       (new SampleBuilder()..update(updates)).build();
 
-  _$Sample._({this.commands, this.units, this.upgrades}) : super._() {
+  _$Sample._(
+      {this.aCommand,
+      this.aUnit,
+      this.aUpgrade,
+      this.commands,
+      this.units,
+      this.upgrades})
+      : super._() {
+    if (aCommand == null) {
+      throw new BuiltValueNullFieldError('Sample', 'aCommand');
+    }
+    if (aUnit == null) {
+      throw new BuiltValueNullFieldError('Sample', 'aUnit');
+    }
+    if (aUpgrade == null) {
+      throw new BuiltValueNullFieldError('Sample', 'aUpgrade');
+    }
     if (commands == null) {
       throw new BuiltValueNullFieldError('Sample', 'commands');
     }
@@ -108,6 +160,9 @@ class _$Sample extends Sample {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is Sample &&
+        aCommand == other.aCommand &&
+        aUnit == other.aUnit &&
+        aUpgrade == other.aUpgrade &&
         commands == other.commands &&
         units == other.units &&
         upgrades == other.upgrades;
@@ -115,13 +170,22 @@ class _$Sample extends Sample {
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, commands.hashCode), units.hashCode), upgrades.hashCode));
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, aCommand.hashCode), aUnit.hashCode),
+                    aUpgrade.hashCode),
+                commands.hashCode),
+            units.hashCode),
+        upgrades.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('Sample')
+          ..add('aCommand', aCommand)
+          ..add('aUnit', aUnit)
+          ..add('aUpgrade', aUpgrade)
           ..add('commands', commands)
           ..add('units', units)
           ..add('upgrades', upgrades))
@@ -131,6 +195,18 @@ class _$Sample extends Sample {
 
 class SampleBuilder implements Builder<Sample, SampleBuilder> {
   _$Sample _$v;
+
+  Reference<CommandCard> _aCommand;
+  Reference<CommandCard> get aCommand => _$this._aCommand;
+  set aCommand(Reference<CommandCard> aCommand) => _$this._aCommand = aCommand;
+
+  Reference<Unit> _aUnit;
+  Reference<Unit> get aUnit => _$this._aUnit;
+  set aUnit(Reference<Unit> aUnit) => _$this._aUnit = aUnit;
+
+  Reference<Upgrade> _aUpgrade;
+  Reference<Upgrade> get aUpgrade => _$this._aUpgrade;
+  set aUpgrade(Reference<Upgrade> aUpgrade) => _$this._aUpgrade = aUpgrade;
 
   SetBuilder<Reference<CommandCard>> _commands;
   SetBuilder<Reference<CommandCard>> get commands =>
@@ -153,6 +229,9 @@ class SampleBuilder implements Builder<Sample, SampleBuilder> {
 
   SampleBuilder get _$this {
     if (_$v != null) {
+      _aCommand = _$v.aCommand;
+      _aUnit = _$v.aUnit;
+      _aUpgrade = _$v.aUpgrade;
       _commands = _$v.commands?.toBuilder();
       _units = _$v.units?.toBuilder();
       _upgrades = _$v.upgrades?.toBuilder();
@@ -180,6 +259,9 @@ class SampleBuilder implements Builder<Sample, SampleBuilder> {
     try {
       _$result = _$v ??
           new _$Sample._(
+              aCommand: aCommand,
+              aUnit: aUnit,
+              aUpgrade: aUpgrade,
               commands: commands.build(),
               units: units.build(),
               upgrades: upgrades.build());
