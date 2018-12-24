@@ -3,14 +3,16 @@ import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:meta/meta.dart';
 
-import 'entity_key.dart';
+import 'reference.dart';
 import 'unit.dart';
 import 'weapon.dart';
 
 part 'command_card.g.dart';
 
 /// Represents a collection of units (a list) as an army.
-abstract class CommandCard implements Built<CommandCard, CommandCardBuilder> {
+abstract class CommandCard extends Object
+    with Indexable<CommandCard>
+    implements Built<CommandCard, CommandCardBuilder> {
   /// Support for serializing instances of [CommandCard].
   static Serializer<CommandCard> get serializer => _$commandCardSerializer;
 
@@ -37,6 +39,7 @@ abstract class CommandCard implements Built<CommandCard, CommandCardBuilder> {
   CommandCard._();
 
   /// ID of the [CommandCard].
+  @override
   String get id;
 
   /// Name of the [CommandCard].
@@ -63,7 +66,4 @@ abstract class CommandCard implements Built<CommandCard, CommandCardBuilder> {
   @BuiltValueField(compare: false)
   @nullable
   Weapon get weapon;
-
-  /// Returns an [EntityKey] reference for this [CommandCard].
-  EntityKey toKey() => EntityKey(id: id, name: name);
 }

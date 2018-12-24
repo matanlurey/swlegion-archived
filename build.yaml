@@ -23,6 +23,7 @@ targets:
     sources:
       - lib/src/model/**.dart
       - lib/src/all_models.dart
+      - test/entity/**.dart
     dependencies:
       - built_collection
       - built_value
@@ -32,6 +33,7 @@ targets:
         generate_for:
           - lib/src/model/**.dart
           - lib/src/all_models.dart
+          - test/entity/**.dart
   _aggregate_database:
     sources:
       - tool/src/aggregate_database.dart
