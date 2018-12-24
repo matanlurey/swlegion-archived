@@ -3,9 +3,9 @@ import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:meta/meta.dart';
 
-import 'entity_key.dart';
 import 'faction.dart';
 import 'keyword.dart';
+import 'reference.dart';
 import 'unit.dart';
 import 'unit_type.dart';
 import 'upgrade_slot.dart';
@@ -15,7 +15,9 @@ part 'upgrade.g.dart';
 
 /// Represents an upgrade card.
 @BuiltValue()
-abstract class Upgrade implements Built<Upgrade, UpgradeBuilder> {
+abstract class Upgrade extends Object
+    with Indexable<Upgrade>
+    implements Built<Upgrade, UpgradeBuilder> {
   /// Support for serializing instances of [Upgrade].
   static Serializer<Upgrade> get serializer => _$upgradeSerializer;
 
@@ -85,6 +87,7 @@ abstract class Upgrade implements Built<Upgrade, UpgradeBuilder> {
   UnitType get restrictedToType;
 
   /// Unique ID for the upgrade.
+  @override
   String get id;
 
   /// Name of the upgrade card.
@@ -105,7 +108,4 @@ abstract class Upgrade implements Built<Upgrade, UpgradeBuilder> {
   @nullable
   @BuiltValueField(wireName: 'weapon')
   Weapon get weapon;
-
-  /// Returns a [EntityKey] reference for this [Upgrade].
-  EntityKey toKey() => EntityKey(id: id, name: name);
 }

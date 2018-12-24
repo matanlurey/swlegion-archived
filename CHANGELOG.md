@@ -2,7 +2,8 @@
 
 * Moved `Army` and `ArmyUnit` out of this package.
 * `CommandCard` was added.
-* Replaced `*Key` instances with a single `EntityKey` instance.
+* Replaced `*Key` instances with a single `Reference<T>` instance.
+  * `CommandCard`, `Unit`, `Upgrade` all now implement `Indexable<T>`.
 
 ## Database
 

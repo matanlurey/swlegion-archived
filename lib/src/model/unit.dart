@@ -5,10 +5,10 @@ import 'package:meta/meta.dart';
 
 import 'attack_surge.dart';
 import 'defense_dice.dart';
-import 'entity_key.dart';
 import 'faction.dart';
 import 'keyword.dart';
 import 'rank.dart';
+import 'reference.dart';
 import 'unit_type.dart';
 import 'upgrade_slot.dart';
 import 'weapon.dart';
@@ -16,7 +16,9 @@ import 'weapon.dart';
 part 'unit.g.dart';
 
 /// Represents a unit card.
-abstract class Unit implements Built<Unit, UnitBuilder> {
+abstract class Unit extends Object
+    with Indexable<Unit>
+    implements Built<Unit, UnitBuilder> {
   /// Support for serializing instances of [Unit].
   static Serializer<Unit> get serializer => _$unitSerializer;
 
@@ -72,7 +74,8 @@ abstract class Unit implements Built<Unit, UnitBuilder> {
   // defined directly or deserialized via JSON).
   factory Unit._builder(void Function(UnitBuilder) build) = _$Unit;
 
-  /// Unique ID for the unit.
+  /// Unique ID for the [Unit].
+  @override
   String get id;
 
   /// Name of the unit.
@@ -158,7 +161,4 @@ abstract class Unit implements Built<Unit, UnitBuilder> {
   /// Keywords on the unit.
   @BuiltValueField(compare: false)
   BuiltMap<Keyword, String> get keywords;
-
-  /// Returns a [EntityKey] reference for this [Unit].
-  EntityKey toKey() => EntityKey(id: id, name: name);
 }

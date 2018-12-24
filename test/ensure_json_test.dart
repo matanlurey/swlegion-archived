@@ -4,12 +4,17 @@ import 'package:swlegion/swlegion.dart';
 import 'package:swlegion/database.dart';
 import 'package:test/test.dart';
 
+import 'entity/sample.dart';
+
 /// Ensures all entries can be serialized and deserialized to equal instances.
 void main() {
   Serializers json;
 
   setUpAll(() {
-    json = (serializers.toBuilder()..addPlugin(StandardJsonPlugin())).build();
+    json = (serializers.toBuilder()
+          ..add(Sample.serializer)
+          ..addPlugin(StandardJsonPlugin()))
+        .build();
   });
 
   for (final card in commands) {
@@ -43,4 +48,14 @@ void main() {
       expect(weapon, data);
     });
   }
+
+  test('should support serializing to/from Reference<...>', () {
+    final sample = Sample((b) => b
+      ..commands.add(commands.first.toRef())
+      ..units.add(units.first.toRef())
+      ..upgrades.add(upgrades.first.toRef()));
+    final text = json.serializeWith(Sample.serializer, sample);
+    final data = json.deserializeWith(Sample.serializer, text);
+    expect(sample, data);
+  });
 }
