@@ -42,18 +42,21 @@ class AttackDice extends EnumClass {
   };
 
   /// White attack dice.
-  @BuiltValueEnumConst(wireName: 'WHITE')
+  @BuiltValueEnumConst(wireName: 'white')
   static const AttackDice white = _$white;
 
   /// Black attack dice.
-  @BuiltValueEnumConst(wireName: 'BLACK')
+  @BuiltValueEnumConst(wireName: 'black')
   static const AttackDice black = _$black;
 
   /// Red attack dice.
-  @BuiltValueEnumConst(wireName: 'RED')
+  @BuiltValueEnumConst(wireName: 'red')
   static const AttackDice red = _$red;
 
   const AttackDice._(String name) : super(name);
+
+    @override
+  String get name => _$AttackDiceSerializer._toWire[super.name];
 
   /// Sides of the dice.
   List<AttackDiceSide> get sides => _sides[this];
@@ -67,6 +70,12 @@ class AttackDice extends EnumClass {
   /// Parses and returns [name] into the cooresponding [AttackDice] value.
   ///
   /// Throws [ArgumentError] if no match is found.
+  static AttackDice from(String name) {
+    return _$valueOf(_$AttackDiceSerializer._fromWire[name]);
+  }
+
+  /// **WARNING**: Prefer [from].
+  @Deprecated('Use "AttackDice.from" instead.')
   static AttackDice valueOf(String name) => _$valueOf(name);
 }
 

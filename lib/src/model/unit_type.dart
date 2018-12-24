@@ -6,19 +6,22 @@ part 'unit_type.g.dart';
 
 /// Represents possible unit types.
 class UnitType extends EnumClass {
-  @BuiltValueEnumConst(wireName: 'TROOPER')
+  @BuiltValueEnumConst(wireName: 'trooper')
   static const UnitType trooper = _$trooper;
 
-  @BuiltValueEnumConst(wireName: 'EMPLACEMENT_TROOPER')
+  @BuiltValueEnumConst(wireName: 'emplacement-trooper')
   static const UnitType emplacementTrooper = _$emplacementTrooper;
 
-  @BuiltValueEnumConst(wireName: 'GROUND_VEHICLE')
+  @BuiltValueEnumConst(wireName: 'ground-vehicle')
   static const UnitType groundVehicle = _$groundVehicle;
 
-  @BuiltValueEnumConst(wireName: 'REPULSOR_VEHICLE')
+  @BuiltValueEnumConst(wireName: 'repulsor-vehicle')
   static const UnitType repulsorVehicle = _$repulsorVehicle;
 
   const UnitType._(String name) : super(name);
+
+  @override
+  String get name => _$UnitTypeSerializer._toWire[super.name];
 
   /// Support for serializing instances of [UnitType].
   static Serializer<UnitType> get serializer => _$unitTypeSerializer;
@@ -29,5 +32,11 @@ class UnitType extends EnumClass {
   /// Parses and returns [name] into the cooresponding [UnitType] value.
   ///
   /// Throws [ArgumentError] if no match is found.
+  static UnitType from(String name) {
+    return _$valueOf(_$UnitTypeSerializer._fromWire[name]);
+  }
+
+  /// **WARNING**: Prefer [from].
+  @Deprecated('Use "UnitType.from" instead.')
   static UnitType valueOf(String name) => _$valueOf(name);
 }

@@ -17,25 +17,28 @@ class Rank extends EnumClass {
     heavy: [0, 2],
   };
 
-  @BuiltValueEnumConst(wireName: 'COMMANDER')
+  @BuiltValueEnumConst(wireName: 'commander')
   static const Rank commander = _$commander;
 
-  @BuiltValueEnumConst(wireName: 'OPERATIVE')
+  @BuiltValueEnumConst(wireName: 'operative')
   static const Rank operative = _$operative;
 
-  @BuiltValueEnumConst(wireName: 'CORPS')
+  @BuiltValueEnumConst(wireName: 'corps')
   static const Rank corps = _$corps;
 
-  @BuiltValueEnumConst(wireName: 'SPECIAL_FORCES')
+  @BuiltValueEnumConst(wireName: 'special-forces')
   static const Rank specialForces = _$specialForces;
 
-  @BuiltValueEnumConst(wireName: 'SUPPORT')
+  @BuiltValueEnumConst(wireName: 'support')
   static const Rank support = _$support;
 
-  @BuiltValueEnumConst(wireName: 'HEAVY')
+  @BuiltValueEnumConst(wireName: 'heavy')
   static const Rank heavy = _$heavy;
 
   const Rank._(String name) : super(name);
+
+  @override
+  String get name => _$RankSerializer._toWire[super.name];
 
   /// Minimum amount of this type of unit for a typical army list (800 points).
   int get minimum => _armyConstraints[this].first;
@@ -52,5 +55,11 @@ class Rank extends EnumClass {
   /// Parses and returns [name] into the cooresponding [Rank] value.
   ///
   /// Throws [ArgumentError] if no match is found.
+  static Rank from(String name) {
+    return _$valueOf(_$RankSerializer._fromWire[name]);
+  }
+
+  /// **WARNING**: Prefer [from].
+  @Deprecated('Use "Rank.from" instead.')
   static Rank valueOf(String name) => _$valueOf(name);
 }
