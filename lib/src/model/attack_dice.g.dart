@@ -34,14 +34,14 @@ Serializer<AttackDice> _$attackDiceSerializer = new _$AttackDiceSerializer();
 
 class _$AttackDiceSerializer implements PrimitiveSerializer<AttackDice> {
   static const Map<String, String> _toWire = const <String, String>{
-    'white': 'WHITE',
-    'black': 'BLACK',
-    'red': 'RED',
+    'white': 'white',
+    'black': 'black',
+    'red': 'red',
   };
   static const Map<String, String> _fromWire = const <String, String>{
-    'WHITE': 'white',
-    'BLACK': 'black',
-    'RED': 'red',
+    'white': 'white',
+    'black': 'black',
+    'red': 'red',
   };
 
   @override

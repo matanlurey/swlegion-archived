@@ -3,7 +3,19 @@ import 'package:swlegion/swlegion.dart';
 import 'package:test/test.dart';
 
 void main() {
-  final isValidId = RegExp(r'^[a-zA-Z0-9-\-]+$');
+  final isValidId = RegExp(r'^[a-z0-9-\-]+$');
+
+  test('every enum should have a valid unique ID', () {
+    final everyIdIsValid = everyElement(matches(isValidId));
+    expect(AttackDice.values.map((d) => d.name), everyIdIsValid);
+    expect(AttackSurge.values.map((d) => d.name), everyIdIsValid);
+    expect(DefenseDice.values.map((d) => d.name), everyIdIsValid);
+    expect(Faction.values.map((d) => d.name), everyIdIsValid);
+    expect(Keyword.values.map((d) => d.name), everyIdIsValid);
+    expect(Rank.values.map((d) => d.name), everyIdIsValid);
+    expect(UnitType.values.map((d) => d.name), everyIdIsValid);
+    expect(UpgradeSlot.values.map((d) => d.name), everyIdIsValid);
+  });
 
   test('every command should have a valid unique ID', () {
     final allIds = Set<String>();

@@ -45,20 +45,20 @@ Serializer<Rank> _$rankSerializer = new _$RankSerializer();
 
 class _$RankSerializer implements PrimitiveSerializer<Rank> {
   static const Map<String, String> _toWire = const <String, String>{
-    'commander': 'COMMANDER',
-    'operative': 'OPERATIVE',
-    'corps': 'CORPS',
-    'specialForces': 'SPECIAL_FORCES',
-    'support': 'SUPPORT',
-    'heavy': 'HEAVY',
+    'commander': 'commander',
+    'operative': 'operative',
+    'corps': 'corps',
+    'specialForces': 'special-forces',
+    'support': 'support',
+    'heavy': 'heavy',
   };
   static const Map<String, String> _fromWire = const <String, String>{
-    'COMMANDER': 'commander',
-    'OPERATIVE': 'operative',
-    'CORPS': 'corps',
-    'SPECIAL_FORCES': 'specialForces',
-    'SUPPORT': 'support',
-    'HEAVY': 'heavy',
+    'commander': 'commander',
+    'operative': 'operative',
+    'corps': 'corps',
+    'special-forces': 'specialForces',
+    'support': 'support',
+    'heavy': 'heavy',
   };
 
   @override

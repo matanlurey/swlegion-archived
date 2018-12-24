@@ -30,12 +30,12 @@ Serializer<AttackSurge> _$attackSurgeSerializer = new _$AttackSurgeSerializer();
 
 class _$AttackSurgeSerializer implements PrimitiveSerializer<AttackSurge> {
   static const Map<String, String> _toWire = const <String, String>{
-    'hit': 'HIT',
-    'critical': 'CRIT',
+    'hit': 'hit',
+    'critical': 'critical',
   };
   static const Map<String, String> _fromWire = const <String, String>{
-    'HIT': 'hit',
-    'CRIT': 'critical',
+    'hit': 'hit',
+    'critical': 'critical',
   };
 
   @override

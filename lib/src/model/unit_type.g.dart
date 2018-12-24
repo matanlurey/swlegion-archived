@@ -37,16 +37,16 @@ Serializer<UnitType> _$unitTypeSerializer = new _$UnitTypeSerializer();
 
 class _$UnitTypeSerializer implements PrimitiveSerializer<UnitType> {
   static const Map<String, String> _toWire = const <String, String>{
-    'trooper': 'TROOPER',
-    'emplacementTrooper': 'EMPLACEMENT_TROOPER',
-    'groundVehicle': 'GROUND_VEHICLE',
-    'repulsorVehicle': 'REPULSOR_VEHICLE',
+    'trooper': 'trooper',
+    'emplacementTrooper': 'emplacement-trooper',
+    'groundVehicle': 'ground-vehicle',
+    'repulsorVehicle': 'repulsor-vehicle',
   };
   static const Map<String, String> _fromWire = const <String, String>{
-    'TROOPER': 'trooper',
-    'EMPLACEMENT_TROOPER': 'emplacementTrooper',
-    'GROUND_VEHICLE': 'groundVehicle',
-    'REPULSOR_VEHICLE': 'repulsorVehicle',
+    'trooper': 'trooper',
+    'emplacement-trooper': 'emplacementTrooper',
+    'ground-vehicle': 'groundVehicle',
+    'repulsor-vehicle': 'repulsorVehicle',
   };
 
   @override

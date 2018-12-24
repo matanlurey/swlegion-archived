@@ -197,189 +197,192 @@ class Keyword extends EnumClass {
     ''',
   };
 
-  @BuiltValueEnumConst(wireName: 'JUMP')
+  @BuiltValueEnumConst(wireName: 'jump')
   static const Keyword jumpX = _$0;
 
-  @BuiltValueEnumConst(wireName: 'PULLING_THE_STRINGS')
+  @BuiltValueEnumConst(wireName: 'pulling-the-strings')
   static const Keyword pullingTheStrings = _$1;
 
-  @BuiltValueEnumConst(wireName: 'QUICK_THINKING')
+  @BuiltValueEnumConst(wireName: 'quick-thinking')
   static const Keyword quickThinking = _$2;
 
-  @BuiltValueEnumConst(wireName: 'SPOTTER')
+  @BuiltValueEnumConst(wireName: 'spotter')
   static const Keyword spotterX = _$3;
 
   // Passive.
 
-  @BuiltValueEnumConst(wireName: 'ARM')
+  @BuiltValueEnumConst(wireName: 'arm')
   static const Keyword armXY = _$4;
 
-  @BuiltValueEnumConst(wireName: 'ARMOR')
+  @BuiltValueEnumConst(wireName: 'armor')
   static const Keyword armor = _$5;
 
-  @BuiltValueEnumConst(wireName: 'ARSENAL')
+  @BuiltValueEnumConst(wireName: 'arsenal')
   static const Keyword arsenalX = _$6;
 
-  @BuiltValueEnumConst(wireName: 'BLAST')
+  @BuiltValueEnumConst(wireName: 'blast')
   static const Keyword blast = _$7;
 
-  @BuiltValueEnumConst(wireName: 'BOUNTY')
+  @BuiltValueEnumConst(wireName: 'bounty')
   static const Keyword bounty = _$bounty;
 
-  @BuiltValueEnumConst(wireName: 'CHARGE')
+  @BuiltValueEnumConst(wireName: 'charge')
   static const Keyword charge = _$8;
 
-  @BuiltValueEnumConst(wireName: 'CLIMBING_VEHICLE')
+  @BuiltValueEnumConst(wireName: 'climbing-vehicle')
   static const Keyword climbingVehicle = _$9;
 
-  @BuiltValueEnumConst(wireName: 'COMPEL')
+  @BuiltValueEnumConst(wireName: 'compel')
   static const Keyword compel = _$10;
 
-  @BuiltValueEnumConst(wireName: 'COVER')
+  @BuiltValueEnumConst(wireName: 'cover')
   static const Keyword coverX = _$11;
 
-  @BuiltValueEnumConst(wireName: 'CUMBERSOME')
+  @BuiltValueEnumConst(wireName: 'cumbersome')
   static const Keyword cumbersome = _$12;
 
-  @BuiltValueEnumConst(wireName: 'CUNNING')
+  @BuiltValueEnumConst(wireName: 'cunning')
   static const Keyword cunning = _$13;
 
-  @BuiltValueEnumConst(wireName: 'DANGER_SENSE')
+  @BuiltValueEnumConst(wireName: 'danger-sense')
   static const Keyword dangerSenseX = _$14;
 
-  @BuiltValueEnumConst(wireName: 'DAUNTLESS')
+  @BuiltValueEnumConst(wireName: 'dauntless')
   static const Keyword dauntless = _$15;
 
-  @BuiltValueEnumConst(wireName: 'DEFLECT')
+  @BuiltValueEnumConst(wireName: 'deflect')
   static const Keyword deflect = _$16;
 
-  @BuiltValueEnumConst(wireName: 'DETONATE')
+  @BuiltValueEnumConst(wireName: 'detonate')
   static const Keyword denotateXY = _$17;
 
-  @BuiltValueEnumConst(wireName: 'DISCIPLINED')
+  @BuiltValueEnumConst(wireName: 'disciplined')
   static const Keyword disciplinedX = _$18;
 
-  @BuiltValueEnumConst(wireName: 'ENRAGE')
+  @BuiltValueEnumConst(wireName: 'enrage')
   static const Keyword enrageX = _$19;
 
-  @BuiltValueEnumConst(wireName: 'ENTOURAGE')
+  @BuiltValueEnumConst(wireName: 'entourage')
   static const Keyword entourageX = _$20;
 
-  @BuiltValueEnumConst(wireName: 'EXPERT_CLIMBER')
+  @BuiltValueEnumConst(wireName: 'expert-climber')
   static const Keyword expertClimber = _$21;
 
-  @BuiltValueEnumConst(wireName: 'FIXED')
+  @BuiltValueEnumConst(wireName: 'fixed')
   static const Keyword fixedX = _$22;
 
-  @BuiltValueEnumConst(wireName: 'FULL_PIVOT')
+  @BuiltValueEnumConst(wireName: 'full-pivot')
   static const Keyword fullPivot = _$23;
 
-  @BuiltValueEnumConst(wireName: 'GUARDIAN')
+  @BuiltValueEnumConst(wireName: 'guardian')
   static const Keyword guardianX = _$24;
 
-  @BuiltValueEnumConst(wireName: 'GUNSLINGER')
+  @BuiltValueEnumConst(wireName: 'gunslinger')
   static const Keyword gunslinger = _$25;
 
-  @BuiltValueEnumConst(wireName: 'HEAVY_WEAPON_TEAM')
+  @BuiltValueEnumConst(wireName: 'heavy-weapon-team')
   static const Keyword heavyWeaponTeam = _$26;
 
-  @BuiltValueEnumConst(wireName: 'HIGH_VELOCITY')
+  @BuiltValueEnumConst(wireName: 'high-velocity')
   static const Keyword highVelocity = _$27;
 
-  @BuiltValueEnumConst(wireName: 'IMMUNE')
+  @BuiltValueEnumConst(wireName: 'immune')
   static const Keyword immuneX = _$28;
 
-  @BuiltValueEnumConst(wireName: 'IMPACT')
+  @BuiltValueEnumConst(wireName: 'impact')
   static const Keyword impactX = _$29;
 
-  @BuiltValueEnumConst(wireName: 'IMPERVIOUS')
+  @BuiltValueEnumConst(wireName: 'impervious')
   static const Keyword impervious = _$impervious;
 
-  @BuiltValueEnumConst(wireName: 'INDOMITABLE')
+  @BuiltValueEnumConst(wireName: 'indomitable')
   static const Keyword indomitable = _$30;
 
-  @BuiltValueEnumConst(wireName: 'ION')
+  @BuiltValueEnumConst(wireName: 'ion')
   static const Keyword ionX = _$31;
 
-  @BuiltValueEnumConst(wireName: 'INSPIRE')
+  @BuiltValueEnumConst(wireName: 'inspire')
   static const Keyword inspireX = _$32;
 
-  @BuiltValueEnumConst(wireName: 'INFILTRATE')
+  @BuiltValueEnumConst(wireName: 'infilitrate')
   static const Keyword infilitrate = _$33;
 
-  @BuiltValueEnumConst(wireName: 'LOW_PROFILE')
+  @BuiltValueEnumConst(wireName: 'low-profile')
   static const Keyword lowProfile = _$34;
 
-  @BuiltValueEnumConst(wireName: 'MASTER_OF_THE_FORCE')
+  @BuiltValueEnumConst(wireName: 'master-of-the-force')
   static const Keyword masterOfTheForceX = _$35;
 
-  @BuiltValueEnumConst(wireName: 'NIMBLE')
+  @BuiltValueEnumConst(wireName: 'nimble')
   static const Keyword nimble = _$36;
 
-  @BuiltValueEnumConst(wireName: 'PRECISE')
+  @BuiltValueEnumConst(wireName: 'precise')
   static const Keyword preciseX = _$37;
 
-  @BuiltValueEnumConst(wireName: 'PIERCE')
+  @BuiltValueEnumConst(wireName: 'pierce')
   static const Keyword pierceX = _$38;
 
-  @BuiltValueEnumConst(wireName: 'PLODDING')
+  @BuiltValueEnumConst(wireName: 'plodding')
   static const Keyword plodding = _$39;
 
-  @BuiltValueEnumConst(wireName: 'READY')
+  @BuiltValueEnumConst(wireName: 'ready')
   static const Keyword readyX = _$40;
 
-  @BuiltValueEnumConst(wireName: 'RELENTLESS')
+  @BuiltValueEnumConst(wireName: 'relentless')
   static const Keyword relentless = _$41;
 
-  @BuiltValueEnumConst(wireName: 'REPOSITION')
+  @BuiltValueEnumConst(wireName: 'reposition')
   static const Keyword reposition = _$42;
 
-  @BuiltValueEnumConst(wireName: 'SCOUT')
+  @BuiltValueEnumConst(wireName: 'scout')
   static const Keyword scoutX = _$43;
 
-  @BuiltValueEnumConst(wireName: 'SENTINEL')
+  @BuiltValueEnumConst(wireName: 'sentinel')
   static const Keyword sentinel = _$44;
 
-  @BuiltValueEnumConst(wireName: 'SHARPSHOOTER')
+  @BuiltValueEnumConst(wireName: 'sharpshooter')
   static const Keyword sharpshooterX = _$45;
 
-  @BuiltValueEnumConst(wireName: 'SIDEARM')
+  @BuiltValueEnumConst(wireName: 'sidearm')
   static const Keyword sidearmX = _$sidearmX;
 
-  @BuiltValueEnumConst(wireName: 'SPEEDER')
+  @BuiltValueEnumConst(wireName: 'speeder')
   static const Keyword speederX = _$46;
 
-  @BuiltValueEnumConst(wireName: 'SPRAY')
+  @BuiltValueEnumConst(wireName: 'spray')
   static const Keyword spray = _$47;
 
-  @BuiltValueEnumConst(wireName: 'STATIONARY')
+  @BuiltValueEnumConst(wireName: 'stationary')
   static const Keyword stationary = _$48;
 
-  @BuiltValueEnumConst(wireName: 'STEADY')
+  @BuiltValueEnumConst(wireName: 'steady')
   static const Keyword steady = _$49;
 
-  @BuiltValueEnumConst(wireName: 'SUPPRESSIVE')
+  @BuiltValueEnumConst(wireName: 'suppressive')
   static const Keyword suppressive = _$50;
 
-  @BuiltValueEnumConst(wireName: 'TAKE_COVER')
+  @BuiltValueEnumConst(wireName: 'take-cover')
   static const Keyword takeCoverX = _$51;
 
-  @BuiltValueEnumConst(wireName: 'TEAMWORK')
+  @BuiltValueEnumConst(wireName: 'teamwork')
   static const Keyword teamworkX = _$52;
 
-  @BuiltValueEnumConst(wireName: 'TOW_CABLE')
+  @BuiltValueEnumConst(wireName: 'tow-cable')
   static const Keyword towCable = _$53;
 
-  @BuiltValueEnumConst(wireName: 'UNCANNY_LUCK')
+  @BuiltValueEnumConst(wireName: 'uncanny-luck')
   static const Keyword uncannyLuckX = _$54;
 
-  @BuiltValueEnumConst(wireName: 'UNHINDERED')
+  @BuiltValueEnumConst(wireName: 'unhindered')
   static const Keyword unhindered = _$55;
 
-  @BuiltValueEnumConst(wireName: 'WEAK_POINT')
+  @BuiltValueEnumConst(wireName: 'weak-point')
   static const Keyword weakPointX = _$56;
 
   const Keyword._(String name) : super(name);
+
+  @override
+  String get name => _$KeywordSerializer._toWire[super.name];
 
   /// A description of this keyword.
   String get description => (_description[this] ?? '').trim();
@@ -399,5 +402,11 @@ class Keyword extends EnumClass {
   /// Parses and returns [name] into the cooresponding [Keyword] value.
   ///
   /// Throws [ArgumentError] if no match is found.
+  static Keyword from(String name) {
+    return _$valueOf(_$KeywordSerializer._fromWire[name]);
+  }
+
+  /// **WARNING**: Prefer [from].
+  @Deprecated('Use "Keyword.from" instead.')
   static Keyword valueOf(String name) => _$valueOf(name);
 }

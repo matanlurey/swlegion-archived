@@ -30,12 +30,12 @@ Serializer<DefenseDice> _$defenseDiceSerializer = new _$DefenseDiceSerializer();
 
 class _$DefenseDiceSerializer implements PrimitiveSerializer<DefenseDice> {
   static const Map<String, String> _toWire = const <String, String>{
-    'white': 'WHITE',
-    'red': 'RED',
+    'white': 'white',
+    'red': 'red',
   };
   static const Map<String, String> _fromWire = const <String, String>{
-    'WHITE': 'white',
-    'RED': 'red',
+    'white': 'white',
+    'red': 'red',
   };
 
   @override

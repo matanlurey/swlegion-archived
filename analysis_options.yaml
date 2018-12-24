@@ -2,6 +2,9 @@ analyzer:
   strong-mode:
     implicit-casts: false
     implicit-dynamic: false
+  errors:
+    # https://github.com/google/built_value.dart/issues/558
+    deprecated_member_use: ignore
   exclude:
     - ".dart_tool/**"
 

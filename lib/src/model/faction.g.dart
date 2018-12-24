@@ -29,12 +29,12 @@ Serializer<Faction> _$factionSerializer = new _$FactionSerializer();
 
 class _$FactionSerializer implements PrimitiveSerializer<Faction> {
   static const Map<String, String> _toWire = const <String, String>{
-    'lightSide': 'LIGHT_SIDE',
-    'darkSide': 'DARK_SIDE',
+    'lightSide': 'light-side',
+    'darkSide': 'dark-side',
   };
   static const Map<String, String> _fromWire = const <String, String>{
-    'LIGHT_SIDE': 'lightSide',
-    'DARK_SIDE': 'darkSide',
+    'light-side': 'lightSide',
+    'dark-side': 'darkSide',
   };
 
   @override

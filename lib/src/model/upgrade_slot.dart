@@ -6,40 +6,43 @@ part 'upgrade_slot.g.dart';
 
 /// Represents available upgrade slots of a unit.
 class UpgradeSlot extends EnumClass {
-  @BuiltValueEnumConst(wireName: 'HEAVY_WEAPON')
+  @BuiltValueEnumConst(wireName: 'heavy-weapon')
   static const UpgradeSlot heavyWeapon = _$heavyWeapon;
 
-  @BuiltValueEnumConst(wireName: 'PERSONNEL')
+  @BuiltValueEnumConst(wireName: 'personnel')
   static const UpgradeSlot personnel = _$personnel;
 
-  @BuiltValueEnumConst(wireName: 'FORCE')
+  @BuiltValueEnumConst(wireName: 'force')
   static const UpgradeSlot force = _$force;
 
-  @BuiltValueEnumConst(wireName: 'COMMAND')
+  @BuiltValueEnumConst(wireName: 'command')
   static const UpgradeSlot command = _$command;
 
-  @BuiltValueEnumConst(wireName: 'GEAR')
+  @BuiltValueEnumConst(wireName: 'gear')
   static const UpgradeSlot gear = _$gear;
 
-  @BuiltValueEnumConst(wireName: 'GRENADES')
+  @BuiltValueEnumConst(wireName: 'grenades')
   static const UpgradeSlot grenades = _$grenades;
 
-  @BuiltValueEnumConst(wireName: 'HARD_POINT')
+  @BuiltValueEnumConst(wireName: 'hard-point')
   static const UpgradeSlot hardPoint = _$hardPoint;
 
-  @BuiltValueEnumConst(wireName: 'COMMS')
+  @BuiltValueEnumConst(wireName: 'comms')
   static const UpgradeSlot comms = _$comms;
 
-  @BuiltValueEnumConst(wireName: 'PILOT')
+  @BuiltValueEnumConst(wireName: 'pilot')
   static const UpgradeSlot pilot = _$pilot;
 
-  @BuiltValueEnumConst(wireName: 'ELITE')
+  @BuiltValueEnumConst(wireName: 'elite')
   static const UpgradeSlot elite = _$elite;
 
-  @BuiltValueEnumConst(wireName: 'GENERATOR')
+  @BuiltValueEnumConst(wireName: 'generator')
   static const UpgradeSlot generator = _$generator;
 
   const UpgradeSlot._(String name) : super(name);
+
+  @override
+  String get name => _$UpgradeSlotSerializer._toWire[super.name];
 
   /// Support for serializing instances of [UpgradeSlot].
   static Serializer<UpgradeSlot> get serializer => _$upgradeSlotSerializer;
@@ -50,5 +53,11 @@ class UpgradeSlot extends EnumClass {
   /// Parses and returns [name] into the cooresponding [UpgradeSlot] value.
   ///
   /// Throws [ArgumentError] if no match is found.
+  static UpgradeSlot from(String name) {
+    return _$valueOf(_$UpgradeSlotSerializer._fromWire[name]);
+  }
+
+  /// **WARNING**: Prefer [from].
+  @Deprecated('Use "UpgradeSlot.from" instead.')
   static UpgradeSlot valueOf(String name) => _$valueOf(name);
 }

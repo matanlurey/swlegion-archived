@@ -1,3 +1,8 @@
+### Database
+
+* Normalized all enum IDs as `lower-hyphenated-case`.
+* Added `.from` to every enum, to use instead of `valueOf`.
+
 ## 0.2.0
 
 ### Data Model
