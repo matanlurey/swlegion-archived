@@ -11,6 +11,15 @@ abstract class Sample implements Built<Sample, SampleBuilder> {
   factory Sample(void Function(SampleBuilder) b) = _$Sample;
   Sample._();
 
+  /// A single [CommandCard].
+  Reference<CommandCard> get aCommand;
+
+  /// A single [Unit].
+  Reference<Unit> get aUnit;
+
+  /// A single [Upgrade].
+  Reference<Upgrade> get aUpgrade;
+
   /// Example of cards by reference.
   BuiltSet<Reference<CommandCard>> get commands;
 

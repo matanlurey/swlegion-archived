@@ -51,8 +51,11 @@ void main() {
 
   test('should support serializing to/from Reference<...>', () {
     final sample = Sample((b) => b
+      ..aCommand = commands.first.toRef()
       ..commands.add(commands.first.toRef())
+      ..aUnit = units.first.toRef()
       ..units.add(units.first.toRef())
+      ..aUpgrade = upgrades.first.toRef()
       ..upgrades.add(upgrades.first.toRef()));
     final text = json.serializeWith(Sample.serializer, sample);
     final data = json.deserializeWith(Sample.serializer, text);
