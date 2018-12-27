@@ -28,6 +28,9 @@ class Reference<T extends Indexable<T>> implements Indexable<T> {
 
   @override
   Reference<T> toRef() => this;
+
+  @override
+  String toString() => 'Reference<$T>: $id';
 }
 
 class _ReferenceSerializer implements PrimitiveSerializer<Reference> {
