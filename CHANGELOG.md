@@ -6,6 +6,7 @@
 
 * Normalized all enum IDs as `lower-hyphenated-case`.
 * Added `.from` to every enum, to use instead of `valueOf`.
+* Added `.toString()` to `Reference` to aid in debugging.
 
 ## 0.2.0
 
