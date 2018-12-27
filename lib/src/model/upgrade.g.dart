@@ -219,18 +219,12 @@ class _$Upgrade extends Upgrade {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is Upgrade &&
-        restrictedToType == other.restrictedToType &&
-        id == other.id &&
-        type == other.type &&
-        weapon == other.weapon;
+    return other is Upgrade && id == other.id;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, restrictedToType.hashCode), id.hashCode), type.hashCode),
-        weapon.hashCode));
+    return $jf($jc(0, id.hashCode));
   }
 
   @override

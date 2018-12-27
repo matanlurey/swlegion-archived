@@ -83,7 +83,7 @@ abstract class Upgrade extends Object
   ///
   /// May be `null` if this upgrade may be applied on any unit.
   @nullable
-  @BuiltValueField(wireName: 'restricted_to_type')
+  @BuiltValueField(compare: false, wireName: 'restricted_to_type')
   UnitType get restrictedToType;
 
   /// Unique ID for the upgrade.
@@ -99,13 +99,13 @@ abstract class Upgrade extends Object
   String get text;
 
   /// Type of the upgrade.
-  @BuiltValueField(wireName: 'type')
+  @BuiltValueField(compare: false, wireName: 'type')
   UpgradeSlot get type;
 
   /// Weapon supplied to unit when the upgrade is used.
   ///
   /// May be `null` if this upgrade does not provide an weapon.
   @nullable
-  @BuiltValueField(wireName: 'weapon')
+  @BuiltValueField(compare: false, wireName: 'weapon')
   Weapon get weapon;
 }
