@@ -1,3 +1,7 @@
+### Data Model
+
+* Corrects `Upgrade` to only compare based on `.id`.
+
 ### Database
 
 * Normalized all enum IDs as `lower-hyphenated-case`.
