@@ -8,6 +8,7 @@ final generalVeers = Unit(
   name: 'General Veers',
   subTitle: 'Master Tactician',
   faction: Faction.darkSide,
+  isUnique: true,
   miniatures: 1,
   rank: Rank.commander,
   type: UnitType.trooper,

@@ -8,6 +8,7 @@ final hanSolo = Unit(
   name: 'Han Solo',
   subTitle: 'Unorthodox General',
   faction: Faction.lightSide,
+  isUnique: true,
   miniatures: 1,
   rank: Rank.commander,
   type: UnitType.trooper,

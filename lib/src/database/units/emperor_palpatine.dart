@@ -7,6 +7,7 @@ final emperorPalpatine = Unit(
   name: 'Emperor Palpatine',
   subTitle: 'Ruler of the Galactic Empire',
   faction: Faction.darkSide,
+  isUnique: true,
   miniatures: 1,
   rank: Rank.commander,
   type: UnitType.trooper,

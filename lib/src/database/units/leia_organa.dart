@@ -8,6 +8,7 @@ final leiaOrgana = Unit(
   name: 'Leia Organa',
   subTitle: 'Fearless and Inventive',
   faction: Faction.lightSide,
+  isUnique: true,
   miniatures: 1,
   rank: Rank.commander,
   type: UnitType.trooper,

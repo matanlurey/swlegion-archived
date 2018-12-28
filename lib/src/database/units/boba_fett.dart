@@ -9,6 +9,7 @@ final bobaFett = Unit(
   name: 'Boba Fett',
   subTitle: 'Infamous Bounty Hunter',
   faction: Faction.darkSide,
+  isUnique: true,
   miniatures: 1,
   rank: Rank.operative,
   type: UnitType.trooper,
