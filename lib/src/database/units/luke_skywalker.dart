@@ -7,6 +7,7 @@ final lukeSkywalker = Unit(
   name: 'Luke Skywalker',
   subTitle: 'Hero of the Rebellion',
   faction: Faction.lightSide,
+  isUnique: true,
   miniatures: 1,
   rank: Rank.commander,
   type: UnitType.trooper,

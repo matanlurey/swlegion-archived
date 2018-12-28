@@ -7,6 +7,7 @@ final darthVader = Unit(
   name: 'Darth Vader',
   subTitle: 'Dark Lord of the Sith',
   faction: Faction.darkSide,
+  isUnique: true,
   miniatures: 1,
   rank: Rank.commander,
   type: UnitType.trooper,
