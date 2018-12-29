@@ -8,7 +8,7 @@ final t7IonSnowtrooper = Upgrade(
   name: 'T-7 Ion Snowtrooper',
   type: UpgradeSlot.heavyWeapon,
   isExhaustible: true,
-  restrictedToUnit: [unit.snowtroopers],
+  restrictedToUnit: [unit.snowtroopers.toRef()],
   addsMiniature: true,
   weapon: weapon.t7IonDisrupterRifle,
   points: 34,

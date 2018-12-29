@@ -7,6 +7,6 @@ final rebelTrooper = Upgrade(
   name: 'Rebel Trooper',
   type: UpgradeSlot.personnel,
   addsMiniature: true,
-  restrictedToUnit: [unit.rebelTroopers],
+  restrictedToUnit: [unit.rebelTroopers.toRef()],
   points: 10,
 );

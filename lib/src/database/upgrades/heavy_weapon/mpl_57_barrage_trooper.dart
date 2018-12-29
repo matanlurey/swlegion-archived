@@ -8,7 +8,7 @@ final mpl57BarrageTrooper = Upgrade(
   name: 'MPL-57 Barrage Trooper',
   type: UpgradeSlot.heavyWeapon,
   isExhaustible: true,
-  restrictedToUnit: [unit.fleetTroopers],
+  restrictedToUnit: [unit.fleetTroopers.toRef()],
   addsMiniature: true,
   weapon: weapon.mpl57BarrageLauncher,
   points: 33,

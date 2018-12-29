@@ -18,6 +18,7 @@
 * `CommandCard` was added.
 * Replaced `*Key` instances with a single `Reference<T>` instance.
   * `CommandCard`, `Unit`, `Upgrade` all now implement `Indexable<T>`.
+  * `Upgrade`'s `.restrictedToUnit` is now a `BuiltSet<Reference<Unit>>`.
 
 ### Database
 

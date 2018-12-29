@@ -32,8 +32,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
               const [const FullType(Keyword), const FullType(String)]),
           () => new MapBuilder<Keyword, String>())
       ..addBuilderFactory(
-          const FullType(BuiltSet, const [const FullType(Unit)]),
-          () => new SetBuilder<Unit>())
+          const FullType(BuiltSet, const [
+            const FullType(Reference, const [const FullType(Unit)])
+          ]),
+          () => new SetBuilder<Reference<Unit>>())
       ..addBuilderFactory(
           const FullType(BuiltMap,
               const [const FullType(UpgradeSlot), const FullType(int)]),

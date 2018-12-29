@@ -9,8 +9,8 @@ final dh447Sniper = Upgrade(
   name: 'DH-447 Sniper',
   type: UpgradeSlot.heavyWeapon,
   restrictedToUnit: [
-    unit.rebelCommandos,
-    unit.rebelCommandosStrikeTeam,
+    unit.rebelCommandos.toRef(),
+    unit.rebelCommandosStrikeTeam.toRef(),
   ],
   addsMiniature: true,
   weapon: weapon.dh447SniperRifle,

@@ -7,7 +7,7 @@ final moDkPowerHarpoon = Upgrade(
   id: 'mo-dk-power-harpoon',
   name: 'Mo/DK Power Harpoon',
   type: UpgradeSlot.hardPoint,
-  restrictedToUnit: [unit.t47Airspeeder],
+  restrictedToUnit: [unit.t47Airspeeder.toRef()],
   weapon: weapon.moDkPowerHarpoon,
   points: 8,
 );

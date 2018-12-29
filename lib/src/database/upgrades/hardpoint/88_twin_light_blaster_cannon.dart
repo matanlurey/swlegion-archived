@@ -8,7 +8,7 @@ final $88TwinLightBlasterCannon = Upgrade(
   id: '88-twin-light-blaster-cannon',
   name: '88 Twin Light Blaster Cannon',
   type: UpgradeSlot.hardPoint,
-  restrictedToUnit: [unit.atSt],
+  restrictedToUnit: [unit.atSt.toRef()],
   weapon: weapon.$88TwinLightBlasterCannon,
   points: 20,
 );
