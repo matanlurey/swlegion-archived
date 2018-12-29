@@ -1,7 +1,7 @@
 import 'package:swlegion/swlegion.dart';
 
 final emergencyStims = Upgrade(
-  id: 'emergency-stms',
+  id: 'emergency-stims',
   name: 'Emergency Stims',
   type: UpgradeSlot.gear,
   points: 8,
