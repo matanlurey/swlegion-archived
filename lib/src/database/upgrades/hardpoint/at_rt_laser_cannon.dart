@@ -7,7 +7,7 @@ final atRtLaserCannon = Upgrade(
   id: 'at-rt-laser-cannon',
   name: 'AT-RT Laser Cannon',
   type: UpgradeSlot.hardPoint,
-  restrictedToUnit: [unit.atRt],
+  restrictedToUnit: [unit.atRt.toRef()],
   weapon: weapon.atRtLaserCannon,
   points: 35,
 );

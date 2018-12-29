@@ -7,6 +7,6 @@ final snowtrooper = Upgrade(
   name: 'Snowtrooper',
   type: UpgradeSlot.personnel,
   addsMiniature: true,
-  restrictedToUnit: [unit.snowtroopers],
+  restrictedToUnit: [unit.snowtroopers.toRef()],
   points: 12,
 );

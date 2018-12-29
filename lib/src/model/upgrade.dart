@@ -27,7 +27,7 @@ abstract class Upgrade extends Object
     @required int points,
     Map<Keyword, String> keywords = const {},
     Faction restrictedToFaction,
-    List<Unit> restrictedToUnit = const [],
+    List<Reference<Unit>> restrictedToUnit = const [],
     UnitType restrictedToType,
     @required String id,
     @required String name,
@@ -77,7 +77,7 @@ abstract class Upgrade extends Object
 
   /// Units this upgrade is restricted to.
   @BuiltValueField(compare: false, wireName: 'restricted_to_unit')
-  BuiltSet<Unit> get restrictedToUnit;
+  BuiltSet<Reference<Unit>> get restrictedToUnit;
 
   /// Unit type this upgrade is restricted to.
   ///

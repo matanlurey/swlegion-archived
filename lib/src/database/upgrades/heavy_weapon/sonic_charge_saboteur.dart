@@ -9,8 +9,8 @@ final sonicChargeSaboteur = Upgrade(
   name: 'Sonic Charge Saboteur',
   type: UpgradeSlot.heavyWeapon,
   restrictedToUnit: [
-    unit.scoutTroopers,
-    unit.scoutTroopersStrikeTeam,
+    unit.scoutTroopers.toRef(),
+    unit.scoutTroopersStrikeTeam.toRef(),
   ],
   addsMiniature: true,
   weapon: weapon.sonicCharge,

@@ -8,7 +8,7 @@ final mpl57IonTrooper = Upgrade(
   name: 'MPL-57 Ion Trooper',
   type: UpgradeSlot.heavyWeapon,
   isExhaustible: true,
-  restrictedToUnit: [unit.rebelTroopers],
+  restrictedToUnit: [unit.rebelTroopers.toRef()],
   addsMiniature: true,
   weapon: weapon.mpl57IonLauncher,
   points: 32,

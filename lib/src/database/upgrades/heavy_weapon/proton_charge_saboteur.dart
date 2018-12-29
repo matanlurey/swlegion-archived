@@ -9,8 +9,8 @@ final protonChargeSaboteur = Upgrade(
   name: 'Proton Charge Saboteur',
   type: UpgradeSlot.heavyWeapon,
   restrictedToUnit: [
-    unit.rebelCommandos,
-    unit.rebelCommandosStrikeTeam,
+    unit.rebelCommandos.toRef(),
+    unit.rebelCommandosStrikeTeam.toRef(),
   ],
   addsMiniature: true,
   weapon: weapon.protonCharge,

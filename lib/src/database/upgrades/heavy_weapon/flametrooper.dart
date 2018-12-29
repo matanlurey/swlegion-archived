@@ -7,7 +7,7 @@ final flametrooper = Upgrade(
   id: 'flametrooper',
   name: 'Flametrooper',
   type: UpgradeSlot.heavyWeapon,
-  restrictedToUnit: [unit.snowtroopers],
+  restrictedToUnit: [unit.snowtroopers.toRef()],
   addsMiniature: true,
   weapon: weapon.flamethrower,
   points: 20,

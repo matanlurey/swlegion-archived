@@ -7,7 +7,7 @@ final atRtRotaryBlaster = Upgrade(
   id: 'at-rt-rotary-blaster',
   name: 'AT-RT Rotary Blaster',
   type: UpgradeSlot.hardPoint,
-  restrictedToUnit: [unit.atRt],
+  restrictedToUnit: [unit.atRt.toRef()],
   weapon: weapon.atRtRotaryBlaster,
   points: 30,
 );

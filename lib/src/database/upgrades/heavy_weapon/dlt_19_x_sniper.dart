@@ -9,8 +9,8 @@ final dlt19XSniper = Upgrade(
   name: 'DLT-19x Sniper',
   type: UpgradeSlot.heavyWeapon,
   restrictedToUnit: [
-    unit.scoutTroopers,
-    unit.scoutTroopersStrikeTeam,
+    unit.scoutTroopers.toRef(),
+    unit.scoutTroopersStrikeTeam.toRef(),
   ],
   addsMiniature: true,
   weapon: weapon.dlt19XSniperRifle,

@@ -32,8 +32,9 @@ class _$UpgradeSerializer implements StructuredSerializer<Upgrade> {
               const [const FullType(Keyword), const FullType(String)])),
       'restricted_to_unit',
       serializers.serialize(object.restrictedToUnit,
-          specifiedType:
-              const FullType(BuiltSet, const [const FullType(Unit)])),
+          specifiedType: const FullType(BuiltSet, const [
+            const FullType(Reference, const [const FullType(Unit)])
+          ])),
       'id',
       serializers.serialize(object.id, specifiedType: const FullType(String)),
       'name',
@@ -102,9 +103,9 @@ class _$UpgradeSerializer implements StructuredSerializer<Upgrade> {
           break;
         case 'restricted_to_unit':
           result.restrictedToUnit.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltSet, const [const FullType(Unit)]))
-              as BuiltSet);
+              specifiedType: const FullType(BuiltSet, const [
+                const FullType(Reference, const [const FullType(Unit)])
+              ])) as BuiltSet);
           break;
         case 'restricted_to_type':
           result.restrictedToType = serializers.deserialize(value,
@@ -149,7 +150,7 @@ class _$Upgrade extends Upgrade {
   @override
   final Faction restrictedToFaction;
   @override
-  final BuiltSet<Unit> restrictedToUnit;
+  final BuiltSet<Reference<Unit>> restrictedToUnit;
   @override
   final UnitType restrictedToType;
   @override
@@ -274,10 +275,10 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
   set restrictedToFaction(Faction restrictedToFaction) =>
       _$this._restrictedToFaction = restrictedToFaction;
 
-  SetBuilder<Unit> _restrictedToUnit;
-  SetBuilder<Unit> get restrictedToUnit =>
-      _$this._restrictedToUnit ??= new SetBuilder<Unit>();
-  set restrictedToUnit(SetBuilder<Unit> restrictedToUnit) =>
+  SetBuilder<Reference<Unit>> _restrictedToUnit;
+  SetBuilder<Reference<Unit>> get restrictedToUnit =>
+      _$this._restrictedToUnit ??= new SetBuilder<Reference<Unit>>();
+  set restrictedToUnit(SetBuilder<Reference<Unit>> restrictedToUnit) =>
       _$this._restrictedToUnit = restrictedToUnit;
 
   UnitType _restrictedToType;
