@@ -8,6 +8,7 @@
 * Added `.from` to every enum, to use instead of `valueOf`.
 * Added `.toString()` to `Reference` to aid in debugging.
 * Added missing `.isUnique = true` for commanders/operatives.
+* Upgrade emergency stims now has a corrected ID of `emergency-stims`.
 
 ## 0.2.0
 
