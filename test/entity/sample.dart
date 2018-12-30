@@ -12,20 +12,26 @@ abstract class Sample implements Built<Sample, SampleBuilder> {
   Sample._();
 
   /// A single [CommandCard].
+  @nullable
   Reference<CommandCard> get aCommand;
 
   /// A single [Unit].
+  @nullable
   Reference<Unit> get aUnit;
 
   /// A single [Upgrade].
+  @nullable
   Reference<Upgrade> get aUpgrade;
 
   /// Example of cards by reference.
+  @nullable
   BuiltSet<Reference<CommandCard>> get commands;
 
   /// Example of units by reference.
+  @nullable
   BuiltList<Reference<Unit>> get units;
 
   /// Examples of upgrades by reference.
+  @nullable
   BuiltSet<Reference<Upgrade>> get upgrades;
 }

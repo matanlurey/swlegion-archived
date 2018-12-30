@@ -17,7 +17,7 @@ part 'upgrade.g.dart';
 @BuiltValue()
 abstract class Upgrade extends Object
     with Indexable<Upgrade>
-    implements Built<Upgrade, UpgradeBuilder> {
+    implements Built<Upgrade, UpgradeBuilder>, Reference<Upgrade> {
   /// Support for serializing instances of [Upgrade].
   static Serializer<Upgrade> get serializer => _$upgradeSerializer;
 

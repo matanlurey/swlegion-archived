@@ -1,6 +1,7 @@
 ### Data Model
 
 * Corrects `Upgrade` to only compare based on `.id`.
+* `Indexable.toRef` is now optional, as an `Indexable` is also a `Reference`.
 
 ### Database
 
@@ -9,6 +10,37 @@
 * Added `.toString()` to `Reference` to aid in debugging.
 * Added missing `.isUnique = true` for commanders/operatives.
 * Upgrade emergency stims now has a corrected ID of `emergency-stims`.
+* Created `Commands`, `Units`, `Upgrades`, `Weapons` classes for convenience:
+
+```dart
+import 'package:swlegion/database.dart';
+
+void main() {
+  print(Units.stormtroopers.points); // 44
+}
+```
+
+### Mechanics
+
+* Added a new `class`, `Holodeck`, for game logic and helper functionality that
+  is not strictly tied to the database nor to the serialized JSON model(s):
+
+```dart
+import 'package:swlegion/database.dart';
+import 'package:swlegion/swlegion.dart';
+
+void main() {
+  // Can create a `Holodeck` using the provided data:
+  final customDeck = Holodeck(
+    commands: commands,
+    units: units,
+    upgrades: upgrades,
+  );
+
+  // Or use the default `Holodeck` directly.
+  holodeck.validUpgradesForUnit(Units.stormtroopers);
+}
+```
 
 ## 0.2.0
 

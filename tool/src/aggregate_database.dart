@@ -45,13 +45,25 @@ class _AggregateDatabase extends Builder {
         final model = topLevel.first.name;
         aggregate[p.joinAll(input.pathSegments.skip(2))] = model;
       }
-      final imports = aggregate.keys.map((i) => "import '$i';").join('\n');
-      final models = aggregate.values.map((name) => '  $name').join(',\n');
+      final imports =
+          aggregate.keys.map((i) => "import '$i' as _i;").join('\n');
+      final models = aggregate.values.map((name) => '  _i.$name').join(',\n');
+      final clazz = _className(entry.key);
+      final exports = 'class $clazz {\n'
+          '  const $clazz._();\n'
+          '  ${aggregate.values.map((n) => 'static final $n = _i.$n;').join('\n  ')}'
+          '\n'
+          '}\n';
       await buildStep.writeAsString(
         output,
-        '$imports\n\nfinal aggregate = [\n$models\n];\n',
+        '$imports\n\nfinal aggregate = [\n$models\n];\n$exports\n',
       );
     }
+  }
+
+  static String _className(String output) {
+    final file = p.basenameWithoutExtension(output).split('_').last;
+    return file[0].toUpperCase() + file.substring(1);
   }
 
   @override
