@@ -7,8 +7,10 @@ import 'database/commands/darth_vader/implacable.dart' as _i;
 import 'database/commands/darth_vader/master_of_evil.dart' as _i;
 import 'database/commands/darth_vader/new_ways_to_motivate_them.dart' as _i;
 import 'database/commands/emperor_palpatine.dart/an_entire_legion.dart' as _i;
-import 'database/commands/emperor_palpatine.dart/and_now_you_will_die.dart' as _i;
-import 'database/commands/emperor_palpatine.dart/give_in_to_your_anger.dart' as _i;
+import 'database/commands/emperor_palpatine.dart/and_now_you_will_die.dart'
+    as _i;
+import 'database/commands/emperor_palpatine.dart/give_in_to_your_anger.dart'
+    as _i;
 import 'database/commands/general_veers/evasive_maneuvers.dart' as _i;
 import 'database/commands/general_veers/imperial_discipline.dart' as _i;
 import 'database/commands/general_veers/maximum_firepower.dart' as _i;
@@ -17,7 +19,8 @@ import 'database/commands/han_solo/reckless_diversion.dart' as _i;
 import 'database/commands/han_solo/sorry_about_the_mess.dart' as _i;
 import 'database/commands/leia_organa/coordinated_bombardment.dart' as _i;
 import 'database/commands/leia_organa/no_time_for_sorrows.dart' as _i;
-import 'database/commands/leia_organa/somebody_has_to_save_our_skins.dart' as _i;
+import 'database/commands/leia_organa/somebody_has_to_save_our_skins.dart'
+    as _i;
 import 'database/commands/luke_skywalker/my_ally_is_the_force.dart' as _i;
 import 'database/commands/luke_skywalker/return_of_the_jedi.dart' as _i;
 import 'database/commands/luke_skywalker/son_of_skywalker.dart' as _i;
@@ -51,6 +54,7 @@ final aggregate = [
   _i.push,
   _i.standingOrders
 ];
+
 class Commands {
   const Commands._();
   static final ambush = _i.ambush;
@@ -79,4 +83,3 @@ class Commands {
   static final push = _i.push;
   static final standingOrders = _i.standingOrders;
 }
-

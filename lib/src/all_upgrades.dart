@@ -107,6 +107,7 @@ final aggregate = [
   _i.generalWeiss,
   _i.wedgeAntilles
 ];
+
 class Upgrades {
   const Upgrades._();
   static final commandingPresence = _i.commandingPresence;
@@ -163,4 +164,3 @@ class Upgrades {
   static final generalWeiss = _i.generalWeiss;
   static final wedgeAntilles = _i.wedgeAntilles;
 }
-

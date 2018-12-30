@@ -45,6 +45,7 @@ final aggregate = [
   _i.stormtroopers,
   _i.t47Airspeeder
 ];
+
 class Units {
   const Units._();
   static final $1dot4FDLaserCannonTeam = _i.$1dot4FDLaserCannonTeam;
@@ -70,4 +71,3 @@ class Units {
   static final stormtroopers = _i.stormtroopers;
   static final t47Airspeeder = _i.t47Airspeeder;
 }
-
