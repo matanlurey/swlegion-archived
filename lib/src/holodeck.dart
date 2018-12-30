@@ -37,7 +37,8 @@ class Holodeck {
       if (!details.upgrades.containsKey(u.type)) {
         return false;
       }
-      if (u.restrictedToUnit.isNotEmpty && !u.restrictedToUnit.contains(unit)) {
+      if (u.restrictedToUnit.isNotEmpty &&
+          !u.restrictedToUnit.contains(unit.toRef())) {
         return false;
       }
       if (u.restrictedToFaction != null) {
