@@ -1,3 +1,5 @@
+## 0.3.0
+
 ### Data Model
 
 * Corrects `Upgrade` to only compare based on `.id`.
