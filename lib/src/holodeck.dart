@@ -69,10 +69,22 @@ class Holodeck {
   /// Returns the cost of [unit] with [upgrades].
   int costOfUnit(
     Reference<Unit> unit, {
-    Iterable<Reference<Upgrade>> upgrades = const [],
+    @required Iterable<Reference<Upgrade>> upgrades,
   }) {
+    assert(upgrades != null);
     return upgrades.fold(toUnit(unit).points, (sum, upgrade) {
       return sum + toUpgrade(upgrade).points;
+    });
+  }
+
+  /// Returns the number of miniatures in [unit] with [upgrades].
+  int totalMinatures(
+    Reference<Unit> unit, {
+    @required Iterable<Reference<Upgrade>> upgrades,
+  }) {
+    assert(upgrades != null);
+    return upgrades.fold(toUnit(unit).miniatures, (sum, upgrade) {
+      return sum + (toUpgrade(upgrade).addsMiniature ? 1 : 0);
     });
   }
 

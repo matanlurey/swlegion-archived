@@ -52,4 +52,19 @@ void main() {
       expected,
     );
   });
+
+  test('should return the total number of miniatures', () {
+    final expected = Units.stormtroopers.miniatures + 2;
+    expect(
+      holodeck.totalMinatures(
+        Units.stormtroopers,
+        upgrades: [
+          Upgrades.dlt19Stormtrooper,
+          Upgrades.stormtrooper,
+        ],
+      ),
+      expected,
+      reason: 'Stormtroopers with 2 upgrades that add units should be 6',
+    );
+  });
 }
