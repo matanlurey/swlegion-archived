@@ -5,6 +5,11 @@
 * Added Chewbacca Operative Expansion.
 * Added Wookie Warriors Expansion.
 
+### Holodeck
+
+* `costOfUnit` now treats `upgrades` as a `@required` named parameter.
+* Added `totalMiniatures(unit, {Iterable<Reference<Upgrade>> upgrades})`.
+
 ## 0.3.0
 
 ### Data Model
