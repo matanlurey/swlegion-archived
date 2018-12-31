@@ -12,7 +12,7 @@ part 'command_card.g.dart';
 /// Represents a collection of units (a list) as an army.
 abstract class CommandCard extends Object
     with Indexable<CommandCard>
-    implements Built<CommandCard, CommandCardBuilder> {
+    implements Built<CommandCard, CommandCardBuilder>, Reference<CommandCard> {
   /// Support for serializing instances of [CommandCard].
   static Serializer<CommandCard> get serializer => _$commandCardSerializer;
 

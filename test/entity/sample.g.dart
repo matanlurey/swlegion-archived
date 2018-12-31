@@ -17,35 +17,52 @@ class _$SampleSerializer implements StructuredSerializer<Sample> {
   @override
   Iterable serialize(Serializers serializers, Sample object,
       {FullType specifiedType = FullType.unspecified}) {
-    final result = <Object>[
-      'aCommand',
-      serializers.serialize(object.aCommand,
-          specifiedType:
-              const FullType(Reference, const [const FullType(CommandCard)])),
-      'aUnit',
-      serializers.serialize(object.aUnit,
-          specifiedType:
-              const FullType(Reference, const [const FullType(Unit)])),
-      'aUpgrade',
-      serializers.serialize(object.aUpgrade,
-          specifiedType:
-              const FullType(Reference, const [const FullType(Upgrade)])),
-      'commands',
-      serializers.serialize(object.commands,
-          specifiedType: const FullType(BuiltSet, const [
-            const FullType(Reference, const [const FullType(CommandCard)])
-          ])),
-      'units',
-      serializers.serialize(object.units,
-          specifiedType: const FullType(BuiltList, const [
-            const FullType(Reference, const [const FullType(Unit)])
-          ])),
-      'upgrades',
-      serializers.serialize(object.upgrades,
-          specifiedType: const FullType(BuiltSet, const [
-            const FullType(Reference, const [const FullType(Upgrade)])
-          ])),
-    ];
+    final result = <Object>[];
+    if (object.aCommand != null) {
+      result
+        ..add('aCommand')
+        ..add(serializers.serialize(object.aCommand,
+            specifiedType: const FullType(
+                Reference, const [const FullType(CommandCard)])));
+    }
+    if (object.aUnit != null) {
+      result
+        ..add('aUnit')
+        ..add(serializers.serialize(object.aUnit,
+            specifiedType:
+                const FullType(Reference, const [const FullType(Unit)])));
+    }
+    if (object.aUpgrade != null) {
+      result
+        ..add('aUpgrade')
+        ..add(serializers.serialize(object.aUpgrade,
+            specifiedType:
+                const FullType(Reference, const [const FullType(Upgrade)])));
+    }
+    if (object.commands != null) {
+      result
+        ..add('commands')
+        ..add(serializers.serialize(object.commands,
+            specifiedType: const FullType(BuiltSet, const [
+              const FullType(Reference, const [const FullType(CommandCard)])
+            ])));
+    }
+    if (object.units != null) {
+      result
+        ..add('units')
+        ..add(serializers.serialize(object.units,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(Reference, const [const FullType(Unit)])
+            ])));
+    }
+    if (object.upgrades != null) {
+      result
+        ..add('upgrades')
+        ..add(serializers.serialize(object.upgrades,
+            specifiedType: const FullType(BuiltSet, const [
+              const FullType(Reference, const [const FullType(Upgrade)])
+            ])));
+    }
 
     return result;
   }
@@ -128,26 +145,7 @@ class _$Sample extends Sample {
       this.commands,
       this.units,
       this.upgrades})
-      : super._() {
-    if (aCommand == null) {
-      throw new BuiltValueNullFieldError('Sample', 'aCommand');
-    }
-    if (aUnit == null) {
-      throw new BuiltValueNullFieldError('Sample', 'aUnit');
-    }
-    if (aUpgrade == null) {
-      throw new BuiltValueNullFieldError('Sample', 'aUpgrade');
-    }
-    if (commands == null) {
-      throw new BuiltValueNullFieldError('Sample', 'commands');
-    }
-    if (units == null) {
-      throw new BuiltValueNullFieldError('Sample', 'units');
-    }
-    if (upgrades == null) {
-      throw new BuiltValueNullFieldError('Sample', 'upgrades');
-    }
-  }
+      : super._();
 
   @override
   Sample rebuild(void updates(SampleBuilder b)) =>
@@ -262,18 +260,18 @@ class SampleBuilder implements Builder<Sample, SampleBuilder> {
               aCommand: aCommand,
               aUnit: aUnit,
               aUpgrade: aUpgrade,
-              commands: commands.build(),
-              units: units.build(),
-              upgrades: upgrades.build());
+              commands: _commands?.build(),
+              units: _units?.build(),
+              upgrades: _upgrades?.build());
     } catch (_) {
       String _$failedField;
       try {
         _$failedField = 'commands';
-        commands.build();
+        _commands?.build();
         _$failedField = 'units';
-        units.build();
+        _units?.build();
         _$failedField = 'upgrades';
-        upgrades.build();
+        _upgrades?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'Sample', _$failedField, e.toString());

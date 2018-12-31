@@ -19,12 +19,12 @@ void main() {
 
   test('every command should have a valid unique ID', () {
     final allIds = Set<String>();
-    for (final card in commands) {
+    for (final card in allCommands) {
       final id = card.id;
       expect(id, matches(isValidId));
       expect(allIds.add(id), isTrue, reason: 'Duplicate ID: $id');
     }
-    expect(allIds, hasLength(commands.length));
+    expect(allIds, hasLength(allCommands.length));
   });
 
   test('commands should be compared purely based on ID', () {
@@ -39,12 +39,12 @@ void main() {
   });
   test('every upgrade should have a valid unique ID', () {
     final allIds = Set<String>();
-    for (final upgrade in upgrades) {
+    for (final upgrade in allUpgrades) {
       final id = upgrade.id;
       expect(id, matches(isValidId));
       expect(allIds.add(id), isTrue, reason: 'Duplicate ID: $id');
     }
-    expect(allIds, hasLength(upgrades.length));
+    expect(allIds, hasLength(allUpgrades.length));
   });
 
   test('upgrades should be compared purely based on ID', () {
@@ -60,12 +60,12 @@ void main() {
 
   test('every unit should have a valid unique ID', () {
     final allIds = Set<String>();
-    for (final unit in units) {
+    for (final unit in allUnits) {
       final id = unit.id;
       expect(id, matches(isValidId));
       expect(allIds.add(id), isTrue, reason: 'Duplicate ID: $id');
     }
-    expect(allIds, hasLength(units.length));
+    expect(allIds, hasLength(allUnits.length));
   });
 
   test('units should be compared purely based on ID', () {

@@ -18,7 +18,7 @@ part 'unit.g.dart';
 /// Represents a unit card.
 abstract class Unit extends Object
     with Indexable<Unit>
-    implements Built<Unit, UnitBuilder> {
+    implements Built<Unit, UnitBuilder>, Reference<Unit> {
   /// Support for serializing instances of [Unit].
   static Serializer<Unit> get serializer => _$unitSerializer;
 

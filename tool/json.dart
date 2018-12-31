@@ -14,9 +14,9 @@ void main(List<String> args) async {
     await File(_pubspecFile).readAsString(),
   ) as yaml.YamlMap;
   final catalog = {
-    'units': _jsonEncode(database.units, Unit.serializer),
-    'upgrades': _jsonEncode(database.upgrades, Upgrade.serializer),
-    'weapons': _jsonEncode(database.weapons, Weapon.serializer),
+    'units': _jsonEncode(database.allUnits, Unit.serializer),
+    'upgrades': _jsonEncode(database.allUpgrades, Upgrade.serializer),
+    'weapons': _jsonEncode(database.allWeapons, Weapon.serializer),
     'version': pubspec['version'] as String,
   };
   var output = const JsonEncoder.withIndent('  ').convert(catalog);

@@ -17,7 +17,7 @@ void main() {
         .build();
   });
 
-  for (final card in commands) {
+  for (final card in allCommands) {
     test('should serialize/deserialize "${card.name}"', () {
       final text = json.serialize(card);
       final data = json.deserialize(text);
@@ -25,7 +25,7 @@ void main() {
     });
   }
 
-  for (final unit in units) {
+  for (final unit in allUnits) {
     test('should serialize/deserialize "${unit.name}"', () {
       final text = json.serialize(unit);
       final data = json.deserialize(text);
@@ -33,7 +33,7 @@ void main() {
     });
   }
 
-  for (final upgrade in upgrades) {
+  for (final upgrade in allUpgrades) {
     test('should serialize/deserialize "${upgrade.name}"', () {
       final text = json.serialize(upgrade);
       final data = json.deserialize(text);
@@ -41,7 +41,7 @@ void main() {
     });
   }
 
-  for (final weapon in weapons) {
+  for (final weapon in allWeapons) {
     test('should serialize/deserialize "${weapon.name}"', () {
       final text = json.serialize(weapon);
       final data = json.deserialize(text);
@@ -51,14 +51,34 @@ void main() {
 
   test('should support serializing to/from Reference<...>', () {
     final sample = Sample((b) => b
-      ..aCommand = commands.first.toRef()
-      ..commands.add(commands.first.toRef())
-      ..aUnit = units.first.toRef()
-      ..units.add(units.first.toRef())
-      ..aUpgrade = upgrades.first.toRef()
-      ..upgrades.add(upgrades.first.toRef()));
+      ..aCommand = allCommands.first.toRef()
+      ..commands.add(allCommands.first.toRef())
+      ..aUnit = allUnits.first.toRef()
+      ..units.add(allUnits.first.toRef())
+      ..aUpgrade = allUpgrades.first.toRef()
+      ..upgrades.add(allUpgrades.first.toRef()));
     final text = json.serializeWith(Sample.serializer, sample);
     final data = json.deserializeWith(Sample.serializer, text);
     expect(sample, data);
+  });
+
+  test('should allow implicit refs (Unit instead of Reference<Unit>)', () {
+    final sample = Sample((b) => b
+      ..aUnit = Units.stormtroopers
+      ..units.add(Units.stormtroopers));
+    final data = json.serializeWith(Sample.serializer, sample);
+    expect(
+      data,
+      {
+        'aUnit': {
+          'id': Units.stormtroopers.id,
+        },
+        'units': [
+          {
+            'id': Units.stormtroopers.id,
+          },
+        ],
+      },
+    );
   });
 }
