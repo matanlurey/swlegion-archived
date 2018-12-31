@@ -38,7 +38,7 @@ void main() {
   );
 
   // Or use the default `Holodeck` directly.
-  holodeck.validUpgradesForUnit(Units.stormtroopers);
+  print(holodeck.validUpgradesForUnit(Units.stormtroopers));
 }
 ```
 

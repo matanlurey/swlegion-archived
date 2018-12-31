@@ -34,4 +34,22 @@ void main() {
       reason: 'Force choke is faction restricted',
     );
   });
+
+  test('should return the sum cost of a unit', () {
+    final expected = [
+      Units.stormtroopers.points,
+      Upgrades.dlt19Stormtrooper.points,
+      Upgrades.impactGrenades.points
+    ].reduce((a, b) => a + b);
+    expect(
+      holodeck.costOfUnit(
+        Units.stormtroopers,
+        upgrades: [
+          Upgrades.dlt19Stormtrooper,
+          Upgrades.impactGrenades,
+        ],
+      ),
+      expected,
+    );
+  });
 }

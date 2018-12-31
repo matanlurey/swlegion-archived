@@ -23,6 +23,7 @@ final allUpgrades = List<Upgrade>.unmodifiable(all_upgrades.aggregate);
 final allWeapons = List<Weapon>.unmodifiable(all_weapons.aggregate);
 
 final holodeck = Holodeck(
+  commands: all_commands.aggregate,
   units: all_units.aggregate,
   upgrades: all_upgrades.aggregate,
 );

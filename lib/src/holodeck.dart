@@ -1,9 +1,18 @@
+import 'package:built_collection/built_collection.dart';
 import 'package:meta/meta.dart';
 
 import 'all_models.dart';
 
 /// Game mechanics assistant based on the provided database of cards.
+///
+/// **NOTE**: Interactions are _not_ cached.
 class Holodeck {
+  /// All command cards in the [Holodeck].
+  final List<CommandCard> commands;
+
+  /// [CommandCard] by index.
+  final Map<Reference<CommandCard>, CommandCard> _commandsIndex;
+
   /// All units in the [Holodeck].
   final List<Unit> units;
 
@@ -17,9 +26,15 @@ class Holodeck {
   final Map<Reference<Upgrade>, Upgrade> _upgradesIndex;
 
   Holodeck({
+    @required Iterable<CommandCard> commands,
     @required Iterable<Unit> units,
     @required Iterable<Upgrade> upgrades,
-  })  : assert(units != null),
+  })  : assert(commands != null),
+        commands = List.unmodifiable(commands),
+        _commandsIndex = Map.fromEntries(
+          commands.map((c) => MapEntry(c.toRef(), c)),
+        ),
+        assert(units != null),
         units = List.unmodifiable(units),
         _unitsIndex = Map.fromEntries(
           units.map((u) => MapEntry(u.toRef(), u)),
@@ -31,24 +46,42 @@ class Holodeck {
         );
 
   /// Returns all [Upgrade] instances that would be valid for a given [unit].
+  ///
+  /// **NOTE**: This only checks _validity_ not game rules or composition.
   Iterable<Upgrade> upgradesForUnit(Reference<Unit> unit) {
     final details = toUnit(unit);
-    return upgrades.where((u) {
-      if (!details.upgrades.containsKey(u.type)) {
-        return false;
-      }
-      if (u.restrictedToUnit.isNotEmpty &&
-          !u.restrictedToUnit.contains(unit.toRef())) {
-        return false;
-      }
-      if (u.restrictedToFaction != null) {
-        return u.restrictedToFaction == details.faction;
-      }
-      if (u.restrictedToType != null) {
-        return u.restrictedToType == details.type;
-      }
-      return true;
+    return upgrades.where((u) => u.isUsableBy(details));
+  }
+
+  /// Returns all [upgrades] valid for a given [unit] grouped by [UpgradeSlot].
+  ///
+  /// **NOTE**: This only checks _validity_ not game rules or composition.
+  BuiltListMultimap<UpgradeSlot, Upgrade> upgradesForUnitGrouped(
+    Reference<Unit> unit,
+  ) {
+    final builder = ListMultimapBuilder<UpgradeSlot, Upgrade>();
+    for (final upgrade in upgradesForUnit(unit)) {
+      builder.add(upgrade.type, upgrade);
+    }
+    return builder.build();
+  }
+
+  /// Returns the cost of [unit] with [upgrades].
+  int costOfUnit(
+    Reference<Unit> unit, {
+    Iterable<Reference<Upgrade>> upgrades = const [],
+  }) {
+    return upgrades.fold(toUnit(unit).points, (sum, upgrade) {
+      return sum + toUpgrade(upgrade).points;
     });
+  }
+
+  /// Looks up and returns a reference to a [command] as a [CommandCard].
+  CommandCard toCommand(Reference<CommandCard> command) {
+    if (command is CommandCard) {
+      return command;
+    }
+    return _commandsIndex[command];
   }
 
   /// Looks up and returns a reference to a [unit] as a [Unit].

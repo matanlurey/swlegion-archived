@@ -86,6 +86,24 @@ abstract class Upgrade extends Object
   @BuiltValueField(compare: false, wireName: 'restricted_to_type')
   UnitType get restrictedToType;
 
+  /// Returns whether [unit] is able to use this upgrade.
+  ///
+  /// **NOTE**: This is only a simple check of the various restrictions and the
+  /// type of this upgrade, and does not encapsulate game logic such as
+  /// uniqueness, available slots, point costs, or any extra rules.
+  bool isUsableBy(Unit unit) {
+    if (!unit.upgrades.containsKey(type)) {
+      return false;
+    }
+    if (restrictedToFaction != null && restrictedToFaction != unit.faction) {
+      return false;
+    }
+    if (restrictedToType != null && restrictedToType != unit.type) {
+      return false;
+    }
+    return restrictedToUnit.isEmpty || restrictedToUnit.contains(unit.toRef());
+  }
+
   /// Unique ID for the upgrade.
   @override
   String get id;
