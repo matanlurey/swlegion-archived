@@ -32,6 +32,7 @@ import 'database/upgrades/hardpoint/at_st_mortar_launcher.dart' as _i;
 import 'database/upgrades/hardpoint/ax_108_ground_buzzer.dart' as _i;
 import 'database/upgrades/hardpoint/dw3_concussion_grenade_launcher.dart' as _i;
 import 'database/upgrades/hardpoint/mo_dk_power_harpoon.dart' as _i;
+import 'database/upgrades/heavy_weapon/bowcaster_wookie.dart' as _i;
 import 'database/upgrades/heavy_weapon/dh_447_sniper.dart' as _i;
 import 'database/upgrades/heavy_weapon/dlt_19_stormtrooper.dart' as _i;
 import 'database/upgrades/heavy_weapon/dlt_19_x_sniper.dart' as _i;
@@ -87,6 +88,7 @@ final aggregate = [
   _i.ax108GroundBuzzer,
   _i.dw3ConcussionGrenadeLauncher,
   _i.moDkPowerHarpoon,
+  _i.bowcasterWookie,
   _i.dh447Sniper,
   _i.dlt19Stormtrooper,
   _i.dlt19XSniper,
@@ -107,7 +109,6 @@ final aggregate = [
   _i.generalWeiss,
   _i.wedgeAntilles
 ];
-
 class Upgrades {
   const Upgrades._();
   static final commandingPresence = _i.commandingPresence;
@@ -144,6 +145,7 @@ class Upgrades {
   static final ax108GroundBuzzer = _i.ax108GroundBuzzer;
   static final dw3ConcussionGrenadeLauncher = _i.dw3ConcussionGrenadeLauncher;
   static final moDkPowerHarpoon = _i.moDkPowerHarpoon;
+  static final bowcasterWookie = _i.bowcasterWookie;
   static final dh447Sniper = _i.dh447Sniper;
   static final dlt19Stormtrooper = _i.dlt19Stormtrooper;
   static final dlt19XSniper = _i.dlt19XSniper;
@@ -164,3 +166,4 @@ class Upgrades {
   static final generalWeiss = _i.generalWeiss;
   static final wedgeAntilles = _i.wedgeAntilles;
 }
+

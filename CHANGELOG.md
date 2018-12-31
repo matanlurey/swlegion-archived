@@ -1,3 +1,10 @@
+## 0.3.1
+
+### Database
+
+* Added Chewbacca Operative Expansion.
+* Added Wookie Warriors Expansion.
+
 ## 0.3.0
 
 ### Data Model

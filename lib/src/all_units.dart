@@ -3,6 +3,7 @@ import 'database/units/74_z_speeder_bike.dart' as _i;
 import 'database/units/at_rt.dart' as _i;
 import 'database/units/at_st.dart' as _i;
 import 'database/units/boba_fett.dart' as _i;
+import 'database/units/chewbacca.dart' as _i;
 import 'database/units/darth_vader.dart' as _i;
 import 'database/units/e_web_heavy_blaster_team.dart' as _i;
 import 'database/units/emperor_palpatine.dart' as _i;
@@ -20,6 +21,7 @@ import 'database/units/scout_troopers_strike_team.dart' as _i;
 import 'database/units/snowtroopers.dart' as _i;
 import 'database/units/stormtroopers.dart' as _i;
 import 'database/units/t_47_airspeeder.dart' as _i;
+import 'database/units/wookie_warriors.dart' as _i;
 
 final aggregate = [
   _i.$1dot4FDLaserCannonTeam,
@@ -27,6 +29,7 @@ final aggregate = [
   _i.atRt,
   _i.atSt,
   _i.bobaFett,
+  _i.chewbacca,
   _i.darthVader,
   _i.eWebHeavyBlasterTeam,
   _i.emperorPalpatine,
@@ -43,9 +46,9 @@ final aggregate = [
   _i.scoutTroopersStrikeTeam,
   _i.snowtroopers,
   _i.stormtroopers,
-  _i.t47Airspeeder
+  _i.t47Airspeeder,
+  _i.wookieWarriors
 ];
-
 class Units {
   const Units._();
   static final $1dot4FDLaserCannonTeam = _i.$1dot4FDLaserCannonTeam;
@@ -53,6 +56,7 @@ class Units {
   static final atRt = _i.atRt;
   static final atSt = _i.atSt;
   static final bobaFett = _i.bobaFett;
+  static final chewbacca = _i.chewbacca;
   static final darthVader = _i.darthVader;
   static final eWebHeavyBlasterTeam = _i.eWebHeavyBlasterTeam;
   static final emperorPalpatine = _i.emperorPalpatine;
@@ -70,4 +74,6 @@ class Units {
   static final snowtroopers = _i.snowtroopers;
   static final stormtroopers = _i.stormtroopers;
   static final t47Airspeeder = _i.t47Airspeeder;
+  static final wookieWarriors = _i.wookieWarriors;
 }
+
