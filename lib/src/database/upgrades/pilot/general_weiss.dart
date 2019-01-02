@@ -11,4 +11,7 @@ final generalWeiss = Upgrade(
   text: r'''
     Exhaust Action: Until the end of your activation, you gain Arsenal 2.
   ''',
+  keywords: {
+    Keyword.arsenalX: '2',
+  },
 );

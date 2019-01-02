@@ -11,4 +11,7 @@ final wedgeAntilles = Upgrade(
   text: r'''
     Exhaust Action: Until the end of your activation, you gain Full Pivot.
   ''',
+  keywords: {
+    Keyword.fullPivot: '',
+  },
 );

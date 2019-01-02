@@ -7,6 +7,8 @@ final saberThrow = Upgrade(
   isExhaustible: true,
   points: 10,
   text: r'''
-    Action: Choose 1 of your melee weapons. Perform a ranged attack with that weapon against an enemy at range 1-2, using half of that weapon's dice, rounded up. This is treated as an attack action.
+    Action: Choose 1 of your melee weapons.
+    Perform a ranged attack with that weapon against an enemy at range 1-2, using half of that weapon's dice, rounded up.
+    This is treated as an attack action.
   ''',
 );
