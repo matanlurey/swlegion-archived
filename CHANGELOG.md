@@ -5,6 +5,7 @@
 * Added Chewbacca Operative Expansion.
 * Added Wookie Warriors Expansion.
 * Fixed the ID of Battle Meditation.
+* Added `keywords` to upgrades that provide them on active or passively.
 
 ### Holodeck
 

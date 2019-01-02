@@ -8,4 +8,7 @@ final reconIntel = Upgrade(
   text: r'''
     You gain Scout 1.
   ''',
+  keywords: {
+    Keyword.scoutX: '1',
+  },
 );

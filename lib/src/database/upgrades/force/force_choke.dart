@@ -8,6 +8,7 @@ final forceChoke = Upgrade(
   restrictedToFaction: Faction.darkSide,
   points: 5,
   text: r'''
-    Choose an enemy trooper mini at range 1 that is not a commander. It suffers 1 wound.
+    Choose an enemy trooper mini at range 1 that is not a commander.
+    It suffers 1 wound.
   ''',
 );

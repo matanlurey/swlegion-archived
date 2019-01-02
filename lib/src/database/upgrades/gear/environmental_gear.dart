@@ -8,4 +8,7 @@ final environmentalGear = Upgrade(
   text: r'''
     You gain Unhindered.
   ''',
+  keywords: {
+    Keyword.unhindered: '',
+  },
 );
