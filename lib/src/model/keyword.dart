@@ -42,6 +42,9 @@ class Keyword extends EnumClass {
     blast: '''
       Ignore cover.
     ''',
+    bounty: '''
+      After setup, place a victory token on an enemy commander or operative. If you defeat a unit with a victory token, move that token to you. At the end of the game, if you have a victory token, gain that token.
+    ''',
     charge: '''
       After you perform a move action, you may perform a free melee attack action.
     ''',
@@ -70,7 +73,7 @@ class Keyword extends EnumClass {
       While defending, if you spend a dodge token, you gain “Surge: Block”: if it’s a ranged attack, the attacker suffers 1 wound for each Surge rolled.
     ''',
     denotateXY: '''
-
+      Detonate X friendly charge tokens of the specified Y type.
     ''',
     disciplinedX: '''
       When you are issued an order, you may remove up to X suppression tokens.
