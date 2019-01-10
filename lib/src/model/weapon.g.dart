@@ -41,6 +41,12 @@ class _$WeaponSerializer implements StructuredSerializer<Weapon> {
         ..add(serializers.serialize(object.maxRange,
             specifiedType: const FullType(int)));
     }
+    if (object.surgeOverride != null) {
+      result
+        ..add('surge_override')
+        ..add(serializers.serialize(object.surgeOverride,
+            specifiedType: const FullType(AttackSurge)));
+    }
 
     return result;
   }
@@ -86,6 +92,10 @@ class _$WeaponSerializer implements StructuredSerializer<Weapon> {
                 const FullType(String)
               ])) as BuiltMap);
           break;
+        case 'surge_override':
+          result.surgeOverride = serializers.deserialize(value,
+              specifiedType: const FullType(AttackSurge)) as AttackSurge;
+          break;
       }
     }
 
@@ -106,6 +116,8 @@ class _$Weapon extends Weapon {
   final int maxRange;
   @override
   final BuiltMap<Keyword, String> keywords;
+  @override
+  final AttackSurge surgeOverride;
 
   factory _$Weapon([void updates(WeaponBuilder b)]) =>
       (new WeaponBuilder()..update(updates)).build();
@@ -116,7 +128,8 @@ class _$Weapon extends Weapon {
       this.areaOfEffect,
       this.minRange,
       this.maxRange,
-      this.keywords})
+      this.keywords,
+      this.surgeOverride})
       : super._() {
     if (name == null) {
       throw new BuiltValueNullFieldError('Weapon', 'name');
@@ -151,7 +164,8 @@ class _$Weapon extends Weapon {
         areaOfEffect == other.areaOfEffect &&
         minRange == other.minRange &&
         maxRange == other.maxRange &&
-        keywords == other.keywords;
+        keywords == other.keywords &&
+        surgeOverride == other.surgeOverride;
   }
 
   @override
@@ -159,11 +173,13 @@ class _$Weapon extends Weapon {
     return $jf($jc(
         $jc(
             $jc(
-                $jc($jc($jc(0, name.hashCode), dice.hashCode),
-                    areaOfEffect.hashCode),
-                minRange.hashCode),
-            maxRange.hashCode),
-        keywords.hashCode));
+                $jc(
+                    $jc($jc($jc(0, name.hashCode), dice.hashCode),
+                        areaOfEffect.hashCode),
+                    minRange.hashCode),
+                maxRange.hashCode),
+            keywords.hashCode),
+        surgeOverride.hashCode));
   }
 
   @override
@@ -174,7 +190,8 @@ class _$Weapon extends Weapon {
           ..add('areaOfEffect', areaOfEffect)
           ..add('minRange', minRange)
           ..add('maxRange', maxRange)
-          ..add('keywords', keywords))
+          ..add('keywords', keywords)
+          ..add('surgeOverride', surgeOverride))
         .toString();
   }
 }
@@ -209,6 +226,11 @@ class WeaponBuilder implements Builder<Weapon, WeaponBuilder> {
   set keywords(MapBuilder<Keyword, String> keywords) =>
       _$this._keywords = keywords;
 
+  AttackSurge _surgeOverride;
+  AttackSurge get surgeOverride => _$this._surgeOverride;
+  set surgeOverride(AttackSurge surgeOverride) =>
+      _$this._surgeOverride = surgeOverride;
+
   WeaponBuilder();
 
   WeaponBuilder get _$this {
@@ -219,6 +241,7 @@ class WeaponBuilder implements Builder<Weapon, WeaponBuilder> {
       _minRange = _$v.minRange;
       _maxRange = _$v.maxRange;
       _keywords = _$v.keywords?.toBuilder();
+      _surgeOverride = _$v.surgeOverride;
       _$v = null;
     }
     return this;
@@ -248,7 +271,8 @@ class WeaponBuilder implements Builder<Weapon, WeaponBuilder> {
               areaOfEffect: areaOfEffect,
               minRange: minRange,
               maxRange: maxRange,
-              keywords: keywords.build());
+              keywords: keywords.build(),
+              surgeOverride: surgeOverride);
     } catch (_) {
       String _$failedField;
       try {
