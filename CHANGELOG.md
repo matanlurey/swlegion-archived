@@ -1,32 +1,36 @@
+### Data Model
+
+- Added `surge_override` (`AttackSurge`) field to `Weapon`.
+
 ## 0.3.1
 
 ### Database
 
-* Added Chewbacca Operative Expansion.
-* Added Wookie Warriors Expansion.
-* Fixed the ID of Battle Meditation.
-* Added `keywords` to upgrades that provide them on active or passively.
+- Added Chewbacca Operative Expansion.
+- Added Wookie Warriors Expansion.
+- Fixed the ID of Battle Meditation.
+- Added `keywords` to upgrades that provide them on active or passively.
 
 ### Holodeck
 
-* `costOfUnit` now treats `upgrades` as a `@required` named parameter.
-* Added `totalMiniatures(unit, {Iterable<Reference<Upgrade>> upgrades})`.
+- `costOfUnit` now treats `upgrades` as a `@required` named parameter.
+- Added `totalMiniatures(unit, {Iterable<Reference<Upgrade>> upgrades})`.
 
 ## 0.3.0
 
 ### Data Model
 
-* Corrects `Upgrade` to only compare based on `.id`.
-* `Indexable.toRef` is now optional, as an `Indexable` is also a `Reference`.
+- Corrects `Upgrade` to only compare based on `.id`.
+- `Indexable.toRef` is now optional, as an `Indexable` is also a `Reference`.
 
 ### Database
 
-* Normalized all enum IDs as `lower-hyphenated-case`.
-* Added `.from` to every enum, to use instead of `valueOf`.
-* Added `.toString()` to `Reference` to aid in debugging.
-* Added missing `.isUnique = true` for commanders/operatives.
-* Upgrade emergency stims now has a corrected ID of `emergency-stims`.
-* Created `Commands`, `Units`, `Upgrades`, `Weapons` classes for convenience:
+- Normalized all enum IDs as `lower-hyphenated-case`.
+- Added `.from` to every enum, to use instead of `valueOf`.
+- Added `.toString()` to `Reference` to aid in debugging.
+- Added missing `.isUnique = true` for commanders/operatives.
+- Upgrade emergency stims now has a corrected ID of `emergency-stims`.
+- Created `Commands`, `Units`, `Upgrades`, `Weapons` classes for convenience:
 
 ```dart
 import 'package:swlegion/database.dart';
@@ -38,7 +42,7 @@ void main() {
 
 ### Mechanics
 
-* Added a new `class`, `Holodeck`, for game logic and helper functionality that
+- Added a new `class`, `Holodeck`, for game logic and helper functionality that
   is not strictly tied to the database nor to the serialized JSON model(s):
 
 ```dart
@@ -62,19 +66,19 @@ void main() {
 
 ### Data Model
 
-* Moved `Army` and `ArmyUnit` out of this package.
-* `CommandCard` was added.
-* Replaced `*Key` instances with a single `Reference<T>` instance.
-  * `CommandCard`, `Unit`, `Upgrade` all now implement `Indexable<T>`.
-  * `Upgrade`'s `.restrictedToUnit` is now a `BuiltSet<Reference<Unit>>`.
+- Moved `Army` and `ArmyUnit` out of this package.
+- `CommandCard` was added.
+- Replaced `*Key` instances with a single `Reference<T>` instance.
+  - `CommandCard`, `Unit`, `Upgrade` all now implement `Indexable<T>`.
+  - `Upgrade`'s `.restrictedToUnit` is now a `BuiltSet<Reference<Unit>>`.
 
 ### Database
 
-* Added `'Emergency Stims'` (Gear), which was accidentally omitted.
-* Fixed the cost of `'Estmeed Leader'` (Command), which is 5 points not 10.
-* Fixed the ID of `'Esteemed Leader'`, which was mis-spelled.
-* Added `CommandCard`(s) for every existing commander and operative.
+- Added `'Emergency Stims'` (Gear), which was accidentally omitted.
+- Fixed the cost of `'Estmeed Leader'` (Command), which is 5 points not 10.
+- Fixed the ID of `'Esteemed Leader'`, which was mis-spelled.
+- Added `CommandCard`(s) for every existing commander and operative.
 
 ## 0.1.0
 
-* Initial stable release.
+- Initial stable release.

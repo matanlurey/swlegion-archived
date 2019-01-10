@@ -15,4 +15,5 @@ final protonCharge = Weapon(
     Keyword.blast: '',
     Keyword.impactX: '1',
   },
+  surgeOverride: AttackSurge.critical,
 );

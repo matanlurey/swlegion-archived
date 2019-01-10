@@ -4,6 +4,7 @@ import 'package:built_value/serializer.dart';
 import 'package:meta/meta.dart';
 
 import 'attack_dice.dart';
+import 'attack_surge.dart';
 import 'keyword.dart';
 
 part 'weapon.g.dart';
@@ -21,6 +22,7 @@ abstract class Weapon implements Built<Weapon, WeaponBuilder> {
     int maxRange,
     int areaOfEffect = 0,
     Map<Keyword, String> keywords = const {},
+    AttackSurge surgeOverride,
   }) =>
       Weapon._build((b) => b
         ..name = name
@@ -28,7 +30,8 @@ abstract class Weapon implements Built<Weapon, WeaponBuilder> {
         ..dice.addAll(dice)
         ..minRange = minRange
         ..maxRange = maxRange
-        ..keywords.addAll(keywords));
+        ..keywords.addAll(keywords)
+        ..surgeOverride = surgeOverride);
 
   factory Weapon.melee({
     @required String name,
@@ -89,4 +92,8 @@ abstract class Weapon implements Built<Weapon, WeaponBuilder> {
       });
     });
   }
+
+  @BuiltValueField(wireName: 'surge_override')
+  @nullable
+  AttackSurge get surgeOverride;
 }

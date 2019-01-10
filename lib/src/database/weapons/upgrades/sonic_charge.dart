@@ -15,4 +15,5 @@ final sonicCharge = Weapon(
     Keyword.blast: '',
     Keyword.suppressive: '',
   },
+  surgeOverride: AttackSurge.critical,
 );
