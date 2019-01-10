@@ -34,15 +34,18 @@ class _$WeaponSerializer implements StructuredSerializer<Weapon> {
       serializers.serialize(object.keywords,
           specifiedType: const FullType(BuiltMap,
               const [const FullType(Keyword), const FullType(String)])),
-      'surge_override',
-      serializers.serialize(object.surgeOverride,
-          specifiedType: const FullType(AttackSurge)),
     ];
     if (object.maxRange != null) {
       result
         ..add('max_range')
         ..add(serializers.serialize(object.maxRange,
             specifiedType: const FullType(int)));
+    }
+    if (object.surgeOverride != null) {
+      result
+        ..add('surge_override')
+        ..add(serializers.serialize(object.surgeOverride,
+            specifiedType: const FullType(AttackSurge)));
     }
 
     return result;
@@ -142,9 +145,6 @@ class _$Weapon extends Weapon {
     }
     if (keywords == null) {
       throw new BuiltValueNullFieldError('Weapon', 'keywords');
-    }
-    if (surgeOverride == null) {
-      throw new BuiltValueNullFieldError('Weapon', 'surgeOverride');
     }
   }
 
