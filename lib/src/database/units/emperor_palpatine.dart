@@ -2,6 +2,8 @@ import 'package:swlegion/swlegion.dart';
 
 import '../weapons/force_lightning.dart';
 
+import 'imperial_royal_guards.dart';
+
 final emperorPalpatine = Unit(
   id: 'emperor-palpatine',
   name: 'Emperor Palpatine',
@@ -18,7 +20,7 @@ final emperorPalpatine = Unit(
   hasDefenseSurge: true,
   speed: 1,
   points: 210,
-  upgrades: {
+  upgrades: const {
     UpgradeSlot.force: 3,
     UpgradeSlot.command: 1,
   },
@@ -26,9 +28,9 @@ final emperorPalpatine = Unit(
     forceLightning,
   ],
   keywords: {
-    Keyword.pullingTheStrings: '',
-    Keyword.entourageX: 'Imperial Royal Guards',
-    Keyword.immuneX: 'Pierce',
-    Keyword.masterOfTheForceX: '2',
+    UnitKeyword.kPullingTheStrings: '',
+    UnitKeyword.kEntourage: imperialRoyalGuards.id,
+    UnitKeyword.kImmunePierce: '',
+    UnitKeyword.kMasterOfTheForce: 2,
   },
 );

@@ -7,8 +7,8 @@ final dh447SniperRifle = Weapon(
     AttackDice.white: 1,
   },
   minRange: 1,
-  keywords: {
-    Keyword.highVelocity: '',
-    Keyword.pierceX: '1',
+  keywords: const {
+    WeaponKeyword.kHighVelocity: '',
+    WeaponKeyword.kPierce: 1,
   },
 );

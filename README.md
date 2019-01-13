@@ -13,20 +13,19 @@ _Star Wars, Star Wars: Legion and all related properties and text are owned by F
 
 ## Usage
 
-This package provides 2 libraries: `database.dart` and `swlegion.dart`. Library
-`database` is a (best effort) collection of all known cards and other models
+This package provides 2 libraries: `catalog.dart` and `swlegion.dart`. Library
+`catalog` is a (best effort) collection of all known cards and other models
 that may change over time. Common APIs include:
 
-* `allCommands` and `Commands`
-* `allUnits` and `Units`
-* `allUpgrades` and `Upgrades`
-* `allWeapons` and `Weapons`
+- `catalog.commands` and `Commands`
+- `catalog.units` and `Units`
+- `catalog.upgrades` and `Upgrades`
 
 Library `swlegion.dart` is just the data _models_, with the idea that they are
-used to create `database.dart`. In future versions, data may be exported to an
-API and/or `JSON`, and the data models should be used to access the data once
-deserialized.
+used to create `catalog.dart` (and exported as `catalog.json` for use in
+non-Dart clients).
 
-There is also a utility class `Holodeck` (or the built-in instance, `holodeck`)
+There is also a utility class `Catalog` (or the built-in instance, `catalog`)
 which adds the ability to do easy aggregations or compuations, for example which
-`Upgrade`(s) are valid given a `Unit` instance or reference.
+`Upgrade`(s) are valid given a `Unit` instance or reference, and a utility class
+`Holodeck` for running dice simulations and calculating statistics.

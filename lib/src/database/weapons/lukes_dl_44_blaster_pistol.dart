@@ -7,7 +7,7 @@ final lukesDl44BlasterPistol = Weapon(
   },
   minRange: 1,
   maxRange: 2,
-  keywords: {
-    Keyword.pierceX: '2',
+  keywords: const {
+    WeaponKeyword.kPierce: 2,
   },
 );

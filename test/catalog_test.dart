@@ -1,4 +1,4 @@
-import 'package:swlegion/database.dart';
+import 'package:swlegion/catalog.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -9,7 +9,7 @@ void main() {
     ];
 
     expect(
-      holodeck.upgradesForUnit(Units.stormtroopers),
+      catalog.upgradesForUnit(Units.stormtroopers),
       containsAll(validStormtrooperUpgrades),
       reason: 'Stormtroopers can use both these upgrades',
     );
@@ -19,7 +19,7 @@ void main() {
     ];
 
     expect(
-      holodeck.upgradesForUnit(Units.stormtroopers),
+      catalog.upgradesForUnit(Units.stormtroopers),
       isNot(containsAll(validTrooperUpgrades)),
       reason: 'Z6 trooper is unit restricted',
     );
@@ -29,7 +29,7 @@ void main() {
     ];
 
     expect(
-      holodeck.upgradesForUnit(Units.lukeSkywalker),
+      catalog.upgradesForUnit(Units.lukeSkywalker),
       isNot(containsAll(validDarthVaderUpgrades)),
       reason: 'Force choke is faction restricted',
     );
@@ -42,7 +42,7 @@ void main() {
       Upgrades.impactGrenades.points
     ].reduce((a, b) => a + b);
     expect(
-      holodeck.costOfUnit(
+      catalog.costOfUnit(
         Units.stormtroopers,
         upgrades: [
           Upgrades.dlt19Stormtrooper,
@@ -56,7 +56,7 @@ void main() {
   test('should return the total number of miniatures', () {
     final expected = Units.stormtroopers.miniatures + 2;
     expect(
-      holodeck.totalMinatures(
+      catalog.totalMiniatures(
         Units.stormtroopers,
         upgrades: [
           Upgrades.dlt19Stormtrooper,

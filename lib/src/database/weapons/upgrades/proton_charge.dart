@@ -9,11 +9,11 @@ final protonCharge = Weapon(
   minRange: 1,
   maxRange: 1,
   areaOfEffect: 1,
-  keywords: {
-    Keyword.armXY: '1, Proton Charge',
-    Keyword.denotateXY: '1, Proton Charge',
-    Keyword.blast: '',
-    Keyword.impactX: '1',
+  keywords: const {
+    WeaponKeyword.kArm: 1,
+    WeaponKeyword.kDetonate: 1,
+    WeaponKeyword.kBlast: '',
+    WeaponKeyword.kImpact: 1,
   },
   surgeOverride: AttackSurge.critical,
 );

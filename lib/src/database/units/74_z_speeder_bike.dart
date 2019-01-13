@@ -16,15 +16,15 @@ final $74ZSpeederBikes = Unit(
   hasDefenseSurge: true,
   speed: 3,
   points: 90,
-  upgrades: {
+  upgrades: const {
     UpgradeSlot.comms: 1,
   },
   weapons: [
     ec17HoldOutBlaster,
     ax20BlasterCannon,
   ],
-  keywords: {
-    Keyword.coverX: '1',
-    Keyword.speederX: '1',
+  keywords: const {
+    UnitKeyword.kCover: 1,
+    UnitKeyword.kSpeeder: 1,
   },
 );

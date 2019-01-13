@@ -4,14 +4,15 @@ homepage: https://github.com/hquplink/swlegion
 description: "JSON-Serializable Data Model and Card Database for Star Wars: Legion"
 authors:
   - Matan Lurey <matan@hquplink.com>
-version: 0.3.0
+version: 0.4.0
 environment:
-  sdk: '>=2.0.0 <3.0.0'
+  sdk: ">=2.0.0 <3.0.0"
 
 dependencies:
   args: ^1.5.1
   built_collection: ^4.0.0
   built_value: ^6.1.6
+  collection: ^1.14.11
   meta: ^1.1.6
 
 dev_dependencies:

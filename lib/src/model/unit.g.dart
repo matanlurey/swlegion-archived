@@ -59,7 +59,7 @@ class _$UnitSerializer implements StructuredSerializer<Unit> {
       'keywords',
       serializers.serialize(object.keywords,
           specifiedType: const FullType(BuiltMap,
-              const [const FullType(Keyword), const FullType(String)])),
+              const [const FullType(UnitKeyword), const FullType(JsonObject)])),
     ];
     if (object.subTitle != null) {
       result
@@ -180,8 +180,8 @@ class _$UnitSerializer implements StructuredSerializer<Unit> {
         case 'keywords':
           result.keywords.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltMap, const [
-                const FullType(Keyword),
-                const FullType(String)
+                const FullType(UnitKeyword),
+                const FullType(JsonObject)
               ])) as BuiltMap);
           break;
       }
@@ -229,7 +229,7 @@ class _$Unit extends Unit {
   @override
   final BuiltSet<Weapon> weapons;
   @override
-  final BuiltMap<Keyword, String> keywords;
+  final BuiltMap<UnitKeyword, JsonObject> keywords;
 
   factory _$Unit([void updates(UnitBuilder b)]) =>
       (new UnitBuilder()..update(updates)).build();
@@ -425,10 +425,10 @@ class UnitBuilder implements Builder<Unit, UnitBuilder> {
       _$this._weapons ??= new SetBuilder<Weapon>();
   set weapons(SetBuilder<Weapon> weapons) => _$this._weapons = weapons;
 
-  MapBuilder<Keyword, String> _keywords;
-  MapBuilder<Keyword, String> get keywords =>
-      _$this._keywords ??= new MapBuilder<Keyword, String>();
-  set keywords(MapBuilder<Keyword, String> keywords) =>
+  MapBuilder<UnitKeyword, JsonObject> _keywords;
+  MapBuilder<UnitKeyword, JsonObject> get keywords =>
+      _$this._keywords ??= new MapBuilder<UnitKeyword, JsonObject>();
+  set keywords(MapBuilder<UnitKeyword, JsonObject> keywords) =>
       _$this._keywords = keywords;
 
   UnitBuilder();

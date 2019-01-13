@@ -16,7 +16,7 @@ final atSt = Unit(
   hasDefenseSurge: true,
   speed: 2,
   points: 195,
-  upgrades: {
+  upgrades: const {
     UpgradeSlot.comms: 1,
     UpgradeSlot.hardPoint: 3,
     UpgradeSlot.pilot: 1,
@@ -25,9 +25,9 @@ final atSt = Unit(
     fenceCuttingBlades,
     ms4TwinBlasterCannon,
   ],
-  keywords: {
-    Keyword.armor: '',
-    Keyword.arsenalX: '2',
-    Keyword.weakPointX: '1, Rear',
+  keywords: const {
+    UnitKeyword.kArmor: '',
+    UnitKeyword.kArsenal: 2,
+    UnitKeyword.kWeakPointRear: '',
   },
 );

@@ -9,8 +9,8 @@ final ax20BlasterCannon = Weapon(
   },
   minRange: 1,
   maxRange: 3,
-  keywords: {
-    Keyword.fixedX: 'Front',
-    Keyword.impactX: '1',
+  keywords: const {
+    WeaponKeyword.kFixedFront: '',
+    WeaponKeyword.kImpact: 1,
   },
 );

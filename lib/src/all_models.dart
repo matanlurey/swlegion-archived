@@ -1,4 +1,5 @@
 import 'package:built_collection/built_collection.dart';
+import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 
 // Import self in order to use in the metadata annotation.
@@ -7,10 +8,11 @@ import 'model/reference.dart';
 
 export 'model/attack_dice.dart' show AttackDice, AttackDiceSide;
 export 'model/attack_surge.dart' show AttackSurge;
+export 'model/catalog.dart' show Catalog;
 export 'model/command_card.dart' show CommandCard;
 export 'model/defense_dice.dart' show DefenseDice, DefenseDiceSide;
 export 'model/faction.dart' show Faction;
-export 'model/keyword.dart' show Keyword;
+export 'model/keyword.dart' show UnitKeyword, UpgradeKeyword, WeaponKeyword;
 export 'model/rank.dart' show Rank;
 export 'model/reference.dart' show Indexable, Reference;
 export 'model/unit.dart' show Unit;
@@ -25,10 +27,10 @@ part 'all_models.g.dart';
 @SerializersFor([
   AttackDice,
   AttackSurge,
+  Catalog,
   CommandCard,
   DefenseDice,
   Faction,
-  Keyword,
   Rank,
   UnitType,
   Unit,
@@ -37,7 +39,11 @@ part 'all_models.g.dart';
   Weapon,
 ])
 final Serializers serializers = () {
-  final builder = _$serializers.toBuilder()..add(Reference.serializer);
+  final builder = _$serializers.toBuilder()
+    ..add(Reference.serializer)
+    ..add(UnitKeyword.serializer)
+    ..add(UpgradeKeyword.serializer)
+    ..add(WeaponKeyword.serializer);
 
   // Manually add Reference<CommandCard|Unit|Upgrade>.
   // https://github.com/google/built_value.dart/issues/124

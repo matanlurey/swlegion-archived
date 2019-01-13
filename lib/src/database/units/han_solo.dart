@@ -19,7 +19,7 @@ final hanSolo = Unit(
   hasDefenseSurge: true,
   speed: 2,
   points: 120,
-  upgrades: {
+  upgrades: const {
     UpgradeSlot.command: 1,
     UpgradeSlot.elite: 1,
     UpgradeSlot.gear: 1,
@@ -28,10 +28,10 @@ final hanSolo = Unit(
     brawl,
     hansDl44BlasterPistol,
   ],
-  keywords: {
-    Keyword.lowProfile: '',
-    Keyword.gunslinger: '',
-    Keyword.sharpshooterX: '1',
-    Keyword.uncannyLuckX: '3',
+  keywords: const {
+    UnitKeyword.kLowProfile: '',
+    UnitKeyword.kGunslinger: '',
+    UnitKeyword.kSharpshooter: 1,
+    UnitKeyword.kUncannyLuck: 3,
   },
 );

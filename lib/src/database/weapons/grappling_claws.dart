@@ -5,7 +5,7 @@ final grapplingClaws = Weapon.melee(
   dice: {
     AttackDice.red: 3,
   },
-  keywords: {
-    Keyword.impactX: '1',
+  keywords: const {
+    WeaponKeyword.kImpact: 1,
   },
 );

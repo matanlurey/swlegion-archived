@@ -1,5 +1,6 @@
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
+import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:swlegion/swlegion.dart';
 
@@ -34,4 +35,8 @@ abstract class Sample implements Built<Sample, SampleBuilder> {
   /// Examples of upgrades by reference.
   @nullable
   BuiltSet<Reference<Upgrade>> get upgrades;
+
+  /// Examples of keywords.
+  @nullable
+  BuiltMap<UnitKeyword, JsonObject> get keywords;
 }

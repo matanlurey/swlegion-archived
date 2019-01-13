@@ -19,7 +19,7 @@ final leiaOrgana = Unit(
   hasDefenseSurge: true,
   speed: 2,
   points: 90,
-  upgrades: {
+  upgrades: const {
     UpgradeSlot.command: 2,
     UpgradeSlot.gear: 1,
   },
@@ -27,10 +27,10 @@ final leiaOrgana = Unit(
     martialArts,
     leiasDefenderSportingBlaster,
   ],
-  keywords: {
-    Keyword.takeCoverX: '2',
-    Keyword.inspireX: '2',
-    Keyword.nimble: '',
-    Keyword.sharpshooterX: '2',
+  keywords: const {
+    UnitKeyword.kTakeCover: 2,
+    UnitKeyword.kInspire: 2,
+    UnitKeyword.kNimble: '',
+    UnitKeyword.kSharpshooter: 2,
   },
 );

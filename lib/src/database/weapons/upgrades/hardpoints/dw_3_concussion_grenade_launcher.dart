@@ -7,8 +7,8 @@ final dw3ConcussionGrenadeLauncher = Weapon(
   },
   minRange: 1,
   maxRange: 2,
-  keywords: {
-    Keyword.blast: '',
-    Keyword.fixedX: 'Front',
+  keywords: const {
+    WeaponKeyword.kBlast: '',
+    WeaponKeyword.kFixedFront: '',
   },
 );

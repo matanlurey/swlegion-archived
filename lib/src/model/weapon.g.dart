@@ -32,8 +32,10 @@ class _$WeaponSerializer implements StructuredSerializer<Weapon> {
           specifiedType: const FullType(int)),
       'keywords',
       serializers.serialize(object.keywords,
-          specifiedType: const FullType(BuiltMap,
-              const [const FullType(Keyword), const FullType(String)])),
+          specifiedType: const FullType(BuiltMap, const [
+            const FullType(WeaponKeyword),
+            const FullType(JsonObject)
+          ])),
     ];
     if (object.maxRange != null) {
       result
@@ -88,8 +90,8 @@ class _$WeaponSerializer implements StructuredSerializer<Weapon> {
         case 'keywords':
           result.keywords.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltMap, const [
-                const FullType(Keyword),
-                const FullType(String)
+                const FullType(WeaponKeyword),
+                const FullType(JsonObject)
               ])) as BuiltMap);
           break;
         case 'surge_override':
@@ -115,7 +117,7 @@ class _$Weapon extends Weapon {
   @override
   final int maxRange;
   @override
-  final BuiltMap<Keyword, String> keywords;
+  final BuiltMap<WeaponKeyword, JsonObject> keywords;
   @override
   final AttackSurge surgeOverride;
 
@@ -220,10 +222,10 @@ class WeaponBuilder implements Builder<Weapon, WeaponBuilder> {
   int get maxRange => _$this._maxRange;
   set maxRange(int maxRange) => _$this._maxRange = maxRange;
 
-  MapBuilder<Keyword, String> _keywords;
-  MapBuilder<Keyword, String> get keywords =>
-      _$this._keywords ??= new MapBuilder<Keyword, String>();
-  set keywords(MapBuilder<Keyword, String> keywords) =>
+  MapBuilder<WeaponKeyword, JsonObject> _keywords;
+  MapBuilder<WeaponKeyword, JsonObject> get keywords =>
+      _$this._keywords ??= new MapBuilder<WeaponKeyword, JsonObject>();
+  set keywords(MapBuilder<WeaponKeyword, JsonObject> keywords) =>
       _$this._keywords = keywords;
 
   AttackSurge _surgeOverride;

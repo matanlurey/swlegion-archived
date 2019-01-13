@@ -18,7 +18,7 @@ final rebelCommandosStrikeTeam = Unit(
   hasDefenseSurge: true,
   speed: 2,
   points: 16,
-  upgrades: {
+  upgrades: const {
     UpgradeSlot.comms: 1,
     UpgradeSlot.elite: 1,
     UpgradeSlot.gear: 1,
@@ -29,10 +29,10 @@ final rebelCommandosStrikeTeam = Unit(
     unarmed,
     a280BlasterRifle,
   ],
-  keywords: {
-    Keyword.heavyWeaponTeam: '',
-    Keyword.lowProfile: '',
-    Keyword.scoutX: '2',
-    Keyword.sharpshooterX: '1',
+  keywords: const {
+    UnitKeyword.kHeavyWeaponTeam: '',
+    UnitKeyword.kLowProfile: '',
+    UnitKeyword.kScout: 2,
+    UnitKeyword.kSharpshooter: 1,
   },
 );

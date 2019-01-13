@@ -1,6 +1,16 @@
+### Catalog
+
+- Renamed `database.dart` to `catalog.dart`. See the top-level field `catalog`.
+
 ### Data Model
 
 - Added `surge_override` (`AttackSurge`) field to `Weapon`.
+- Significant data model change for `Keyword`, now split into 3 new classes.
+
+## Holodeck
+
+- `Holodeck` is now a utility class for executing simulations.
+- The existing database structure and reference lookups were moved to `Catalog`.
 
 ## 0.3.1
 

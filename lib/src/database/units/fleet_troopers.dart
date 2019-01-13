@@ -17,7 +17,7 @@ final fleetTroopers = Unit(
   attackSurge: AttackSurge.hit,
   speed: 2,
   points: 44,
-  upgrades: {
+  upgrades: const {
     UpgradeSlot.personnel: 1,
     UpgradeSlot.heavyWeapon: 1,
     UpgradeSlot.gear: 1,
@@ -27,7 +27,7 @@ final fleetTroopers = Unit(
     unarmed,
     dh17BlasterPistol,
   ],
-  keywords: {
-    Keyword.readyX: '1',
+  keywords: const {
+    UnitKeyword.kReady: 1,
   },
 );

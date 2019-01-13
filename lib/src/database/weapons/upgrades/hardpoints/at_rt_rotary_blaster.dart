@@ -7,7 +7,7 @@ final atRtRotaryBlaster = Weapon(
   },
   minRange: 1,
   maxRange: 3,
-  keywords: {
-    Keyword.fixedX: 'Front',
+  keywords: const {
+    WeaponKeyword.kFixedFront: '',
   },
 );

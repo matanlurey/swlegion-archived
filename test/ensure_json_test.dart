@@ -1,7 +1,8 @@
+import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_value/standard_json_plugin.dart';
+import 'package:swlegion/catalog.dart';
 import 'package:swlegion/swlegion.dart';
-import 'package:swlegion/database.dart';
 import 'package:test/test.dart';
 
 import 'entity/sample.dart';
@@ -17,7 +18,7 @@ void main() {
         .build();
   });
 
-  for (final card in allCommands) {
+  for (final card in catalog.commandCards) {
     test('should serialize/deserialize "${card.name}"', () {
       final text = json.serialize(card);
       final data = json.deserialize(text);
@@ -25,7 +26,7 @@ void main() {
     });
   }
 
-  for (final unit in allUnits) {
+  for (final unit in catalog.units) {
     test('should serialize/deserialize "${unit.name}"', () {
       final text = json.serialize(unit);
       final data = json.deserialize(text);
@@ -33,7 +34,7 @@ void main() {
     });
   }
 
-  for (final upgrade in allUpgrades) {
+  for (final upgrade in catalog.upgrades) {
     test('should serialize/deserialize "${upgrade.name}"', () {
       final text = json.serialize(upgrade);
       final data = json.deserialize(text);
@@ -41,22 +42,14 @@ void main() {
     });
   }
 
-  for (final weapon in allWeapons) {
-    test('should serialize/deserialize "${weapon.name}"', () {
-      final text = json.serialize(weapon);
-      final data = json.deserialize(text);
-      expect(weapon, data);
-    });
-  }
-
   test('should support serializing to/from Reference<...>', () {
     final sample = Sample((b) => b
-      ..aCommand = allCommands.first.toRef()
-      ..commands.add(allCommands.first.toRef())
-      ..aUnit = allUnits.first.toRef()
-      ..units.add(allUnits.first.toRef())
-      ..aUpgrade = allUpgrades.first.toRef()
-      ..upgrades.add(allUpgrades.first.toRef()));
+      ..aCommand = catalog.commandCards.first.toRef()
+      ..commands.add(catalog.commandCards.first.toRef())
+      ..aUnit = catalog.units.first.toRef()
+      ..units.add(catalog.units.first.toRef())
+      ..aUpgrade = catalog.upgrades.first.toRef()
+      ..upgrades.add(catalog.upgrades.first.toRef()));
     final text = json.serializeWith(Sample.serializer, sample);
     final data = json.deserializeWith(Sample.serializer, text);
     expect(sample, data);
@@ -80,5 +73,19 @@ void main() {
         ],
       },
     );
+  });
+
+  test('should serialize keywords as simple JSON', () {
+    final sample = Sample(
+      (b) => b.keywords[UnitKeyword.kPrecise] = JsonObject(1),
+    );
+    final data = json.serializeWith(Sample.serializer, sample);
+    expect(data, {
+      'keywords': {
+        // TODO: Figure out why extra quotes/strange encoding occur.
+        // https://github.com/google/built_value.dart/issues/568
+        '"${UnitKeyword.kPrecise.id}"': 1,
+      },
+    });
   });
 }

@@ -16,7 +16,7 @@ final snowtroopers = Unit(
   attackSurge: AttackSurge.hit,
   speed: 1,
   points: 48,
-  upgrades: {
+  upgrades: const {
     UpgradeSlot.personnel: 1,
     UpgradeSlot.heavyWeapon: 1,
     UpgradeSlot.gear: 1,
@@ -26,7 +26,7 @@ final snowtroopers = Unit(
     unarmed,
     e11BlasterRifle,
   ],
-  keywords: {
-    Keyword.steady: '',
+  keywords: const {
+    UnitKeyword.kSteady: '',
   },
 );

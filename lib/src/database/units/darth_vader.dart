@@ -15,16 +15,16 @@ final darthVader = Unit(
   defense: DefenseDice.red,
   speed: 1,
   points: 200,
-  upgrades: {
+  upgrades: const {
     UpgradeSlot.force: 3,
   },
   weapons: [
     vadersLightsaber,
   ],
-  keywords: {
-    Keyword.deflect: '',
-    Keyword.immuneX: 'Pierce',
-    Keyword.masterOfTheForceX: '1',
-    Keyword.relentless: '',
+  keywords: const {
+    UnitKeyword.kDeflect: '',
+    UnitKeyword.kImmunePierce: '',
+    UnitKeyword.kMasterOfTheForce: 1,
+    UnitKeyword.kRelentless: '',
   },
 );

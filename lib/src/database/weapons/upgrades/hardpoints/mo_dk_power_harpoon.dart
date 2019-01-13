@@ -7,9 +7,9 @@ final moDkPowerHarpoon = Weapon(
   },
   minRange: 1,
   maxRange: 2,
-  keywords: {
-    Keyword.impactX: '1',
-    Keyword.fixedX: 'Rear',
-    Keyword.towCable: '',
+  keywords: const {
+    WeaponKeyword.kImpact: 1,
+    WeaponKeyword.kFixedRear: '',
+    WeaponKeyword.kTowCable: '',
   },
 );
