@@ -41,10 +41,8 @@ abstract class Upgrade extends Object
         ..addsMiniature = addsMiniature
         ..isExhaustible = isExhaustible
         ..points = points
-        ..keywordsForUnit.addAll(
-          keywordsForUnit.map((k, v) => MapEntry(k, JsonObject(v))),
-        )
-        ..keywords.addAll(keywords.map((k, v) => MapEntry(k, JsonObject(v))))
+        ..keywordsForUnit.addAll(keywordsForUnit)
+        ..keywords.addAll(keywords)
         ..restrictedToFaction = restrictedToFaction
         ..restrictedToUnit.addAll(restrictedToUnit)
         ..restrictedToType = restrictedToType
@@ -71,11 +69,11 @@ abstract class Upgrade extends Object
 
   /// Keywords on the upgrade itself.
   @BuiltValueField(compare: false)
-  BuiltMap<UpgradeKeyword, JsonObject> get keywords;
+  BuiltMap<UpgradeKeyword, Object> get keywords;
 
   /// Keywords on the upgrade granted to the unit.
   @BuiltValueField(compare: false, wireName: 'keywords_for_unit')
-  BuiltMap<UnitKeyword, JsonObject> get keywordsForUnit;
+  BuiltMap<UnitKeyword, Object> get keywordsForUnit;
 
   /// Faction this upgrade is restricted to.
   ///

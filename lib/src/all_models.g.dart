@@ -33,21 +33,17 @@ Serializers _$serializers = (new Serializers().toBuilder()
               const [const FullType(AttackDice), const FullType(int)]),
           () => new MapBuilder<AttackDice, int>())
       ..addBuilderFactory(
-          const FullType(BuiltMap, const [
-            const FullType(WeaponKeyword),
-            const FullType(JsonObject)
-          ]),
-          () => new MapBuilder<WeaponKeyword, JsonObject>())
-      ..addBuilderFactory(
-          const FullType(BuiltMap, const [
-            const FullType(UpgradeKeyword),
-            const FullType(JsonObject)
-          ]),
-          () => new MapBuilder<UpgradeKeyword, JsonObject>())
+          const FullType(BuiltMap,
+              const [const FullType(WeaponKeyword), const FullType(Object)]),
+          () => new MapBuilder<WeaponKeyword, Object>())
       ..addBuilderFactory(
           const FullType(BuiltMap,
-              const [const FullType(UnitKeyword), const FullType(JsonObject)]),
-          () => new MapBuilder<UnitKeyword, JsonObject>())
+              const [const FullType(UpgradeKeyword), const FullType(Object)]),
+          () => new MapBuilder<UpgradeKeyword, Object>())
+      ..addBuilderFactory(
+          const FullType(BuiltMap,
+              const [const FullType(UnitKeyword), const FullType(Object)]),
+          () => new MapBuilder<UnitKeyword, Object>())
       ..addBuilderFactory(
           const FullType(BuiltSet, const [
             const FullType(Reference, const [const FullType(Unit)])
@@ -62,8 +58,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
           () => new SetBuilder<Weapon>())
       ..addBuilderFactory(
           const FullType(BuiltMap,
-              const [const FullType(UnitKeyword), const FullType(JsonObject)]),
-          () => new MapBuilder<UnitKeyword, JsonObject>())
+              const [const FullType(UnitKeyword), const FullType(Object)]),
+          () => new MapBuilder<UnitKeyword, Object>())
       ..addBuilderFactory(
           const FullType(BuiltSet, const [
             const FullType(Reference, const [const FullType(Unit)])

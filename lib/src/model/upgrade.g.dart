@@ -28,14 +28,12 @@ class _$UpgradeSerializer implements StructuredSerializer<Upgrade> {
       serializers.serialize(object.points, specifiedType: const FullType(int)),
       'keywords',
       serializers.serialize(object.keywords,
-          specifiedType: const FullType(BuiltMap, const [
-            const FullType(UpgradeKeyword),
-            const FullType(JsonObject)
-          ])),
+          specifiedType: const FullType(BuiltMap,
+              const [const FullType(UpgradeKeyword), const FullType(Object)])),
       'keywords_for_unit',
       serializers.serialize(object.keywordsForUnit,
           specifiedType: const FullType(BuiltMap,
-              const [const FullType(UnitKeyword), const FullType(JsonObject)])),
+              const [const FullType(UnitKeyword), const FullType(Object)])),
       'restricted_to_unit',
       serializers.serialize(object.restrictedToUnit,
           specifiedType: const FullType(BuiltSet, const [
@@ -100,14 +98,14 @@ class _$UpgradeSerializer implements StructuredSerializer<Upgrade> {
           result.keywords.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltMap, const [
                 const FullType(UpgradeKeyword),
-                const FullType(JsonObject)
+                const FullType(Object)
               ])) as BuiltMap);
           break;
         case 'keywords_for_unit':
           result.keywordsForUnit.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltMap, const [
                 const FullType(UnitKeyword),
-                const FullType(JsonObject)
+                const FullType(Object)
               ])) as BuiltMap);
           break;
         case 'restricted_to_faction':
@@ -159,9 +157,9 @@ class _$Upgrade extends Upgrade {
   @override
   final int points;
   @override
-  final BuiltMap<UpgradeKeyword, JsonObject> keywords;
+  final BuiltMap<UpgradeKeyword, Object> keywords;
   @override
-  final BuiltMap<UnitKeyword, JsonObject> keywordsForUnit;
+  final BuiltMap<UnitKeyword, Object> keywordsForUnit;
   @override
   final Faction restrictedToFaction;
   @override
@@ -284,16 +282,16 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
   int get points => _$this._points;
   set points(int points) => _$this._points = points;
 
-  MapBuilder<UpgradeKeyword, JsonObject> _keywords;
-  MapBuilder<UpgradeKeyword, JsonObject> get keywords =>
-      _$this._keywords ??= new MapBuilder<UpgradeKeyword, JsonObject>();
-  set keywords(MapBuilder<UpgradeKeyword, JsonObject> keywords) =>
+  MapBuilder<UpgradeKeyword, Object> _keywords;
+  MapBuilder<UpgradeKeyword, Object> get keywords =>
+      _$this._keywords ??= new MapBuilder<UpgradeKeyword, Object>();
+  set keywords(MapBuilder<UpgradeKeyword, Object> keywords) =>
       _$this._keywords = keywords;
 
-  MapBuilder<UnitKeyword, JsonObject> _keywordsForUnit;
-  MapBuilder<UnitKeyword, JsonObject> get keywordsForUnit =>
-      _$this._keywordsForUnit ??= new MapBuilder<UnitKeyword, JsonObject>();
-  set keywordsForUnit(MapBuilder<UnitKeyword, JsonObject> keywordsForUnit) =>
+  MapBuilder<UnitKeyword, Object> _keywordsForUnit;
+  MapBuilder<UnitKeyword, Object> get keywordsForUnit =>
+      _$this._keywordsForUnit ??= new MapBuilder<UnitKeyword, Object>();
+  set keywordsForUnit(MapBuilder<UnitKeyword, Object> keywordsForUnit) =>
       _$this._keywordsForUnit = keywordsForUnit;
 
   Faction _restrictedToFaction;

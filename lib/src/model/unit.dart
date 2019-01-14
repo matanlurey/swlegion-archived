@@ -1,6 +1,5 @@
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
-import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:meta/meta.dart';
 
@@ -64,7 +63,7 @@ abstract class Unit extends Object
         ..speed = speed
         ..upgrades.addAll(upgrades)
         ..weapons.addAll(weapons)
-        ..keywords.addAll(keywords.map((k, v) => MapEntry(k, JsonObject(v)))));
+        ..keywords.addAll(keywords));
 
   Unit._();
 
@@ -161,5 +160,5 @@ abstract class Unit extends Object
 
   /// Keywords on the unit.
   @BuiltValueField(compare: false)
-  BuiltMap<UnitKeyword, JsonObject> get keywords;
+  BuiltMap<UnitKeyword, Object> get keywords;
 }

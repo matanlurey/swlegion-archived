@@ -1,6 +1,5 @@
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
-import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:meta/meta.dart';
 
@@ -31,7 +30,7 @@ abstract class Weapon implements Built<Weapon, WeaponBuilder> {
         ..dice.addAll(dice)
         ..minRange = minRange
         ..maxRange = maxRange
-        ..keywords.addAll(keywords.map((k, v) => MapEntry(k, JsonObject(v))))
+        ..keywords.addAll(keywords)
         ..surgeOverride = surgeOverride);
 
   factory Weapon.melee({
@@ -82,7 +81,7 @@ abstract class Weapon implements Built<Weapon, WeaponBuilder> {
   int get maxRange;
 
   /// Keywords on the weapon.
-  BuiltMap<WeaponKeyword, JsonObject> get keywords;
+  BuiltMap<WeaponKeyword, Object> get keywords;
 
   /// Returns a new weapon as-if [amount] of these weapons are being used.
   Weapon scale(int amount) {
