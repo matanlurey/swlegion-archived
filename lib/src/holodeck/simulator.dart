@@ -41,6 +41,54 @@ class Holodeck {
     }
   }
 
+  /// Rolls defense dice based on [attack] and returns the number of wounds.
+  ///
+  /// **NOTE**: This includes pierce and other abilities.
+  int simulateWounds(
+    AttackResult attack,
+    AttackPool attacker,
+    DefensePool defender,
+  ) {
+    // Hits can be cancelled or mitigated.
+    var hits = attack.hits.length;
+    var crits = attack.crits.length;
+
+    // 5. Apply Dodge & Cover
+    hits -= attacker.highVelocity ? 0 : defender.dodge;
+    hits -= defender.computeCover(attacker);
+
+    // 6. Modify Attack Dice (i.e. impact & armor)
+    if (defender.armor) {
+      final convert = min(attacker.impact, hits);
+      crits += convert;
+      hits = 0;
+    }
+
+    // 7. Roll Defense Dice
+    final totalHits = max(0, hits) + crits;
+    var defense = rollDefenses(
+      defender.dice,
+      defender.impervious ? attacker.pierce + totalHits : totalHits,
+      surge: defender.defenseSurge,
+    );
+
+    // 8. Modify Defense Dice (i.e. uncanny luck, impervious, pierce).
+    // IMPERVIOUS (see above).
+    // UNCANNY LUCK
+    defense = defense.reroll(
+      max: defender.diceToReroll,
+      surge: defender.defenseSurge,
+      roll: _rollDefense,
+    );
+    // PIERCE
+    var blocked = defense.blocks;
+    if (!defender.immuneToPierce) {
+      blocked -= attacker.pierce;
+    }
+
+    return totalHits - max(0, blocked) as int;
+  }
+
   /// Returns the result of re-rolling dice in [result].
   ///
   /// If [AttackPool.aimTokens] is `0`, this function just returns [result].
