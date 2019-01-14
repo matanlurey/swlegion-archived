@@ -16,8 +16,29 @@ class Holodeck {
     Random random,
   }) : _random = random ?? Random();
 
-  AttackDiceSide _rollAttack(AttackDice dice) {
-    return dice.sides[_random.nextInt(dice.sides.length)];
+  AttackDiceSide _rollAttack(AttackDice dice, AttackSurge surge) {
+    final result = dice.sides[_random.nextInt(dice.sides.length)];
+    if (result == AttackDiceSide.surge) {
+      switch (surge) {
+        case AttackSurge.critical:
+          return AttackDiceSide.criticalHit;
+        case AttackSurge.hit:
+          return AttackDiceSide.hit;
+        default:
+          return AttackDiceSide.blank;
+      }
+    } else {
+      return result;
+    }
+  }
+
+  DefenseDiceSide _rollDefense(DefenseDice dice, {@required bool surge}) {
+    final result = dice.sides[_random.nextInt(dice.sides.length)];
+    if (result == DefenseDiceSide.surge) {
+      return surge ? DefenseDiceSide.block : DefenseDiceSide.blank;
+    } else {
+      return result;
+    }
   }
 
   /// Returns the result of re-rolling dice in [result].
@@ -29,7 +50,7 @@ class Holodeck {
   /// [AttackDiceSide.hit], trying to obtain [AttackDiceSide.criticalHit].
   ///
   /// To disable that behavior, toggle [onlyRerollMisses] to `true`.
-  AttackResult rerollIfDesirable(
+  AttackResult rerollAttacks(
     AttackResult result,
     AttackPool attack,
     DefensePool defense, {
@@ -53,6 +74,7 @@ class Holodeck {
           maxDice: attack.diceToReroll,
           roll: _rollAttack,
           rerollForCrits: max(0, attack.diceToReroll - attack.impact),
+          surge: attack.attackSurge,
         );
         continue;
       }
@@ -65,12 +87,17 @@ class Holodeck {
           maxDice: attack.diceToReroll,
           roll: _rollAttack,
           rerollForCrits: attack.diceToReroll,
+          surge: attack.attackSurge,
         );
         continue;
       }
 
       // Re-roll misses only.
-      result = result.reroll(maxDice: attack.diceToReroll, roll: _rollAttack);
+      result = result.reroll(
+        maxDice: attack.diceToReroll,
+        roll: _rollAttack,
+        surge: attack.attackSurge,
+      );
     }
 
     return result;
@@ -82,7 +109,7 @@ class Holodeck {
     final crits = <AttackDice>[];
     final misses = <AttackDice>[];
     for (final dice in allDice) {
-      final result = _rollAttack(dice);
+      final result = _rollAttack(dice, surge);
       switch (result) {
         case AttackDiceSide.criticalHit:
           crits.add(dice);
@@ -93,25 +120,42 @@ class Holodeck {
         case AttackDiceSide.blank:
           misses.add(dice);
           break;
-        case AttackDiceSide.surge:
-          switch (surge) {
-            case AttackSurge.critical:
-              crits.add(dice);
-              break;
-            case AttackSurge.hit:
-              hits.add(dice);
-              break;
-            default:
-              misses.add(dice);
-              break;
-          }
-          break;
+        default:
+          throw AssertionError();
       }
     }
     return AttackResult(
       hits: hits,
       crits: crits,
       misses: misses,
+    );
+  }
+
+  /// Returns the result of rolling [amount] of [dice] with [surge] applied.
+  DefenseResult rollDefenses(
+    DefenseDice dice,
+    int amount, {
+    @required bool surge,
+  }) {
+    var blocks = 0;
+    var blanks = 0;
+    for (var i = 0; i < amount; i++) {
+      final result = _rollDefense(dice, surge: surge);
+      switch (result) {
+        case DefenseDiceSide.block:
+          blocks++;
+          break;
+        case DefenseDiceSide.blank:
+          blanks++;
+          break;
+        default:
+          throw AssertionError();
+      }
+    }
+    return DefenseResult(
+      blocks: blocks,
+      blanks: blanks,
+      dice: dice,
     );
   }
 }
@@ -129,18 +173,11 @@ class AttackResult {
         assert(crits != null),
         assert(misses != null);
 
-  AttackResult operator +(AttackResult o) {
-    return AttackResult(
-      hits: hits.toList()..addAll(o.hits),
-      crits: crits.toList()..addAll(o.crits),
-      misses: misses.toList()..addAll(o.misses),
-    );
-  }
-
   /// Returns this result with up to [maxDice] re-rolled.
   AttackResult reroll({
     int maxDice = 2,
-    @required AttackDiceSide Function(AttackDice) roll,
+    @required AttackSurge surge,
+    @required AttackDiceSide Function(AttackDice, AttackSurge) roll,
     int rerollForCrits = 0,
   }) {
     assert(maxDice >= 0);
@@ -163,7 +200,7 @@ class AttackResult {
     }
 
     for (final dice in toRoll) {
-      final result = roll(dice);
+      final result = roll(dice, surge);
       switch (result) {
         case AttackDiceSide.criticalHit:
           crits.add(dice);
@@ -210,5 +247,70 @@ class AttackResult {
       'misses': misses.map((d) => d.name).toList(),
     });
     return 'AttackResult $details';
+  }
+}
+
+class DefenseResult {
+  final int blocks;
+  final int blanks;
+  final DefenseDice dice;
+
+  const DefenseResult({
+    this.blocks,
+    this.blanks,
+    this.dice,
+  })  : assert(blocks != null),
+        assert(blanks != null),
+        assert(dice != null);
+
+  @override
+  bool operator ==(Object o) =>
+      identical(this, o) ||
+      o is DefenseResult &&
+          blocks == o.blocks &&
+          blanks == o.blanks &&
+          dice == o.dice;
+
+  @override
+  int get hashCode {
+    return blocks.hashCode ^ blanks.hashCode ^ dice.hashCode;
+  }
+
+  /// Returns the result with [max] re-rolls applied to try and get [blocks].
+  DefenseResult reroll({
+    @required int max,
+    @required bool surge,
+    @required DefenseDiceSide Function(DefenseDice, {bool surge}) roll,
+  }) {
+    var blocks = this.blocks;
+    var blanks = this.blanks;
+    final rolls = <DefenseDiceSide>[];
+    while (blanks > 0 && max > 0) {
+      rolls.add(roll(dice, surge: surge));
+      max--;
+      blanks--;
+    }
+    for (final roll in rolls) {
+      if (roll == DefenseDiceSide.block) {
+        blocks++;
+      } else {
+        blanks++;
+      }
+    }
+    return DefenseResult(
+      blocks: blocks,
+      blanks: blanks,
+      dice: dice,
+    );
+  }
+
+  @override
+  String toString() {
+    final details = const JsonEncoder.withIndent('  ').convert({
+      'blocks': blocks,
+      'blanks': blanks,
+      'type': dice.name,
+    });
+    return 'DefenseResult $details';
   }
 }
