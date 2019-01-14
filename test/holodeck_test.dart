@@ -27,6 +27,93 @@ void main() {
       ),
     );
   });
+
+  test('should re-roll a single miss', () {
+    expect(
+      const AttackResult(
+        hits: [
+          AttackDice.black,
+          AttackDice.red,
+        ],
+        crits: [],
+        misses: [
+          AttackDice.white,
+        ],
+      ).reroll(
+        roll: (_) => AttackDiceSide.criticalHit,
+      ),
+      const AttackResult(
+        hits: [
+          AttackDice.black,
+          AttackDice.red,
+        ],
+        crits: [
+          AttackDice.white,
+        ],
+        misses: [],
+      ),
+    );
+  });
+
+  test('should re-roll a two misses', () {
+    expect(
+      const AttackResult(
+        hits: [
+          AttackDice.black,
+          AttackDice.red,
+        ],
+        crits: [],
+        misses: [
+          AttackDice.white,
+          AttackDice.black,
+          AttackDice.white,
+        ],
+      ).reroll(
+        roll: (_) => AttackDiceSide.criticalHit,
+      ),
+      const AttackResult(
+        hits: [
+          AttackDice.black,
+          AttackDice.red,
+        ],
+        crits: [
+          AttackDice.black,
+          AttackDice.white,
+        ],
+        misses: [
+          AttackDice.white,
+        ],
+      ),
+    );
+  });
+
+  test('should re-roll hits (crit fishing)', () {
+    expect(
+      const AttackResult(
+        hits: [
+          AttackDice.black,
+          AttackDice.red,
+        ],
+        crits: [],
+        misses: [
+          AttackDice.white,
+        ],
+      ).reroll(
+        roll: (_) => AttackDiceSide.criticalHit,
+        rerollForCrits: 1,
+      ),
+      const AttackResult(
+        hits: [
+          AttackDice.black,
+        ],
+        crits: [
+          AttackDice.white,
+          AttackDice.red,
+        ],
+        misses: [],
+      ),
+    );
+  });
 }
 
 class _FixedRandom implements Random {
