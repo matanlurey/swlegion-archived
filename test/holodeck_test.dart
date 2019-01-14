@@ -114,6 +114,146 @@ void main() {
       ),
     );
   });
+
+  group('should re-roll ', () {
+    final alwaysCrit = _FixedRandom([0]);
+    final holodeck = Holodeck(
+      random: alwaysCrit,
+    );
+
+    test('misses (always)', () {
+      expect(
+        holodeck.rerollIfDesirable(
+          const AttackResult(
+            hits: [],
+            crits: [],
+            misses: [
+              AttackDice.white,
+              AttackDice.white,
+            ],
+          ),
+          const AttackPool(
+            dice: {
+              AttackDice.white: 2,
+            },
+            aimTokens: 1,
+          ),
+          const DefensePool(
+            dice: DefenseDice.white,
+          ),
+        ),
+        const AttackResult(
+          hits: [],
+          crits: [
+            AttackDice.white,
+            AttackDice.white,
+          ],
+          misses: [],
+        ),
+      );
+    });
+
+    test('hits (always against armor)', () {
+      expect(
+        holodeck.rerollIfDesirable(
+          const AttackResult(
+            hits: [],
+            crits: [],
+            misses: [
+              AttackDice.white,
+              AttackDice.white,
+            ],
+          ),
+          const AttackPool(
+            dice: {
+              AttackDice.white: 2,
+            },
+            aimTokens: 1,
+          ),
+          const DefensePool(
+            dice: DefenseDice.white,
+            armor: true,
+          ),
+        ),
+        const AttackResult(
+          hits: [],
+          crits: [
+            AttackDice.white,
+            AttackDice.white,
+          ],
+          misses: [],
+        ),
+      );
+    });
+
+    test('hits (when cover would prevent all damage)', () {
+      expect(
+        holodeck.rerollIfDesirable(
+          const AttackResult(
+            hits: [
+              AttackDice.white,
+              AttackDice.white,
+            ],
+            crits: [],
+            misses: [],
+          ),
+          const AttackPool(
+            dice: {
+              AttackDice.white: 2,
+            },
+            aimTokens: 1,
+          ),
+          const DefensePool(
+            dice: DefenseDice.white,
+            cover: 2,
+          ),
+        ),
+        const AttackResult(
+          hits: [],
+          crits: [
+            AttackDice.white,
+            AttackDice.white,
+          ],
+          misses: [],
+        ),
+      );
+    });
+
+    test('misses only when hits can effect cover', () {
+      expect(
+        holodeck.rerollIfDesirable(
+          const AttackResult(
+            hits: [
+              AttackDice.white,
+            ],
+            crits: [],
+            misses: [
+              AttackDice.white,
+            ],
+          ),
+          const AttackPool(
+            dice: {
+              AttackDice.white: 2,
+            },
+            aimTokens: 1,
+          ),
+          const DefensePool(
+            dice: DefenseDice.white,
+            cover: 1,
+          ),
+        ),
+        const AttackResult(
+          hits: [
+            AttackDice.white,
+          ],
+          crits: [
+            AttackDice.white,
+          ],
+          misses: [],
+        ),
+      );
+    });
+  });
 }
 
 class _FixedRandom implements Random {

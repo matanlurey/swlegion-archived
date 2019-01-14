@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:math' as math;
 
 import 'package:collection/collection.dart';
 import 'package:meta/meta.dart';
@@ -48,7 +49,6 @@ class AttackPool {
     this.diceToReroll = 2,
     this.blast = false,
   })  : assert(aimTokens >= 0),
-        assert(attackSurge != null),
         assert(dice != null),
         assert(pierce >= 0),
         assert(diceToReroll >= 2),
@@ -185,6 +185,14 @@ class DefensePool {
         assert(immuneToPierce != null),
         assert(impervious != null),
         assert(diceToReroll >= 0);
+
+  /// Returns the amount of effective (final) cover if attacked by [attacker].
+  int computeCover(AttackPool attacker) {
+    if (attacker.blast && !immuneToBlast) {
+      return 0;
+    }
+    return math.max(0, cover - attacker.sharpshooter);
+  }
 
   @override
   bool operator ==(Object o) {
