@@ -48,12 +48,35 @@ class AttackPool {
     this.diceToReroll = 2,
     this.blast = false,
   })  : assert(aimTokens >= 0),
+        assert(attackSurge != null),
         assert(dice != null),
         assert(pierce >= 0),
         assert(diceToReroll >= 2),
         assert(sharpshooter >= 0),
         assert(impact >= 0),
         assert(blast != null);
+
+  AttackPool copyWith({
+    int aimTokens,
+    AttackSurge attackSurge,
+    Map<AttackDice, int> dice,
+    int pierce,
+    int diceToReroll,
+    int sharpshooter,
+    int impact,
+    bool blast,
+  }) {
+    return AttackPool(
+      aimTokens: aimTokens ?? this.aimTokens,
+      attackSurge: attackSurge ?? this.attackSurge,
+      dice: dice ?? this.dice,
+      pierce: pierce ?? this.pierce,
+      diceToReroll: diceToReroll ?? this.diceToReroll,
+      sharpshooter: sharpshooter ?? this.sharpshooter,
+      impact: impact ?? this.impact,
+      blast: blast ?? this.blast,
+    );
+  }
 
   @override
   bool operator ==(Object o) {
