@@ -130,7 +130,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
       * To use a weapon during an attack, the defender must be at or within any
         of the weapon's ranges.
 
-      * A mini has the **ARSANEL X** keyword, can divide its weapons between any
+      * A mini has the **ARSENAL X** keyword, can divide its weapons between any
         number of units, forming a separate dice pool for each weapon or
         combination of weapons.
     ''',
