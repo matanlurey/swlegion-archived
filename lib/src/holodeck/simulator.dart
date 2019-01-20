@@ -87,9 +87,7 @@ class Holodeck {
     }
 
     return totalHits - max(0, blocked) as int;
-  }
-
-  /// Returns the result of re-rolling dice in [result].
+  }  /// Returns the result of re-rolling dice in [result].
   ///
   /// If [AttackPool.aimTokens] is `0`, this function just returns [result].
   ///
