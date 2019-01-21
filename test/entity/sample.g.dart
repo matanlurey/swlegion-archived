@@ -67,10 +67,8 @@ class _$SampleSerializer implements StructuredSerializer<Sample> {
       result
         ..add('keywords')
         ..add(serializers.serialize(object.keywords,
-            specifiedType: const FullType(BuiltMap, const [
-              const FullType(UnitKeyword),
-              const FullType(JsonObject)
-            ])));
+            specifiedType: const FullType(BuiltMap,
+                const [const FullType(UnitKeyword), const FullType(Object)])));
     }
 
     return result;
@@ -127,7 +125,7 @@ class _$SampleSerializer implements StructuredSerializer<Sample> {
           result.keywords.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltMap, const [
                 const FullType(UnitKeyword),
-                const FullType(JsonObject)
+                const FullType(Object)
               ])) as BuiltMap);
           break;
       }
@@ -151,7 +149,7 @@ class _$Sample extends Sample {
   @override
   final BuiltSet<Reference<Upgrade>> upgrades;
   @override
-  final BuiltMap<UnitKeyword, JsonObject> keywords;
+  final BuiltMap<UnitKeyword, Object> keywords;
 
   factory _$Sample([void updates(SampleBuilder b)]) =>
       (new SampleBuilder()..update(updates)).build();
@@ -246,10 +244,10 @@ class SampleBuilder implements Builder<Sample, SampleBuilder> {
   set upgrades(SetBuilder<Reference<Upgrade>> upgrades) =>
       _$this._upgrades = upgrades;
 
-  MapBuilder<UnitKeyword, JsonObject> _keywords;
-  MapBuilder<UnitKeyword, JsonObject> get keywords =>
-      _$this._keywords ??= new MapBuilder<UnitKeyword, JsonObject>();
-  set keywords(MapBuilder<UnitKeyword, JsonObject> keywords) =>
+  MapBuilder<UnitKeyword, Object> _keywords;
+  MapBuilder<UnitKeyword, Object> get keywords =>
+      _$this._keywords ??= new MapBuilder<UnitKeyword, Object>();
+  set keywords(MapBuilder<UnitKeyword, Object> keywords) =>
       _$this._keywords = keywords;
 
   SampleBuilder();

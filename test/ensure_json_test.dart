@@ -77,7 +77,7 @@ void main() {
 
   test('should serialize keywords as simple JSON', () {
     final sample = Sample(
-      (b) => b.keywords[UnitKeyword.kPrecise] = JsonObject(1),
+      (b) => b.keywords[UnitKeyword.kPrecise] = 1,
     );
     final data = json.serializeWith(Sample.serializer, sample);
     expect(data, {
