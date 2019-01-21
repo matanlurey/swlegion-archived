@@ -38,5 +38,5 @@ abstract class Sample implements Built<Sample, SampleBuilder> {
 
   /// Examples of keywords.
   @nullable
-  BuiltMap<UnitKeyword, JsonObject> get keywords;
+  BuiltMap<UnitKeyword, Object> get keywords;
 }
