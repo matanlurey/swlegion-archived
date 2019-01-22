@@ -6,6 +6,9 @@
 
 - Added `surge_override` (`AttackSurge`) field to `Weapon`.
 - Significant data model change for `Keyword`, now split into 3 new classes.
+- Changed the default `serializers` to always use standard JSON, fixed encoding
+  issues that would cause issues with Firebase or other database formats that
+  expect valid JSON. See `lib/catalog.json` for example output.
 
 ## Holodeck
 

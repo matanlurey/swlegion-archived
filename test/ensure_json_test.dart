@@ -1,6 +1,4 @@
-import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
-import 'package:built_value/standard_json_plugin.dart';
 import 'package:swlegion/catalog.dart';
 import 'package:swlegion/swlegion.dart';
 import 'package:test/test.dart';
@@ -12,32 +10,29 @@ void main() {
   Serializers json;
 
   setUpAll(() {
-    json = (serializers.toBuilder()
-          ..add(Sample.serializer)
-          ..addPlugin(StandardJsonPlugin()))
-        .build();
+    json = (serializers.toBuilder()..add(Sample.serializer)).build();
   });
 
   for (final card in catalog.commandCards) {
     test('should serialize/deserialize "${card.name}"', () {
-      final text = json.serialize(card);
-      final data = json.deserialize(text);
+      final text = json.serializeWith(CommandCard.serializer, card);
+      final data = json.deserializeWith(CommandCard.serializer, text);
       expect(card, data);
     });
   }
 
   for (final unit in catalog.units) {
     test('should serialize/deserialize "${unit.name}"', () {
-      final text = json.serialize(unit);
-      final data = json.deserialize(text);
+      final text = json.serializeWith(Unit.serializer, unit);
+      final data = json.deserializeWith(Unit.serializer, text);
       expect(unit, data);
     });
   }
 
   for (final upgrade in catalog.upgrades) {
     test('should serialize/deserialize "${upgrade.name}"', () {
-      final text = json.serialize(upgrade);
-      final data = json.deserialize(text);
+      final text = json.serializeWith(Upgrade.serializer, upgrade);
+      final data = json.deserializeWith(Upgrade.serializer, text);
       expect(upgrade, data);
     });
   }
@@ -82,10 +77,9 @@ void main() {
     final data = json.serializeWith(Sample.serializer, sample);
     expect(data, {
       'keywords': {
-        // TODO: Figure out why extra quotes/strange encoding occur.
-        // https://github.com/google/built_value.dart/issues/568
-        '"${UnitKeyword.kPrecise.id}"': 1,
+        '${UnitKeyword.kPrecise.id}': 1,
       },
     });
+    expect(json.deserializeWith(Sample.serializer, data), sample);
   });
 }
