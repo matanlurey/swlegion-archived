@@ -141,6 +141,21 @@ class CustomJsonPlugin extends StandardJsonPlugin {
 ])
 final Serializers serializers = () {
   final builder = _$serializers.toBuilder()
+    ..addPlugin(_CustomEnumJsonPlugin(
+      enumsUsedAsMapKeys: const [
+        AttackDice,
+        DefenseDice,
+        UnitKeyword,
+        UpgradeKeyword,
+        UpgradeSlot,
+        WeaponKeyword,
+      ],
+      enumsExternalToBuiltValue: const [
+        UnitKeyword,
+        UpgradeKeyword,
+        WeaponKeyword,
+      ],
+    ))
     ..add(Reference.serializer)
     ..add(UnitKeyword.serializer)
     ..add(UpgradeKeyword.serializer)
