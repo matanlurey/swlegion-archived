@@ -10,6 +10,7 @@
   issues that would cause issues with Firebase or other database formats that
   expect valid JSON. See `lib/catalog.json` for example output. Use the exported
   `CustomJsonPlugin` instead of `StandardJsonPlugin`.
+- Added `ForceAlignment` (instead of just `Faction`).
 
 ## Holodeck
 

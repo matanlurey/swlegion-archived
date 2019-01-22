@@ -6,7 +6,7 @@ import '../weapons/ryyk_blade.dart';
 final wookieWarriors = Unit(
   id: 'wookie-warriors',
   name: 'Wookie Warriors',
-  faction: Faction.lightSide,
+  faction: Faction.rebels,
   miniatures: 3,
   rank: Rank.specialForces,
   type: UnitType.trooper,

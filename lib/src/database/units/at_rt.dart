@@ -6,7 +6,7 @@ import '../weapons/grappling_claws.dart';
 final atRt = Unit(
   id: 'at-rt',
   name: 'AT-RT',
-  faction: Faction.lightSide,
+  faction: Faction.rebels,
   miniatures: 1,
   rank: Rank.support,
   type: UnitType.groundVehicle,

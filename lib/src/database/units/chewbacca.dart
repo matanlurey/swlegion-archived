@@ -9,7 +9,7 @@ final chewbacca = Unit(
   id: 'chewbacca',
   name: 'Chewbacca',
   subTitle: 'Walking Carpet',
-  faction: Faction.lightSide,
+  faction: Faction.rebels,
   isUnique: true,
   miniatures: 1,
   rank: Rank.operative,

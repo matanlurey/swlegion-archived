@@ -74,7 +74,7 @@ void main() {
       type: UnitType.trooper,
       name: 'Gonk Droid',
       defense: DefenseDice.white,
-      faction: Faction.lightSide,
+      faction: Faction.rebels,
       speed: 1,
       id: 'gonk-droid',
       wounds: 1,

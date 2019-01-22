@@ -4,7 +4,7 @@ final wedgeAntilles = Upgrade(
   id: 'wedge-antilles',
   name: 'Wedge Antilles',
   type: UpgradeSlot.pilot,
-  restrictedToFaction: Faction.lightSide,
+  restrictedToFaction: Faction.rebels,
   restrictedToType: UnitType.repulsorVehicle,
   points: 5,
   isExhaustible: true,

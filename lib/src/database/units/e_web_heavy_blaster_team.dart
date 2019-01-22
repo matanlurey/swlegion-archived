@@ -7,7 +7,7 @@ import '../weapons/unarmed.dart';
 final eWebHeavyBlasterTeam = Unit(
   id: 'e-web-heavy-blaster-team',
   name: 'E-Web Heavy Blaster Team',
-  faction: Faction.darkSide,
+  faction: Faction.imperials,
   miniatures: 1,
   rank: Rank.support,
   type: UnitType.emplacementTrooper,

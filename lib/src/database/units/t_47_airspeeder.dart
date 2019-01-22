@@ -5,7 +5,7 @@ import '../weapons/ap_11_double_laser_cannon.dart';
 final t47Airspeeder = Unit(
   id: 't-47-airspeeder',
   name: 'T-47 Airspeeder',
-  faction: Faction.lightSide,
+  faction: Faction.rebels,
   miniatures: 1,
   rank: Rank.heavy,
   type: UnitType.repulsorVehicle,

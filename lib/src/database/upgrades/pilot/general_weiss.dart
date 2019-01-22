@@ -4,7 +4,7 @@ final generalWeiss = Upgrade(
   id: 'general-weiss',
   name: 'General Weiss',
   type: UpgradeSlot.pilot,
-  restrictedToFaction: Faction.darkSide,
+  restrictedToFaction: Faction.imperials,
   restrictedToType: UnitType.groundVehicle,
   points: 10,
   isExhaustible: true,

@@ -55,6 +55,12 @@ class _$UpgradeSerializer implements StructuredSerializer<Upgrade> {
         ..add(serializers.serialize(object.restrictedToFaction,
             specifiedType: const FullType(Faction)));
     }
+    if (object.restrictedToForceAlignment != null) {
+      result
+        ..add('restricted_to_force_alignment')
+        ..add(serializers.serialize(object.restrictedToForceAlignment,
+            specifiedType: const FullType(ForceAlignment)));
+    }
     if (object.restrictedToType != null) {
       result
         ..add('restricted_to_type')
@@ -112,6 +118,10 @@ class _$UpgradeSerializer implements StructuredSerializer<Upgrade> {
           result.restrictedToFaction = serializers.deserialize(value,
               specifiedType: const FullType(Faction)) as Faction;
           break;
+        case 'restricted_to_force_alignment':
+          result.restrictedToForceAlignment = serializers.deserialize(value,
+              specifiedType: const FullType(ForceAlignment)) as ForceAlignment;
+          break;
         case 'restricted_to_unit':
           result.restrictedToUnit.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltSet, const [
@@ -163,6 +173,8 @@ class _$Upgrade extends Upgrade {
   @override
   final Faction restrictedToFaction;
   @override
+  final ForceAlignment restrictedToForceAlignment;
+  @override
   final BuiltSet<Reference<Unit>> restrictedToUnit;
   @override
   final UnitType restrictedToType;
@@ -187,6 +199,7 @@ class _$Upgrade extends Upgrade {
       this.keywords,
       this.keywordsForUnit,
       this.restrictedToFaction,
+      this.restrictedToForceAlignment,
       this.restrictedToUnit,
       this.restrictedToType,
       this.id,
@@ -254,6 +267,7 @@ class _$Upgrade extends Upgrade {
           ..add('keywords', keywords)
           ..add('keywordsForUnit', keywordsForUnit)
           ..add('restrictedToFaction', restrictedToFaction)
+          ..add('restrictedToForceAlignment', restrictedToForceAlignment)
           ..add('restrictedToUnit', restrictedToUnit)
           ..add('restrictedToType', restrictedToType)
           ..add('id', id)
@@ -299,6 +313,12 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
   set restrictedToFaction(Faction restrictedToFaction) =>
       _$this._restrictedToFaction = restrictedToFaction;
 
+  ForceAlignment _restrictedToForceAlignment;
+  ForceAlignment get restrictedToForceAlignment =>
+      _$this._restrictedToForceAlignment;
+  set restrictedToForceAlignment(ForceAlignment restrictedToForceAlignment) =>
+      _$this._restrictedToForceAlignment = restrictedToForceAlignment;
+
   SetBuilder<Reference<Unit>> _restrictedToUnit;
   SetBuilder<Reference<Unit>> get restrictedToUnit =>
       _$this._restrictedToUnit ??= new SetBuilder<Reference<Unit>>();
@@ -340,6 +360,7 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
       _keywords = _$v.keywords?.toBuilder();
       _keywordsForUnit = _$v.keywordsForUnit?.toBuilder();
       _restrictedToFaction = _$v.restrictedToFaction;
+      _restrictedToForceAlignment = _$v.restrictedToForceAlignment;
       _restrictedToUnit = _$v.restrictedToUnit?.toBuilder();
       _restrictedToType = _$v.restrictedToType;
       _id = _$v.id;
@@ -377,6 +398,7 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
               keywords: keywords.build(),
               keywordsForUnit: keywordsForUnit.build(),
               restrictedToFaction: restrictedToFaction,
+              restrictedToForceAlignment: restrictedToForceAlignment,
               restrictedToUnit: restrictedToUnit.build(),
               restrictedToType: restrictedToType,
               id: id,

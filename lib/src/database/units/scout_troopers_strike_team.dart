@@ -7,7 +7,7 @@ final scoutTroopersStrikeTeam = Unit(
   id: 'scout-troopers-strike-team',
   name: 'Scout Troopers',
   subTitle: 'Strike Team',
-  faction: Faction.darkSide,
+  faction: Faction.imperials,
   miniatures: 1,
   rank: Rank.specialForces,
   type: UnitType.trooper,

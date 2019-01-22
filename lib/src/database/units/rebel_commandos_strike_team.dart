@@ -7,7 +7,7 @@ final rebelCommandosStrikeTeam = Unit(
   id: 'rebel-commandos-strike-team',
   name: 'Rebel Commandos',
   subTitle: 'Strike Team',
-  faction: Faction.lightSide,
+  faction: Faction.rebels,
   miniatures: 1,
   rank: Rank.specialForces,
   type: UnitType.trooper,

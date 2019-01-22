@@ -6,7 +6,7 @@ import '../weapons/ms_4_twin_blaster_cannon.dart';
 final atSt = Unit(
   id: 'at-st',
   name: 'AT-ST',
-  faction: Faction.darkSide,
+  faction: Faction.imperials,
   miniatures: 1,
   rank: Rank.heavy,
   type: UnitType.groundVehicle,

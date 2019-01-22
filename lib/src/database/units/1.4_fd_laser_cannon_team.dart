@@ -7,7 +7,7 @@ import '../weapons/unarmed.dart';
 final $1dot4FDLaserCannonTeam = Unit(
   id: '1-4-fd-laser-cannon-team',
   name: '1.4 FD Laser Cannon Team',
-  faction: Faction.lightSide,
+  faction: Faction.rebels,
   miniatures: 1,
   rank: Rank.support,
   type: UnitType.emplacementTrooper,

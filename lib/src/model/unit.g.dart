@@ -67,6 +67,12 @@ class _$UnitSerializer implements StructuredSerializer<Unit> {
         ..add(serializers.serialize(object.subTitle,
             specifiedType: const FullType(String)));
     }
+    if (object.forceAlignment != null) {
+      result
+        ..add('force_alignment')
+        ..add(serializers.serialize(object.forceAlignment,
+            specifiedType: const FullType(ForceAlignment)));
+    }
     if (object.courage != null) {
       result
         ..add('courage')
@@ -119,6 +125,10 @@ class _$UnitSerializer implements StructuredSerializer<Unit> {
         case 'faction':
           result.faction = serializers.deserialize(value,
               specifiedType: const FullType(Faction)) as Faction;
+          break;
+        case 'force_alignment':
+          result.forceAlignment = serializers.deserialize(value,
+              specifiedType: const FullType(ForceAlignment)) as ForceAlignment;
           break;
         case 'type':
           result.type = serializers.deserialize(value,
@@ -203,6 +213,8 @@ class _$Unit extends Unit {
   @override
   final Faction faction;
   @override
+  final ForceAlignment forceAlignment;
+  @override
   final UnitType type;
   @override
   final int points;
@@ -240,6 +252,7 @@ class _$Unit extends Unit {
       this.isUnique,
       this.subTitle,
       this.faction,
+      this.forceAlignment,
       this.type,
       this.points,
       this.rank,
@@ -328,6 +341,7 @@ class _$Unit extends Unit {
           ..add('isUnique', isUnique)
           ..add('subTitle', subTitle)
           ..add('faction', faction)
+          ..add('forceAlignment', forceAlignment)
           ..add('type', type)
           ..add('points', points)
           ..add('rank', rank)
@@ -368,6 +382,11 @@ class UnitBuilder implements Builder<Unit, UnitBuilder> {
   Faction _faction;
   Faction get faction => _$this._faction;
   set faction(Faction faction) => _$this._faction = faction;
+
+  ForceAlignment _forceAlignment;
+  ForceAlignment get forceAlignment => _$this._forceAlignment;
+  set forceAlignment(ForceAlignment forceAlignment) =>
+      _$this._forceAlignment = forceAlignment;
 
   UnitType _type;
   UnitType get type => _$this._type;
@@ -440,6 +459,7 @@ class UnitBuilder implements Builder<Unit, UnitBuilder> {
       _isUnique = _$v.isUnique;
       _subTitle = _$v.subTitle;
       _faction = _$v.faction;
+      _forceAlignment = _$v.forceAlignment;
       _type = _$v.type;
       _points = _$v.points;
       _rank = _$v.rank;
@@ -483,6 +503,7 @@ class UnitBuilder implements Builder<Unit, UnitBuilder> {
               isUnique: isUnique,
               subTitle: subTitle,
               faction: faction,
+              forceAlignment: forceAlignment,
               type: type,
               points: points,
               rank: rank,

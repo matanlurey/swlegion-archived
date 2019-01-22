@@ -6,7 +6,7 @@ import '../weapons/unarmed.dart';
 final stormtroopers = Unit(
   id: 'stormtroopers',
   name: 'Stormtroopers',
-  faction: Faction.darkSide,
+  faction: Faction.imperials,
   miniatures: 4,
   rank: Rank.corps,
   type: UnitType.trooper,
