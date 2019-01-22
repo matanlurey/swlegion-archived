@@ -384,7 +384,11 @@
       "id": "1-4-fd-laser-cannon-team",
       "name": "1.4 FD Laser Cannon Team",
       "is_unique": false,
+<<<<<<< HEAD
       "faction": "rebels",
+=======
+      "faction": "light-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "type": "emplacement-trooper",
       "points": 70,
       "rank": "support",
@@ -444,7 +448,11 @@
       "id": "74-z-speeder-bikes",
       "name": "74-Z Speeder Bikes",
       "is_unique": false,
+<<<<<<< HEAD
       "faction": "imperials",
+=======
+      "faction": "dark-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "type": "ground-vehicle",
       "points": 90,
       "rank": "support",
@@ -493,7 +501,11 @@
       "id": "at-rt",
       "name": "AT-RT",
       "is_unique": false,
+<<<<<<< HEAD
       "faction": "rebels",
+=======
+      "faction": "light-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "type": "ground-vehicle",
       "points": 55,
       "rank": "support",
@@ -541,7 +553,11 @@
       "id": "at-st",
       "name": "AT-ST",
       "is_unique": false,
+<<<<<<< HEAD
       "faction": "imperials",
+=======
+      "faction": "dark-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "type": "ground-vehicle",
       "points": 195,
       "rank": "heavy",
@@ -593,7 +609,11 @@
       "id": "boba-fett",
       "name": "Boba Fett",
       "is_unique": true,
+<<<<<<< HEAD
       "faction": "imperials",
+=======
+      "faction": "dark-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "type": "trooper",
       "points": 140,
       "rank": "operative",
@@ -657,7 +677,11 @@
       "id": "chewbacca",
       "name": "Chewbacca",
       "is_unique": true,
+<<<<<<< HEAD
       "faction": "rebels",
+=======
+      "faction": "light-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "type": "trooper",
       "points": 110,
       "rank": "operative",
@@ -710,7 +734,11 @@
       "id": "darth-vader",
       "name": "Darth Vader",
       "is_unique": true,
+<<<<<<< HEAD
       "faction": "imperials",
+=======
+      "faction": "dark-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "type": "trooper",
       "points": 200,
       "rank": "commander",
@@ -743,14 +771,22 @@
         "master-of-the-force": 1,
         "relentless": ""
       },
+<<<<<<< HEAD
       "sub_title": "Dark Lord of the Sith",
       "force_alignment": "dark"
+=======
+      "sub_title": "Dark Lord of the Sith"
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
     },
     {
       "id": "e-web-heavy-blaster-team",
       "name": "E-Web Heavy Blaster Team",
       "is_unique": false,
+<<<<<<< HEAD
       "faction": "imperials",
+=======
+      "faction": "dark-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "type": "emplacement-trooper",
       "points": 55,
       "rank": "support",
@@ -813,7 +849,11 @@
       "id": "emperor-palpatine",
       "name": "Emperor Palpatine",
       "is_unique": true,
+<<<<<<< HEAD
       "faction": "imperials",
+=======
+      "faction": "dark-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "type": "trooper",
       "points": 210,
       "rank": "commander",
@@ -850,7 +890,10 @@
         "master-of-the-force": 2
       },
       "sub_title": "Ruler of the Galactic Empire",
+<<<<<<< HEAD
       "force_alignment": "dark",
+=======
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "courage": 4,
       "attack_surge": "critical"
     },
@@ -858,7 +901,11 @@
       "id": "fleet-troopers",
       "name": "Fleet Troopers",
       "is_unique": false,
+<<<<<<< HEAD
       "faction": "rebels",
+=======
+      "faction": "light-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "type": "trooper",
       "points": 44,
       "rank": "corps",
@@ -905,7 +952,11 @@
       "id": "general-veers",
       "name": "General Veers",
       "is_unique": true,
+<<<<<<< HEAD
       "faction": "imperials",
+=======
+      "faction": "dark-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "type": "trooper",
       "points": 80,
       "rank": "commander",
@@ -956,7 +1007,11 @@
       "id": "han-solo",
       "name": "Han Solo",
       "is_unique": true,
+<<<<<<< HEAD
       "faction": "rebels",
+=======
+      "faction": "light-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "type": "trooper",
       "points": 120,
       "rank": "commander",
@@ -1006,7 +1061,11 @@
       "id": "imperial-royal-guards",
       "name": "Imperial Royal Guards",
       "is_unique": false,
+<<<<<<< HEAD
       "faction": "imperials",
+=======
+      "faction": "dark-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "type": "trooper",
       "points": 75,
       "rank": "special-forces",
@@ -1055,7 +1114,11 @@
       "id": "leia-organa",
       "name": "Leia Organa",
       "is_unique": true,
+<<<<<<< HEAD
       "faction": "rebels",
+=======
+      "faction": "light-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "type": "trooper",
       "points": 90,
       "rank": "commander",
@@ -1106,7 +1169,11 @@
       "id": "luke-skywalker",
       "name": "Luke Skywalker",
       "is_unique": true,
+<<<<<<< HEAD
       "faction": "rebels",
+=======
+      "faction": "light-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "type": "trooper",
       "points": 160,
       "rank": "commander",
@@ -1141,7 +1208,10 @@
         "immune-pierce": ""
       },
       "sub_title": "Hero of the Rebellion",
+<<<<<<< HEAD
       "force_alignment": "light",
+=======
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "courage": 3,
       "attack_surge": "critical"
     },
@@ -1149,7 +1219,11 @@
       "id": "rebel-commandos",
       "name": "Rebel Commandos",
       "is_unique": false,
+<<<<<<< HEAD
       "faction": "rebels",
+=======
+      "faction": "light-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "type": "trooper",
       "points": 60,
       "rank": "special-forces",
@@ -1199,7 +1273,11 @@
       "id": "rebel-commandos-strike-team",
       "name": "Rebel Commandos",
       "is_unique": false,
+<<<<<<< HEAD
       "faction": "rebels",
+=======
+      "faction": "light-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "type": "trooper",
       "points": 16,
       "rank": "special-forces",
@@ -1251,7 +1329,11 @@
       "id": "rebel-troopers",
       "name": "Rebel Troopers",
       "is_unique": false,
+<<<<<<< HEAD
       "faction": "rebels",
+=======
+      "faction": "light-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "type": "trooper",
       "points": 40,
       "rank": "corps",
@@ -1297,7 +1379,11 @@
       "id": "scout-troopers",
       "name": "Scout Troopers",
       "is_unique": false,
+<<<<<<< HEAD
       "faction": "imperials",
+=======
+      "faction": "dark-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "type": "trooper",
       "points": 60,
       "rank": "special-forces",
@@ -1346,7 +1432,11 @@
       "id": "scout-troopers-strike-team",
       "name": "Scout Troopers",
       "is_unique": false,
+<<<<<<< HEAD
       "faction": "imperials",
+=======
+      "faction": "dark-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "type": "trooper",
       "points": 16,
       "rank": "special-forces",
@@ -1397,7 +1487,11 @@
       "id": "snowtroopers",
       "name": "Snowtroopers",
       "is_unique": false,
+<<<<<<< HEAD
       "faction": "imperials",
+=======
+      "faction": "dark-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "type": "trooper",
       "points": 48,
       "rank": "corps",
@@ -1444,7 +1538,11 @@
       "id": "stormtroopers",
       "name": "Stormtroopers",
       "is_unique": false,
+<<<<<<< HEAD
       "faction": "imperials",
+=======
+      "faction": "dark-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "type": "trooper",
       "points": 44,
       "rank": "corps",
@@ -1491,7 +1589,11 @@
       "id": "t-47-airspeeder",
       "name": "T-47 Airspeeder",
       "is_unique": false,
+<<<<<<< HEAD
       "faction": "rebels",
+=======
+      "faction": "light-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "type": "repulsor-vehicle",
       "points": 175,
       "rank": "heavy",
@@ -1535,7 +1637,11 @@
       "id": "wookie-warriors",
       "name": "Wookie Warriors",
       "is_unique": false,
+<<<<<<< HEAD
       "faction": "rebels",
+=======
+      "faction": "light-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "type": "trooper",
       "points": 75,
       "rank": "special-forces",
@@ -1703,7 +1809,11 @@
       "name": "Anger",
       "text": "    After you suffer 1 or more wounds, gain 1 aim token.\n  ",
       "type": "force",
+<<<<<<< HEAD
       "restricted_to_force_alignment": "dark"
+=======
+      "restricted_to_faction": "dark-side"
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
     },
     {
       "adds_miniature": false,
@@ -1728,7 +1838,11 @@
       "name": "Force Choke",
       "text": "    Choose an enemy trooper mini at range 1 that is not a commander.\n    It suffers 1 wound.\n  ",
       "type": "force",
+<<<<<<< HEAD
       "restricted_to_force_alignment": "dark"
+=======
+      "restricted_to_faction": "dark-side"
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
     },
     {
       "adds_miniature": false,
@@ -1765,7 +1879,11 @@
       "name": "Jedi Mind Trick",
       "text": "    Action: Choose an enemy trooper at range 1-2.\n    It gains 2 suppression tokens.\n  ",
       "type": "force",
+<<<<<<< HEAD
       "restricted_to_force_alignment": "light"
+=======
+      "restricted_to_faction": "light-side"
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
     },
     {
       "adds_miniature": false,
@@ -2674,7 +2792,11 @@
       "name": "General Weiss",
       "text": "    Exhaust Action: Until the end of your activation, you gain Arsenal 2.\n  ",
       "type": "pilot",
+<<<<<<< HEAD
       "restricted_to_faction": "imperials",
+=======
+      "restricted_to_faction": "dark-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "restricted_to_type": "ground-vehicle"
     },
     {
@@ -2690,7 +2812,11 @@
       "name": "Wedge Antilles",
       "text": "    Exhaust Action: Until the end of your activation, you gain Full Pivot.\n  ",
       "type": "pilot",
+<<<<<<< HEAD
       "restricted_to_faction": "rebels",
+=======
+      "restricted_to_faction": "light-side",
+>>>>>>> bd75f60ec94f037abd60f6fb663768ade4c5705b
       "restricted_to_type": "repulsor-vehicle"
     }
   ],
