@@ -24,13 +24,47 @@ export 'model/weapon.dart' show Weapon;
 
 part 'all_models.g.dart';
 
-class _CustomEnumJsonPlugin extends StandardJsonPlugin {
+/// A custom implementation of [StandardJsonPlugin] for the models here.
+///
+/// Includes models in this package. Additionla may be specified.
+class CustomJsonPlugin extends StandardJsonPlugin {
+  static List<Type> _concat(Iterable<Type> a, Iterable<Type> b) {
+    return a.toList() + b.toList();
+  }
+
   final Set<Type> _enumsUsedAsMapKeys;
   final Set<Type> _enumsExternalToBuiltValue;
 
-  _CustomEnumJsonPlugin({
-    @required Iterable<Type> enumsUsedAsMapKeys,
+  factory CustomJsonPlugin({
+    Iterable<Type> enumsUsedAsMapKeys = const [],
     Iterable<Type> enumsExternalToBuiltValue = const [],
+  }) {
+    return CustomJsonPlugin._(
+      enumsUsedAsMapKeys: _concat(
+        enumsUsedAsMapKeys,
+        const [
+          AttackDice,
+          DefenseDice,
+          UnitKeyword,
+          UpgradeKeyword,
+          UpgradeSlot,
+          WeaponKeyword,
+        ],
+      ),
+      enumsExternalToBuiltValue: _concat(
+        enumsExternalToBuiltValue,
+        const [
+          UnitKeyword,
+          UpgradeKeyword,
+          WeaponKeyword,
+        ],
+      ),
+    );
+  }
+
+  CustomJsonPlugin._({
+    @required Iterable<Type> enumsUsedAsMapKeys,
+    @required Iterable<Type> enumsExternalToBuiltValue,
   })  : _enumsUsedAsMapKeys = enumsUsedAsMapKeys.toSet(),
         _enumsExternalToBuiltValue = enumsExternalToBuiltValue.toSet();
 
@@ -107,21 +141,6 @@ class _CustomEnumJsonPlugin extends StandardJsonPlugin {
 ])
 final Serializers serializers = () {
   final builder = _$serializers.toBuilder()
-    ..addPlugin(_CustomEnumJsonPlugin(
-      enumsUsedAsMapKeys: const [
-        AttackDice,
-        DefenseDice,
-        UnitKeyword,
-        UpgradeKeyword,
-        UpgradeSlot,
-        WeaponKeyword,
-      ],
-      enumsExternalToBuiltValue: const [
-        UnitKeyword,
-        UpgradeKeyword,
-        WeaponKeyword,
-      ],
-    ))
     ..add(Reference.serializer)
     ..add(UnitKeyword.serializer)
     ..add(UpgradeKeyword.serializer)

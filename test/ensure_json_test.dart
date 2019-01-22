@@ -10,7 +10,10 @@ void main() {
   Serializers json;
 
   setUpAll(() {
-    json = (serializers.toBuilder()..add(Sample.serializer)).build();
+    json = (serializers.toBuilder()
+          ..addPlugin(CustomJsonPlugin())
+          ..add(Sample.serializer))
+        .build();
   });
 
   for (final card in catalog.commandCards) {
