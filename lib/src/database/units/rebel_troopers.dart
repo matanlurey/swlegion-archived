@@ -16,7 +16,7 @@ final rebelTroopers = Unit(
   hasDefenseSurge: true,
   speed: 2,
   points: 40,
-  upgrades: {
+  upgrades: const {
     UpgradeSlot.personnel: 1,
     UpgradeSlot.heavyWeapon: 1,
     UpgradeSlot.gear: 1,
@@ -26,7 +26,7 @@ final rebelTroopers = Unit(
     unarmed,
     a280BlasterRifle,
   ],
-  keywords: {
-    Keyword.nimble: '',
+  keywords: const {
+    UnitKeyword.kNimble: '',
   },
 );

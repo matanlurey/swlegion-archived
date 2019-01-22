@@ -16,7 +16,7 @@ final atRt = Unit(
   attackSurge: AttackSurge.critical,
   speed: 2,
   points: 55,
-  upgrades: {
+  upgrades: const {
     UpgradeSlot.comms: 1,
     UpgradeSlot.hardPoint: 1,
   },
@@ -24,8 +24,8 @@ final atRt = Unit(
     grapplingClaws,
     a300BlasterRifle,
   ],
-  keywords: {
-    Keyword.coverX: '1',
-    Keyword.speederX: '1',
+  keywords: const {
+    UnitKeyword.kCover: 1,
+    UnitKeyword.kSpeeder: 1,
   },
 );

@@ -5,8 +5,8 @@ final anakinsLightsaber = Weapon.melee(
   dice: {
     AttackDice.black: 6,
   },
-  keywords: {
-    Keyword.impactX: '2',
-    Keyword.pierceX: '2',
+  keywords: const {
+    WeaponKeyword.kImpact: 2,
+    WeaponKeyword.kPierce: 2,
   },
 );

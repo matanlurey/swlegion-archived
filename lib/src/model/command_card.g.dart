@@ -26,13 +26,14 @@ class _$CommandCardSerializer implements StructuredSerializer<CommandCard> {
       serializers.serialize(object.text, specifiedType: const FullType(String)),
       'pips',
       serializers.serialize(object.pips, specifiedType: const FullType(int)),
-      'unitsActivated',
+      'activated',
       serializers.serialize(object.unitsActivated,
           specifiedType: const FullType(String)),
-      'unitsRequired',
+      'required',
       serializers.serialize(object.unitsRequired,
-          specifiedType:
-              const FullType(BuiltSet, const [const FullType(Unit)])),
+          specifiedType: const FullType(BuiltSet, const [
+            const FullType(Reference, const [const FullType(Unit)])
+          ])),
     ];
     if (object.weapon != null) {
       result
@@ -71,15 +72,15 @@ class _$CommandCardSerializer implements StructuredSerializer<CommandCard> {
           result.pips = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
-        case 'unitsActivated':
+        case 'activated':
           result.unitsActivated = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
-        case 'unitsRequired':
+        case 'required':
           result.unitsRequired.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltSet, const [const FullType(Unit)]))
-              as BuiltSet);
+              specifiedType: const FullType(BuiltSet, const [
+                const FullType(Reference, const [const FullType(Unit)])
+              ])) as BuiltSet);
           break;
         case 'weapon':
           result.weapon.replace(serializers.deserialize(value,
@@ -104,7 +105,7 @@ class _$CommandCard extends CommandCard {
   @override
   final String unitsActivated;
   @override
-  final BuiltSet<Unit> unitsRequired;
+  final BuiltSet<Reference<Unit>> unitsRequired;
   @override
   final Weapon weapon;
 
@@ -196,10 +197,10 @@ class CommandCardBuilder implements Builder<CommandCard, CommandCardBuilder> {
   set unitsActivated(String unitsActivated) =>
       _$this._unitsActivated = unitsActivated;
 
-  SetBuilder<Unit> _unitsRequired;
-  SetBuilder<Unit> get unitsRequired =>
-      _$this._unitsRequired ??= new SetBuilder<Unit>();
-  set unitsRequired(SetBuilder<Unit> unitsRequired) =>
+  SetBuilder<Reference<Unit>> _unitsRequired;
+  SetBuilder<Reference<Unit>> get unitsRequired =>
+      _$this._unitsRequired ??= new SetBuilder<Reference<Unit>>();
+  set unitsRequired(SetBuilder<Reference<Unit>> unitsRequired) =>
       _$this._unitsRequired = unitsRequired;
 
   WeaponBuilder _weapon;

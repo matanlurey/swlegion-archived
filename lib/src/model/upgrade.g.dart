@@ -29,7 +29,11 @@ class _$UpgradeSerializer implements StructuredSerializer<Upgrade> {
       'keywords',
       serializers.serialize(object.keywords,
           specifiedType: const FullType(BuiltMap,
-              const [const FullType(Keyword), const FullType(String)])),
+              const [const FullType(UpgradeKeyword), const FullType(Object)])),
+      'keywords_for_unit',
+      serializers.serialize(object.keywordsForUnit,
+          specifiedType: const FullType(BuiltMap,
+              const [const FullType(UnitKeyword), const FullType(Object)])),
       'restricted_to_unit',
       serializers.serialize(object.restrictedToUnit,
           specifiedType: const FullType(BuiltSet, const [
@@ -93,8 +97,15 @@ class _$UpgradeSerializer implements StructuredSerializer<Upgrade> {
         case 'keywords':
           result.keywords.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltMap, const [
-                const FullType(Keyword),
-                const FullType(String)
+                const FullType(UpgradeKeyword),
+                const FullType(Object)
+              ])) as BuiltMap);
+          break;
+        case 'keywords_for_unit':
+          result.keywordsForUnit.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltMap, const [
+                const FullType(UnitKeyword),
+                const FullType(Object)
               ])) as BuiltMap);
           break;
         case 'restricted_to_faction':
@@ -146,7 +157,9 @@ class _$Upgrade extends Upgrade {
   @override
   final int points;
   @override
-  final BuiltMap<Keyword, String> keywords;
+  final BuiltMap<UpgradeKeyword, Object> keywords;
+  @override
+  final BuiltMap<UnitKeyword, Object> keywordsForUnit;
   @override
   final Faction restrictedToFaction;
   @override
@@ -172,6 +185,7 @@ class _$Upgrade extends Upgrade {
       this.isExhaustible,
       this.points,
       this.keywords,
+      this.keywordsForUnit,
       this.restrictedToFaction,
       this.restrictedToUnit,
       this.restrictedToType,
@@ -192,6 +206,9 @@ class _$Upgrade extends Upgrade {
     }
     if (keywords == null) {
       throw new BuiltValueNullFieldError('Upgrade', 'keywords');
+    }
+    if (keywordsForUnit == null) {
+      throw new BuiltValueNullFieldError('Upgrade', 'keywordsForUnit');
     }
     if (restrictedToUnit == null) {
       throw new BuiltValueNullFieldError('Upgrade', 'restrictedToUnit');
@@ -235,6 +252,7 @@ class _$Upgrade extends Upgrade {
           ..add('isExhaustible', isExhaustible)
           ..add('points', points)
           ..add('keywords', keywords)
+          ..add('keywordsForUnit', keywordsForUnit)
           ..add('restrictedToFaction', restrictedToFaction)
           ..add('restrictedToUnit', restrictedToUnit)
           ..add('restrictedToType', restrictedToType)
@@ -264,11 +282,17 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
   int get points => _$this._points;
   set points(int points) => _$this._points = points;
 
-  MapBuilder<Keyword, String> _keywords;
-  MapBuilder<Keyword, String> get keywords =>
-      _$this._keywords ??= new MapBuilder<Keyword, String>();
-  set keywords(MapBuilder<Keyword, String> keywords) =>
+  MapBuilder<UpgradeKeyword, Object> _keywords;
+  MapBuilder<UpgradeKeyword, Object> get keywords =>
+      _$this._keywords ??= new MapBuilder<UpgradeKeyword, Object>();
+  set keywords(MapBuilder<UpgradeKeyword, Object> keywords) =>
       _$this._keywords = keywords;
+
+  MapBuilder<UnitKeyword, Object> _keywordsForUnit;
+  MapBuilder<UnitKeyword, Object> get keywordsForUnit =>
+      _$this._keywordsForUnit ??= new MapBuilder<UnitKeyword, Object>();
+  set keywordsForUnit(MapBuilder<UnitKeyword, Object> keywordsForUnit) =>
+      _$this._keywordsForUnit = keywordsForUnit;
 
   Faction _restrictedToFaction;
   Faction get restrictedToFaction => _$this._restrictedToFaction;
@@ -314,6 +338,7 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
       _isExhaustible = _$v.isExhaustible;
       _points = _$v.points;
       _keywords = _$v.keywords?.toBuilder();
+      _keywordsForUnit = _$v.keywordsForUnit?.toBuilder();
       _restrictedToFaction = _$v.restrictedToFaction;
       _restrictedToUnit = _$v.restrictedToUnit?.toBuilder();
       _restrictedToType = _$v.restrictedToType;
@@ -350,6 +375,7 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
               isExhaustible: isExhaustible,
               points: points,
               keywords: keywords.build(),
+              keywordsForUnit: keywordsForUnit.build(),
               restrictedToFaction: restrictedToFaction,
               restrictedToUnit: restrictedToUnit.build(),
               restrictedToType: restrictedToType,
@@ -363,6 +389,8 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
       try {
         _$failedField = 'keywords';
         keywords.build();
+        _$failedField = 'keywordsForUnit';
+        keywordsForUnit.build();
 
         _$failedField = 'restrictedToUnit';
         restrictedToUnit.build();

@@ -7,9 +7,9 @@ final atRtFlamethrower = Weapon(
   },
   minRange: 1,
   maxRange: 1,
-  keywords: {
-    Keyword.blast: '',
-    Keyword.fixedX: 'Front',
-    Keyword.spray: '',
+  keywords: const {
+    WeaponKeyword.kBlast: '',
+    WeaponKeyword.kFixedFront: '',
+    WeaponKeyword.kSpray: '',
   },
 );

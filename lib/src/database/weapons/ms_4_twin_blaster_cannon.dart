@@ -9,8 +9,8 @@ final ms4TwinBlasterCannon = Weapon(
     AttackDice.black: 2,
     AttackDice.white: 2,
   },
-  keywords: {
-    Keyword.fixedX: 'Front',
-    Keyword.impactX: '3',
+  keywords: const {
+    WeaponKeyword.kFixedFront: '',
+    WeaponKeyword.kImpact: 3,
   },
 );

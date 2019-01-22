@@ -17,7 +17,7 @@ final eWebHeavyBlasterTeam = Unit(
   attackSurge: AttackSurge.critical,
   speed: 1,
   points: 55,
-  upgrades: {
+  upgrades: const {
     UpgradeSlot.comms: 1,
     UpgradeSlot.generator: 1,
   },
@@ -26,10 +26,10 @@ final eWebHeavyBlasterTeam = Unit(
     e11BlasterRifle,
     eWebHeavyBlaster,
   ],
-  keywords: {
-    Keyword.fullPivot: '',
-    Keyword.plodding: '',
-    Keyword.reposition: '',
-    Keyword.sentinel: '',
+  keywords: const {
+    UnitKeyword.kFullPivot: '',
+    UnitKeyword.kPlodding: '',
+    UnitKeyword.kReposition: '',
+    UnitKeyword.kSentinel: '',
   },
 );

@@ -7,7 +7,7 @@ final concussionGrenades = Weapon(
   },
   minRange: 1,
   maxRange: 1,
-  keywords: {
-    Keyword.blast: '',
+  keywords: const {
+    WeaponKeyword.kBlast: '',
   },
 );

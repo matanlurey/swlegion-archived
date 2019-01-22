@@ -16,7 +16,7 @@ final scoutTroopers = Unit(
   hasDefenseSurge: true,
   speed: 2,
   points: 60,
-  upgrades: {
+  upgrades: const {
     UpgradeSlot.comms: 1,
     UpgradeSlot.elite: 1,
     UpgradeSlot.gear: 1,
@@ -27,9 +27,9 @@ final scoutTroopers = Unit(
     unarmed,
     ec17HoldOutBlaster,
   ],
-  keywords: {
-    Keyword.lowProfile: '',
-    Keyword.scoutX: '1',
-    Keyword.sharpshooterX: '1',
+  keywords: const {
+    UnitKeyword.kLowProfile: '',
+    UnitKeyword.kScout: 1,
+    UnitKeyword.kSharpshooter: 1,
   },
 );

@@ -42,7 +42,7 @@ abstract class Unit extends Object
     @required int speed,
     Map<UpgradeSlot, int> upgrades = const {},
     List<Weapon> weapons = const [],
-    Map<Keyword, String> keywords = const {},
+    Map<UnitKeyword, Object> keywords = const {},
   }) =>
       Unit._builder((b) => b
         ..id = id
@@ -160,5 +160,5 @@ abstract class Unit extends Object
 
   /// Keywords on the unit.
   @BuiltValueField(compare: false)
-  BuiltMap<Keyword, String> get keywords;
+  BuiltMap<UnitKeyword, Object> get keywords;
 }

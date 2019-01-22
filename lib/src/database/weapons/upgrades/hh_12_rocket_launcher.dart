@@ -7,8 +7,8 @@ final hh12RocketLauncher = Weapon(
   },
   minRange: 2,
   maxRange: 4,
-  keywords: {
-    Keyword.cumbersome: '',
-    Keyword.impactX: '3',
+  keywords: const {
+    WeaponKeyword.kCumbersome: '',
+    WeaponKeyword.kImpact: 3,
   },
 );

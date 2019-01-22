@@ -8,7 +8,7 @@ final targetingScopes = Upgrade(
   text: r'''
     You gain Precise 1.
   ''',
-  keywords: {
-    Keyword.preciseX: '1',
+  keywordsForUnit: const {
+    UnitKeyword.kPrecise: 1,
   },
 );

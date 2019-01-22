@@ -65,7 +65,6 @@ linter:
     - only_throw_errors
     - overridden_fields
     - package_api_docs
-    - parameter_assignments
     - prefer_adjacent_string_concatenation
     - prefer_asserts_in_initializer_lists
     - prefer_bool_in_asserts

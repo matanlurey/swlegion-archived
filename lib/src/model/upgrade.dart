@@ -25,7 +25,8 @@ abstract class Upgrade extends Object
     bool addsMiniature = false,
     bool isExhaustible = false,
     @required int points,
-    Map<Keyword, String> keywords = const {},
+    Map<UnitKeyword, Object> keywordsForUnit = const {},
+    Map<UpgradeKeyword, Object> keywords = const {},
     Faction restrictedToFaction,
     List<Reference<Unit>> restrictedToUnit = const [],
     UnitType restrictedToType,
@@ -39,6 +40,7 @@ abstract class Upgrade extends Object
         ..addsMiniature = addsMiniature
         ..isExhaustible = isExhaustible
         ..points = points
+        ..keywordsForUnit.addAll(keywordsForUnit)
         ..keywords.addAll(keywords)
         ..restrictedToFaction = restrictedToFaction
         ..restrictedToUnit.addAll(restrictedToUnit)
@@ -64,9 +66,13 @@ abstract class Upgrade extends Object
   @BuiltValueField(compare: false, wireName: 'points')
   int get points;
 
-  /// Keywords on the upgrade, normally granted to the unit.
-  @BuiltValueField(compare: false, wireName: 'keywords')
-  BuiltMap<Keyword, String> get keywords;
+  /// Keywords on the upgrade itself.
+  @BuiltValueField(compare: false)
+  BuiltMap<UpgradeKeyword, Object> get keywords;
+
+  /// Keywords on the upgrade granted to the unit.
+  @BuiltValueField(compare: false, wireName: 'keywords_for_unit')
+  BuiltMap<UnitKeyword, Object> get keywordsForUnit;
 
   /// Faction this upgrade is restricted to.
   ///

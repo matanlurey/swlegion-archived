@@ -6,8 +6,8 @@ final atStMortarLauncher = Weapon(
     AttackDice.white: 3,
   },
   minRange: 4,
-  keywords: {
-    Keyword.fixedX: 'Front',
-    Keyword.suppressive: '',
+  keywords: const {
+    WeaponKeyword.kFixedFront: '',
+    WeaponKeyword.kSuppressive: '',
   },
 );

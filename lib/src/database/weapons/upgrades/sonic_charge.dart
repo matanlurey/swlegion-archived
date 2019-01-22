@@ -9,11 +9,11 @@ final sonicCharge = Weapon(
   minRange: 1,
   maxRange: 1,
   areaOfEffect: 1,
-  keywords: {
-    Keyword.armXY: '1, Sonic Charge',
-    Keyword.denotateXY: '1, Sonic Charge',
-    Keyword.blast: '',
-    Keyword.suppressive: '',
+  keywords: const {
+    WeaponKeyword.kArm: 1,
+    WeaponKeyword.kDetonate: 1,
+    WeaponKeyword.kBlast: '',
+    WeaponKeyword.kSuppressive: '',
   },
   surgeOverride: AttackSurge.critical,
 );

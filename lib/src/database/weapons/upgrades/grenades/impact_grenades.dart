@@ -7,7 +7,7 @@ final impactGrenades = Weapon(
   },
   minRange: 1,
   maxRange: 1,
-  keywords: {
-    Keyword.impactX: '1',
+  keywords: const {
+    WeaponKeyword.kImpact: 1,
   },
 );

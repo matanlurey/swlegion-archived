@@ -17,17 +17,17 @@ final lukeSkywalker = Unit(
   defense: DefenseDice.red,
   speed: 2,
   points: 160,
-  upgrades: {
+  upgrades: const {
     UpgradeSlot.force: 2,
     UpgradeSlot.gear: 1,
   },
   weapons: [
     anakinsLightsaber,
   ],
-  keywords: {
-    Keyword.jumpX: '1',
-    Keyword.charge: '',
-    Keyword.deflect: '',
-    Keyword.immuneX: 'Pierce',
+  keywords: const {
+    UnitKeyword.kJump: 1,
+    UnitKeyword.kCharge: '',
+    UnitKeyword.kDeflect: '',
+    UnitKeyword.kImmunePierce: '',
   },
 );

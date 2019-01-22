@@ -18,7 +18,7 @@ final generalVeers = Unit(
   defense: DefenseDice.red,
   speed: 2,
   points: 80,
-  upgrades: {
+  upgrades: const {
     UpgradeSlot.command: 2,
     UpgradeSlot.gear: 1,
   },
@@ -26,10 +26,10 @@ final generalVeers = Unit(
     combatExpertise,
     veersE11BlasterRifle,
   ],
-  keywords: {
-    Keyword.spotterX: '2',
-    Keyword.inspireX: '1',
-    Keyword.preciseX: '1',
-    Keyword.sharpshooterX: '1',
+  keywords: const {
+    UnitKeyword.kSpotter: 2,
+    UnitKeyword.kInspire: 1,
+    UnitKeyword.kPrecise: 1,
+    UnitKeyword.kSharpshooter: 1,
   },
 );
