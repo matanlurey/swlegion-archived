@@ -29,6 +29,7 @@ abstract class Unit extends Object
     bool isUnique = false,
     String subTitle,
     @required Faction faction,
+    ForceAlignment forceAlignment,
     @required UnitType type,
     @required int points,
     @required Rank rank,
@@ -50,6 +51,7 @@ abstract class Unit extends Object
         ..isUnique = isUnique
         ..subTitle = subTitle
         ..faction = faction
+        ..forceAlignment = forceAlignment
         ..type = type
         ..points = points
         ..rank = rank
@@ -96,6 +98,11 @@ abstract class Unit extends Object
   /// Faction the unit belongs to.
   @BuiltValueField(compare: false)
   Faction get faction;
+
+  /// Force alignment this unit has.
+  @BuiltValueField(compare: false, wireName: 'force_alignment')
+  @nullable
+  ForceAlignment get forceAlignment;
 
   /// Type of the unit.
   @BuiltValueField(compare: false)

@@ -6,7 +6,7 @@ import '../weapons/unarmed.dart';
 final rebelCommandos = Unit(
   id: 'rebel-commandos',
   name: 'Rebel Commandos',
-  faction: Faction.lightSide,
+  faction: Faction.rebels,
   miniatures: 4,
   rank: Rank.specialForces,
   type: UnitType.trooper,

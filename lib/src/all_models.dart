@@ -12,7 +12,7 @@ export 'model/attack_surge.dart' show AttackSurge;
 export 'model/catalog.dart' show Catalog;
 export 'model/command_card.dart' show CommandCard;
 export 'model/defense_dice.dart' show DefenseDice, DefenseDiceSide;
-export 'model/faction.dart' show Faction;
+export 'model/faction.dart' show Faction, ForceAlignment;
 export 'model/keyword.dart' show UnitKeyword, UpgradeKeyword, WeaponKeyword;
 export 'model/rank.dart' show Rank;
 export 'model/reference.dart' show Indexable, Reference;
@@ -141,21 +141,6 @@ class CustomJsonPlugin extends StandardJsonPlugin {
 ])
 final Serializers serializers = () {
   final builder = _$serializers.toBuilder()
-    ..addPlugin(_CustomEnumJsonPlugin(
-      enumsUsedAsMapKeys: const [
-        AttackDice,
-        DefenseDice,
-        UnitKeyword,
-        UpgradeKeyword,
-        UpgradeSlot,
-        WeaponKeyword,
-      ],
-      enumsExternalToBuiltValue: const [
-        UnitKeyword,
-        UpgradeKeyword,
-        WeaponKeyword,
-      ],
-    ))
     ..add(Reference.serializer)
     ..add(UnitKeyword.serializer)
     ..add(UpgradeKeyword.serializer)

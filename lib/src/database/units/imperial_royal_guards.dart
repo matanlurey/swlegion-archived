@@ -6,7 +6,7 @@ import '../weapons/force_pike.dart';
 final imperialRoyalGuards = Unit(
   id: 'imperial-royal-guards',
   name: 'Imperial Royal Guards',
-  faction: Faction.darkSide,
+  faction: Faction.imperials,
   miniatures: 3,
   rank: Rank.specialForces,
   type: UnitType.trooper,

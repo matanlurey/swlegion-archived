@@ -13,9 +13,12 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(CommandCard.serializer)
       ..add(DefenseDice.serializer)
       ..add(Faction.serializer)
+      ..add(ForceAlignment.serializer)
       ..add(Rank.serializer)
       ..add(Unit.serializer)
+      ..add(Unit.serializer)
       ..add(UnitType.serializer)
+      ..add(Upgrade.serializer)
       ..add(Upgrade.serializer)
       ..add(UpgradeSlot.serializer)
       ..add(Weapon.serializer)
@@ -49,6 +52,30 @@ Serializers _$serializers = (new Serializers().toBuilder()
             const FullType(Reference, const [const FullType(Unit)])
           ]),
           () => new SetBuilder<Reference<Unit>>())
+      ..addBuilderFactory(
+          const FullType(BuiltMap,
+              const [const FullType(UpgradeKeyword), const FullType(Object)]),
+          () => new MapBuilder<UpgradeKeyword, Object>())
+      ..addBuilderFactory(
+          const FullType(BuiltMap,
+              const [const FullType(UnitKeyword), const FullType(Object)]),
+          () => new MapBuilder<UnitKeyword, Object>())
+      ..addBuilderFactory(
+          const FullType(BuiltSet, const [
+            const FullType(Reference, const [const FullType(Unit)])
+          ]),
+          () => new SetBuilder<Reference<Unit>>())
+      ..addBuilderFactory(
+          const FullType(BuiltMap,
+              const [const FullType(UpgradeSlot), const FullType(int)]),
+          () => new MapBuilder<UpgradeSlot, int>())
+      ..addBuilderFactory(
+          const FullType(BuiltSet, const [const FullType(Weapon)]),
+          () => new SetBuilder<Weapon>())
+      ..addBuilderFactory(
+          const FullType(BuiltMap,
+              const [const FullType(UnitKeyword), const FullType(Object)]),
+          () => new MapBuilder<UnitKeyword, Object>())
       ..addBuilderFactory(
           const FullType(BuiltMap,
               const [const FullType(UpgradeSlot), const FullType(int)]),

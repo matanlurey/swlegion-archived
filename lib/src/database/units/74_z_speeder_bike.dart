@@ -6,7 +6,7 @@ import '../weapons/ec_17_hold_out_blaster.dart';
 final $74ZSpeederBikes = Unit(
   id: '74-z-speeder-bikes',
   name: '74-Z Speeder Bikes',
-  faction: Faction.darkSide,
+  faction: Faction.imperials,
   miniatures: 2,
   rank: Rank.support,
   type: UnitType.groundVehicle,
