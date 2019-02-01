@@ -6,6 +6,12 @@
 # ... the reason for this complexity is basically ensuring built_value runs 1st.
 targets:
   $default:
+    sources:
+      exclude:
+        - lib/src/database/**.dart
+        - lib/src/model/**.dart
+        - lib/src/all_models.dart
+        - test/entity/**.dart
     builders:
       built_value_generator|built_value:
         enabled: false
