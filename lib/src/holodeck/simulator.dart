@@ -57,27 +57,30 @@ class Holodeck {
     hits -= attacker.highVelocity ? 0 : defender.dodge;
     hits -= defender.computeCover(attacker);
 
-    // 6. Modify Attack Dice (i.e. impact & armor)
+    // 6. Apply Guardian
+    hits -= defender.guardians;
+
+    // 7. Modify Attack Dice (i.e. impact & armor)
     if (defender.armor) {
       final convert = min(attacker.impact, hits);
       crits += convert;
       hits = 0;
     }
 
-    // 7. Roll Defense Dice
+    // 8. Roll Defense Dice
     final totalHits = max(0, hits) + crits;
     var defense = rollDefenses(
       defender.dice,
       defender.impervious ? attacker.pierce + totalHits : totalHits,
-      surge: defender.defenseSurge,
+      surge: defender.surge || defender.deflect && defender.dodge >= 1,
     );
 
-    // 8. Modify Defense Dice (i.e. uncanny luck, impervious, pierce).
+    // 9. Modify Defense Dice (i.e. uncanny luck, impervious, pierce).
     // IMPERVIOUS (see above).
     // UNCANNY LUCK
     defense = defense.reroll(
-      max: defender.diceToReroll,
-      surge: defender.defenseSurge,
+      max: defender.uncannyLuck,
+      surge: defender.surge,
       roll: _rollDefense,
     );
     // PIERCE
@@ -122,7 +125,7 @@ class Holodeck {
           maxDice: attack.diceToReroll,
           roll: _rollAttack,
           rerollForCrits: max(0, attack.diceToReroll - attack.impact),
-          surge: attack.attackSurge,
+          surge: attack.surge,
         );
         continue;
       }
@@ -135,7 +138,7 @@ class Holodeck {
           maxDice: attack.diceToReroll,
           roll: _rollAttack,
           rerollForCrits: attack.diceToReroll,
-          surge: attack.attackSurge,
+          surge: attack.surge,
         );
         continue;
       }
@@ -144,7 +147,7 @@ class Holodeck {
       result = result.reroll(
         maxDice: attack.diceToReroll,
         roll: _rollAttack,
-        surge: attack.attackSurge,
+        surge: attack.surge,
       );
     }
 

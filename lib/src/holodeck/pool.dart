@@ -13,7 +13,7 @@ class AttackPool {
   final int aimTokens;
 
   /// How to treat [AttackDiceSide.surge].
-  final AttackSurge attackSurge;
+  final AttackSurge surge;
 
   /// Attacking dice pool.
   final Map<AttackDice, int> dice;
@@ -40,7 +40,7 @@ class AttackPool {
 
   const AttackPool({
     this.aimTokens = 0,
-    this.attackSurge,
+    this.surge,
     @required this.dice,
     this.highVelocity = false,
     this.sharpshooter = 0,
@@ -58,7 +58,7 @@ class AttackPool {
 
   AttackPool copyWith({
     int aimTokens,
-    AttackSurge attackSurge,
+    AttackSurge surge,
     Map<AttackDice, int> dice,
     int pierce,
     int diceToReroll,
@@ -68,7 +68,7 @@ class AttackPool {
   }) {
     return AttackPool(
       aimTokens: aimTokens ?? this.aimTokens,
-      attackSurge: attackSurge ?? this.attackSurge,
+      surge: surge ?? this.surge,
       dice: dice ?? this.dice,
       pierce: pierce ?? this.pierce,
       diceToReroll: diceToReroll ?? this.diceToReroll,
@@ -83,7 +83,7 @@ class AttackPool {
     return identical(this, o) ||
         o is AttackPool &&
             aimTokens == o.aimTokens &&
-            attackSurge == o.attackSurge &&
+            surge == o.surge &&
             _mapEquals(dice, o.dice) &&
             highVelocity == o.highVelocity &&
             sharpshooter == o.sharpshooter &&
@@ -96,7 +96,7 @@ class AttackPool {
   @override
   int get hashCode =>
       aimTokens.hashCode ^
-      attackSurge.hashCode ^
+      surge.hashCode ^
       _mapHash(dice) ^
       highVelocity.hashCode ^
       sharpshooter.hashCode ^
@@ -119,7 +119,7 @@ class AttackPool {
   String toString() {
     final details = const JsonEncoder.withIndent('  ').convert({
       'aimTokens': aimTokens,
-      'attackSurge': attackSurge?.name,
+      'surge': surge?.name,
       'dice': dice,
       'highVelocity': highVelocity,
       'sharpshooter': sharpshooter,
@@ -143,14 +143,20 @@ class DefensePool {
   /// "Duck and Cover".
   final int cover;
 
+  /// Whether the defending units have [UnitKeyword.kDeflect].
+  final bool deflect;
+
   /// What type of dice the defending units are using.
   final DefenseDice dice;
 
   /// Whether to convert [DefenseDiceSide.surge] to a block.
-  final bool defenseSurge;
+  final bool surge;
 
   /// Dodge tokens.
   final int dodge;
+
+  /// Number of nearby units with [UnitKeyword.kGuardian] available.
+  final int guardians;
 
   /// Whether the defending units have [UnitKeyword.kImmuneBlast].
   final bool immuneToBlast;
@@ -161,30 +167,32 @@ class DefensePool {
   /// Whether the defending units have [UnitKeyword.kImpervious].
   final bool impervious;
 
-  /// How many dice may be re-rolled, if any, on failed defense dice.
-  ///
-  /// This should account for [UnitKeyword.kUncannyLuck].
-  final int diceToReroll;
+  /// Whether the defending units have [UnitKeyword.kUncannyLuck].
+  final int uncannyLuck;
 
   const DefensePool({
     @required this.dice,
-    this.defenseSurge = false,
+    this.surge = false,
     this.armor = false,
     this.cover = 0,
+    this.deflect = false,
     this.dodge = 0,
+    this.guardians = 0,
     this.immuneToBlast = false,
     this.immuneToPierce = false,
     this.impervious = false,
-    this.diceToReroll = 0,
+    this.uncannyLuck = 0,
   })  : assert(dice != null),
-        assert(defenseSurge != null),
+        assert(surge != null),
         assert(armor != null),
         assert(cover >= 0 && cover <= 2),
+        assert(deflect != null),
         assert(dodge >= 0),
+        assert(guardians >= 0),
         assert(immuneToBlast != null),
         assert(immuneToPierce != null),
         assert(impervious != null),
-        assert(diceToReroll >= 0);
+        assert(uncannyLuck >= 0);
 
   /// Returns the amount of effective (final) cover if attacked by [attacker].
   int computeCover(AttackPool attacker) {
@@ -199,40 +207,46 @@ class DefensePool {
     return identical(this, o) ||
         o is DefensePool &&
             dice == o.dice &&
-            defenseSurge == o.defenseSurge &&
+            surge == o.surge &&
             armor == o.armor &&
             cover == o.cover &&
+            deflect == o.deflect &&
             dodge == o.dodge &&
+            guardians == o.guardians &&
             immuneToBlast == o.immuneToBlast &&
             immuneToPierce == o.immuneToPierce &&
             impervious == o.impervious &&
-            diceToReroll == o.diceToReroll;
+            uncannyLuck == o.uncannyLuck;
   }
 
   @override
   int get hashCode =>
       dice.hashCode ^
-      defenseSurge.hashCode ^
+      surge.hashCode ^
       armor.hashCode ^
       cover.hashCode ^
+      deflect.hashCode ^
       dodge.hashCode ^
+      guardians.hashCode ^
       immuneToBlast.hashCode ^
       immuneToPierce.hashCode ^
       impervious.hashCode ^
-      diceToReroll.hashCode;
+      uncannyLuck.hashCode;
 
   @override
   String toString() {
     final details = const JsonEncoder.withIndent('  ').convert({
       'dice': dice.name,
-      'defenseSurge': defenseSurge,
+      'surge': surge,
       'armor': armor,
       'cover': cover,
+      'deflect': deflect,
       'dodge': dodge,
+      'guardians': guardians,
       'immuneToBlast': immuneToBlast,
       'immuneToPierce': immuneToPierce,
       'impervious': impervious,
-      'diceToReroll': diceToReroll,
+      'diceToReroll': uncannyLuck,
     });
     return 'DefensePool $details';
   }
