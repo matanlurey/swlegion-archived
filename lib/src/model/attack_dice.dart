@@ -68,6 +68,12 @@ class AttackDice extends EnumClass implements Comparable<AttackDice> {
     }
   }
 
+  /// Returns a `List<AttackDice>` of `this` type [repeat]ed.
+  List<AttackDice> operator *(int repeat) {
+    assert(repeat >= 0);
+    return List.filled(repeat, this);
+  }
+
   @override
   int compareTo(AttackDice o) => _order.compareTo(o._order);
 

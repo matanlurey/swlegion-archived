@@ -16,13 +16,12 @@ void main() {
           AttackDice.black,
           AttackDice.white,
         ], AttackSurge.critical),
-        const AttackResult(
+        Attack(
           hits: [
             AttackDice.red,
             AttackDice.black,
           ],
-          crits: [],
-          misses: [
+          blanks: [
             AttackDice.white,
           ],
         ),
@@ -30,21 +29,23 @@ void main() {
     });
 
     test('should re-roll a single miss', () {
+      final attack = Attack(
+        hits: [
+          AttackDice.black,
+          AttackDice.red,
+        ],
+        blanks: [
+          AttackDice.white,
+        ],
+      );
+      final reroll = Holodeck().rerollAttack(
+        attack,
+        roll: (_, __) => AttackDiceSide.criticalHit,
+        surge: null,
+      );
       expect(
-        const AttackResult(
-          hits: [
-            AttackDice.black,
-            AttackDice.red,
-          ],
-          crits: [],
-          misses: [
-            AttackDice.white,
-          ],
-        ).reroll(
-          roll: (_, __) => AttackDiceSide.criticalHit,
-          surge: null,
-        ),
-        const AttackResult(
+        reroll,
+        Attack(
           hits: [
             AttackDice.black,
             AttackDice.red,
@@ -52,29 +53,30 @@ void main() {
           crits: [
             AttackDice.white,
           ],
-          misses: [],
         ),
       );
     });
 
     test('should re-roll a two misses', () {
+      final attack = Attack(
+        hits: [
+          AttackDice.black,
+          AttackDice.red,
+        ],
+        blanks: [
+          AttackDice.white,
+          AttackDice.black,
+          AttackDice.white,
+        ],
+      );
+      final reroll = Holodeck().rerollAttack(
+        attack,
+        roll: (_, __) => AttackDiceSide.criticalHit,
+        surge: null,
+      );
       expect(
-        const AttackResult(
-          hits: [
-            AttackDice.black,
-            AttackDice.red,
-          ],
-          crits: [],
-          misses: [
-            AttackDice.white,
-            AttackDice.black,
-            AttackDice.white,
-          ],
-        ).reroll(
-          roll: (_, __) => AttackDiceSide.criticalHit,
-          surge: null,
-        ),
-        const AttackResult(
+        reroll,
+        Attack(
           hits: [
             AttackDice.black,
             AttackDice.red,
@@ -83,7 +85,7 @@ void main() {
             AttackDice.black,
             AttackDice.white,
           ],
-          misses: [
+          blanks: [
             AttackDice.white,
           ],
         ),
@@ -91,22 +93,24 @@ void main() {
     });
 
     test('should re-roll hits (crit fishing)', () {
+      final attack = Attack(
+        hits: [
+          AttackDice.black,
+          AttackDice.red,
+        ],
+        blanks: [
+          AttackDice.white,
+        ],
+      );
+      final reroll = Holodeck().rerollAttack(
+        attack,
+        roll: (_, __) => AttackDiceSide.criticalHit,
+        rerollForCrits: 1,
+        surge: null,
+      );
       expect(
-        const AttackResult(
-          hits: [
-            AttackDice.black,
-            AttackDice.red,
-          ],
-          crits: [],
-          misses: [
-            AttackDice.white,
-          ],
-        ).reroll(
-          roll: (_, __) => AttackDiceSide.criticalHit,
-          rerollForCrits: 1,
-          surge: null,
-        ),
-        const AttackResult(
+        reroll,
+        Attack(
           hits: [
             AttackDice.black,
           ],
@@ -114,7 +118,6 @@ void main() {
             AttackDice.white,
             AttackDice.red,
           ],
-          misses: [],
         ),
       );
     });
@@ -127,133 +130,120 @@ void main() {
 
       test('misses (always)', () {
         expect(
-          holodeck.rerollAttacks(
-            const AttackResult(
-              hits: [],
-              crits: [],
-              misses: [
+          holodeck.rerollAttackAsBeneficial(
+            Attack(
+              blanks: [
                 AttackDice.white,
                 AttackDice.white,
               ],
             ),
-            const AttackPool(
+            AttackPool.of(
               dice: {
                 AttackDice.white: 2,
               },
               aimTokens: 1,
             ),
-            const DefensePool(
+            DefensePool.of(
               dice: DefenseDice.white,
             ),
           ),
-          const AttackResult(
-            hits: [],
+          Attack(
             crits: [
               AttackDice.white,
               AttackDice.white,
             ],
-            misses: [],
           ),
         );
       });
 
       test('hits (always against armor)', () {
-        expect(
-          holodeck.rerollAttacks(
-            const AttackResult(
-              hits: [],
-              crits: [],
-              misses: [
-                AttackDice.white,
-                AttackDice.white,
-              ],
-            ),
-            const AttackPool(
-              dice: {
-                AttackDice.white: 2,
-              },
-              aimTokens: 1,
-            ),
-            const DefensePool(
-              dice: DefenseDice.white,
-              armor: true,
-            ),
+        final reroll = holodeck.rerollAttackAsBeneficial(
+          Attack(
+            blanks: [
+              AttackDice.white,
+              AttackDice.white,
+            ],
           ),
-          const AttackResult(
-            hits: [],
+          AttackPool.of(
+            dice: {
+              AttackDice.white: 2,
+            },
+            aimTokens: 1,
+          ),
+          DefensePool.of(
+            dice: DefenseDice.white,
+            armor: true,
+          ),
+        );
+        expect(
+          reroll,
+          Attack(
             crits: [
               AttackDice.white,
               AttackDice.white,
             ],
-            misses: [],
           ),
         );
       });
 
       test('hits (when cover would prevent all damage)', () {
         expect(
-          holodeck.rerollAttacks(
-            const AttackResult(
+          holodeck.rerollAttackAsBeneficial(
+            Attack(
               hits: [
                 AttackDice.white,
                 AttackDice.white,
               ],
-              crits: [],
-              misses: [],
             ),
-            const AttackPool(
+            AttackPool.of(
               dice: {
                 AttackDice.white: 2,
               },
               aimTokens: 1,
             ),
-            const DefensePool(
+            DefensePool.of(
               dice: DefenseDice.white,
               cover: 2,
             ),
           ),
-          const AttackResult(
-            hits: [],
+          Attack(
             crits: [
               AttackDice.white,
               AttackDice.white,
             ],
-            misses: [],
           ),
         );
       });
 
       test('misses only when hits can effect cover', () {
         expect(
-          holodeck.rerollAttacks(
-            const AttackResult(
+          holodeck.rerollAttackAsBeneficial(
+            Attack(
               hits: [
                 AttackDice.white,
               ],
-              crits: [],
-              misses: [
+              blanks: [
                 AttackDice.white,
               ],
             ),
-            const AttackPool(
+            AttackPool.of(
               dice: {
                 AttackDice.white: 2,
               },
               aimTokens: 1,
             ),
-            const DefensePool(
+            DefensePool.of(
               dice: DefenseDice.white,
               cover: 1,
             ),
           ),
-          const AttackResult(
+          Attack(
             hits: [
               AttackDice.white,
             ],
             crits: [
               AttackDice.white,
             ],
-            misses: [],
           ),
         );
       });
@@ -271,29 +261,32 @@ void main() {
           2,
           surge: true,
         ),
-        const DefenseResult(
+        Defense(
+          DefenseDice.white,
           blocks: 1,
           blanks: 1,
-          dice: DefenseDice.white,
         ),
       );
     });
 
     test('should re-roll defense dice', () {
+      final defense = Defense(
+        DefenseDice.white,
+        blocks: 1,
+        blanks: 2,
+      );
+      final reroll = Holodeck().rerollDefense(
+        defense,
+        max: 3,
+        surge: true,
+        roll: (_, {surge}) => DefenseDiceSide.block,
+      );
       expect(
-        const DefenseResult(
-          blocks: 1,
-          blanks: 2,
-          dice: DefenseDice.white,
-        ).reroll(
-          max: 3,
-          surge: true,
-          roll: (_, {surge}) => DefenseDiceSide.block,
-        ),
-        const DefenseResult(
+        reroll,
+        Defense(
+          DefenseDice.white,
           blocks: 3,
           blanks: 0,
-          dice: DefenseDice.white,
         ),
       );
     });

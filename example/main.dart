@@ -48,12 +48,12 @@ void simulateAttackWithTroopers() {
     final wounds = holodeck.simulateWounds(
       z6Attack,
       // Rebel Troopers + Z6
-      const AttackPool(dice: {
+      AttackPool.of(dice: {
         AttackDice.white: 6,
         AttackDice.black: 4,
       }),
       // Stormtroopers
-      const DefensePool(
+      DefensePool.of(
         dice: DefenseDice.red,
       ),
     );
