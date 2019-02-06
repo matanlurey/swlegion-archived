@@ -60,6 +60,9 @@ class Holodeck {
     // 6. Apply Guardian
     hits -= defender.guardians;
 
+    // Ensure that hits is non-negative.
+    hits = max(hits, 0);
+
     // 7. Modify Attack Dice (i.e. impact & armor)
     if (defender.armor) {
       final convert = min(attacker.impact, hits);

@@ -16,11 +16,11 @@ export 'model/faction.dart' show Faction, ForceAlignment;
 export 'model/keyword.dart' show UnitKeyword, UpgradeKeyword, WeaponKeyword;
 export 'model/rank.dart' show Rank;
 export 'model/reference.dart' show Indexable, Reference;
-export 'model/unit.dart' show Unit;
+export 'model/unit.dart' show Unit, UnitBuilder;
 export 'model/unit_type.dart' show UnitType;
-export 'model/upgrade.dart' show Upgrade;
+export 'model/upgrade.dart' show Upgrade, UpgradeBuilder;
 export 'model/upgrade_slot.dart' show UpgradeSlot;
-export 'model/weapon.dart' show Weapon;
+export 'model/weapon.dart' show Weapon, WeaponBuilder;
 
 part 'all_models.g.dart';
 
