@@ -80,6 +80,12 @@ abstract class Weapon implements Built<Weapon, WeaponBuilder> {
   @nullable
   int get maxRange;
 
+  /// Whether this weapon is capable of being used in melee.
+  bool get isMeleeCapable => minRange == 0;
+
+  /// Whether this weapon is _only_ capable of beign used in melee.
+  bool get isMeleeOnly => minRange == 0 && maxRange == 0;
+
   /// Keywords on the weapon.
   BuiltMap<WeaponKeyword, Object> get keywords;
 

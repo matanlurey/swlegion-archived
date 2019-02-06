@@ -1,8 +1,9 @@
 import 'dart:math';
 
+import 'components/attack_generator.dart';
 import 'components/dice_roller.dart';
 
-class Holodeck with DiceRoller {
+class Holodeck with AttackGenerator, DiceRoller {
   final Random _random;
 
   Holodeck({
