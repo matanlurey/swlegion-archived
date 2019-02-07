@@ -31,27 +31,19 @@ void simulateAttackWithTroopers() {
   var sumWounds = 0;
   for (var i = 0; i < 10000; i++) {
     final z6Attack = holodeck.rollAttacks(
-      const [
-        AttackDice.white,
-        AttackDice.white,
-        AttackDice.white,
-        AttackDice.white,
-        AttackDice.white,
-        AttackDice.white,
-        AttackDice.black,
-        AttackDice.black,
-        AttackDice.black,
-        AttackDice.black,
-      ],
+      AttackDice.white * 6 + AttackDice.black * 4,
       AttackSurge.hit,
     );
     final wounds = holodeck.simulateWounds(
       z6Attack,
       // Rebel Troopers + Z6
-      AttackPool.of(dice: {
-        AttackDice.white: 6,
-        AttackDice.black: 4,
-      }),
+      holodeck.formAttackPool(
+        Units.rebelTroopers,
+        weapons: {
+          Weapons.a280BlasterRifle: 4,
+          Weapons.z6RotaryBlaster: 1,
+        },
+      ),
       // Stormtroopers
       DefensePool.of(
         dice: DefenseDice.red,
