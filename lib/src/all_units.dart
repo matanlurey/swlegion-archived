@@ -15,6 +15,7 @@ import 'database/units/leia_organa.dart' as _i;
 import 'database/units/luke_skywalker.dart' as _i;
 import 'database/units/rebel_commandos.dart' as _i;
 import 'database/units/rebel_commandos_strike_team.dart' as _i;
+import 'database/units/rebel_officer.dart' as _i;
 import 'database/units/rebel_troopers.dart' as _i;
 import 'database/units/scout_troopers.dart' as _i;
 import 'database/units/scout_troopers_strike_team.dart' as _i;
@@ -41,6 +42,7 @@ final aggregate = [
   _i.lukeSkywalker,
   _i.rebelCommandos,
   _i.rebelCommandosStrikeTeam,
+  _i.rebelOfficer,
   _i.rebelTroopers,
   _i.scoutTroopers,
   _i.scoutTroopersStrikeTeam,
@@ -69,6 +71,7 @@ class Units {
   static final lukeSkywalker = _i.lukeSkywalker;
   static final rebelCommandos = _i.rebelCommandos;
   static final rebelCommandosStrikeTeam = _i.rebelCommandosStrikeTeam;
+  static final rebelOfficer = _i.rebelOfficer;
   static final rebelTroopers = _i.rebelTroopers;
   static final scoutTroopers = _i.scoutTroopers;
   static final scoutTroopersStrikeTeam = _i.scoutTroopersStrikeTeam;
