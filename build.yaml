@@ -1,6 +1,5 @@
 builders:
   _aggregate_database:
-    target: "_aggregate_database"
     import: tool/src/aggregate_database.dart
     builder_factories:
       - aggregateDatabase
@@ -13,3 +12,12 @@ builders:
     auto_apply: root_package
     required_inputs:
       - lib/src/model/**.g.dart
+  _aggregate_keywords:
+    import: tool/src/aggregate_keywords.dart
+    builder_factories:
+      - aggregateKeywords
+    build_extensions:
+      "src/model/keyword.dart":
+        - "keyword.aggregate.dart"
+    build_to: source
+    auto_apply: root_package

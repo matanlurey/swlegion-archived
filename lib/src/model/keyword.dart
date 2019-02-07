@@ -4,7 +4,7 @@ import 'package:meta/meta.dart';
 
 import 'reference.dart';
 
-// TODO: Generate {Unit|Upgrade|Weapon}Keyword.values.
+part 'keyword.aggregate.dart';
 
 class _Serializer<T extends Indexable<T>> implements PrimitiveSerializer<T> {
   final BuiltMap<String, T> _index;
@@ -47,51 +47,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     types: const [UnitKeyword],
   );
 
-  static final values = BuiltSet.of([
-    kArmor,
-    kArsenal,
-    kBounty,
-    kCharge,
-    kClimbingVehicle,
-    kCover,
-    kDeflect,
-    kDisciplined,
-    kEnrage,
-    kEntourage,
-    kExpertClimber,
-    kFullPivot,
-    kGuardian,
-    kGunslinger,
-    kHeavyWeaponTeam,
-    kImmuneBlast,
-    kImmuneMelee,
-    kImmunePierce,
-    kImpervious,
-    kIndomitable,
-    kInspire,
-    kJump,
-    kLowProfile,
-    kMasterOfTheForce,
-    kNimble,
-    kPlodding,
-    kPrecise,
-    kPullingTheStrings,
-    kReady,
-    kRelentless,
-    kReposition,
-    kScout,
-    kSentinel,
-    kSharpshooter,
-    kSpeeder,
-    kSpotter,
-    kStationary,
-    kSteady,
-    kTakeCover,
-    kTeamwork,
-    kUncannyLuck,
-    kUnhindered,
-    kWeakPointRear,
-  ]);
+  static final values = BuiltSet.of(_$unitKeywordValues);
 
   static final _index = BuiltMap.of(
     Map.fromEntries(
@@ -709,22 +665,7 @@ class WeaponKeyword implements Indexable<WeaponKeyword> {
     types: const [WeaponKeyword],
   );
 
-  static final values = BuiltSet.of(const [
-    kArm,
-    kBlast,
-    kCumbersome,
-    kDetonate,
-    kFixedFront,
-    kFixedRear,
-    kHighVelocity,
-    kImpact,
-    kImmuneDeflect,
-    kIon,
-    kPierce,
-    kSpray,
-    kSuppressive,
-    kTowCable,
-  ]);
+  static final values = BuiltSet.of(_$weaponKeywordValues);
 
   static final _index = BuiltMap.of(
     Map.fromEntries(
@@ -1013,14 +954,7 @@ class UpgradeKeyword implements Indexable<UpgradeKeyword> {
     types: const [UpgradeKeyword],
   );
 
-  static final values = BuiltSet.of(const [
-    kLeader,
-    kNonCombatant,
-    kRepair,
-    kSidearmMelee,
-    kSidearmRanged,
-    kTreat,
-  ]);
+  static final values = BuiltSet.of(_$upgradeKeywordValues);
 
   static final _index = BuiltMap.of(
     Map.fromEntries(
