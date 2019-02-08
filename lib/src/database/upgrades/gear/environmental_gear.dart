@@ -11,4 +11,8 @@ final environmentalGear = Upgrade(
   keywordsForUnit: const {
     UnitKeyword.kUnhindered: '',
   },
+  waves: const [
+    Wave.wGeneralVeersCommanderExpansion,
+    Wave.wLeiaOrganaCommanderExpansion,
+  ],
 );

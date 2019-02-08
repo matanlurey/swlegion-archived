@@ -10,4 +10,7 @@ final sorryAboutTheMess = CommandCard(
   text: r'''
     While building a command hand, treat this card as though it has 1 pip. When Han Solo is issued an order, he gains 1 aim token and 1 dodge token.
   ''',
+  waves: const [
+    Wave.wHanSoloCommanderExpansion,
+  ],
 );

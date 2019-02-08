@@ -14,4 +14,7 @@ final commonCause = CommandCard(
     After Chewbacca activates, if Luke Skywalker has a faceup order token, he may activate.
     After Luke Skywalker activates, if Chewbacca has a faceup order token, he may activate.
   ''',
+  waves: const [
+    Wave.wChewbaccaOperativeExpansion,
+  ],
 );

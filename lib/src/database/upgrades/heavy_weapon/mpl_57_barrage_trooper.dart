@@ -10,4 +10,7 @@ final mpl57BarrageTrooper = Upgrade(
   addsMiniature: true,
   weapon: Weapons.mpl57BarrageLauncher,
   points: 33,
+  waves: const [
+    Wave.wFleetTroopersUnitExpansion,
+  ],
 );

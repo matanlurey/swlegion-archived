@@ -11,4 +11,7 @@ final z6JetpackLauncher = CommandCard(
     During Boba Fett's activation he gains the following weapon:
   ''',
   weapon: Weapons.z6JetpackLauncher,
+  waves: const [
+    Wave.wBobaFettOperativeExpansion,
+  ],
 );

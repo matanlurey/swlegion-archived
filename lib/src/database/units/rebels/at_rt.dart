@@ -26,4 +26,8 @@ final atRt = Unit(
     UnitKeyword.kCover: 1,
     UnitKeyword.kSpeeder: 1,
   },
+  waves: const [
+    Wave.wCore,
+    Wave.wAtRtUnitExpansion,
+  ],
 );

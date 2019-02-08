@@ -29,4 +29,7 @@ final $1dot4FDLaserCannonTeam = Unit(
     UnitKeyword.kSentinel: '',
     UnitKeyword.kStationary: '',
   },
+  waves: const [
+    Wave.w1dot4FDLaserCannonUnitExpansion,
+  ],
 );

@@ -14,4 +14,7 @@ final brainsAndBrawn = CommandCard(
     When Leia Organa is performing a ranged attack, if Chewbacca is not engaged and has line of sight to and is range 1-3 of the defender, add one
     of his ranged weapons to the attack pool.
   ''',
+  waves: const [
+    Wave.wChewbaccaOperativeExpansion,
+  ],
 );

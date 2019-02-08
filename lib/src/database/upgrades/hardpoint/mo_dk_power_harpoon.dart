@@ -8,4 +8,7 @@ final moDkPowerHarpoon = Upgrade(
   restrictedToUnit: [Units.t47Airspeeder.toRef()],
   weapon: Weapons.moDkPowerHarpoon,
   points: 8,
+  waves: const [
+    Wave.wT47AirspeederUnitExpansion,
+  ],
 );

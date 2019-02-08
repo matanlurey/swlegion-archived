@@ -9,4 +9,7 @@ final pinnedDown = CommandCard(
   text: r'''
     After a friendly supoport or heavy unit performs an attack against a unit with a faceup order token, shuffle that token back into its order pool.
   ''',
+  waves: const [
+    Wave.wImperialSpecialistsPersonnelExpansion,
+  ],
 );

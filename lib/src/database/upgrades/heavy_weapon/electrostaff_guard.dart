@@ -12,4 +12,7 @@ final electrostaffGuard = Upgrade(
   keywords: const {
     UpgradeKeyword.kSidearmMelee: '',
   },
+  waves: const [
+    Wave.wImperialRoyalGuardsUnitExpansion,
+  ],
 );

@@ -9,4 +9,7 @@ final turningTheTide = CommandCard(
   text: r'''
     Each friendly support and heavy unit gains INSPIRE 2.
   ''',
+  waves: const [
+    Wave.wRebelSpecialistsPersonnelExpansion,
+  ],
 );

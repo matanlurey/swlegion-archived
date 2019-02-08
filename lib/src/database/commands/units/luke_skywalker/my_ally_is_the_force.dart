@@ -10,4 +10,7 @@ final myAllyIsTheForce = CommandCard(
   text: r'''
     When a friendly trooper unit is issued an order, it gains 1 dodge token.
   ''',
+  waves: const [
+    Wave.wCore,
+  ],
 );

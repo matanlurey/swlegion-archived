@@ -10,4 +10,7 @@ final noTimeForSorrows = CommandCard(
   text: r'''
     When a friendly Trooper unit is issued an order, it may perform a speed-1 move.
   ''',
+  waves: const [
+    Wave.wLeiaOrganaCommanderExpansion,
+  ],
 );

@@ -9,4 +9,7 @@ final anger = Upgrade(
   text: r'''
     After you suffer 1 or more wounds, gain 1 aim token.
   ''',
+  waves: const [
+    Wave.wEmperorPalpatineCommanderExpansion,
+  ],
 );

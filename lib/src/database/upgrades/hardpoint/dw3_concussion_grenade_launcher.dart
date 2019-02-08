@@ -8,4 +8,7 @@ final dw3ConcussionGrenadeLauncher = Upgrade(
   restrictedToUnit: [Units.atSt.toRef()],
   weapon: Weapons.dw3ConcussionGrenadeLauncher,
   points: 15,
+  waves: const [
+    Wave.wAtStUnitExpansion,
+  ],
 );

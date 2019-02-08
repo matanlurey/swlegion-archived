@@ -25,4 +25,8 @@ final $74ZSpeederBikes = Unit(
     UnitKeyword.kCover: 1,
     UnitKeyword.kSpeeder: 1,
   },
+  waves: const [
+    Wave.wCore,
+    Wave.w74ZSpeederBikesUnitExpansion,
+  ],
 );

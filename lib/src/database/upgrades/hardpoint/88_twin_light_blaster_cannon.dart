@@ -8,4 +8,7 @@ final $88TwinLightBlasterCannon = Upgrade(
   restrictedToUnit: [Units.atSt.toRef()],
   weapon: Weapons.$88TwinLightBlasterCannon,
   points: 20,
+  waves: const [
+    Wave.wAtStUnitExpansion,
+  ],
 );

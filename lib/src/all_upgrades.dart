@@ -50,6 +50,7 @@ import 'database/upgrades/personnel/2_1_b_medical_droid.dart' as _i;
 import 'database/upgrades/personnel/fleet_trooper.dart' as _i;
 import 'database/upgrades/personnel/fx_9_medical_droid.dart' as _i;
 import 'database/upgrades/personnel/imperial_comms_technician.dart' as _i;
+import 'database/upgrades/personnel/r_4_astromech_droid.dart' as _i;
 import 'database/upgrades/personnel/r_5_astromech_droid.dart' as _i;
 import 'database/upgrades/personnel/rebel_comms_technician.dart' as _i;
 import 'database/upgrades/personnel/rebel_officer.dart' as _i;
@@ -115,6 +116,7 @@ final aggregate = [
   _i.fleetTrooper,
   _i.fx9MedicalDroid,
   _i.imperialCommsTechnician,
+  _i.r4AstromechDroid,
   _i.r5AstromechDroid,
   _i.rebelCommsTechnician,
   _i.rebelOfficer,
@@ -182,6 +184,7 @@ class Upgrades {
   static final fleetTrooper = _i.fleetTrooper;
   static final fx9MedicalDroid = _i.fx9MedicalDroid;
   static final imperialCommsTechnician = _i.imperialCommsTechnician;
+  static final r4AstromechDroid = _i.r4AstromechDroid;
   static final r5AstromechDroid = _i.r5AstromechDroid;
   static final rebelCommsTechnician = _i.rebelCommsTechnician;
   static final rebelOfficer = _i.rebelOfficer;

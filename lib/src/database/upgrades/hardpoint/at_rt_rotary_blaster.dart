@@ -8,4 +8,8 @@ final atRtRotaryBlaster = Upgrade(
   restrictedToUnit: [Units.atRt.toRef()],
   weapon: Weapons.atRtRotaryBlaster,
   points: 30,
+  waves: const [
+    Wave.wCore,
+    Wave.wAtRtUnitExpansion,
+  ],
 );

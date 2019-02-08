@@ -9,4 +9,10 @@ final hqUplink = Upgrade(
   text: r'''
     During the Issue Orders step of the Command Phase, issue an order to yourself.
   ''',
+  waves: const [
+    Wave.wScoutTroopersUnitExpansion,
+    Wave.wEWebHeavyBlasterTeamUnitExpansion,
+    Wave.wRebelCommandosUnitExpansion,
+    Wave.w1dot4FDLaserCannonUnitExpansion,
+  ],
 );

@@ -9,4 +9,7 @@ final sabotagedCommunications = CommandCard(
   text: r'''
     Your opponent must issue orders to 1 fewer unit than is indicated on their command card, to a minimum of 1.
   ''',
+  waves: const [
+    Wave.wRebelSpecialistsPersonnelExpansion,
+  ],
 );

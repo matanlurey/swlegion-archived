@@ -14,4 +14,7 @@ final wedgeAntilles = Upgrade(
   keywordsForUnit: const {
     UnitKeyword.kFullPivot: '',
   },
+  waves: const [
+    Wave.wT47AirspeederUnitExpansion,
+  ],
 );

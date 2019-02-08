@@ -27,4 +27,8 @@ final rebelTroopers = Unit(
   keywords: const {
     UnitKeyword.kNimble: '',
   },
+  waves: const [
+    Wave.wCore,
+    Wave.wRebelTroopersUnitExpansion,
+  ],
 );

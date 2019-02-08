@@ -9,4 +9,7 @@ final coordinatedFire = CommandCard(
   text: r'''
     After a friendly corps unit spends an aim token, another friendly unit at range 1-2 may gain 1 aim token.
   ''',
+  waves: const [
+    Wave.wImperialSpecialistsPersonnelExpansion,
+  ],
 );

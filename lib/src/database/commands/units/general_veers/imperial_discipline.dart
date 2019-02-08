@@ -10,4 +10,7 @@ final imperialDiscipline = CommandCard(
   text: r'''
     When a friendly unit is issued an order it may recover.
   ''',
+  waves: const [
+    Wave.wGeneralVeersCommanderExpansion,
+  ],
 );

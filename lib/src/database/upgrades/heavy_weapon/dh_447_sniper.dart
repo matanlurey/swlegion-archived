@@ -12,4 +12,7 @@ final dh447Sniper = Upgrade(
   addsMiniature: true,
   weapon: Weapons.dh447SniperRifle,
   points: 28,
+  waves: const [
+    Wave.wRebelCommandosUnitExpansion,
+  ],
 );

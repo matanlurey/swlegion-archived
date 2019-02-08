@@ -5,4 +5,7 @@ final ambush = CommandCard(
   name: 'Ambush',
   unitsActivated: '1 Unit',
   pips: 1,
+  waves: const [
+    Wave.wCore,
+  ],
 );

@@ -10,4 +10,8 @@ final hh12Stormtrooper = Upgrade(
   addsMiniature: true,
   weapon: Weapons.hh12RocketLauncher,
   points: 34,
+  waves: const [
+    Wave.wCore,
+    Wave.wStormtroopersUnitExpansion,
+  ],
 );

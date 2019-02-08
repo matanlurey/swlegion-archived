@@ -5,4 +5,7 @@ final push = CommandCard(
   name: 'Push',
   unitsActivated: '2 Units',
   pips: 2,
+  waves: const [
+    Wave.wCore,
+  ],
 );

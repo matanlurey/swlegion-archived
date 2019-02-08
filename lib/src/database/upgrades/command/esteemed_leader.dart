@@ -8,4 +8,9 @@ final estmeedLeader = Upgrade(
   text: r'''
     While you are defending, each friendly corps trooper unit at range 1 gains Guardian 1.
   ''',
+  waves: const [
+    Wave.wGeneralVeersCommanderExpansion,
+    Wave.wLeiaOrganaCommanderExpansion,
+    Wave.wDirectorOrsonKrennicCommanderExpansion,
+  ],
 );

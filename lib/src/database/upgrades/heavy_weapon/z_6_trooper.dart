@@ -9,4 +9,7 @@ final z6Trooper = Upgrade(
   addsMiniature: true,
   weapon: Weapons.z6RotaryBlaster,
   points: 22,
+  waves: const [
+    Wave.wRebelTroopersUnitExpansion,
+  ],
 );

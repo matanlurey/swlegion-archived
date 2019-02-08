@@ -11,4 +11,8 @@ final forceChoke = Upgrade(
     Choose an enemy trooper mini at range 1 that is not a commander.
     It suffers 1 wound.
   ''',
+  waves: const [
+    Wave.wCore,
+    Wave.wEmperorPalpatineCommanderExpansion,
+  ],
 );

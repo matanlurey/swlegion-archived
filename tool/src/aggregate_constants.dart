@@ -4,13 +4,14 @@ import 'package:analyzer/dart/element/element.dart';
 import 'package:build/build.dart';
 import 'package:path/path.dart' as p;
 
-Builder aggregateKeywords(BuilderOptions _) => _AggregateKeywords();
+Builder aggregateConstants(BuilderOptions _) => _AggregateConstants();
 
-class _AggregateKeywords extends Builder {
+class _AggregateConstants extends Builder {
   @override
   Future<void> build(BuildStep buildStep) async {
     final input = await buildStep.inputLibrary;
-    final output = StringBuffer()..writeln("part of 'keyword.dart';\n");
+    final name = p.basenameWithoutExtension(buildStep.inputId.path);
+    final output = StringBuffer()..writeln("part of '$name.dart';\n");
     for (final clazz in input.definingCompilationUnit.types) {
       if (clazz.getGetter('values') != null) {
         final fields = clazz.fields.where((f) => f.isConst);
@@ -48,6 +49,9 @@ class _AggregateKeywords extends Builder {
   final buildExtensions = const {
     'src/model/keyword.dart': [
       'src/model/keyword.aggregate.dart',
+    ],
+    'src/model/wave.dart': [
+      'src/model/wave.aggregate.dart',
     ],
   };
 }

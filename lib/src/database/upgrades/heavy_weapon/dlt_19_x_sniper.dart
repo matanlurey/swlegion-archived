@@ -12,4 +12,7 @@ final dlt19XSniper = Upgrade(
   addsMiniature: true,
   weapon: Weapons.dlt19XSniperRifle,
   points: 28,
+  waves: const [
+    Wave.wScoutTroopersUnitExpansion,
+  ],
 );

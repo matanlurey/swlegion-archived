@@ -30,4 +30,7 @@ final lukeSkywalker = Unit(
     UnitKeyword.kDeflect: '',
     UnitKeyword.kImmunePierce: '',
   },
+  waves: const [
+    Wave.wCore,
+  ],
 );

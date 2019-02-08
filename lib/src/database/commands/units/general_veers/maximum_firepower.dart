@@ -11,4 +11,7 @@ final maximumFirepower = CommandCard(
     At the end of General Veers’ activation, he may perform an attacking using the following weapon.
   ''',
   weapon: Weapons.maximumFirepower,
+  waves: const [
+    Wave.wGeneralVeersCommanderExpansion,
+  ],
 );

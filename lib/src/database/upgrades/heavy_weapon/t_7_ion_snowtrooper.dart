@@ -10,4 +10,7 @@ final t7IonSnowtrooper = Upgrade(
   addsMiniature: true,
   weapon: Weapons.t7IonDisrupterRifle,
   points: 34,
+  waves: const [
+    Wave.wSnowtroopersUnitExpansion,
+  ],
 );

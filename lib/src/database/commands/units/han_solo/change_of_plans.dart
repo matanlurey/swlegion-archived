@@ -10,4 +10,7 @@ final changeOfPlans = CommandCard(
   text: r'''
     When this card is revealed, you may discard it to return an opponent's command card to their hand. If you do, return to the Select Command Card step. That opponent cannot select the command card that was returned to their hand.
   ''',
+  waves: const [
+    Wave.wHanSoloCommanderExpansion,
+  ],
 );

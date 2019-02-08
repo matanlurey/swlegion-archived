@@ -10,4 +10,7 @@ final andNowYouWillDie = CommandCard(
   text: r'''
     During Emperor Palpatine's activation, he may suffer 1 wound and gain 1 suppression token to perform an attack. He may do this any number of times. After Emperor Palpatine performs an attack, the defender gains 1 immobilized token.
   ''',
+  waves: const [
+    Wave.wEmperorPalpatineCommanderExpansion,
+  ],
 );

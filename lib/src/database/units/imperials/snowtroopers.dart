@@ -27,4 +27,7 @@ final snowtroopers = Unit(
   keywords: const {
     UnitKeyword.kSteady: '',
   },
+  waves: const [
+    Wave.wSnowtroopersUnitExpansion,
+  ],
 );

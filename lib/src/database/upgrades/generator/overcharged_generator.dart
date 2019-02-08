@@ -9,4 +9,8 @@ final overchargedGenerator = Upgrade(
   text: r'''
     While performing a ranged attack with a weapon that has FIXED, add 1 black attack dice and apply IMPACT 1 to your attack pool.
   ''',
+  waves: const [
+    Wave.wEWebHeavyBlasterTeamUnitExpansion,
+    Wave.w1dot4FDLaserCannonUnitExpansion,
+  ],
 );

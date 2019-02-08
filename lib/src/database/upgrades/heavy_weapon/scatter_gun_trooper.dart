@@ -9,4 +9,7 @@ final scatterGunTrooper = Upgrade(
   addsMiniature: true,
   weapon: Weapons.scatterGun,
   points: 23,
+  waves: const [
+    Wave.wFleetTroopersUnitExpansion,
+  ],
 );

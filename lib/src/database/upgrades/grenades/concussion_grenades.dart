@@ -8,4 +8,7 @@ final concussionGrenades = Upgrade(
   type: UpgradeSlot.grenades,
   weapon: weapon.concussionGrenades,
   points: 5,
+  waves: const [
+    Wave.wCore,
+  ],
 );

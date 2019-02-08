@@ -30,4 +30,7 @@ final generalVeers = Unit(
     UnitKeyword.kPrecise: 1,
     UnitKeyword.kSharpshooter: 1,
   },
+  waves: const [
+    Wave.wGeneralVeersCommanderExpansion,
+  ],
 );

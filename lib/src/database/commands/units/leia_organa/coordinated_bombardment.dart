@@ -11,4 +11,7 @@ final coordinatedBombardment = CommandCard(
     At the end of Leia Organa's activation, you may perform up to 3 attacks against different enemy units using the following weapon.
   ''',
   weapon: Weapons.coordinatedBombardment,
+  waves: const [
+    Wave.wLeiaOrganaCommanderExpansion,
+  ],
 );

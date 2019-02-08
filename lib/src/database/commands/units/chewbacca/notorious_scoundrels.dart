@@ -13,4 +13,7 @@ final notoriousScoundrels = CommandCard(
   text: r'''
     Choose one of Han Solo's command cards in your discard pile. Return that card to your hand.
   ''',
+  waves: const [
+    Wave.wChewbaccaOperativeExpansion,
+  ],
 );

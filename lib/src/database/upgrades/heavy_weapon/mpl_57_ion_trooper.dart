@@ -10,4 +10,8 @@ final mpl57IonTrooper = Upgrade(
   addsMiniature: true,
   weapon: Weapons.mpl57IonLauncher,
   points: 32,
+  waves: const [
+    Wave.wCore,
+    Wave.wRebelTroopersUnitExpansion,
+  ],
 );

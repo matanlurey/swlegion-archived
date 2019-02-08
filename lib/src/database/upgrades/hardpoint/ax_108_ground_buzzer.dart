@@ -8,4 +8,7 @@ final ax108GroundBuzzer = Upgrade(
   restrictedToUnit: [Units.t47Airspeeder.toRef()],
   weapon: Weapons.ax108GroundBuzzer,
   points: 20,
+  waves: const [
+    Wave.wT47AirspeederUnitExpansion,
+  ],
 );

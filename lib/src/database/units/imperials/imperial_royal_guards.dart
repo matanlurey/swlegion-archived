@@ -28,4 +28,7 @@ final imperialRoyalGuards = Unit(
     UnitKeyword.kDisciplined: 2,
     UnitKeyword.kGuardian: 2,
   },
+  waves: const [
+    Wave.wImperialRoyalGuardsUnitExpansion,
+  ],
 );

@@ -12,4 +12,7 @@ final sonicChargeSaboteur = Upgrade(
   addsMiniature: true,
   weapon: Weapons.sonicCharge,
   points: 26,
+  waves: const [
+    Wave.wScoutTroopersUnitExpansion,
+  ],
 );

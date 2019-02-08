@@ -29,4 +29,7 @@ final eWebHeavyBlasterTeam = Unit(
     UnitKeyword.kReposition: '',
     UnitKeyword.kSentinel: '',
   },
+  waves: const [
+    Wave.wEWebHeavyBlasterTeamUnitExpansion,
+  ],
 );

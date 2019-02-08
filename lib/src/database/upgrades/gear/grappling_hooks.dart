@@ -11,4 +11,10 @@ final grapplingHooks = Upgrade(
   keywordsForUnit: const {
     UnitKeyword.kExpertClimber: '',
   },
+  waves: const [
+    Wave.wFleetTroopersUnitExpansion,
+    Wave.wRebelTroopersUnitExpansion,
+    Wave.wStormtroopersUnitExpansion,
+    Wave.wSnowtroopersUnitExpansion,
+  ],
 );

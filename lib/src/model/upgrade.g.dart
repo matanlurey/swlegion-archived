@@ -52,6 +52,10 @@ class _$UpgradeSerializer implements StructuredSerializer<Upgrade> {
       'type',
       serializers.serialize(object.type,
           specifiedType: const FullType(UpgradeSlot)),
+      'waves',
+      serializers.serialize(object.waves,
+          specifiedType:
+              const FullType(BuiltList, const [const FullType(Wave)])),
     ];
     if (object.restrictedToFaction != null) {
       result
@@ -163,6 +167,12 @@ class _$UpgradeSerializer implements StructuredSerializer<Upgrade> {
           result.weapon.replace(serializers.deserialize(value,
               specifiedType: const FullType(Weapon)) as Weapon);
           break;
+        case 'waves':
+          result.waves.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(BuiltList, const [const FullType(Wave)]))
+              as BuiltList);
+          break;
       }
     }
 
@@ -201,6 +211,8 @@ class _$Upgrade extends Upgrade {
   final UpgradeSlot type;
   @override
   final Weapon weapon;
+  @override
+  final BuiltList<Wave> waves;
 
   factory _$Upgrade([void updates(UpgradeBuilder b)]) =>
       (new UpgradeBuilder()..update(updates)).build();
@@ -220,7 +232,8 @@ class _$Upgrade extends Upgrade {
       this.name,
       this.text,
       this.type,
-      this.weapon})
+      this.weapon,
+      this.waves})
       : super._() {
     if (addsMiniature == null) {
       throw new BuiltValueNullFieldError('Upgrade', 'addsMiniature');
@@ -254,6 +267,9 @@ class _$Upgrade extends Upgrade {
     }
     if (type == null) {
       throw new BuiltValueNullFieldError('Upgrade', 'type');
+    }
+    if (waves == null) {
+      throw new BuiltValueNullFieldError('Upgrade', 'waves');
     }
   }
 
@@ -292,7 +308,8 @@ class _$Upgrade extends Upgrade {
           ..add('name', name)
           ..add('text', text)
           ..add('type', type)
-          ..add('weapon', weapon))
+          ..add('weapon', weapon)
+          ..add('waves', waves))
         .toString();
   }
 }
@@ -374,6 +391,10 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
   WeaponBuilder get weapon => _$this._weapon ??= new WeaponBuilder();
   set weapon(WeaponBuilder weapon) => _$this._weapon = weapon;
 
+  ListBuilder<Wave> _waves;
+  ListBuilder<Wave> get waves => _$this._waves ??= new ListBuilder<Wave>();
+  set waves(ListBuilder<Wave> waves) => _$this._waves = waves;
+
   UpgradeBuilder();
 
   UpgradeBuilder get _$this {
@@ -393,6 +414,7 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
       _text = _$v.text;
       _type = _$v.type;
       _weapon = _$v.weapon?.toBuilder();
+      _waves = _$v.waves?.toBuilder();
       _$v = null;
     }
     return this;
@@ -431,7 +453,8 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
               name: name,
               text: text,
               type: type,
-              weapon: _weapon?.build());
+              weapon: _weapon?.build(),
+              waves: waves.build());
     } catch (_) {
       String _$failedField;
       try {
@@ -448,6 +471,8 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
 
         _$failedField = 'weapon';
         _weapon?.build();
+        _$failedField = 'waves';
+        waves.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'Upgrade', _$failedField, e.toString());

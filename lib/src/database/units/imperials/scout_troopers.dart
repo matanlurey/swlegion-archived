@@ -30,4 +30,7 @@ final scoutTroopers = Unit(
     UnitKeyword.kScout: 1,
     UnitKeyword.kSharpshooter: 1,
   },
+  waves: const [
+    Wave.wScoutTroopersUnitExpansion,
+  ],
 );

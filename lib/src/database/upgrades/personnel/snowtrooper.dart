@@ -8,4 +8,7 @@ final snowtrooper = Upgrade(
   addsMiniature: true,
   restrictedToUnit: [Units.snowtroopers.toRef()],
   points: 12,
+  waves: const [
+    Wave.wSnowtroopersUnitExpansion,
+  ],
 );

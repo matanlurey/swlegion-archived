@@ -13,4 +13,7 @@ final giveInToYourAnger = CommandCard(
     Assign it an order token from its order pool unless it has a faceup order token.
     At the end of that units's activation, if it did not perform an attack, it gains 4 suppression tokens.
   ''',
+  waves: const [
+    Wave.wEmperorPalpatineCommanderExpansion,
+  ],
 );

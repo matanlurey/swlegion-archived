@@ -11,4 +11,7 @@ final whipcordLauncher = CommandCard(
     Boba Fett can perform moves while engaged with a unit that has 1 or more immobilized tokens. During Boba Fett's activation he gains:
     Choose an enemy trooper unit at range 1 and in line of sight. It gains 2 immobilized tokens and 2 suppression tokens.
   ''',
+  waves: const [
+    Wave.wBobaFettOperativeExpansion,
+  ],
 );

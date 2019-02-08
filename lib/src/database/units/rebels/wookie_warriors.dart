@@ -30,4 +30,7 @@ final wookieWarriors = Unit(
     UnitKeyword.kIndomitable: '',
     UnitKeyword.kUnhindered: '',
   },
+  waves: const [
+    Wave.wWookieWarriorsUnitExpansion,
+  ],
 );

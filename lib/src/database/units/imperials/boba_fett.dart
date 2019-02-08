@@ -33,4 +33,7 @@ final bobaFett = Unit(
     UnitKeyword.kImpervious: '',
     UnitKeyword.kSharpshooter: 2,
   },
+  waves: const [
+    Wave.wBobaFettOperativeExpansion,
+  ],
 );

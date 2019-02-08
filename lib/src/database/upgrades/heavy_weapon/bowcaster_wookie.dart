@@ -9,4 +9,7 @@ final bowcasterWookie = Upgrade(
   addsMiniature: true,
   weapon: Weapons.bowcaster,
   points: 35,
+  waves: const [
+    Wave.wWookieWarriorsUnitExpansion,
+  ],
 );

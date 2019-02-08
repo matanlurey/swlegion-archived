@@ -10,4 +10,7 @@ final masterOfEvil = CommandCard(
   text: r'''
     When Darth Vader is issued an order, he gains 1 dodge token. When Darth Vader activates, each enemy trooper at range 1-2 of him gains 3 suppression tokens.
   ''',
+  waves: const [
+    Wave.wCore,
+  ],
 );

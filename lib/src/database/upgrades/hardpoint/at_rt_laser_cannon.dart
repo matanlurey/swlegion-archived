@@ -8,4 +8,8 @@ final atRtLaserCannon = Upgrade(
   restrictedToUnit: [Units.atRt.toRef()],
   weapon: Weapons.atRtLaserCannon,
   points: 35,
+  waves: const [
+    Wave.wCore,
+    Wave.wAtRtUnitExpansion,
+  ],
 );

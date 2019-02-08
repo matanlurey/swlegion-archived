@@ -10,4 +10,7 @@ final somebodyHasToSaveOurSkins = CommandCard(
   text: r'''
     After Leia Organa's activation, you may choose a friendly unit at range 1-2 with a faceup order token and activate it.
   ''',
+  waves: const [
+    Wave.wLeiaOrganaCommanderExpansion,
+  ],
 );

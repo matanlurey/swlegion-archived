@@ -31,4 +31,7 @@ final leiaOrgana = Unit(
     UnitKeyword.kNimble: '',
     UnitKeyword.kSharpshooter: 2,
   },
+  waves: const [
+    Wave.wLeiaOrganaCommanderExpansion,
+  ],
 );

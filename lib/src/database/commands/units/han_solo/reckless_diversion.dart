@@ -10,4 +10,7 @@ final recklessDiversion = CommandCard(
   text: r'''
     When an enemy unit performs an attack, it must attack a trooper unit that has a faceup order token, if available.
   ''',
+  waves: const [
+    Wave.wHanSoloCommanderExpansion,
+  ],
 );

@@ -28,4 +28,7 @@ final atSt = Unit(
     UnitKeyword.kArsenal: 2,
     UnitKeyword.kWeakPointRear: '',
   },
+  waves: const [
+    Wave.wAtStUnitExpansion,
+  ],
 );

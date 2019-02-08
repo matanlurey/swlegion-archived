@@ -20,6 +20,7 @@ export 'model/unit.dart' show Unit, UnitBuilder;
 export 'model/unit_type.dart' show UnitType;
 export 'model/upgrade.dart' show Upgrade, UpgradeBuilder;
 export 'model/upgrade_slot.dart' show UpgradeSlot;
+export 'model/wave.dart' show Wave;
 export 'model/weapon.dart' show Weapon, WeaponBuilder;
 
 part 'all_models.g.dart';
@@ -144,6 +145,7 @@ final Serializers serializers = () {
     ..add(Reference.serializer)
     ..add(UnitKeyword.serializer)
     ..add(UpgradeKeyword.serializer)
+    ..add(Wave.serializer)
     ..add(WeaponKeyword.serializer);
 
   // Manually add Reference<CommandCard|Unit|Upgrade>.

@@ -32,4 +32,7 @@ final chewbacca = Unit(
     UnitKeyword.kGuardian: 3,
     UnitKeyword.kTeamwork: hanSolo.id,
   },
+  waves: const [
+    Wave.wChewbaccaOperativeExpansion,
+  ],
 );

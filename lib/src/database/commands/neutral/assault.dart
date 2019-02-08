@@ -5,4 +5,7 @@ final assault = CommandCard(
   name: 'Assault',
   unitsActivated: '3 Units',
   pips: 3,
+  waves: const [
+    Wave.wCore,
+  ],
 );

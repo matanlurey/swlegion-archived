@@ -27,4 +27,7 @@ final darthVader = Unit(
     UnitKeyword.kMasterOfTheForce: 1,
     UnitKeyword.kRelentless: '',
   },
+  waves: const [
+    Wave.wCore,
+  ],
 );

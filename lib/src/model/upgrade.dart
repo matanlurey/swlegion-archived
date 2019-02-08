@@ -9,6 +9,7 @@ import 'reference.dart';
 import 'unit.dart';
 import 'unit_type.dart';
 import 'upgrade_slot.dart';
+import 'wave.dart';
 import 'weapon.dart';
 
 part 'upgrade.g.dart';
@@ -36,6 +37,7 @@ abstract class Upgrade extends Object
     @required String name,
     String text = '',
     @required UpgradeSlot type,
+    @required List<Wave> waves,
     Weapon weapon,
   }) =>
       Upgrade._builder((b) => b
@@ -53,6 +55,7 @@ abstract class Upgrade extends Object
         ..name = name
         ..text = text
         ..type = type
+        ..waves.addAll(waves)
         ..weapon = weapon?.toBuilder());
 
   factory Upgrade._builder(void Function(UpgradeBuilder) build) = _$Upgrade;
@@ -145,4 +148,11 @@ abstract class Upgrade extends Object
   @nullable
   @BuiltValueField(compare: false, wireName: 'weapon')
   Weapon get weapon;
+
+  /// Wave(s) of the upgrade's release.
+  @BuiltValueField(compare: false)
+  BuiltList<Wave> get waves;
+
+  /// Whether this upgrade is considered released.
+  bool get isReleased => waves.any((w) => w.isReleased);
 }

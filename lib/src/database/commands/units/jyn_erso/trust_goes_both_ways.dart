@@ -11,4 +11,7 @@ final trustGoesBothWays = CommandCard(
     Jyn Erso gains INSPIRE 2.
     When Jyn Erso issues an order to another friendly trooper, that unit gainst TEARMWORK: JYN ERSO.
   ''',
+  waves: const [
+    Wave.wJynErsoCommanderExpansion,
+  ],
 );

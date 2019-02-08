@@ -30,4 +30,7 @@ final t47Airspeeder = Unit(
     UnitKeyword.kImmuneMelee: '',
     UnitKeyword.kSpeeder: 2,
   },
+  waves: const [
+    Wave.wT47AirspeederUnitExpansion,
+  ],
 );

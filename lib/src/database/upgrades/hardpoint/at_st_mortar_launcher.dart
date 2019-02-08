@@ -8,4 +8,7 @@ final atStMortarLauncher = Upgrade(
   restrictedToUnit: [Units.atSt.toRef()],
   weapon: Weapons.atStMortarLauncher,
   points: 10,
+  waves: const [
+    Wave.wAtStUnitExpansion,
+  ],
 );

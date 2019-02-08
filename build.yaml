@@ -12,12 +12,14 @@ builders:
     auto_apply: root_package
     required_inputs:
       - lib/src/model/**.g.dart
-  _aggregate_keywords:
-    import: tool/src/aggregate_keywords.dart
+  _aggregate_constants:
+    import: tool/src/aggregate_constants.dart
     builder_factories:
-      - aggregateKeywords
+      - aggregateConstants
     build_extensions:
       "src/model/keyword.dart":
         - "keyword.aggregate.dart"
+      "src/model/wave.dart":
+        - "wave.aggregate.dart"
     build_to: source
     auto_apply: root_package

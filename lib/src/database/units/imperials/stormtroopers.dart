@@ -27,4 +27,8 @@ final stormtroopers = Unit(
   keywords: const {
     UnitKeyword.kPrecise: 1,
   },
+  waves: const [
+    Wave.wCore,
+    Wave.wStormtroopersUnitExpansion,
+  ],
 );

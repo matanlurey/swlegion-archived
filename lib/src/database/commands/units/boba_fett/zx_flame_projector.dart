@@ -11,4 +11,7 @@ final zxFlameProjector = CommandCard(
     During Boba Fett's activation he gains the following weapon:
   ''',
   weapon: Weapons.zxFlameProjector,
+  waves: const [
+    Wave.wBobaFettOperativeExpansion,
+  ],
 );

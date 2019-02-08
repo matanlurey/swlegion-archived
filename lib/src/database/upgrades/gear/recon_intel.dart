@@ -11,4 +11,10 @@ final reconIntel = Upgrade(
   keywordsForUnit: const {
     UnitKeyword.kScout: 1,
   },
+  waves: const [
+    Wave.wImperialSpecialistsPersonnelExpansion,
+    Wave.wRebelSpecialistsPersonnelExpansion,
+    Wave.wImperialRoyalGuardsUnitExpansion,
+    Wave.wWookieWarriorsUnitExpansion,
+  ],
 );

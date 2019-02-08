@@ -9,4 +9,7 @@ final flametrooper = Upgrade(
   addsMiniature: true,
   weapon: Weapons.flamethrower,
   points: 20,
+  waves: const [
+    Wave.wSnowtroopersUnitExpansion,
+  ],
 );

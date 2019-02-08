@@ -7,4 +7,7 @@ final anEntireLegion = CommandCard(
   unitsActivated: 'Each Eligible Unit',
   unitsRequired: [Units.emperorPalpatine],
   pips: 3,
+  waves: const [
+    Wave.wEmperorPalpatineCommanderExpansion,
+  ],
 );

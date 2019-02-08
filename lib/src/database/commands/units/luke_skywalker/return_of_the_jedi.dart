@@ -10,4 +10,7 @@ final returnOfTheJedi = CommandCard(
   text: r'''
     When Luke Skywalker is issued an order, he gains 1 dodge token. When Luke Skywalker activates, each friendly trooper at range 1-3 of him may remove 1 suppression token.
   ''',
+  waves: const [
+    Wave.wCore,
+  ],
 );

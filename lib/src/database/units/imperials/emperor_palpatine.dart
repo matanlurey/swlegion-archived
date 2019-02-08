@@ -31,4 +31,7 @@ final emperorPalpatine = Unit(
     UnitKeyword.kImmunePierce: '',
     UnitKeyword.kMasterOfTheForce: 2,
   },
+  waves: const [
+    Wave.wEmperorPalpatineCommanderExpansion,
+  ],
 );

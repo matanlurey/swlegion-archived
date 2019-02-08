@@ -12,4 +12,7 @@ final protonChargeSaboteur = Upgrade(
   addsMiniature: true,
   weapon: Weapons.protonCharge,
   points: 26,
+  waves: const [
+    Wave.wRebelCommandosUnitExpansion,
+  ],
 );

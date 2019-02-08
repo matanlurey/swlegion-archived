@@ -9,4 +9,7 @@ final covertObservation = CommandCard(
   text: r'''
     Look at up to 2 random command cards from an opponent's hand.
   ''',
+  waves: const [
+    Wave.wImperialSpecialistsPersonnelExpansion,
+  ],
 );

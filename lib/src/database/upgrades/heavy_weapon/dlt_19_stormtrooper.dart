@@ -9,4 +9,8 @@ final dlt19Stormtrooper = Upgrade(
   addsMiniature: true,
   weapon: Weapons.dlt19HHeavyBlasterRifle,
   points: 24,
+  waves: const [
+    Wave.wCore,
+    Wave.wStormtroopersUnitExpansion,
+  ],
 );

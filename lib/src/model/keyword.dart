@@ -6,42 +6,8 @@ import 'reference.dart';
 
 part 'keyword.aggregate.dart';
 
-class _Serializer<T extends Indexable<T>> implements PrimitiveSerializer<T> {
-  final BuiltMap<String, T> _index;
-
-  const _Serializer(
-    this._index, {
-    @required this.types,
-    @required this.wireName,
-  });
-
-  @override
-  Object serialize(
-    Serializers serializers,
-    T object, {
-    FullType specifiedType = FullType.unspecified,
-  }) {
-    return object.id;
-  }
-
-  @override
-  T deserialize(
-    Serializers serializers,
-    Object serialized, {
-    FullType specifiedType = FullType.unspecified,
-  }) {
-    return _index[serialized as String];
-  }
-
-  @override
-  final List<Type> types;
-
-  @override
-  final String wireName;
-}
-
 class UnitKeyword implements Indexable<UnitKeyword> {
-  static final Serializer<UnitKeyword> serializer = _Serializer(
+  static final Serializer<UnitKeyword> serializer = IndexableSerializer(
     _index,
     wireName: 'unitKeyword',
     types: const [UnitKeyword],
@@ -693,7 +659,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
 }
 
 class WeaponKeyword implements Indexable<WeaponKeyword> {
-  static final Serializer<WeaponKeyword> serializer = _Serializer(
+  static final Serializer<WeaponKeyword> serializer = IndexableSerializer(
     _index,
     wireName: 'weaponKeyword',
     types: const [WeaponKeyword],
@@ -982,7 +948,7 @@ class WeaponKeyword implements Indexable<WeaponKeyword> {
 }
 
 class UpgradeKeyword implements Indexable<UpgradeKeyword> {
-  static final Serializer<UpgradeKeyword> serializer = _Serializer(
+  static final Serializer<UpgradeKeyword> serializer = IndexableSerializer(
     _index,
     wireName: 'upgradeKeyword',
     types: const [UpgradeKeyword],

@@ -31,4 +31,7 @@ final rebelCommandos = Unit(
     UnitKeyword.kScout: 2,
     UnitKeyword.kSharpshooter: 1,
   },
+  waves: const [
+    Wave.wRebelCommandosUnitExpansion,
+  ],
 );

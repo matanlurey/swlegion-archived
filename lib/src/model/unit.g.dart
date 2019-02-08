@@ -60,6 +60,10 @@ class _$UnitSerializer implements StructuredSerializer<Unit> {
       serializers.serialize(object.keywords,
           specifiedType: const FullType(BuiltMap,
               const [const FullType(UnitKeyword), const FullType(Object)])),
+      'waves',
+      serializers.serialize(object.waves,
+          specifiedType:
+              const FullType(BuiltList, const [const FullType(Wave)])),
     ];
     if (object.subTitle != null) {
       result
@@ -194,6 +198,12 @@ class _$UnitSerializer implements StructuredSerializer<Unit> {
                 const FullType(Object)
               ])) as BuiltMap);
           break;
+        case 'waves':
+          result.waves.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(BuiltList, const [const FullType(Wave)]))
+              as BuiltList);
+          break;
       }
     }
 
@@ -242,6 +252,8 @@ class _$Unit extends Unit {
   final BuiltSet<Weapon> weapons;
   @override
   final BuiltMap<UnitKeyword, Object> keywords;
+  @override
+  final BuiltList<Wave> waves;
 
   factory _$Unit([void updates(UnitBuilder b)]) =>
       (new UnitBuilder()..update(updates)).build();
@@ -266,7 +278,8 @@ class _$Unit extends Unit {
       this.speed,
       this.upgrades,
       this.weapons,
-      this.keywords})
+      this.keywords,
+      this.waves})
       : super._() {
     if (id == null) {
       throw new BuiltValueNullFieldError('Unit', 'id');
@@ -313,6 +326,9 @@ class _$Unit extends Unit {
     if (keywords == null) {
       throw new BuiltValueNullFieldError('Unit', 'keywords');
     }
+    if (waves == null) {
+      throw new BuiltValueNullFieldError('Unit', 'waves');
+    }
   }
 
   @override
@@ -355,7 +371,8 @@ class _$Unit extends Unit {
           ..add('speed', speed)
           ..add('upgrades', upgrades)
           ..add('weapons', weapons)
-          ..add('keywords', keywords))
+          ..add('keywords', keywords)
+          ..add('waves', waves))
         .toString();
   }
 }
@@ -450,6 +467,10 @@ class UnitBuilder implements Builder<Unit, UnitBuilder> {
   set keywords(MapBuilder<UnitKeyword, Object> keywords) =>
       _$this._keywords = keywords;
 
+  ListBuilder<Wave> _waves;
+  ListBuilder<Wave> get waves => _$this._waves ??= new ListBuilder<Wave>();
+  set waves(ListBuilder<Wave> waves) => _$this._waves = waves;
+
   UnitBuilder();
 
   UnitBuilder get _$this {
@@ -474,6 +495,7 @@ class UnitBuilder implements Builder<Unit, UnitBuilder> {
       _upgrades = _$v.upgrades?.toBuilder();
       _weapons = _$v.weapons?.toBuilder();
       _keywords = _$v.keywords?.toBuilder();
+      _waves = _$v.waves?.toBuilder();
       _$v = null;
     }
     return this;
@@ -517,7 +539,8 @@ class UnitBuilder implements Builder<Unit, UnitBuilder> {
               speed: speed,
               upgrades: upgrades.build(),
               weapons: weapons.build(),
-              keywords: keywords.build());
+              keywords: keywords.build(),
+              waves: waves.build());
     } catch (_) {
       String _$failedField;
       try {
@@ -527,6 +550,8 @@ class UnitBuilder implements Builder<Unit, UnitBuilder> {
         weapons.build();
         _$failedField = 'keywords';
         keywords.build();
+        _$failedField = 'waves';
+        waves.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'Unit', _$failedField, e.toString());

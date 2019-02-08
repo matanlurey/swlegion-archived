@@ -10,4 +10,7 @@ final sonOfSkywalker = CommandCard(
   text: r'''
     After Luke Skywalker performs his first attack he may perform 1 additional attack.
   ''',
+  waves: const [
+    Wave.wCore,
+  ],
 );

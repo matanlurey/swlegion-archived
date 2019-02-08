@@ -32,4 +32,7 @@ final hanSolo = Unit(
     UnitKeyword.kSharpshooter: 1,
     UnitKeyword.kUncannyLuck: 3,
   },
+  waves: const [
+    Wave.wHanSoloCommanderExpansion,
+  ],
 );

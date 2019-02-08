@@ -8,4 +8,7 @@ final rebelTrooper = Upgrade(
   addsMiniature: true,
   restrictedToUnit: [Units.rebelTroopers.toRef()],
   points: 10,
+  waves: const [
+    Wave.wRebelTroopersUnitExpansion,
+  ],
 );

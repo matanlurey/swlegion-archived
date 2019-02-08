@@ -8,4 +8,7 @@ final standingOrders = CommandCard(
   text: r'''
     At the end of the Command Phase, return this card to your hand.
   ''',
+  waves: const [
+    Wave.wCore,
+  ],
 );

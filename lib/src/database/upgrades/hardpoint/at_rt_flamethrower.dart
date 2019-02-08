@@ -8,4 +8,8 @@ final atRtFlamethrower = Upgrade(
   restrictedToUnit: [Units.atRt.toRef()],
   weapon: Weapons.atRtFlamethrower,
   points: 25,
+  waves: const [
+    Wave.wCore,
+    Wave.wAtRtUnitExpansion,
+  ],
 );

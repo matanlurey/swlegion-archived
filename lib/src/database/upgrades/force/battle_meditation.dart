@@ -8,4 +8,7 @@ final battleMeditation = Upgrade(
   text: r'''
     When you issue orders, one of those orders can be issued to any friendly unit on the battlefield.
   ''',
+  waves: const [
+    Wave.wCore,
+  ],
 );

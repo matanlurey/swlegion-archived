@@ -28,4 +28,7 @@ final fleetTroopers = Unit(
   keywords: const {
     UnitKeyword.kReady: 1,
   },
+  waves: const [
+    Wave.wFleetTroopersUnitExpansion,
+  ],
 );
