@@ -1,3 +1,7 @@
+## 0.4.0
+
+Large set of breaking changes and new content!
+
 ### Catalog
 
 - Renamed `database.dart` to `catalog.dart`. See the top-level field `catalog`.
