@@ -44,13 +44,15 @@ import 'database/weapons/upgrades/flamethrower.dart' as _i;
 import 'database/weapons/upgrades/grenades/concussion_grenades.dart' as _i;
 import 'database/weapons/upgrades/grenades/fragmentation_grenades.dart' as _i;
 import 'database/weapons/upgrades/grenades/impact_grenades.dart' as _i;
-import 'database/weapons/upgrades/hardpoints/88_twin_light_blaster_cannon.dart' as _i;
+import 'database/weapons/upgrades/hardpoints/88_twin_light_blaster_cannon.dart'
+    as _i;
 import 'database/weapons/upgrades/hardpoints/at_rt_flamethrower.dart' as _i;
 import 'database/weapons/upgrades/hardpoints/at_rt_laser_cannon.dart' as _i;
 import 'database/weapons/upgrades/hardpoints/at_rt_rotary_blaster.dart' as _i;
 import 'database/weapons/upgrades/hardpoints/at_st_mortar_launcher.dart' as _i;
 import 'database/weapons/upgrades/hardpoints/ax_108_ground_buzzer.dart' as _i;
-import 'database/weapons/upgrades/hardpoints/dw_3_concussion_grenade_launcher.dart' as _i;
+import 'database/weapons/upgrades/hardpoints/dw_3_concussion_grenade_launcher.dart'
+    as _i;
 import 'database/weapons/upgrades/hardpoints/mo_dk_power_harpoon.dart' as _i;
 import 'database/weapons/upgrades/hh_12_rocket_launcher.dart' as _i;
 import 'database/weapons/upgrades/mpl_57_barrage_launcher.dart' as _i;
@@ -131,6 +133,7 @@ final aggregate = [
   _i.veersE11BlasterRifle,
   _i.wristRocket
 ];
+
 class Weapons {
   const Weapons._();
   static final $1dot4FDLaserCannon = _i.$1dot4FDLaserCannon;
@@ -199,4 +202,3 @@ class Weapons {
   static final veersE11BlasterRifle = _i.veersE11BlasterRifle;
   static final wristRocket = _i.wristRocket;
 }
-

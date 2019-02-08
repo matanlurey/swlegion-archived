@@ -129,6 +129,7 @@ final aggregate = [
   _i.hunter,
   _i.tenacity
 ];
+
 class Upgrades {
   const Upgrades._();
   static final a180PistolConfig = _i.a180PistolConfig;
@@ -196,4 +197,3 @@ class Upgrades {
   static final hunter = _i.hunter;
   static final tenacity = _i.tenacity;
 }
-
