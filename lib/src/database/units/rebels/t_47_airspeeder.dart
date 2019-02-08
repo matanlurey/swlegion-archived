@@ -22,7 +22,7 @@ final t47Airspeeder = Unit(
   weapons: [
     Weapons.ap11DoubleLaserCannon,
   ],
-  keywords: const {
+  keywords: {
     UnitKeyword.kArmor: '',
     UnitKeyword.kArsenal: 2,
     UnitKeyword.kCover: 1,

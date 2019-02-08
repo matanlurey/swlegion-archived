@@ -23,7 +23,7 @@ final imperialRoyalGuards = Unit(
     Weapons.forcePike,
     Weapons.ec17HoldOutBlaster,
   ],
-  keywords: const {
+  keywords: {
     UnitKeyword.kCharge: '',
     UnitKeyword.kDisciplined: 2,
     UnitKeyword.kGuardian: 2,

@@ -25,7 +25,7 @@ final fleetTroopers = Unit(
     Weapons.unarmed,
     Weapons.dh17BlasterPistol,
   ],
-  keywords: const {
+  keywords: {
     UnitKeyword.kReady: 1,
   },
   waves: const [

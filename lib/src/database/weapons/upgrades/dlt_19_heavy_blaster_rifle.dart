@@ -7,7 +7,7 @@ final dlt19HHeavyBlasterRifle = Weapon(
   },
   minRange: 1,
   maxRange: 4,
-  keywords: const {
+  keywords: {
     WeaponKeyword.kImpact: 1,
   },
 );

@@ -7,7 +7,7 @@ final coordinatedBombardment = Weapon(
   },
   minRange: 4,
   maxRange: null,
-  keywords: const {
+  keywords: {
     WeaponKeyword.kImmuneDeflect: '',
   },
 );

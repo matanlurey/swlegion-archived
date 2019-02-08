@@ -24,7 +24,7 @@ final snowtroopers = Unit(
     Weapons.unarmed,
     Weapons.e11BlasterRifle,
   ],
-  keywords: const {
+  keywords: {
     UnitKeyword.kSteady: '',
   },
   waves: const [

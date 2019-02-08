@@ -26,7 +26,7 @@ final scoutTroopersStrikeTeam = Unit(
     Weapons.unarmed,
     Weapons.ec17HoldOutBlaster,
   ],
-  keywords: const {
+  keywords: {
     UnitKeyword.kHeavyWeaponTeam: '',
     UnitKeyword.kLowProfile: '',
     UnitKeyword.kScout: 1,

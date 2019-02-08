@@ -9,7 +9,7 @@ final $88TwinLightBlasterCannon = Weapon(
   },
   minRange: 1,
   maxRange: 3,
-  keywords: const {
+  keywords: {
     WeaponKeyword.kFixedFront: '',
     WeaponKeyword.kImpact: 1,
   },

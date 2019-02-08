@@ -24,7 +24,7 @@ final rebelOfficer = Unit(
     Weapons.unarmed,
     Weapons.officersA180BlasterPistol,
   ],
-  keywords: const {
+  keywords: {
     UnitKeyword.kTakeCover: 1,
     UnitKeyword.kInspire: 1,
     UnitKeyword.kSharpshooter: 1,

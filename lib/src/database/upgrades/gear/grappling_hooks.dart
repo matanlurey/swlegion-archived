@@ -8,7 +8,7 @@ final grapplingHooks = Upgrade(
   text: r'''
     You gain Expert Climber.
   ''',
-  keywordsForUnit: const {
+  keywordsForUnit: {
     UnitKeyword.kExpertClimber: '',
   },
   waves: const [

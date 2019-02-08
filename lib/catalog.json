@@ -3,7 +3,7 @@
     {
       "id": "coordinated-fire",
       "name": "Coordinated Fire",
-      "text": "    After a friendly corps unit spends an aim token, another friendly unit at range 1-2 may gain 1 aim token.\n  ",
+      "text": "After a friendly corps unit spends an aim token, another friendly unit at range 1-2 may gain 1 aim token.",
       "pips": 3,
       "activated": "3 Corps Unit",
       "units_required": [],
@@ -15,7 +15,7 @@
     {
       "id": "covert-observation",
       "name": "Covert Observation",
-      "text": "    Look at up to 2 random command cards from an opponent's hand.\n  ",
+      "text": "Look at up to 2 random command cards from an opponent's hand.",
       "pips": 1,
       "activated": "1 Special Forces or Operative Unit",
       "units_required": [],
@@ -27,7 +27,7 @@
     {
       "id": "pinned-down",
       "name": "Pinned Down",
-      "text": "    After a friendly supoport or heavy unit performs an attack against a unit with a faceup order token, shuffle that token back into its order pool.\n  ",
+      "text": "After a friendly supoport or heavy unit performs an attack against a unit with a faceup order token, shuffle that token back into its order pool.",
       "pips": 2,
       "activated": "2 Support or Heavy Units",
       "units_required": [],
@@ -39,7 +39,7 @@
     {
       "id": "covering-fire",
       "name": "Covering Fire",
-      "text": "    After a friendly corps unit performs a ranged attack, another friendly unit at range 1-2 may gain 1 dodge token.\n  ",
+      "text": "After a friendly corps unit performs a ranged attack, another friendly unit at range 1-2 may gain 1 dodge token.",
       "pips": 3,
       "activated": "3 Corps Unit",
       "units_required": [],
@@ -51,7 +51,7 @@
     {
       "id": "sabotaged-communications",
       "name": "Sabotaged Communications",
-      "text": "    Your opponent must issue orders to 1 fewer unit than is indicated on their command card, to a minimum of 1.\n  ",
+      "text": "Your opponent must issue orders to 1 fewer unit than is indicated on their command card, to a minimum of 1.",
       "pips": 1,
       "activated": "1 Special Forces or Operative Unit",
       "units_required": [],
@@ -63,7 +63,7 @@
     {
       "id": "turning-the-tide",
       "name": "Turning The Tide",
-      "text": "    Each friendly support and heavy unit gains INSPIRE 2.\n  ",
+      "text": "Each friendly support and heavy unit gains INSPIRE 2.",
       "pips": 2,
       "activated": "2 Support or Heavy Units",
       "units_required": [],
@@ -108,7 +108,7 @@
     {
       "id": "standing-orders",
       "name": "Standing Orders",
-      "text": "    At the end of the Command Phase, return this card to your hand.\n  ",
+      "text": "At the end of the Command Phase, return this card to your hand.",
       "pips": 4,
       "activated": "1 Unit",
       "units_required": [],
@@ -119,7 +119,7 @@
     {
       "id": "whipcord-launcher",
       "name": "Whipcord Launcher",
-      "text": "    Boba Fett can perform moves while engaged with a unit that has 1 or more immobilized tokens. During Boba Fett's activation he gains:\n    Choose an enemy trooper unit at range 1 and in line of sight. It gains 2 immobilized tokens and 2 suppression tokens.\n  ",
+      "text": "Boba Fett can perform moves while engaged with a unit that has 1 or more immobilized tokens. During Boba Fett's activation he gains:\n    Choose an enemy trooper unit at range 1 and in line of sight. It gains 2 immobilized tokens and 2 suppression tokens.",
       "pips": 1,
       "activated": "Boba Fett",
       "units_required": [
@@ -134,7 +134,7 @@
     {
       "id": "z-6-jetplack-launcher",
       "name": "Z-6 Jetpack Launcher",
-      "text": "    During Boba Fett's activation he gains the following weapon:\n  ",
+      "text": "During Boba Fett's activation he gains the following weapon:",
       "pips": 3,
       "activated": "Boba Fett",
       "units_required": [
@@ -162,7 +162,7 @@
     {
       "id": "zx-flame-projector",
       "name": "ZX Flame Projector",
-      "text": "    During Boba Fett's activation he gains the following weapon:\n  ",
+      "text": "During Boba Fett's activation he gains the following weapon:",
       "pips": 2,
       "activated": "Boba Fett",
       "units_required": [
@@ -190,7 +190,7 @@
     {
       "id": "brains-and-brawn",
       "name": "Brains and Brawn",
-      "text": "    When Leia Organa is performing a ranged attack, if Chewbacca is not engaged and has line of sight to and is range 1-3 of the defender, add one\n    of his ranged weapons to the attack pool.\n  ",
+      "text": "When Leia Organa is performing a ranged attack, if Chewbacca is not engaged and has line of sight to and is range 1-3 of the defender, add one\n    of his ranged weapons to the attack pool.",
       "pips": 2,
       "activated": "Chewbacca",
       "units_required": [
@@ -208,7 +208,7 @@
     {
       "id": "common-cause",
       "name": "Common Cause",
-      "text": "    After Chewbacca activates, if Luke Skywalker has a faceup order token, he may activate.\n    After Luke Skywalker activates, if Chewbacca has a faceup order token, he may activate.\n  ",
+      "text": "After Chewbacca activates, if Luke Skywalker has a faceup order token, he may activate.\n    After Luke Skywalker activates, if Chewbacca has a faceup order token, he may activate.",
       "pips": 1,
       "activated": "Chewbacca",
       "units_required": [
@@ -226,7 +226,7 @@
     {
       "id": "notorious-scoundrels",
       "name": "Notorious Scoundrels",
-      "text": "    Choose one of Han Solo's command cards in your discard pile. Return that card to your hand.\n  ",
+      "text": "Choose one of Han Solo's command cards in your discard pile. Return that card to your hand.",
       "pips": 3,
       "activated": "Chewbacca",
       "units_required": [
@@ -244,7 +244,7 @@
     {
       "id": "implacable",
       "name": "Implacable",
-      "text": "    At the end of Darth Vader’s first activation, he may suffer 1 wound to shuffle his order token into the order pool. During Darth Vader's second activation, he performs 1 fewer action.\n  ",
+      "text": "At the end of Darth Vader’s first activation, he may suffer 1 wound to shuffle his order token into the order pool. During Darth Vader's second activation, he performs 1 fewer action.",
       "pips": 1,
       "activated": "Darth Vader",
       "units_required": [
@@ -259,7 +259,7 @@
     {
       "id": "master-of-evil",
       "name": "Master of Evil",
-      "text": "    When Darth Vader is issued an order, he gains 1 dodge token. When Darth Vader activates, each enemy trooper at range 1-2 of him gains 3 suppression tokens.\n  ",
+      "text": "When Darth Vader is issued an order, he gains 1 dodge token. When Darth Vader activates, each enemy trooper at range 1-2 of him gains 3 suppression tokens.",
       "pips": 3,
       "activated": "2 Units & Darth Vader",
       "units_required": [
@@ -274,7 +274,7 @@
     {
       "id": "new-ways-to-motivate-them",
       "name": "New Ways To Motivate Them",
-      "text": "    When a friendly non-Darth Vader trooper unit with a faceup order token activates, it may suffer 1 wound to perform 1 free action.\n  ",
+      "text": "When a friendly non-Darth Vader trooper unit with a faceup order token activates, it may suffer 1 wound to perform 1 free action.",
       "pips": 2,
       "activated": "2 Troopers",
       "units_required": [
@@ -304,7 +304,7 @@
     {
       "id": "and-now-you-will-die",
       "name": "And Now... You Will Die",
-      "text": "    During Emperor Palpatine's activation, he may suffer 1 wound and gain 1 suppression token to perform an attack. He may do this any number of times. After Emperor Palpatine performs an attack, the defender gains 1 immobilized token.\n  ",
+      "text": "During Emperor Palpatine's activation, he may suffer 1 wound and gain 1 suppression token to perform an attack. He may do this any number of times. After Emperor Palpatine performs an attack, the defender gains 1 immobilized token.",
       "pips": 1,
       "activated": "Emperor Palpatine",
       "units_required": [
@@ -319,7 +319,7 @@
     {
       "id": "give-in-to-your-anger",
       "name": "Give in to Your Anger",
-      "text": "    Before an opponent would activate their first unit, you may choose an enemy trooper unit.\n    If you do, your opponent must activate that unit instread.\n    Assign it an order token from its order pool unless it has a faceup order token.\n    At the end of that units's activation, if it did not perform an attack, it gains 4 suppression tokens.\n  ",
+      "text": "Before an opponent would activate their first unit, you may choose an enemy trooper unit.\n    If you do, your opponent must activate that unit instread.\n    Assign it an order token from its order pool unless it has a faceup order token.\n    At the end of that units's activation, if it did not perform an attack, it gains 4 suppression tokens.",
       "pips": 2,
       "activated": "Emperor Palpatine",
       "units_required": [
@@ -334,7 +334,7 @@
     {
       "id": "evasive-maneuvers",
       "name": "Evasive Maneuvers",
-      "text": "    When a friendly vehicle unit is issued an order it gains 1 dodge token.\n    Friendly vehicle units can spend dodge tokens to cancel critical hit results.\n  ",
+      "text": "When a friendly vehicle unit is issued an order it gains 1 dodge token.\n    Friendly vehicle units can spend dodge tokens to cancel critical hit results.",
       "pips": 2,
       "activated": "2 Vehicles",
       "units_required": [
@@ -349,7 +349,7 @@
     {
       "id": "imperial-discpline",
       "name": "Imperial Discipline",
-      "text": "    When a friendly unit is issued an order it may recover.\n  ",
+      "text": "When a friendly unit is issued an order it may recover.",
       "pips": 3,
       "activated": "General Veers & 2 Units",
       "units_required": [
@@ -364,7 +364,7 @@
     {
       "id": "maximum-firepower",
       "name": "Maximum Firepower",
-      "text": "    At the end of General Veers’ activation, he may perform an attacking using the following weapon.\n  ",
+      "text": "At the end of General Veers’ activation, he may perform an attacking using the following weapon.",
       "pips": 1,
       "activated": "General Veers",
       "units_required": [
@@ -391,7 +391,7 @@
     {
       "id": "change-of-plans",
       "name": "Change of Plans",
-      "text": "    When this card is revealed, you may discard it to return an opponent's command card to their hand. If you do, return to the Select Command Card step. That opponent cannot select the command card that was returned to their hand.\n  ",
+      "text": "When this card is revealed, you may discard it to return an opponent's command card to their hand. If you do, return to the Select Command Card step. That opponent cannot select the command card that was returned to their hand.",
       "pips": 3,
       "activated": "Han Solo and 2 Troopers",
       "units_required": [
@@ -406,7 +406,7 @@
     {
       "id": "reckless-diversion",
       "name": "Reckless Diversion",
-      "text": "    When an enemy unit performs an attack, it must attack a trooper unit that has a faceup order token, if available.\n  ",
+      "text": "When an enemy unit performs an attack, it must attack a trooper unit that has a faceup order token, if available.",
       "pips": 2,
       "activated": "Han Solo and 1 Trooper",
       "units_required": [
@@ -421,7 +421,7 @@
     {
       "id": "sorry-about-the-mess",
       "name": "Sorry About The Mess",
-      "text": "    While building a command hand, treat this card as though it has 1 pip. When Han Solo is issued an order, he gains 1 aim token and 1 dodge token.\n  ",
+      "text": "While building a command hand, treat this card as though it has 1 pip. When Han Solo is issued an order, he gains 1 aim token and 1 dodge token.",
       "pips": 0,
       "activated": "Han Solo",
       "units_required": [
@@ -436,7 +436,7 @@
     {
       "id": "complete-the-mission",
       "name": "Complete The Mission",
-      "text": "    Jyn Erso gains LOW PROFILE.\n    When a friendly trooper unit is issued an order, it may gain 1 suppression token.\n    When a friendly trooper unit with a faceup order token activates, during its activation, it cannot become panicked or suppressed.\n    At the end of that unit's activation, it may remove 1 suppression token.\n  ",
+      "text": "Jyn Erso gains LOW PROFILE.\n    When a friendly trooper unit is issued an order, it may gain 1 suppression token.\n    When a friendly trooper unit with a faceup order token activates, during its activation, it cannot become panicked or suppressed.\n    At the end of that unit's activation, it may remove 1 suppression token.",
       "pips": 3,
       "activated": "3 Troopers",
       "units_required": [
@@ -451,7 +451,7 @@
     {
       "id": "rebellious",
       "name": "Rebellious",
-      "text": "    Jyn Erso gains CHARGE.\n    Once per round, when an enemy unit at range 1-2 and in line of sight of Jyn Erso activates, before it performs its Rally Step, Jyn Erso may gain 1 suppression token to either perform an attack against that unit or perform a free move action.\n  ",
+      "text": "Jyn Erso gains CHARGE.\n    Once per round, when an enemy unit at range 1-2 and in line of sight of Jyn Erso activates, before it performs its Rally Step, Jyn Erso may gain 1 suppression token to either perform an attack against that unit or perform a free move action.",
       "pips": 1,
       "activated": "Jyn Erso",
       "units_required": [
@@ -466,7 +466,7 @@
     {
       "id": "trust-goes-both-ways",
       "name": "Trust Goes Both Ways",
-      "text": "    Jyn Erso gains INSPIRE 2.\n    When Jyn Erso issues an order to another friendly trooper, that unit gainst TEARMWORK: JYN ERSO.\n  ",
+      "text": "Jyn Erso gains INSPIRE 2.\n    When Jyn Erso issues an order to another friendly trooper, that unit gainst TEARMWORK: JYN ERSO.",
       "pips": 2,
       "activated": "Jyn Erso & 1 Trooper",
       "units_required": [
@@ -481,7 +481,7 @@
     {
       "id": "coordinated-bombardment",
       "name": "Coordinated Bombardment",
-      "text": "    At the end of Leia Organa's activation, you may perform up to 3 attacks against different enemy units using the following weapon.\n  ",
+      "text": "At the end of Leia Organa's activation, you may perform up to 3 attacks against different enemy units using the following weapon.",
       "pips": 1,
       "activated": "Leia Organa",
       "units_required": [
@@ -507,7 +507,7 @@
     {
       "id": "no-time-for-sorrows",
       "name": "No Time for Sorrows",
-      "text": "    When a friendly Trooper unit is issued an order, it may perform a speed-1 move.\n  ",
+      "text": "When a friendly Trooper unit is issued an order, it may perform a speed-1 move.",
       "pips": 2,
       "activated": "2 Troopers",
       "units_required": [
@@ -522,7 +522,7 @@
     {
       "id": "somebody-has-to-save-our-skins",
       "name": "Somebody Has to Save Our Skins",
-      "text": "    After Leia Organa's activation, you may choose a friendly unit at range 1-2 with a faceup order token and activate it.\n  ",
+      "text": "After Leia Organa's activation, you may choose a friendly unit at range 1-2 with a faceup order token and activate it.",
       "pips": 3,
       "activated": "Leia Organa & 2 Troopers",
       "units_required": [
@@ -537,7 +537,7 @@
     {
       "id": "my-ally-is-the-force",
       "name": "My Ally is the Force",
-      "text": "    When a friendly trooper unit is issued an order, it gains 1 dodge token.\n  ",
+      "text": "When a friendly trooper unit is issued an order, it gains 1 dodge token.",
       "pips": 2,
       "activated": "2 Troopers",
       "units_required": [
@@ -552,7 +552,7 @@
     {
       "id": "return-of-the-jedi",
       "name": "Return of the Jedi",
-      "text": "    When Luke Skywalker is issued an order, he gains 1 dodge token. When Luke Skywalker activates, each friendly trooper at range 1-3 of him may remove 1 suppression token.\n  ",
+      "text": "When Luke Skywalker is issued an order, he gains 1 dodge token. When Luke Skywalker activates, each friendly trooper at range 1-3 of him may remove 1 suppression token.",
       "pips": 3,
       "activated": "2 Units & Luke Skywalker",
       "units_required": [
@@ -567,7 +567,7 @@
     {
       "id": "son-of-skywalker",
       "name": "Son of Skywalker",
-      "text": "    After Luke Skywalker performs his first attack he may perform 1 additional attack.\n  ",
+      "text": "After Luke Skywalker performs his first attack he may perform 1 additional attack.",
       "pips": 1,
       "activated": "Luke Skywalker",
       "units_required": [
@@ -2088,7 +2088,7 @@
       "restricted_to_unit": [],
       "id": "commanding-presence",
       "name": "Commanding Presence",
-      "text": "    When issuing orders, you can issue orders at range 4.\n  ",
+      "text": "When issuing orders, you can issue orders at range 4.",
       "type": "command",
       "waves": [
         "SWL10",
@@ -2107,7 +2107,7 @@
       "restricted_to_unit": [],
       "id": "esteemed-leader",
       "name": "Esteemed Leader",
-      "text": "    While you are defending, each friendly corps trooper unit at range 1 gains Guardian 1.\n  ",
+      "text": "While you are defending, each friendly corps trooper unit at range 1 gains Guardian 1.",
       "type": "command",
       "waves": [
         "SWL10",
@@ -2125,7 +2125,7 @@
       "restricted_to_unit": [],
       "id": "improvised-orders",
       "name": "Improvised Orders",
-      "text": "    After an order token is drawn from a friendly order pool, draw a second order token from that pool.\n    Choose 1 to use and shuffle the other back into the order pool. If you do, during the End Phase, ready this card.\n  ",
+      "text": "After an order token is drawn from a friendly order pool, draw a second order token from that pool.\n    Choose 1 to use and shuffle the other back into the order pool. If you do, during the End Phase, ready this card.",
       "type": "command",
       "waves": [
         "SWL22",
@@ -2142,7 +2142,7 @@
       "restricted_to_unit": [],
       "id": "comms-jammer",
       "name": "Comms Jammer",
-      "text": "    Enemy units at range 1 cannot be issued orders, unless they are issuing an order to themselves.\n  ",
+      "text": "Enemy units at range 1 cannot be issued orders, unless they are issuing an order to themselves.",
       "type": "comms",
       "waves": [
         "SWL06",
@@ -2161,7 +2161,7 @@
       "restricted_to_unit": [],
       "id": "comms-relay",
       "name": "Comms Relay",
-      "text": "    When you would be issued an order, you may choose a friendly unit at range 1-2.\n    Issue an order to the chosen unit instead.\n  ",
+      "text": "When you would be issued an order, you may choose a friendly unit at range 1-2.\n    Issue an order to the chosen unit instead.",
       "type": "comms",
       "waves": [
         "SWL26",
@@ -2178,7 +2178,7 @@
       "restricted_to_unit": [],
       "id": "hq-uplink",
       "name": "HQ Uplink",
-      "text": "    During the Issue Orders step of the Command Phase, issue an order to yourself.\n  ",
+      "text": "During the Issue Orders step of the Command Phase, issue an order to yourself.",
       "type": "comms",
       "waves": [
         "SWL19",
@@ -2197,7 +2197,7 @@
       "restricted_to_unit": [],
       "id": "long-range-comlink",
       "name": "Long-Range Comlink",
-      "text": "    During the command phase, you may be issued orders as though you are in range of the nominated commander.\n  ",
+      "text": "During the command phase, you may be issued orders as though you are in range of the nominated commander.",
       "type": "comms",
       "waves": [
         "SWL01",
@@ -2217,7 +2217,7 @@
       "restricted_to_unit": [],
       "id": "anger",
       "name": "Anger",
-      "text": "    After you suffer 1 or more wounds, gain 1 aim token.\n  ",
+      "text": "After you suffer 1 or more wounds, gain 1 aim token.",
       "type": "force",
       "waves": [
         "SWL22"
@@ -2234,7 +2234,7 @@
       "restricted_to_unit": [],
       "id": "battle-meditation",
       "name": "Battle Meditation",
-      "text": "    When you issue orders, one of those orders can be issued to any friendly unit on the battlefield.\n  ",
+      "text": "When you issue orders, one of those orders can be issued to any friendly unit on the battlefield.",
       "type": "force",
       "waves": [
         "SWL01"
@@ -2250,7 +2250,7 @@
       "restricted_to_unit": [],
       "id": "force-choke",
       "name": "Force Choke",
-      "text": "    Choose an enemy trooper mini at range 1 that is not a commander.\n    It suffers 1 wound.\n  ",
+      "text": "Choose an enemy trooper mini at range 1 that is not a commander.\n    It suffers 1 wound.",
       "type": "force",
       "waves": [
         "SWL01",
@@ -2268,7 +2268,7 @@
       "restricted_to_unit": [],
       "id": "force-push",
       "name": "Force Push",
-      "text": "    Action: Choose an enemy trooper unit at range 1.\n    Perform a speed-1 move with that unit, even if it is engaged.\n  ",
+      "text": "Action: Choose an enemy trooper unit at range 1.\n    Perform a speed-1 move with that unit, even if it is engaged.",
       "type": "force",
       "waves": [
         "SWL01"
@@ -2284,7 +2284,7 @@
       "restricted_to_unit": [],
       "id": "force-reflexes",
       "name": "Force Reflexes",
-      "text": "    Action: Gain 1 dodge token.\n  ",
+      "text": "Action: Gain 1 dodge token.",
       "type": "force",
       "waves": [
         "SWL01"
@@ -2300,7 +2300,7 @@
       "restricted_to_unit": [],
       "id": "jedi-mind-trick",
       "name": "Jedi Mind Trick",
-      "text": "    Action: Choose an enemy trooper at range 1-2.\n    It gains 2 suppression tokens.\n  ",
+      "text": "Action: Choose an enemy trooper at range 1-2.\n    It gains 2 suppression tokens.",
       "type": "force",
       "waves": [
         "SWL01"
@@ -2317,7 +2317,7 @@
       "restricted_to_unit": [],
       "id": "saber-throw",
       "name": "Saber Throw",
-      "text": "    Action: Choose 1 of your melee weapons.\n    Perform a ranged attack with that weapon against an enemy at range 1-2, using half of that weapon's dice, rounded up.\n    This is treated as an attack action.\n  ",
+      "text": "Action: Choose 1 of your melee weapons.\n    Perform a ranged attack with that weapon against an enemy at range 1-2, using half of that weapon's dice, rounded up.\n    This is treated as an attack action.",
       "type": "force",
       "waves": [
         "SWL01"
@@ -2333,7 +2333,7 @@
       "restricted_to_unit": [],
       "id": "emergency-stims",
       "name": "Emergency Stims",
-      "text": "    During an attack, when you would suffer wounds, prevent up to 2 wounds and place an equal number of wound tokens on this card instead.\n    If you do, at the end of your next activation, discard each token on this card and suffer wounds equal to the number of tokens discarded.\n  ",
+      "text": "During an attack, when you would suffer wounds, prevent up to 2 wounds and place an equal number of wound tokens on this card instead.\n    If you do, at the end of your next activation, discard each token on this card and suffer wounds equal to the number of tokens discarded.",
       "type": "gear",
       "waves": [
         "SWL18",
@@ -2356,7 +2356,7 @@
       "restricted_to_unit": [],
       "id": "environmental-gear",
       "name": "Environmental Gear",
-      "text": "    You gain Unhindered.\n  ",
+      "text": "You gain Unhindered.",
       "type": "gear",
       "waves": [
         "SWL10",
@@ -2375,7 +2375,7 @@
       "restricted_to_unit": [],
       "id": "grappling-hooks",
       "name": "Grappling Hooks",
-      "text": "    You gain Expert Climber.\n  ",
+      "text": "You gain Expert Climber.",
       "type": "gear",
       "waves": [
         "SWL13",
@@ -2396,7 +2396,7 @@
       "restricted_to_unit": [],
       "id": "recon-intel",
       "name": "Recon Intel",
-      "text": "    You gain Scout 1.\n  ",
+      "text": "You gain Scout 1.",
       "type": "gear",
       "waves": [
         "SWL27",
@@ -2417,7 +2417,7 @@
       "restricted_to_unit": [],
       "id": "targeting-scopes",
       "name": "Targeting Scopes",
-      "text": "    You gain Precise 1.\n  ",
+      "text": "You gain Precise 1.",
       "type": "gear",
       "waves": [
         "SWL01"
@@ -2433,7 +2433,7 @@
       "restricted_to_unit": [],
       "id": "barrage-generator",
       "name": "Barrage Generator",
-      "text": "    While performing a ranged attack with a weapon that has FIXED, add 2 white attack dice and apply SUPPRESSIVE to your attack pool.\n  ",
+      "text": "While performing a ranged attack with a weapon that has FIXED, add 2 white attack dice and apply SUPPRESSIVE to your attack pool.",
       "type": "generator",
       "waves": [
         "SWL15",
@@ -2450,7 +2450,7 @@
       "restricted_to_unit": [],
       "id": "overcharged-generator",
       "name": "Overcharged Generator",
-      "text": "    While performing a ranged attack with a weapon that has FIXED, add 1 black attack dice and apply IMPACT 1 to your attack pool.\n  ",
+      "text": "While performing a ranged attack with a weapon that has FIXED, add 1 black attack dice and apply IMPACT 1 to your attack pool.",
       "type": "generator",
       "waves": [
         "SWL15",
@@ -3308,7 +3308,7 @@
       "restricted_to_unit": [],
       "id": "2-1-b-medical-droid",
       "name": "2-1B Medical Droid",
-      "text": "    Adds a 1 2-1B medical droid mini.\n  ",
+      "text": "Adds a 1 2-1B medical droid mini.",
       "type": "personnel",
       "waves": [
         "SWL26"
@@ -3348,7 +3348,7 @@
       "restricted_to_unit": [],
       "id": "fx-9-medical-droid",
       "name": "FX-9 Medical Droid",
-      "text": "    Adds a 1 FX-9 medical droid mini.\n  ",
+      "text": "Adds a 1 FX-9 medical droid mini.",
       "type": "personnel",
       "waves": [
         "SWL27"
@@ -3367,7 +3367,7 @@
       "restricted_to_unit": [],
       "id": "imperial-comms-technician",
       "name": "Imperial Comms Technician",
-      "text": "    Adds a 1 Imperial comms technician mini.\n    You gain a comms upgrade icon.\n    You must equip a comms upgrade card.\n  ",
+      "text": "Adds a 1 Imperial comms technician mini.\n    You gain a comms upgrade icon.\n    You must equip a comms upgrade card.",
       "type": "personnel",
       "waves": [
         "SWL27"
@@ -3387,7 +3387,7 @@
       "restricted_to_unit": [],
       "id": "r-4-astromech-droid",
       "name": "R4 Astromech Droid",
-      "text": "    Adds a 1 R4 atromech droid mini.\n  ",
+      "text": "Adds a 1 R4 atromech droid mini.",
       "type": "personnel",
       "waves": [
         "SWL27"
@@ -3407,7 +3407,7 @@
       "restricted_to_unit": [],
       "id": "r-5-astromech-droid",
       "name": "R5 Astromech Droid",
-      "text": "    Adds a 1 R5 atromech droid mini.\n  ",
+      "text": "Adds a 1 R5 atromech droid mini.",
       "type": "personnel",
       "waves": [
         "SWL26"
@@ -3426,7 +3426,7 @@
       "restricted_to_unit": [],
       "id": "rebel-comms-technician",
       "name": "Rebel Comms Technician",
-      "text": "    Adds a 1 Rebel comms technician mini.\n    You gain a comms upgrade icon.\n    You must equip a comms upgrade card.\n  ",
+      "text": "Adds a 1 Rebel comms technician mini.\n    You gain a comms upgrade icon.\n    You must equip a comms upgrade card.",
       "type": "personnel",
       "waves": [
         "SWL26"
@@ -3526,7 +3526,7 @@
       "restricted_to_unit": [],
       "id": "general-weiss",
       "name": "General Weiss",
-      "text": "    Exhaust Action: Until the end of your activation, you gain Arsenal 2.\n  ",
+      "text": "Exhaust Action: Until the end of your activation, you gain Arsenal 2.",
       "type": "pilot",
       "waves": [
         "SWL08"
@@ -3546,7 +3546,7 @@
       "restricted_to_unit": [],
       "id": "wedge-antilles",
       "name": "Wedge Antilles",
-      "text": "    Exhaust Action: Until the end of your activation, you gain Full Pivot.\n  ",
+      "text": "Exhaust Action: Until the end of your activation, you gain Full Pivot.",
       "type": "pilot",
       "waves": [
         "SWL09"
@@ -3564,7 +3564,7 @@
       "restricted_to_unit": [],
       "id": "duck-and-cover",
       "name": "Duck and Cover",
-      "text": "    When defending from a Ranged Attack, during the Apply Cover and Dodge tokens step, you may assign yourself 1 Suppression token.\n  ",
+      "text": "When defending from a Ranged Attack, during the Apply Cover and Dodge tokens step, you may assign yourself 1 Suppression token.",
       "type": "training",
       "waves": [
         "SWL18",
@@ -3586,7 +3586,7 @@
       "restricted_to_unit": [],
       "id": "hunter",
       "name": "Hunter",
-      "text": "    While attacking a wounded trooper unit, during the Roll Attack Dice step, you may gain 1 aim token.\n  ",
+      "text": "While attacking a wounded trooper unit, during the Roll Attack Dice step, you may gain 1 aim token.",
       "type": "training",
       "waves": [
         "SWL18",
@@ -3605,7 +3605,7 @@
       "restricted_to_unit": [],
       "id": "tenacity",
       "name": "Tenacity",
-      "text": "    While performing a melee attack, if you are wounded or if one or more of your minis have been defeated, add 1 red attack die to your attack pool.\n  ",
+      "text": "While performing a melee attack, if you are wounded or if one or more of your minis have been defeated, add 1 red attack die to your attack pool.",
       "type": "training",
       "waves": [
         "SWL23",

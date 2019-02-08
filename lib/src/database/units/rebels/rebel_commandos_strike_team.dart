@@ -27,7 +27,7 @@ final rebelCommandosStrikeTeam = Unit(
     Weapons.unarmed,
     Weapons.a280BlasterRifle,
   ],
-  keywords: const {
+  keywords: {
     UnitKeyword.kHeavyWeaponTeam: '',
     UnitKeyword.kLowProfile: '',
     UnitKeyword.kScout: 2,

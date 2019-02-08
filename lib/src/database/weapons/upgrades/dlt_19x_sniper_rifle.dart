@@ -6,7 +6,7 @@ final dlt19XSniperRifle = Weapon(
     AttackDice.black: 2,
   },
   minRange: 1,
-  keywords: const {
+  keywords: {
     WeaponKeyword.kHighVelocity: '',
     WeaponKeyword.kPierce: 1,
   },

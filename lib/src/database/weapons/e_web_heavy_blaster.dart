@@ -9,7 +9,7 @@ final eWebHeavyBlaster = Weapon(
     AttackDice.black: 2,
     AttackDice.white: 2,
   },
-  keywords: const {
+  keywords: {
     WeaponKeyword.kCumbersome: '',
     WeaponKeyword.kFixedFront: '',
   },

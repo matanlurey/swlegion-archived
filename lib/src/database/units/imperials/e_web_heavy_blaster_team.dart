@@ -23,7 +23,7 @@ final eWebHeavyBlasterTeam = Unit(
     Weapons.e11BlasterRifle,
     Weapons.eWebHeavyBlaster,
   ],
-  keywords: const {
+  keywords: {
     UnitKeyword.kFullPivot: '',
     UnitKeyword.kPlodding: '',
     UnitKeyword.kReposition: '',

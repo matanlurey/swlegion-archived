@@ -24,7 +24,7 @@ final wookieWarriors = Unit(
     Weapons.ryykBlade,
     Weapons.kashyyykPistol,
   ],
-  keywords: const {
+  keywords: {
     UnitKeyword.kCharge: '',
     UnitKeyword.kExpertClimber: '',
     UnitKeyword.kIndomitable: '',

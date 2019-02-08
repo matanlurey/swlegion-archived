@@ -9,7 +9,7 @@ final sonicCharge = Weapon(
   minRange: 1,
   maxRange: 1,
   areaOfEffect: 1,
-  keywords: const {
+  keywords: {
     WeaponKeyword.kArm: 1,
     WeaponKeyword.kDetonate: 1,
     WeaponKeyword.kBlast: '',

@@ -24,7 +24,7 @@ final lukeSkywalker = Unit(
   weapons: [
     Weapons.anakinsLightsaber,
   ],
-  keywords: const {
+  keywords: {
     UnitKeyword.kJump: 1,
     UnitKeyword.kCharge: '',
     UnitKeyword.kDeflect: '',

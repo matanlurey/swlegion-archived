@@ -21,7 +21,7 @@ final $74ZSpeederBikes = Unit(
     Weapons.ec17HoldOutBlaster,
     Weapons.ax20BlasterCannon,
   ],
-  keywords: const {
+  keywords: {
     UnitKeyword.kCover: 1,
     UnitKeyword.kSpeeder: 1,
   },

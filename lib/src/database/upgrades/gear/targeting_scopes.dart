@@ -8,7 +8,7 @@ final targetingScopes = Upgrade(
   text: r'''
     You gain Precise 1.
   ''',
-  keywordsForUnit: const {
+  keywordsForUnit: {
     UnitKeyword.kPrecise: 1,
   },
   waves: const [

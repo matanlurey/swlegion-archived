@@ -24,7 +24,7 @@ final generalVeers = Unit(
     Weapons.combatExpertise,
     Weapons.veersE11BlasterRifle,
   ],
-  keywords: const {
+  keywords: {
     UnitKeyword.kSpotter: 2,
     UnitKeyword.kInspire: 1,
     UnitKeyword.kPrecise: 1,

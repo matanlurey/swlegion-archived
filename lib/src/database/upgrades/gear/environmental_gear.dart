@@ -8,7 +8,7 @@ final environmentalGear = Upgrade(
   text: r'''
     You gain Unhindered.
   ''',
-  keywordsForUnit: const {
+  keywordsForUnit: {
     UnitKeyword.kUnhindered: '',
   },
   waves: const [

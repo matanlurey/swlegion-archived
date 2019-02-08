@@ -7,7 +7,7 @@ final mpl57IonLauncher = Weapon(
   },
   minRange: 1,
   maxRange: 3,
-  keywords: const {
+  keywords: {
     WeaponKeyword.kIon: 1,
     WeaponKeyword.kImpact: 1,
   },

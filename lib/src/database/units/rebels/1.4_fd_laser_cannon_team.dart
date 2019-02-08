@@ -24,7 +24,7 @@ final $1dot4FDLaserCannonTeam = Unit(
     Weapons.dh17BlasterPistol.scale(2),
     Weapons.$1dot4FDLaserCannon,
   ],
-  keywords: const {
+  keywords: {
     UnitKeyword.kFullPivot: '',
     UnitKeyword.kSentinel: '',
     UnitKeyword.kStationary: '',

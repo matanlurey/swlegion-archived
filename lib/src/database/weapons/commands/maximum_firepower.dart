@@ -7,7 +7,7 @@ final maximumFirepower = Weapon(
   },
   minRange: 4,
   maxRange: null,
-  keywords: const {
+  keywords: {
     WeaponKeyword.kImpact: 2,
     WeaponKeyword.kImmuneDeflect: '',
   },

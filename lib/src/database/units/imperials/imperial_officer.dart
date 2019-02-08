@@ -24,7 +24,7 @@ final imperialOfficer = Unit(
     Weapons.unarmed,
     Weapons.officersRK3BlasterPistol,
   ],
-  keywords: const {
+  keywords: {
     UnitKeyword.kSpotter: 1,
     UnitKeyword.kInspire: 1,
     UnitKeyword.kSharpshooter: 1,

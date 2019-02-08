@@ -8,7 +8,7 @@ final bowcaster = Weapon(
     AttackDice.white: 1,
     AttackDice.red: 1,
   },
-  keywords: const {
+  keywords: {
     WeaponKeyword.kImpact: 1,
     WeaponKeyword.kPierce: 1,
   },

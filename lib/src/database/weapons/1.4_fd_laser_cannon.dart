@@ -7,7 +7,7 @@ final $1dot4FDLaserCannon = Weapon(
   dice: {
     AttackDice.black: 5,
   },
-  keywords: const {
+  keywords: {
     WeaponKeyword.kFixedFront: '',
     WeaponKeyword.kImpact: 2,
   },
