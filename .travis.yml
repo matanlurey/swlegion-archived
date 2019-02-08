@@ -11,5 +11,6 @@ branches:
     - master
 
 cache:
- directories:
-   - $HOME/.pub-cache
+  directories:
+    - $HOME/.pub-cache
+    - .dart_tool/build

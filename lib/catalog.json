@@ -466,7 +466,7 @@
     {
       "id": "trust-goes-both-ways",
       "name": "Trust Goes Both Ways",
-      "text": "Jyn Erso gains INSPIRE 2.\n    When Jyn Erso issues an order to another friendly trooper, that unit gainst TEARMWORK: JYN ERSO.",
+      "text": "Jyn Erso gains INSPIRE 2.\n    When Jyn Erso issues an order to another friendly trooper, that unit gains TEARMWORK: JYN ERSO.",
       "pips": 2,
       "activated": "Jyn Erso & 1 Trooper",
       "units_required": [
