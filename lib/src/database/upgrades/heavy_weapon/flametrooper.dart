@@ -1,14 +1,12 @@
+import 'package:swlegion/catalog.dart';
 import 'package:swlegion/swlegion.dart';
-
-import '../../units/snowtroopers.dart' as unit;
-import '../../weapons/upgrades/flamethrower.dart' as weapon;
 
 final flametrooper = Upgrade(
   id: 'flametrooper',
   name: 'Flametrooper',
   type: UpgradeSlot.heavyWeapon,
-  restrictedToUnit: [unit.snowtroopers.toRef()],
+  restrictedToUnit: [Units.snowtroopers.toRef()],
   addsMiniature: true,
-  weapon: weapon.flamethrower,
+  weapon: Weapons.flamethrower,
   points: 20,
 );

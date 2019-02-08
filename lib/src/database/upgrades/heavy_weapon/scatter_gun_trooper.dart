@@ -1,14 +1,12 @@
+import 'package:swlegion/catalog.dart';
 import 'package:swlegion/swlegion.dart';
-
-import '../../units/fleet_troopers.dart' as unit;
-import '../../weapons/upgrades/scatter_gun.dart' as weapon;
 
 final scatterGunTrooper = Upgrade(
   id: 'scatter-gun-trooper',
   name: 'Scatter Gun Trooper',
   type: UpgradeSlot.heavyWeapon,
-  restrictedToUnit: [unit.fleetTroopers.toRef()],
+  restrictedToUnit: [Units.fleetTroopers.toRef()],
   addsMiniature: true,
-  weapon: weapon.scatterGun,
+  weapon: Weapons.scatterGun,
   points: 23,
 );
