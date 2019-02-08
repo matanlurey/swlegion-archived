@@ -26,7 +26,7 @@ final jynErso = Unit(
   weapons: [
     Weapons.collapsibleTonfa,
   ],
-  keywords: const {
+  keywords: {
     UnitKeyword.kQuickThinking: '',
     UnitKeyword.kDangerSense: 4,
     UnitKeyword.kInfiltrate: '',

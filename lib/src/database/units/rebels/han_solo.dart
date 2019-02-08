@@ -26,7 +26,7 @@ final hanSolo = Unit(
     Weapons.brawl,
     Weapons.hansDl44BlasterPistol,
   ],
-  keywords: const {
+  keywords: {
     UnitKeyword.kLowProfile: '',
     UnitKeyword.kGunslinger: '',
     UnitKeyword.kSharpshooter: 1,

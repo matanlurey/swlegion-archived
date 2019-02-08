@@ -1,3 +1,7 @@
+### Catalog
+
+- Store `text` fields with trailing and preceding whitespace removed.
+
 ## 0.4.0
 
 Large set of breaking changes and new content!

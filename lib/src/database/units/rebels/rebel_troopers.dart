@@ -24,7 +24,7 @@ final rebelTroopers = Unit(
     Weapons.unarmed,
     Weapons.a280BlasterRifle,
   ],
-  keywords: const {
+  keywords: {
     UnitKeyword.kNimble: '',
   },
   waves: const [

@@ -22,7 +22,7 @@ final atRt = Unit(
     Weapons.grapplingClaws,
     Weapons.a300BlasterRifle,
   ],
-  keywords: const {
+  keywords: {
     UnitKeyword.kCover: 1,
     UnitKeyword.kSpeeder: 1,
   },

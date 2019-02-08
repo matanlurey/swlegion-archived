@@ -21,7 +21,7 @@ final darthVader = Unit(
   weapons: [
     Weapons.vadersLightsaber,
   ],
-  keywords: const {
+  keywords: {
     UnitKeyword.kDeflect: '',
     UnitKeyword.kImmunePierce: '',
     UnitKeyword.kMasterOfTheForce: 1,

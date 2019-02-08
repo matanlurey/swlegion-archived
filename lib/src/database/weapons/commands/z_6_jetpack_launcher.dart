@@ -7,7 +7,7 @@ final z6JetpackLauncher = Weapon(
   },
   minRange: 3,
   maxRange: 4,
-  keywords: const {
+  keywords: {
     WeaponKeyword.kBlast: '',
     WeaponKeyword.kImpact: 2,
   },

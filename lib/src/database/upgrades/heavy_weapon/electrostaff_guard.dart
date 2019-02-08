@@ -9,7 +9,7 @@ final electrostaffGuard = Upgrade(
   addsMiniature: true,
   weapon: Weapons.electrostaff,
   points: 25,
-  keywords: const {
+  keywords: {
     UpgradeKeyword.kSidearmMelee: '',
   },
   waves: const [

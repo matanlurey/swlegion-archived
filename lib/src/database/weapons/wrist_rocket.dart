@@ -7,7 +7,7 @@ final wristRocket = Weapon(
   dice: {
     AttackDice.black: 2,
   },
-  keywords: const {
+  keywords: {
     WeaponKeyword.kImpact: 1,
   },
 );

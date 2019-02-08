@@ -26,7 +26,7 @@ final rebelCommandos = Unit(
     Weapons.unarmed,
     Weapons.a280BlasterRifle,
   ],
-  keywords: const {
+  keywords: {
     UnitKeyword.kLowProfile: '',
     UnitKeyword.kScout: 2,
     UnitKeyword.kSharpshooter: 1,

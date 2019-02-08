@@ -1,6 +1,6 @@
 part of 'keyword.dart';
 
-const _$unitKeywordValues = const [
+final _$unitKeywordValues = [
   UnitKeyword.kArmor,
   UnitKeyword.kArsenal,
   UnitKeyword.kBounty,
@@ -50,7 +50,7 @@ const _$unitKeywordValues = const [
   UnitKeyword.kWeakPointRear,
 ];
 
-const _$weaponKeywordValues = const [
+final _$weaponKeywordValues = [
   WeaponKeyword.kArm,
   WeaponKeyword.kBlast,
   WeaponKeyword.kCumbersome,
@@ -67,7 +67,7 @@ const _$weaponKeywordValues = const [
   WeaponKeyword.kTowCable,
 ];
 
-const _$upgradeKeywordValues = const [
+final _$upgradeKeywordValues = [
   UpgradeKeyword.kLeader,
   UpgradeKeyword.kNonCombatant,
   UpgradeKeyword.kReconfigure,

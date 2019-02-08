@@ -5,7 +5,7 @@ final vadersLightsaber = Weapon.melee(
   dice: {
     AttackDice.red: 6,
   },
-  keywords: const {
+  keywords: {
     WeaponKeyword.kImpact: 3,
     WeaponKeyword.kPierce: 3,
   },

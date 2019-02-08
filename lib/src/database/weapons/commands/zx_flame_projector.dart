@@ -7,7 +7,7 @@ final zxFlameProjector = Weapon(
   },
   minRange: 0,
   maxRange: 1,
-  keywords: const {
+  keywords: {
     WeaponKeyword.kBlast: '',
     WeaponKeyword.kSpray: '',
   },

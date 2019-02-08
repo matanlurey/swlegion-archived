@@ -34,7 +34,7 @@ abstract class CommandCard extends Object
         ..name = name
         ..pips = pips
         ..unitsActivated = unitsActivated
-        ..text = text
+        ..text = text.trim()
         ..factionRequired = factionRequired
         ..unitsRequired.addAll(unitsRequired.map((u) => u.toRef()))
         ..waves.addAll(waves)

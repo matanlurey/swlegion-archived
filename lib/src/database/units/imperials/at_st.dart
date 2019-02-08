@@ -23,7 +23,7 @@ final atSt = Unit(
     Weapons.fenceCuttingBlades,
     Weapons.ms4TwinBlasterCannon,
   ],
-  keywords: const {
+  keywords: {
     UnitKeyword.kArmor: '',
     UnitKeyword.kArsenal: 2,
     UnitKeyword.kWeakPointRear: '',

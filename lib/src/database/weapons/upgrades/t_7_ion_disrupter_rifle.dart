@@ -8,7 +8,7 @@ final t7IonDisrupterRifle = Weapon(
   },
   minRange: 1,
   maxRange: 2,
-  keywords: const {
+  keywords: {
     WeaponKeyword.kIon: 1,
     WeaponKeyword.kImpact: 1,
   },

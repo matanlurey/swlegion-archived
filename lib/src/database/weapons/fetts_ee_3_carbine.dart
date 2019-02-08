@@ -7,7 +7,7 @@ final fettsEE3Carbine = Weapon(
   dice: {
     AttackDice.black: 2,
   },
-  keywords: const {
+  keywords: {
     WeaponKeyword.kPierce: 1,
   },
 );

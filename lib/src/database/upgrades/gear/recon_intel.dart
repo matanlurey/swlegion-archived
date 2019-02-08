@@ -8,7 +8,7 @@ final reconIntel = Upgrade(
   text: r'''
     You gain Scout 1.
   ''',
-  keywordsForUnit: const {
+  keywordsForUnit: {
     UnitKeyword.kScout: 1,
   },
   waves: const [

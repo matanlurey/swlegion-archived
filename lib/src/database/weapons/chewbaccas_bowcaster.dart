@@ -8,7 +8,7 @@ final chewbaccasBowcaster = Weapon(
     AttackDice.white: 2,
     AttackDice.red: 2,
   },
-  keywords: const {
+  keywords: {
     WeaponKeyword.kImpact: 1,
     WeaponKeyword.kPierce: 1,
   },

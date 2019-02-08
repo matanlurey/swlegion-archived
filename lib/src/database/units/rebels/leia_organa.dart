@@ -25,7 +25,7 @@ final leiaOrgana = Unit(
     Weapons.martialArts,
     Weapons.leiasDefenderSportingBlaster,
   ],
-  keywords: const {
+  keywords: {
     UnitKeyword.kTakeCover: 2,
     UnitKeyword.kInspire: 2,
     UnitKeyword.kNimble: '',

@@ -53,7 +53,7 @@ abstract class Upgrade extends Object
         ..restrictedToType = restrictedToType
         ..id = id
         ..name = name
-        ..text = text
+        ..text = text.trim()
         ..type = type
         ..waves.addAll(waves)
         ..weapon = weapon?.toBuilder());

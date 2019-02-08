@@ -8,7 +8,7 @@ final mpl57BarrageLauncher = Weapon(
   },
   minRange: 1,
   maxRange: 3,
-  keywords: const {
+  keywords: {
     WeaponKeyword.kBlast: '',
     WeaponKeyword.kImpact: 2,
   },

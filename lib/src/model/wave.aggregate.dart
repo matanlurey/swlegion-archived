@@ -1,6 +1,6 @@
 part of 'wave.dart';
 
-const _$waveValues = const [
+final _$waveValues = [
   Wave.wCore,
   Wave.wDicePack,
   Wave.wMovementToolsAndRangeRulerPack,

@@ -26,7 +26,7 @@ final bobaFett = Unit(
     Weapons.fettsEE3Carbine,
     Weapons.wristRocket,
   ],
-  keywords: const {
+  keywords: {
     UnitKeyword.kJump: 2,
     UnitKeyword.kArsenal: 2,
     UnitKeyword.kBounty: '',

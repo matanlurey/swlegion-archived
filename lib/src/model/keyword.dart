@@ -6,6 +6,8 @@ import 'reference.dart';
 
 part 'keyword.aggregate.dart';
 
+String _normalize(String text) => text.trim();
+
 class UnitKeyword implements Indexable<UnitKeyword> {
   static final Serializer<UnitKeyword> serializer = IndexableSerializer(
     _index,
@@ -21,7 +23,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ),
   );
 
-  static const kArmor = UnitKeyword._(
+  static final kArmor = UnitKeyword._(
     id: 'armor',
     displayName: 'Armor',
     description: r'''
@@ -40,7 +42,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kArsenal = UnitKeyword._(
+  static final kArsenal = UnitKeyword._(
     id: 'arsenal',
     displayName: 'Arsenal X',
     description: r'''
@@ -59,7 +61,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     isNumeric: true,
   );
 
-  static const kBounty = UnitKeyword._(
+  static final kBounty = UnitKeyword._(
     id: 'bounty',
     displayName: 'Bounty',
     description: r'''
@@ -80,7 +82,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kCharge = UnitKeyword._(
+  static final kCharge = UnitKeyword._(
     id: 'charge',
     displayName: 'Charge',
     description: r'''
@@ -90,7 +92,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kClimbingVehicle = UnitKeyword._(
+  static final kClimbingVehicle = UnitKeyword._(
     id: 'climbing-vehicle',
     displayName: 'Climbing Vehicle',
     description: r'''
@@ -99,7 +101,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kCover = UnitKeyword._(
+  static final kCover = UnitKeyword._(
     id: 'cover',
     displayName: 'Cover X',
     description: r'''
@@ -110,7 +112,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     isNumeric: true,
   );
 
-  static const kDangerSense = UnitKeyword._(
+  static final kDangerSense = UnitKeyword._(
     id: 'danger-sense',
     displayName: 'Danger Sense X',
     description: r'''
@@ -120,7 +122,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     isNumeric: true,
   );
 
-  static const kDeflect = UnitKeyword._(
+  static final kDeflect = UnitKeyword._(
     id: 'deflect',
     displayName: 'Deflect',
     description: r'''
@@ -131,7 +133,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kDisciplined = UnitKeyword._(
+  static final kDisciplined = UnitKeyword._(
     id: 'discplined',
     displayName: 'Disciplined X',
     description: r'''
@@ -141,7 +143,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     isNumeric: true,
   );
 
-  static const kEnrage = UnitKeyword._(
+  static final kEnrage = UnitKeyword._(
     id: 'enrange',
     displayName: 'Enrage X',
     description: r'''
@@ -152,7 +154,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     isNumeric: true,
   );
 
-  static const kEntourage = UnitKeyword._(
+  static final kEntourage = UnitKeyword._(
     id: 'entourage',
     displayName: 'Entourage: Unit Name',
     description: r'''
@@ -187,7 +189,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kExpertClimber = UnitKeyword._(
+  static final kExpertClimber = UnitKeyword._(
     id: 'expert-climber',
     displayName: 'Expert Climber',
     description: r'''
@@ -198,7 +200,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kFullPivot = UnitKeyword._(
+  static final kFullPivot = UnitKeyword._(
     id: 'full-pivot',
     displayName: 'Full Pivot',
     description: r'''
@@ -207,7 +209,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kGuardian = UnitKeyword._(
+  static final kGuardian = UnitKeyword._(
     id: 'guardian',
     displayName: 'Guardian',
     description: r'''
@@ -224,7 +226,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     isNumeric: true,
   );
 
-  static const kGunslinger = UnitKeyword._(
+  static final kGunslinger = UnitKeyword._(
     id: 'gunslinger',
     displayName: 'Gunslinger',
     description: r'''
@@ -236,7 +238,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kHeavyWeaponTeam = UnitKeyword._(
+  static final kHeavyWeaponTeam = UnitKeyword._(
     id: 'heavy-weapon-team',
     displayName: 'Heavy Weapon Team',
     description: r'''
@@ -250,7 +252,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kImmuneBlast = UnitKeyword._(
+  static final kImmuneBlast = UnitKeyword._(
     id: 'immune-blast',
     displayName: 'Immune: Blast',
     description: r'''
@@ -259,7 +261,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kImmuneMelee = UnitKeyword._(
+  static final kImmuneMelee = UnitKeyword._(
     id: 'immune-melee',
     displayName: 'Immune: Melee',
     description: r'''
@@ -268,7 +270,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kImmunePierce = UnitKeyword._(
+  static final kImmunePierce = UnitKeyword._(
     id: 'immune-pierce',
     displayName: 'Immune: Pierce',
     description: r'''
@@ -282,7 +284,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kImpervious = UnitKeyword._(
+  static final kImpervious = UnitKeyword._(
     id: 'impervious',
     displayName: 'Impervious',
     description: r'''
@@ -299,7 +301,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kIndomitable = UnitKeyword._(
+  static final kIndomitable = UnitKeyword._(
     id: 'indomitable',
     displayName: 'Indomitable',
     description: r'''
@@ -309,7 +311,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kInfiltrate = UnitKeyword._(
+  static final kInfiltrate = UnitKeyword._(
     id: 'infiltrate',
     displayName: 'Infilitrate',
     description: r'''
@@ -317,7 +319,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kInspire = UnitKeyword._(
+  static final kInspire = UnitKeyword._(
     id: 'inspire',
     displayName: 'Inspire',
     description: r'''
@@ -330,7 +332,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     isNumeric: true,
   );
 
-  static const kJump = UnitKeyword._(
+  static final kJump = UnitKeyword._(
     id: 'jump',
     displayName: 'Jump X',
     description: r'''
@@ -351,7 +353,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     isNumeric: true,
   );
 
-  static const kLeader = UnitKeyword._(
+  static final kLeader = UnitKeyword._(
     id: 'leader',
     displayName: 'leader',
     description: r'''
@@ -359,7 +361,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kLowProfile = UnitKeyword._(
+  static final kLowProfile = UnitKeyword._(
     id: 'low-profile',
     displayName: 'Low Profile',
     description: r'''
@@ -368,7 +370,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kMasterOfTheForce = UnitKeyword._(
+  static final kMasterOfTheForce = UnitKeyword._(
     id: 'master-of-the-force',
     displayName: 'Master of the Force',
     description: r'''
@@ -379,7 +381,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     isNumeric: true,
   );
 
-  static const kNimble = UnitKeyword._(
+  static final kNimble = UnitKeyword._(
     id: 'nimble',
     displayName: 'Nimble',
     description: r'''
@@ -388,7 +390,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kPlodding = UnitKeyword._(
+  static final kPlodding = UnitKeyword._(
     id: 'plodding',
     displayName: 'Plodding',
     description: r'''
@@ -398,7 +400,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kPrecise = UnitKeyword._(
+  static final kPrecise = UnitKeyword._(
     id: 'precise',
     displayName: 'Precise X',
     description: r'''
@@ -412,7 +414,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     isNumeric: true,
   );
 
-  static const kPullingTheStrings = UnitKeyword._(
+  static final kPullingTheStrings = UnitKeyword._(
     id: 'pulling-the-strings',
     displayName: 'Pulling the Strings',
     description: r'''
@@ -425,7 +427,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kQuickThinking = UnitKeyword._(
+  static final kQuickThinking = UnitKeyword._(
     id: 'quick-thinking',
     displayName: 'Quick Thinking',
     description: r'''
@@ -433,7 +435,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kReady = UnitKeyword._(
+  static final kReady = UnitKeyword._(
     id: 'ready',
     displayName: 'Ready',
     description: r'''
@@ -446,7 +448,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     isNumeric: true,
   );
 
-  static const kRelentless = UnitKeyword._(
+  static final kRelentless = UnitKeyword._(
     id: 'relentless',
     displayName: 'Relentless',
     description: r'''
@@ -455,7 +457,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kReposition = UnitKeyword._(
+  static final kReposition = UnitKeyword._(
     id: 'reposition',
     displayName: 'Reposition',
     description: r'''
@@ -471,7 +473,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kScout = UnitKeyword._(
+  static final kScout = UnitKeyword._(
     id: 'scout',
     displayName: 'Scout X',
     description: r'''
@@ -503,7 +505,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     isNumeric: true,
   );
 
-  static const kSentinel = UnitKeyword._(
+  static final kSentinel = UnitKeyword._(
     id: 'sentinel',
     displayName: 'Sentinel',
     description: r'''
@@ -513,7 +515,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kSharpshooter = UnitKeyword._(
+  static final kSharpshooter = UnitKeyword._(
     id: 'sharpshooter',
     displayName: 'Sharpshooter',
     description: r'''
@@ -523,7 +525,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     isNumeric: true,
   );
 
-  static const kSpeeder = UnitKeyword._(
+  static final kSpeeder = UnitKeyword._(
     id: 'speeder',
     displayName: 'Speeder',
     description: r'''
@@ -534,7 +536,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     isNumeric: true,
   );
 
-  static const kSpotter = UnitKeyword._(
+  static final kSpotter = UnitKeyword._(
     id: 'spotter',
     displayName: 'Spotter',
     description: r'''
@@ -550,7 +552,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     isNumeric: true,
   );
 
-  static const kStationary = UnitKeyword._(
+  static final kStationary = UnitKeyword._(
     id: 'stationary',
     displayName: 'Stationary',
     description: r'''
@@ -564,7 +566,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kSteady = UnitKeyword._(
+  static final kSteady = UnitKeyword._(
     id: 'steady',
     displayName: 'Steady',
     description: r'''
@@ -573,7 +575,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kTakeCover = UnitKeyword._(
+  static final kTakeCover = UnitKeyword._(
     id: 'take-cover',
     displayName: 'Take Cover X',
     description: r'''
@@ -586,7 +588,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     isNumeric: true,
   );
 
-  static const kTeamwork = UnitKeyword._(
+  static final kTeamwork = UnitKeyword._(
     id: 'teamwork',
     displayName: 'Teamwork',
     description: r'''
@@ -599,7 +601,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kUncannyLuck = UnitKeyword._(
+  static final kUncannyLuck = UnitKeyword._(
     id: 'uncanny-luck',
     displayName: 'Uncanny Luck',
     description: r'''
@@ -609,7 +611,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     isNumeric: true,
   );
 
-  static const kUnhindered = UnitKeyword._(
+  static final kUnhindered = UnitKeyword._(
     id: 'unhindererd',
     displayName: 'Unhindered',
     description: r'''
@@ -620,7 +622,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  static const kWeakPointRear = UnitKeyword._(
+  static final kWeakPointRear = UnitKeyword._(
     id: 'weak-point-rear',
     displayName: 'Weak Point X: Rear',
     description: r'''
@@ -644,15 +646,16 @@ class UnitKeyword implements Indexable<UnitKeyword> {
   /// For example `'Pierce 1'` + `'Pierce 1'` should result in `'Pierce 2'`.
   final bool isNumeric;
 
-  const UnitKeyword._({
+  UnitKeyword._({
     @required this.id,
     @required this.displayName,
-    @required this.description,
+    @required String description,
     this.isNumeric = false,
   })  : assert(id != null),
         assert(displayName != null),
         assert(description != null),
-        assert(isNumeric != null);
+        assert(isNumeric != null),
+        description = _normalize(description);
 
   @override
   toRef() => Reference(id);
@@ -673,7 +676,7 @@ class WeaponKeyword implements Indexable<WeaponKeyword> {
     ),
   );
 
-  static const kArm = WeaponKeyword._(
+  static final kArm = WeaponKeyword._(
     id: 'arm',
     displayName: 'Arm X: Charge Type',
     description: r'''
@@ -693,7 +696,7 @@ class WeaponKeyword implements Indexable<WeaponKeyword> {
     isNumeric: true,
   );
 
-  static const kBlast = WeaponKeyword._(
+  static final kBlast = WeaponKeyword._(
     id: 'blast',
     displayName: 'Blast',
     description: r'''
@@ -707,7 +710,7 @@ class WeaponKeyword implements Indexable<WeaponKeyword> {
     ''',
   );
 
-  static const kCumbersome = WeaponKeyword._(
+  static final kCumbersome = WeaponKeyword._(
     id: 'cumbersome',
     displayName: 'Cumbersome',
     description: r'''
@@ -729,7 +732,7 @@ class WeaponKeyword implements Indexable<WeaponKeyword> {
     ''',
   );
 
-  static const kDetonate = WeaponKeyword._(
+  static final kDetonate = WeaponKeyword._(
     id: 'detonate',
     displayName: 'Detonate X: Charge Type',
     description: r'''
@@ -764,7 +767,7 @@ class WeaponKeyword implements Indexable<WeaponKeyword> {
     isNumeric: true,
   );
 
-  static const kFixedFront = WeaponKeyword._(
+  static final kFixedFront = WeaponKeyword._(
     id: 'fixed',
     displayName: 'Fixed: Front',
     description: r'''
@@ -781,7 +784,7 @@ class WeaponKeyword implements Indexable<WeaponKeyword> {
     ''',
   );
 
-  static const kFixedRear = WeaponKeyword._(
+  static final kFixedRear = WeaponKeyword._(
     id: 'rear',
     displayName: 'Fixed: Rear',
     description: r'''
@@ -798,7 +801,7 @@ class WeaponKeyword implements Indexable<WeaponKeyword> {
     ''',
   );
 
-  static const kHighVelocity = WeaponKeyword._(
+  static final kHighVelocity = WeaponKeyword._(
     id: 'high-velocity',
     displayName: 'High Velocity',
     description: r'''
@@ -817,7 +820,7 @@ class WeaponKeyword implements Indexable<WeaponKeyword> {
     ''',
   );
 
-  static const kImpact = WeaponKeyword._(
+  static final kImpact = WeaponKeyword._(
     id: 'impact',
     displayName: 'Impact X',
     description: r'''
@@ -838,7 +841,7 @@ class WeaponKeyword implements Indexable<WeaponKeyword> {
     isNumeric: true,
   );
 
-  static const kImmuneDeflect = WeaponKeyword._(
+  static final kImmuneDeflect = WeaponKeyword._(
     id: 'immune-deflect',
     displayName: 'Immune: Deflect',
     description: r'''
@@ -848,7 +851,7 @@ class WeaponKeyword implements Indexable<WeaponKeyword> {
     ''',
   );
 
-  static const kIon = WeaponKeyword._(
+  static final kIon = WeaponKeyword._(
     id: 'ion',
     displayName: 'Ion X',
     description: r'''
@@ -860,7 +863,7 @@ class WeaponKeyword implements Indexable<WeaponKeyword> {
     isNumeric: true,
   );
 
-  static const kPierce = WeaponKeyword._(
+  static final kPierce = WeaponKeyword._(
     id: 'pierce',
     displayName: 'Pierce X',
     description: r'''
@@ -877,7 +880,7 @@ class WeaponKeyword implements Indexable<WeaponKeyword> {
     isNumeric: true,
   );
 
-  static const kSpray = WeaponKeyword._(
+  static final kSpray = WeaponKeyword._(
     id: 'spray',
     displayName: 'Spray',
     description: r'''
@@ -889,7 +892,7 @@ class WeaponKeyword implements Indexable<WeaponKeyword> {
     ''',
   );
 
-  static const kSuppressive = WeaponKeyword._(
+  static final kSuppressive = WeaponKeyword._(
     id: 'suppressive',
     displayName: 'Suppressive',
     description: r'''
@@ -909,7 +912,7 @@ class WeaponKeyword implements Indexable<WeaponKeyword> {
     ''',
   );
 
-  static const kTowCable = WeaponKeyword._(
+  static final kTowCable = WeaponKeyword._(
     id: 'tow-cable',
     displayName: 'Tow Cable',
     description: r'''
@@ -933,15 +936,16 @@ class WeaponKeyword implements Indexable<WeaponKeyword> {
   /// For example `'Pierce 1'` + `'Pierce 1'` should result in `'Pierce 2'`.
   final bool isNumeric;
 
-  const WeaponKeyword._({
+  WeaponKeyword._({
     @required this.id,
     @required this.displayName,
-    @required this.description,
+    @required String description,
     this.isNumeric = false,
   })  : assert(id != null),
         assert(displayName != null),
         assert(description != null),
-        assert(isNumeric != null);
+        assert(isNumeric != null),
+        description = _normalize(description);
 
   @override
   toRef() => Reference(id);
@@ -962,7 +966,7 @@ class UpgradeKeyword implements Indexable<UpgradeKeyword> {
     ),
   );
 
-  static const kLeader = UpgradeKeyword._(
+  static final kLeader = UpgradeKeyword._(
     id: 'leader',
     displayName: 'Leader',
     description: r'''
@@ -971,7 +975,7 @@ class UpgradeKeyword implements Indexable<UpgradeKeyword> {
     ''',
   );
 
-  static const kNonCombatant = UpgradeKeyword._(
+  static final kNonCombatant = UpgradeKeyword._(
     id: 'noncombatant',
     displayName: 'Noncombatant',
     description: r'''
@@ -981,7 +985,7 @@ class UpgradeKeyword implements Indexable<UpgradeKeyword> {
     ''',
   );
 
-  static const kReconfigure = UpgradeKeyword._(
+  static final kReconfigure = UpgradeKeyword._(
     id: 'reconfigure',
     displayName: 'Reconfigure',
     description: r'''
@@ -989,7 +993,7 @@ class UpgradeKeyword implements Indexable<UpgradeKeyword> {
     ''',
   );
 
-  static const kRepair = UpgradeKeyword._(
+  static final kRepair = UpgradeKeyword._(
     id: 'repair',
     displayName: 'Repair X: Capacity Y',
     description: r'''
@@ -1012,7 +1016,7 @@ class UpgradeKeyword implements Indexable<UpgradeKeyword> {
     isNumeric: true,
   );
 
-  static const kSidearmMelee = UpgradeKeyword._(
+  static final kSidearmMelee = UpgradeKeyword._(
     id: 'sidearm-melee',
     displayName: 'Sidearm: Melee',
     description: r'''
@@ -1023,7 +1027,7 @@ class UpgradeKeyword implements Indexable<UpgradeKeyword> {
     ''',
   );
 
-  static const kSidearmRanged = UpgradeKeyword._(
+  static final kSidearmRanged = UpgradeKeyword._(
     id: 'sidearm-ranged',
     displayName: 'Sidearm: Ranged',
     description: r'''
@@ -1034,7 +1038,7 @@ class UpgradeKeyword implements Indexable<UpgradeKeyword> {
     ''',
   );
 
-  static const kTreat = UpgradeKeyword._(
+  static final kTreat = UpgradeKeyword._(
     id: 'treat',
     displayName: 'Treat X: Capacity Y',
     description: r'''
@@ -1078,15 +1082,16 @@ class UpgradeKeyword implements Indexable<UpgradeKeyword> {
   /// For example `'Pierce 1'` + `'Pierce 1'` should result in `'Pierce 2'`.
   final bool isNumeric;
 
-  const UpgradeKeyword._({
+  UpgradeKeyword._({
     @required this.id,
     @required this.displayName,
-    @required this.description,
+    @required String description,
     this.isNumeric = false,
   })  : assert(id != null),
         assert(displayName != null),
         assert(description != null),
-        assert(isNumeric != null);
+        assert(isNumeric != null),
+        description = _normalize(description);
 
   @override
   toRef() => Reference(id);

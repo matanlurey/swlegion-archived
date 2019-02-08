@@ -24,7 +24,7 @@ final stormtroopers = Unit(
     Weapons.unarmed,
     Weapons.e11BlasterRifle,
   ],
-  keywords: const {
+  keywords: {
     UnitKeyword.kPrecise: 1,
   },
   waves: const [

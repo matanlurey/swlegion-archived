@@ -14,7 +14,7 @@ class _AggregateConstants extends Builder {
     final output = StringBuffer()..writeln("part of '$name.dart';\n");
     for (final clazz in input.definingCompilationUnit.types) {
       if (clazz.getGetter('values') != null) {
-        final fields = clazz.fields.where((f) => f.isConst);
+        final fields = clazz.fields.where((f) => f.type == clazz.type);
         _writeSet(output, clazz.name, fields);
       }
     }
@@ -33,7 +33,7 @@ class _AggregateConstants extends Builder {
     Iterable<FieldElement> fields,
   ) {
     final field = '_\$${name[0].toLowerCase() + name.substring(1)}Values';
-    output.writeln('const $field = const [');
+    output.writeln('final $field = [');
     for (final field in fields) {
       output.writeln('  $name.${field.name},');
     }

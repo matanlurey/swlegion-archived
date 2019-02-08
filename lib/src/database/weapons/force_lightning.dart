@@ -9,7 +9,7 @@ final forceLightning = Weapon(
   },
   minRange: 0,
   maxRange: 2,
-  keywords: const {
+  keywords: {
     WeaponKeyword.kPierce: 1,
     WeaponKeyword.kSuppressive: '',
   },
