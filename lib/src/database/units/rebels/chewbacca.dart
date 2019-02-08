@@ -19,7 +19,7 @@ final chewbacca = Unit(
   speed: 2,
   points: 110,
   upgrades: const {
-    UpgradeSlot.elite: 2,
+    UpgradeSlot.training: 2,
     UpgradeSlot.gear: 1,
   },
   weapons: [

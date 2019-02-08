@@ -1,12 +1,12 @@
+import 'database/upgrades/blaster/a_180_pistol_config.dart' as _i;
+import 'database/upgrades/blaster/a_180_rifle_config.dart' as _i;
 import 'database/upgrades/command/commanding_presence.dart' as _i;
 import 'database/upgrades/command/esteemed_leader.dart' as _i;
 import 'database/upgrades/command/improvised_orders.dart' as _i;
 import 'database/upgrades/comms/comms_jammer.dart' as _i;
+import 'database/upgrades/comms/comms_relay.dart' as _i;
 import 'database/upgrades/comms/hq_uplink.dart' as _i;
 import 'database/upgrades/comms/long_range_comlink.dart' as _i;
-import 'database/upgrades/elite/duck_and_cover.dart' as _i;
-import 'database/upgrades/elite/hunter.dart' as _i;
-import 'database/upgrades/elite/tenacity.dart' as _i;
 import 'database/upgrades/force/anger.dart' as _i;
 import 'database/upgrades/force/battle_meditation.dart' as _i;
 import 'database/upgrades/force/force_choke.dart' as _i;
@@ -46,23 +46,32 @@ import 'database/upgrades/heavy_weapon/scatter_gun_trooper.dart' as _i;
 import 'database/upgrades/heavy_weapon/sonic_charge_saboteur.dart' as _i;
 import 'database/upgrades/heavy_weapon/t_7_ion_snowtrooper.dart' as _i;
 import 'database/upgrades/heavy_weapon/z_6_trooper.dart' as _i;
+import 'database/upgrades/personnel/2_1_b_medical_droid.dart' as _i;
 import 'database/upgrades/personnel/fleet_trooper.dart' as _i;
+import 'database/upgrades/personnel/fx_9_medical_droid.dart' as _i;
+import 'database/upgrades/personnel/imperial_comms_technician.dart' as _i;
+import 'database/upgrades/personnel/r_5_astromech_droid.dart' as _i;
+import 'database/upgrades/personnel/rebel_comms_technician.dart' as _i;
+import 'database/upgrades/personnel/rebel_officer.dart' as _i;
 import 'database/upgrades/personnel/rebel_trooper.dart' as _i;
 import 'database/upgrades/personnel/snowtrooper.dart' as _i;
 import 'database/upgrades/personnel/stormtrooper.dart' as _i;
 import 'database/upgrades/pilot/general_weiss.dart' as _i;
 import 'database/upgrades/pilot/wedge_antilles.dart' as _i;
+import 'database/upgrades/training/duck_and_cover.dart' as _i;
+import 'database/upgrades/training/hunter.dart' as _i;
+import 'database/upgrades/training/tenacity.dart' as _i;
 
 final aggregate = [
+  _i.a180PistolConfig,
+  _i.a180RifleConfig,
   _i.commandingPresence,
   _i.estmeedLeader,
   _i.improvisedOrders,
   _i.commsJammer,
+  _i.commsRelay,
   _i.hqUplink,
   _i.longRangeComlink,
-  _i.duckAndCover,
-  _i.hunter,
-  _i.tenacity,
   _i.anger,
   _i.battleMeditation,
   _i.forceChoke,
@@ -102,25 +111,34 @@ final aggregate = [
   _i.sonicChargeSaboteur,
   _i.t7IonSnowtrooper,
   _i.z6Trooper,
+  _i.$21BMedicalDroid,
   _i.fleetTrooper,
+  _i.fx9MedicalDroid,
+  _i.imperialCommsTechnician,
+  _i.r5AstromechDroid,
+  _i.rebelCommsTechnician,
+  _i.rebelOfficer,
   _i.rebelTrooper,
   _i.snowtrooper,
   _i.stormtrooper,
   _i.generalWeiss,
-  _i.wedgeAntilles
+  _i.wedgeAntilles,
+  _i.duckAndCover,
+  _i.hunter,
+  _i.tenacity
 ];
 
 class Upgrades {
   const Upgrades._();
+  static final a180PistolConfig = _i.a180PistolConfig;
+  static final a180RifleConfig = _i.a180RifleConfig;
   static final commandingPresence = _i.commandingPresence;
   static final estmeedLeader = _i.estmeedLeader;
   static final improvisedOrders = _i.improvisedOrders;
   static final commsJammer = _i.commsJammer;
+  static final commsRelay = _i.commsRelay;
   static final hqUplink = _i.hqUplink;
   static final longRangeComlink = _i.longRangeComlink;
-  static final duckAndCover = _i.duckAndCover;
-  static final hunter = _i.hunter;
-  static final tenacity = _i.tenacity;
   static final anger = _i.anger;
   static final battleMeditation = _i.battleMeditation;
   static final forceChoke = _i.forceChoke;
@@ -160,10 +178,19 @@ class Upgrades {
   static final sonicChargeSaboteur = _i.sonicChargeSaboteur;
   static final t7IonSnowtrooper = _i.t7IonSnowtrooper;
   static final z6Trooper = _i.z6Trooper;
+  static final $21BMedicalDroid = _i.$21BMedicalDroid;
   static final fleetTrooper = _i.fleetTrooper;
+  static final fx9MedicalDroid = _i.fx9MedicalDroid;
+  static final imperialCommsTechnician = _i.imperialCommsTechnician;
+  static final r5AstromechDroid = _i.r5AstromechDroid;
+  static final rebelCommsTechnician = _i.rebelCommsTechnician;
+  static final rebelOfficer = _i.rebelOfficer;
   static final rebelTrooper = _i.rebelTrooper;
   static final snowtrooper = _i.snowtrooper;
   static final stormtrooper = _i.stormtrooper;
   static final generalWeiss = _i.generalWeiss;
   static final wedgeAntilles = _i.wedgeAntilles;
+  static final duckAndCover = _i.duckAndCover;
+  static final hunter = _i.hunter;
+  static final tenacity = _i.tenacity;
 }

@@ -5,6 +5,7 @@ import 'database/units/imperials/darth_vader.dart' as _i;
 import 'database/units/imperials/e_web_heavy_blaster_team.dart' as _i;
 import 'database/units/imperials/emperor_palpatine.dart' as _i;
 import 'database/units/imperials/general_veers.dart' as _i;
+import 'database/units/imperials/imperial_officer.dart' as _i;
 import 'database/units/imperials/imperial_royal_guards.dart' as _i;
 import 'database/units/imperials/scout_troopers.dart' as _i;
 import 'database/units/imperials/scout_troopers_strike_team.dart' as _i;
@@ -15,10 +16,12 @@ import 'database/units/rebels/at_rt.dart' as _i;
 import 'database/units/rebels/chewbacca.dart' as _i;
 import 'database/units/rebels/fleet_troopers.dart' as _i;
 import 'database/units/rebels/han_solo.dart' as _i;
+import 'database/units/rebels/jyn_erso.dart' as _i;
 import 'database/units/rebels/leia_organa.dart' as _i;
 import 'database/units/rebels/luke_skywalker.dart' as _i;
 import 'database/units/rebels/rebel_commandos.dart' as _i;
 import 'database/units/rebels/rebel_commandos_strike_team.dart' as _i;
+import 'database/units/rebels/rebel_officer.dart' as _i;
 import 'database/units/rebels/rebel_troopers.dart' as _i;
 import 'database/units/rebels/t_47_airspeeder.dart' as _i;
 import 'database/units/rebels/wookie_warriors.dart' as _i;
@@ -31,6 +34,7 @@ final aggregate = [
   _i.eWebHeavyBlasterTeam,
   _i.emperorPalpatine,
   _i.generalVeers,
+  _i.imperialOfficer,
   _i.imperialRoyalGuards,
   _i.scoutTroopers,
   _i.scoutTroopersStrikeTeam,
@@ -41,10 +45,12 @@ final aggregate = [
   _i.chewbacca,
   _i.fleetTroopers,
   _i.hanSolo,
+  _i.jynErso,
   _i.leiaOrgana,
   _i.lukeSkywalker,
   _i.rebelCommandos,
   _i.rebelCommandosStrikeTeam,
+  _i.rebelOfficer,
   _i.rebelTroopers,
   _i.t47Airspeeder,
   _i.wookieWarriors
@@ -59,6 +65,7 @@ class Units {
   static final eWebHeavyBlasterTeam = _i.eWebHeavyBlasterTeam;
   static final emperorPalpatine = _i.emperorPalpatine;
   static final generalVeers = _i.generalVeers;
+  static final imperialOfficer = _i.imperialOfficer;
   static final imperialRoyalGuards = _i.imperialRoyalGuards;
   static final scoutTroopers = _i.scoutTroopers;
   static final scoutTroopersStrikeTeam = _i.scoutTroopersStrikeTeam;
@@ -69,10 +76,12 @@ class Units {
   static final chewbacca = _i.chewbacca;
   static final fleetTroopers = _i.fleetTroopers;
   static final hanSolo = _i.hanSolo;
+  static final jynErso = _i.jynErso;
   static final leiaOrgana = _i.leiaOrgana;
   static final lukeSkywalker = _i.lukeSkywalker;
   static final rebelCommandos = _i.rebelCommandos;
   static final rebelCommandosStrikeTeam = _i.rebelCommandosStrikeTeam;
+  static final rebelOfficer = _i.rebelOfficer;
   static final rebelTroopers = _i.rebelTroopers;
   static final t47Airspeeder = _i.t47Airspeeder;
   static final wookieWarriors = _i.wookieWarriors;

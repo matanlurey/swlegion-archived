@@ -16,7 +16,7 @@ final scoutTroopers = Unit(
   points: 60,
   upgrades: const {
     UpgradeSlot.comms: 1,
-    UpgradeSlot.elite: 1,
+    UpgradeSlot.training: 1,
     UpgradeSlot.gear: 1,
     UpgradeSlot.grenades: 1,
     UpgradeSlot.heavyWeapon: 1,

@@ -27,7 +27,7 @@ final emperorPalpatine = Unit(
   ],
   keywords: {
     UnitKeyword.kPullingTheStrings: '',
-    UnitKeyword.kEntourage: Units.imperialRoyalGuards.toRef(),
+    UnitKeyword.kEntourage: Units.imperialRoyalGuards.name,
     UnitKeyword.kImmunePierce: '',
     UnitKeyword.kMasterOfTheForce: 2,
   },

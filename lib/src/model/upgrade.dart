@@ -23,6 +23,7 @@ abstract class Upgrade extends Object
 
   factory Upgrade({
     bool addsMiniature = false,
+    Map<UpgradeSlot, int> addsUpgradeSlots = const {},
     bool isExhaustible = false,
     @required int points,
     Map<UnitKeyword, Object> keywordsForUnit = const {},
@@ -39,6 +40,7 @@ abstract class Upgrade extends Object
   }) =>
       Upgrade._builder((b) => b
         ..addsMiniature = addsMiniature
+        ..addsUpgradeSlots.addAll(addsUpgradeSlots)
         ..isExhaustible = isExhaustible
         ..points = points
         ..keywordsForUnit.addAll(keywordsForUnit)
@@ -59,6 +61,10 @@ abstract class Upgrade extends Object
   /// Whether this upgrade adds a miniature.
   @BuiltValueField(compare: false, wireName: 'adds_miniature')
   bool get addsMiniature;
+
+  /// Upgrade slots that are added as a result of this upgrade.
+  @BuiltValueField(compare: false, wireName: 'adds_upgrade_slots')
+  BuiltMap<UpgradeSlot, int> get addsUpgradeSlots;
 
   /// Whether this upgrade is exhausted upon use.
   @BuiltValueField(compare: false, wireName: 'is_exhaustible')

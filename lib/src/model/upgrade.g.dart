@@ -21,6 +21,10 @@ class _$UpgradeSerializer implements StructuredSerializer<Upgrade> {
       'adds_miniature',
       serializers.serialize(object.addsMiniature,
           specifiedType: const FullType(bool)),
+      'adds_upgrade_slots',
+      serializers.serialize(object.addsUpgradeSlots,
+          specifiedType: const FullType(BuiltMap,
+              const [const FullType(UpgradeSlot), const FullType(int)])),
       'is_exhaustible',
       serializers.serialize(object.isExhaustible,
           specifiedType: const FullType(bool)),
@@ -91,6 +95,13 @@ class _$UpgradeSerializer implements StructuredSerializer<Upgrade> {
         case 'adds_miniature':
           result.addsMiniature = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'adds_upgrade_slots':
+          result.addsUpgradeSlots.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltMap, const [
+                const FullType(UpgradeSlot),
+                const FullType(int)
+              ])) as BuiltMap);
           break;
         case 'is_exhaustible':
           result.isExhaustible = serializers.deserialize(value,
@@ -163,6 +174,8 @@ class _$Upgrade extends Upgrade {
   @override
   final bool addsMiniature;
   @override
+  final BuiltMap<UpgradeSlot, int> addsUpgradeSlots;
+  @override
   final bool isExhaustible;
   @override
   final int points;
@@ -194,6 +207,7 @@ class _$Upgrade extends Upgrade {
 
   _$Upgrade._(
       {this.addsMiniature,
+      this.addsUpgradeSlots,
       this.isExhaustible,
       this.points,
       this.keywords,
@@ -210,6 +224,9 @@ class _$Upgrade extends Upgrade {
       : super._() {
     if (addsMiniature == null) {
       throw new BuiltValueNullFieldError('Upgrade', 'addsMiniature');
+    }
+    if (addsUpgradeSlots == null) {
+      throw new BuiltValueNullFieldError('Upgrade', 'addsUpgradeSlots');
     }
     if (isExhaustible == null) {
       throw new BuiltValueNullFieldError('Upgrade', 'isExhaustible');
@@ -262,6 +279,7 @@ class _$Upgrade extends Upgrade {
   String toString() {
     return (newBuiltValueToStringHelper('Upgrade')
           ..add('addsMiniature', addsMiniature)
+          ..add('addsUpgradeSlots', addsUpgradeSlots)
           ..add('isExhaustible', isExhaustible)
           ..add('points', points)
           ..add('keywords', keywords)
@@ -286,6 +304,12 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
   bool get addsMiniature => _$this._addsMiniature;
   set addsMiniature(bool addsMiniature) =>
       _$this._addsMiniature = addsMiniature;
+
+  MapBuilder<UpgradeSlot, int> _addsUpgradeSlots;
+  MapBuilder<UpgradeSlot, int> get addsUpgradeSlots =>
+      _$this._addsUpgradeSlots ??= new MapBuilder<UpgradeSlot, int>();
+  set addsUpgradeSlots(MapBuilder<UpgradeSlot, int> addsUpgradeSlots) =>
+      _$this._addsUpgradeSlots = addsUpgradeSlots;
 
   bool _isExhaustible;
   bool get isExhaustible => _$this._isExhaustible;
@@ -355,6 +379,7 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
   UpgradeBuilder get _$this {
     if (_$v != null) {
       _addsMiniature = _$v.addsMiniature;
+      _addsUpgradeSlots = _$v.addsUpgradeSlots?.toBuilder();
       _isExhaustible = _$v.isExhaustible;
       _points = _$v.points;
       _keywords = _$v.keywords?.toBuilder();
@@ -393,6 +418,7 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
       _$result = _$v ??
           new _$Upgrade._(
               addsMiniature: addsMiniature,
+              addsUpgradeSlots: addsUpgradeSlots.build(),
               isExhaustible: isExhaustible,
               points: points,
               keywords: keywords.build(),
@@ -409,6 +435,9 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
     } catch (_) {
       String _$failedField;
       try {
+        _$failedField = 'addsUpgradeSlots';
+        addsUpgradeSlots.build();
+
         _$failedField = 'keywords';
         keywords.build();
         _$failedField = 'keywordsForUnit';

@@ -14,7 +14,7 @@ final imperialRoyalGuards = Unit(
   speed: 2,
   points: 75,
   upgrades: const {
-    UpgradeSlot.elite: 2,
+    UpgradeSlot.training: 2,
     UpgradeSlot.gear: 1,
     UpgradeSlot.grenades: 1,
     UpgradeSlot.heavyWeapon: 1,

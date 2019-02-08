@@ -30,6 +30,9 @@ import 'database/commands/units/general_veers/maximum_firepower.dart' as _i;
 import 'database/commands/units/han_solo/change_of_plans.dart' as _i;
 import 'database/commands/units/han_solo/reckless_diversion.dart' as _i;
 import 'database/commands/units/han_solo/sorry_about_the_mess.dart' as _i;
+import 'database/commands/units/jyn_erso/complete_the_mission.dart' as _i;
+import 'database/commands/units/jyn_erso/rebellious.dart' as _i;
+import 'database/commands/units/jyn_erso/trust_goes_both_ways.dart' as _i;
 import 'database/commands/units/leia_organa/coordinated_bombardment.dart' as _i;
 import 'database/commands/units/leia_organa/no_time_for_sorrows.dart' as _i;
 import 'database/commands/units/leia_organa/somebody_has_to_save_our_skins.dart'
@@ -67,6 +70,9 @@ final aggregate = [
   _i.changeOfPlans,
   _i.recklessDiversion,
   _i.sorryAboutTheMess,
+  _i.completeTheMission,
+  _i.rebellious,
+  _i.trustGoesBothWays,
   _i.coordinatedBombardment,
   _i.noTimeForSorrows,
   _i.somebodyHasToSaveOurSkins,
@@ -105,6 +111,9 @@ class Commands {
   static final changeOfPlans = _i.changeOfPlans;
   static final recklessDiversion = _i.recklessDiversion;
   static final sorryAboutTheMess = _i.sorryAboutTheMess;
+  static final completeTheMission = _i.completeTheMission;
+  static final rebellious = _i.rebellious;
+  static final trustGoesBothWays = _i.trustGoesBothWays;
   static final coordinatedBombardment = _i.coordinatedBombardment;
   static final noTimeForSorrows = _i.noTimeForSorrows;
   static final somebodyHasToSaveOurSkins = _i.somebodyHasToSaveOurSkins;

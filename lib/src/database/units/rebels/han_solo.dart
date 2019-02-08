@@ -19,7 +19,7 @@ final hanSolo = Unit(
   points: 120,
   upgrades: const {
     UpgradeSlot.command: 1,
-    UpgradeSlot.elite: 1,
+    UpgradeSlot.training: 1,
     UpgradeSlot.gear: 1,
   },
   weapons: [

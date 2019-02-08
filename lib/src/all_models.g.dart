@@ -39,6 +39,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
           () => new MapBuilder<WeaponKeyword, Object>())
       ..addBuilderFactory(
           const FullType(BuiltMap,
+              const [const FullType(UpgradeSlot), const FullType(int)]),
+          () => new MapBuilder<UpgradeSlot, int>())
+      ..addBuilderFactory(
+          const FullType(BuiltMap,
               const [const FullType(UpgradeKeyword), const FullType(Object)]),
           () => new MapBuilder<UpgradeKeyword, Object>())
       ..addBuilderFactory(

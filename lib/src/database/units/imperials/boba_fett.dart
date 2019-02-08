@@ -18,7 +18,7 @@ final bobaFett = Unit(
   speed: 3,
   points: 140,
   upgrades: const {
-    UpgradeSlot.elite: 2,
+    UpgradeSlot.training: 2,
     UpgradeSlot.gear: 2,
   },
   weapons: [

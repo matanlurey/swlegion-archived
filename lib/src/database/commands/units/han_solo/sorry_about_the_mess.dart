@@ -6,7 +6,7 @@ final sorryAboutTheMess = CommandCard(
   name: 'Sorry About The Mess',
   unitsActivated: Units.hanSolo.name,
   unitsRequired: [Units.hanSolo],
-  pips: 1,
+  pips: 0,
   text: r'''
     While building a command hand, treat this card as though it has 1 pip. When Han Solo is issued an order, he gains 1 aim token and 1 dodge token.
   ''',
