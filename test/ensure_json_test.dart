@@ -5,8 +5,8 @@ import 'package:swlegion/catalog.dart';
 import 'package:swlegion/swlegion.dart';
 import 'package:test/test.dart';
 
-import 'entity/sample.dart';
 import '../tool/json.dart' as tool_json;
+import 'entity/sample.dart';
 
 /// Ensures all entries can be serialized and deserialized to equal instances.
 void main() {
