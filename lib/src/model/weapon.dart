@@ -21,7 +21,7 @@ abstract class Weapon implements Built<Weapon, WeaponBuilder> {
     @required int minRange,
     int maxRange,
     int areaOfEffect = 0,
-    Map<Keyword, String> keywords = const {},
+    Map<WeaponKeyword, Object> keywords = const {},
     AttackSurge surgeOverride,
   }) =>
       Weapon._build((b) => b
@@ -36,7 +36,7 @@ abstract class Weapon implements Built<Weapon, WeaponBuilder> {
   factory Weapon.melee({
     @required String name,
     @required Map<AttackDice, int> dice,
-    Map<Keyword, String> keywords = const {},
+    Map<WeaponKeyword, int> keywords = const {},
   }) =>
       Weapon(
         name: name,
@@ -80,8 +80,14 @@ abstract class Weapon implements Built<Weapon, WeaponBuilder> {
   @nullable
   int get maxRange;
 
+  /// Whether this weapon is capable of being used in melee.
+  bool get isMeleeCapable => minRange == 0;
+
+  /// Whether this weapon is _only_ capable of beign used in melee.
+  bool get isMeleeOnly => minRange == 0 && maxRange == 0;
+
   /// Keywords on the weapon.
-  BuiltMap<Keyword, String> get keywords;
+  BuiltMap<WeaponKeyword, Object> get keywords;
 
   /// Returns a new weapon as-if [amount] of these weapons are being used.
   Weapon scale(int amount) {

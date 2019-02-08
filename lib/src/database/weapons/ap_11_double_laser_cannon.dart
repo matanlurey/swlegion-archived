@@ -8,8 +8,8 @@ final ap11DoubleLaserCannon = Weapon(
     AttackDice.red: 3,
     AttackDice.black: 3,
   },
-  keywords: {
-    Keyword.fixedX: 'Front',
-    Keyword.impactX: '3',
+  keywords: const {
+    WeaponKeyword.kFixedFront: '',
+    WeaponKeyword.kImpact: 3,
   },
 );

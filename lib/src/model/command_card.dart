@@ -31,11 +31,13 @@ abstract class CommandCard extends Object
         ..pips = pips
         ..unitsActivated = unitsActivated
         ..text = text
-        ..unitsRequired.addAll(unitsRequired)
+        ..unitsRequired.addAll(unitsRequired.map((u) => u.toRef()))
         ..weapon = weapon?.toBuilder());
 
-  factory CommandCard._build(void Function(CommandCardBuilder) build) =
-      _$CommandCard;
+  factory CommandCard._build(
+    void Function(CommandCardBuilder) build,
+  ) = _$CommandCard;
+
   CommandCard._();
 
   /// ID of the [CommandCard].
@@ -55,12 +57,12 @@ abstract class CommandCard extends Object
   int get pips;
 
   /// Unit(s) activated as a result of this card.
-  @BuiltValueField(compare: false)
+  @BuiltValueField(compare: false, wireName: 'activated')
   String get unitsActivated;
 
   /// Unit(s) required to use this command card.
-  @BuiltValueField(compare: false)
-  BuiltSet<Unit> get unitsRequired;
+  @BuiltValueField(compare: false, wireName: 'required')
+  BuiltSet<Reference<Unit>> get unitsRequired;
 
   /// Weapon attached to this command card.
   @BuiltValueField(compare: false)

@@ -8,7 +8,7 @@ final bobaFett = Unit(
   id: 'boba-fett',
   name: 'Boba Fett',
   subTitle: 'Infamous Bounty Hunter',
-  faction: Faction.darkSide,
+  faction: Faction.imperials,
   isUnique: true,
   miniatures: 1,
   rank: Rank.operative,
@@ -20,7 +20,7 @@ final bobaFett = Unit(
   defense: DefenseDice.red,
   speed: 3,
   points: 140,
-  upgrades: {
+  upgrades: const {
     UpgradeSlot.elite: 2,
     UpgradeSlot.gear: 2,
   },
@@ -29,11 +29,11 @@ final bobaFett = Unit(
     fettsEE3Carbine,
     wristRocket,
   ],
-  keywords: {
-    Keyword.jumpX: '2',
-    Keyword.arsenalX: '2',
-    Keyword.bounty: '',
-    Keyword.impervious: '',
-    Keyword.sharpshooterX: '2',
+  keywords: const {
+    UnitKeyword.kJump: 2,
+    UnitKeyword.kArsenal: 2,
+    UnitKeyword.kBounty: '',
+    UnitKeyword.kImpervious: '',
+    UnitKeyword.kSharpshooter: 2,
   },
 );

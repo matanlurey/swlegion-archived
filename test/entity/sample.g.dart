@@ -63,6 +63,13 @@ class _$SampleSerializer implements StructuredSerializer<Sample> {
               const FullType(Reference, const [const FullType(Upgrade)])
             ])));
     }
+    if (object.keywords != null) {
+      result
+        ..add('keywords')
+        ..add(serializers.serialize(object.keywords,
+            specifiedType: const FullType(BuiltMap,
+                const [const FullType(UnitKeyword), const FullType(Object)])));
+    }
 
     return result;
   }
@@ -114,6 +121,13 @@ class _$SampleSerializer implements StructuredSerializer<Sample> {
                 const FullType(Reference, const [const FullType(Upgrade)])
               ])) as BuiltSet);
           break;
+        case 'keywords':
+          result.keywords.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltMap, const [
+                const FullType(UnitKeyword),
+                const FullType(Object)
+              ])) as BuiltMap);
+          break;
       }
     }
 
@@ -134,6 +148,8 @@ class _$Sample extends Sample {
   final BuiltList<Reference<Unit>> units;
   @override
   final BuiltSet<Reference<Upgrade>> upgrades;
+  @override
+  final BuiltMap<UnitKeyword, Object> keywords;
 
   factory _$Sample([void updates(SampleBuilder b)]) =>
       (new SampleBuilder()..update(updates)).build();
@@ -144,7 +160,8 @@ class _$Sample extends Sample {
       this.aUpgrade,
       this.commands,
       this.units,
-      this.upgrades})
+      this.upgrades,
+      this.keywords})
       : super._();
 
   @override
@@ -163,7 +180,8 @@ class _$Sample extends Sample {
         aUpgrade == other.aUpgrade &&
         commands == other.commands &&
         units == other.units &&
-        upgrades == other.upgrades;
+        upgrades == other.upgrades &&
+        keywords == other.keywords;
   }
 
   @override
@@ -171,11 +189,13 @@ class _$Sample extends Sample {
     return $jf($jc(
         $jc(
             $jc(
-                $jc($jc($jc(0, aCommand.hashCode), aUnit.hashCode),
-                    aUpgrade.hashCode),
-                commands.hashCode),
-            units.hashCode),
-        upgrades.hashCode));
+                $jc(
+                    $jc($jc($jc(0, aCommand.hashCode), aUnit.hashCode),
+                        aUpgrade.hashCode),
+                    commands.hashCode),
+                units.hashCode),
+            upgrades.hashCode),
+        keywords.hashCode));
   }
 
   @override
@@ -186,7 +206,8 @@ class _$Sample extends Sample {
           ..add('aUpgrade', aUpgrade)
           ..add('commands', commands)
           ..add('units', units)
-          ..add('upgrades', upgrades))
+          ..add('upgrades', upgrades)
+          ..add('keywords', keywords))
         .toString();
   }
 }
@@ -223,6 +244,12 @@ class SampleBuilder implements Builder<Sample, SampleBuilder> {
   set upgrades(SetBuilder<Reference<Upgrade>> upgrades) =>
       _$this._upgrades = upgrades;
 
+  MapBuilder<UnitKeyword, Object> _keywords;
+  MapBuilder<UnitKeyword, Object> get keywords =>
+      _$this._keywords ??= new MapBuilder<UnitKeyword, Object>();
+  set keywords(MapBuilder<UnitKeyword, Object> keywords) =>
+      _$this._keywords = keywords;
+
   SampleBuilder();
 
   SampleBuilder get _$this {
@@ -233,6 +260,7 @@ class SampleBuilder implements Builder<Sample, SampleBuilder> {
       _commands = _$v.commands?.toBuilder();
       _units = _$v.units?.toBuilder();
       _upgrades = _$v.upgrades?.toBuilder();
+      _keywords = _$v.keywords?.toBuilder();
       _$v = null;
     }
     return this;
@@ -262,7 +290,8 @@ class SampleBuilder implements Builder<Sample, SampleBuilder> {
               aUpgrade: aUpgrade,
               commands: _commands?.build(),
               units: _units?.build(),
-              upgrades: _upgrades?.build());
+              upgrades: _upgrades?.build(),
+              keywords: _keywords?.build());
     } catch (_) {
       String _$failedField;
       try {
@@ -272,6 +301,8 @@ class SampleBuilder implements Builder<Sample, SampleBuilder> {
         _units?.build();
         _$failedField = 'upgrades';
         _upgrades?.build();
+        _$failedField = 'keywords';
+        _keywords?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'Sample', _$failedField, e.toString());

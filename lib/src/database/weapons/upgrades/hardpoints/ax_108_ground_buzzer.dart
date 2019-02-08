@@ -7,7 +7,7 @@ final ax108GroundBuzzer = Weapon(
   },
   minRange: 1,
   maxRange: 2,
-  keywords: {
-    Keyword.fixedX: 'Rear',
+  keywords: const {
+    WeaponKeyword.kFixedRear: '',
   },
 );

@@ -6,7 +6,7 @@ import '../weapons/ryyk_blade.dart';
 final wookieWarriors = Unit(
   id: 'wookie-warriors',
   name: 'Wookie Warriors',
-  faction: Faction.lightSide,
+  faction: Faction.rebels,
   miniatures: 3,
   rank: Rank.specialForces,
   type: UnitType.trooper,
@@ -16,7 +16,7 @@ final wookieWarriors = Unit(
   attackSurge: AttackSurge.hit,
   speed: 2,
   points: 75,
-  upgrades: {
+  upgrades: const {
     UpgradeSlot.elite: 2,
     UpgradeSlot.gear: 1,
     UpgradeSlot.grenades: 1,
@@ -26,10 +26,10 @@ final wookieWarriors = Unit(
     ryykBlade,
     kashyyykPistol,
   ],
-  keywords: {
-    Keyword.charge: '',
-    Keyword.expertClimber: '',
-    Keyword.indomitable: '',
-    Keyword.unhindered: '',
+  keywords: const {
+    UnitKeyword.kCharge: '',
+    UnitKeyword.kExpertClimber: '',
+    UnitKeyword.kIndomitable: '',
+    UnitKeyword.kUnhindered: '',
   },
 );

@@ -6,7 +6,7 @@ import '../weapons/unarmed.dart';
 final snowtroopers = Unit(
   id: 'snowtroopers',
   name: 'Snowtroopers',
-  faction: Faction.darkSide,
+  faction: Faction.imperials,
   miniatures: 4,
   rank: Rank.corps,
   type: UnitType.trooper,
@@ -16,7 +16,7 @@ final snowtroopers = Unit(
   attackSurge: AttackSurge.hit,
   speed: 1,
   points: 48,
-  upgrades: {
+  upgrades: const {
     UpgradeSlot.personnel: 1,
     UpgradeSlot.heavyWeapon: 1,
     UpgradeSlot.gear: 1,
@@ -26,7 +26,7 @@ final snowtroopers = Unit(
     unarmed,
     e11BlasterRifle,
   ],
-  keywords: {
-    Keyword.steady: '',
+  keywords: const {
+    UnitKeyword.kSteady: '',
   },
 );

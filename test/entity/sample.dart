@@ -34,4 +34,8 @@ abstract class Sample implements Built<Sample, SampleBuilder> {
   /// Examples of upgrades by reference.
   @nullable
   BuiltSet<Reference<Upgrade>> get upgrades;
+
+  /// Examples of keywords.
+  @nullable
+  BuiltMap<UnitKeyword, Object> get keywords;
 }

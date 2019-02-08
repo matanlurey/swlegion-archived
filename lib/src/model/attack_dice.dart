@@ -7,7 +7,7 @@ part 'attack_dice.g.dart';
 /// Represents possible attack dice for a given attack of weapon (D8).
 ///
 /// See http://starwarslegion.wikia.com/wiki/Dice.
-class AttackDice extends EnumClass {
+class AttackDice extends EnumClass implements Comparable<AttackDice> {
   static const _sides = {
     white: [
       AttackDiceSide.hit,
@@ -54,6 +54,28 @@ class AttackDice extends EnumClass {
   static const AttackDice red = _$red;
 
   const AttackDice._(String name) : super(name);
+
+  int get _order {
+    switch (this) {
+      case white:
+        return 0;
+      case black:
+        return 1;
+      case red:
+        return 2;
+      default:
+        throw AssertionError();
+    }
+  }
+
+  /// Returns a `List<AttackDice>` of `this` type [repeat]ed.
+  List<AttackDice> operator *(int repeat) {
+    assert(repeat >= 0);
+    return List.filled(repeat, this);
+  }
+
+  @override
+  int compareTo(AttackDice o) => _order.compareTo(o._order);
 
   @override
   String get name => _$AttackDiceSerializer._toWire[super.name];

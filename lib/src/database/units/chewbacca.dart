@@ -3,11 +3,13 @@ import 'package:swlegion/swlegion.dart';
 import '../weapons/chewbaccas_bowcaster.dart';
 import '../weapons/overpower.dart';
 
+import 'han_solo.dart';
+
 final chewbacca = Unit(
   id: 'chewbacca',
   name: 'Chewbacca',
   subTitle: 'Walking Carpet',
-  faction: Faction.lightSide,
+  faction: Faction.rebels,
   isUnique: true,
   miniatures: 1,
   rank: Rank.operative,
@@ -18,7 +20,7 @@ final chewbacca = Unit(
   defense: DefenseDice.white,
   speed: 2,
   points: 110,
-  upgrades: {
+  upgrades: const {
     UpgradeSlot.elite: 2,
     UpgradeSlot.gear: 1,
   },
@@ -27,10 +29,9 @@ final chewbacca = Unit(
     chewbaccasBowcaster,
   ],
   keywords: {
-    Keyword.enrageX: '4',
-    Keyword.expertClimber: '',
-    Keyword.guardianX: '3',
-    Keyword.teamworkX: 'Han Solo',
-    Keyword.unhindered: '',
+    UnitKeyword.kEnrage: 4,
+    UnitKeyword.kExpertClimber: '',
+    UnitKeyword.kGuardian: 3,
+    UnitKeyword.kTeamwork: hanSolo.id,
   },
 );

@@ -25,8 +25,10 @@ abstract class Upgrade extends Object
     bool addsMiniature = false,
     bool isExhaustible = false,
     @required int points,
-    Map<Keyword, String> keywords = const {},
+    Map<UnitKeyword, Object> keywordsForUnit = const {},
+    Map<UpgradeKeyword, Object> keywords = const {},
     Faction restrictedToFaction,
+    ForceAlignment restrictedToForceAlignment,
     List<Reference<Unit>> restrictedToUnit = const [],
     UnitType restrictedToType,
     @required String id,
@@ -39,8 +41,10 @@ abstract class Upgrade extends Object
         ..addsMiniature = addsMiniature
         ..isExhaustible = isExhaustible
         ..points = points
+        ..keywordsForUnit.addAll(keywordsForUnit)
         ..keywords.addAll(keywords)
         ..restrictedToFaction = restrictedToFaction
+        ..restrictedToForceAlignment = restrictedToForceAlignment
         ..restrictedToUnit.addAll(restrictedToUnit)
         ..restrictedToType = restrictedToType
         ..id = id
@@ -64,9 +68,13 @@ abstract class Upgrade extends Object
   @BuiltValueField(compare: false, wireName: 'points')
   int get points;
 
-  /// Keywords on the upgrade, normally granted to the unit.
-  @BuiltValueField(compare: false, wireName: 'keywords')
-  BuiltMap<Keyword, String> get keywords;
+  /// Keywords on the upgrade itself.
+  @BuiltValueField(compare: false)
+  BuiltMap<UpgradeKeyword, Object> get keywords;
+
+  /// Keywords on the upgrade granted to the unit.
+  @BuiltValueField(compare: false, wireName: 'keywords_for_unit')
+  BuiltMap<UnitKeyword, Object> get keywordsForUnit;
 
   /// Faction this upgrade is restricted to.
   ///
@@ -74,6 +82,13 @@ abstract class Upgrade extends Object
   @BuiltValueField(compare: false, wireName: 'restricted_to_faction')
   @nullable
   Faction get restrictedToFaction;
+
+  /// Force alignment this upgrade is restricted to.
+  ///
+  /// May be `null` if this upgrade is neutral.
+  @BuiltValueField(compare: false, wireName: 'restricted_to_force_alignment')
+  @nullable
+  ForceAlignment get restrictedToForceAlignment;
 
   /// Units this upgrade is restricted to.
   @BuiltValueField(compare: false, wireName: 'restricted_to_unit')
@@ -91,17 +106,15 @@ abstract class Upgrade extends Object
   /// **NOTE**: This is only a simple check of the various restrictions and the
   /// type of this upgrade, and does not encapsulate game logic such as
   /// uniqueness, available slots, point costs, or any extra rules.
-  bool isUsableBy(Unit unit) {
-    if (!unit.upgrades.containsKey(type)) {
-      return false;
-    }
-    if (restrictedToFaction != null && restrictedToFaction != unit.faction) {
-      return false;
-    }
-    if (restrictedToType != null && restrictedToType != unit.type) {
-      return false;
-    }
-    return restrictedToUnit.isEmpty || restrictedToUnit.contains(unit.toRef());
+  bool isUsableBy(Unit unit) =>
+      unit.upgrades.containsKey(type) &&
+      _nullOrEqual(restrictedToFaction, unit.faction) &&
+      _nullOrEqual(restrictedToForceAlignment, unit.forceAlignment) &&
+      _nullOrEqual(restrictedToType, unit.type) &&
+      (restrictedToUnit.isEmpty || restrictedToUnit.contains(unit.toRef()));
+
+  static bool _nullOrEqual(Object a, Object b) {
+    return a == null || a == b;
   }
 
   /// Unique ID for the upgrade.

@@ -29,6 +29,7 @@ abstract class Unit extends Object
     bool isUnique = false,
     String subTitle,
     @required Faction faction,
+    ForceAlignment forceAlignment,
     @required UnitType type,
     @required int points,
     @required Rank rank,
@@ -42,7 +43,7 @@ abstract class Unit extends Object
     @required int speed,
     Map<UpgradeSlot, int> upgrades = const {},
     List<Weapon> weapons = const [],
-    Map<Keyword, String> keywords = const {},
+    Map<UnitKeyword, Object> keywords = const {},
   }) =>
       Unit._builder((b) => b
         ..id = id
@@ -50,6 +51,7 @@ abstract class Unit extends Object
         ..isUnique = isUnique
         ..subTitle = subTitle
         ..faction = faction
+        ..forceAlignment = forceAlignment
         ..type = type
         ..points = points
         ..rank = rank
@@ -96,6 +98,11 @@ abstract class Unit extends Object
   /// Faction the unit belongs to.
   @BuiltValueField(compare: false)
   Faction get faction;
+
+  /// Force alignment this unit has.
+  @BuiltValueField(compare: false, wireName: 'force_alignment')
+  @nullable
+  ForceAlignment get forceAlignment;
 
   /// Type of the unit.
   @BuiltValueField(compare: false)
@@ -160,5 +167,5 @@ abstract class Unit extends Object
 
   /// Keywords on the unit.
   @BuiltValueField(compare: false)
-  BuiltMap<Keyword, String> get keywords;
+  BuiltMap<UnitKeyword, Object> get keywords;
 }

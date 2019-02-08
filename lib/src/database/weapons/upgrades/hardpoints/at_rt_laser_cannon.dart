@@ -8,8 +8,8 @@ final atRtLaserCannon = Weapon(
   },
   minRange: 2,
   maxRange: 4,
-  keywords: {
-    Keyword.impactX: '3',
-    Keyword.fixedX: 'Front',
+  keywords: const {
+    WeaponKeyword.kImpact: 3,
+    WeaponKeyword.kFixedFront: '',
   },
 );

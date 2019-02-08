@@ -5,7 +5,7 @@ import '../weapons/ap_11_double_laser_cannon.dart';
 final t47Airspeeder = Unit(
   id: 't-47-airspeeder',
   name: 'T-47 Airspeeder',
-  faction: Faction.lightSide,
+  faction: Faction.rebels,
   miniatures: 1,
   rank: Rank.heavy,
   type: UnitType.repulsorVehicle,
@@ -15,7 +15,7 @@ final t47Airspeeder = Unit(
   hasDefenseSurge: true,
   speed: 3,
   points: 175,
-  upgrades: {
+  upgrades: const {
     UpgradeSlot.comms: 1,
     UpgradeSlot.hardPoint: 1,
     UpgradeSlot.pilot: 1,
@@ -23,11 +23,12 @@ final t47Airspeeder = Unit(
   weapons: [
     ap11DoubleLaserCannon,
   ],
-  keywords: {
-    Keyword.armor: '',
-    Keyword.arsenalX: '2',
-    Keyword.coverX: '1',
-    Keyword.immuneX: 'Blast, Melee',
-    Keyword.speederX: '2',
+  keywords: const {
+    UnitKeyword.kArmor: '',
+    UnitKeyword.kArsenal: 2,
+    UnitKeyword.kCover: 1,
+    UnitKeyword.kImmuneBlast: '',
+    UnitKeyword.kImmuneMelee: '',
+    UnitKeyword.kSpeeder: 2,
   },
 );

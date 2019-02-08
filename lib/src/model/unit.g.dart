@@ -59,13 +59,19 @@ class _$UnitSerializer implements StructuredSerializer<Unit> {
       'keywords',
       serializers.serialize(object.keywords,
           specifiedType: const FullType(BuiltMap,
-              const [const FullType(Keyword), const FullType(String)])),
+              const [const FullType(UnitKeyword), const FullType(Object)])),
     ];
     if (object.subTitle != null) {
       result
         ..add('sub_title')
         ..add(serializers.serialize(object.subTitle,
             specifiedType: const FullType(String)));
+    }
+    if (object.forceAlignment != null) {
+      result
+        ..add('force_alignment')
+        ..add(serializers.serialize(object.forceAlignment,
+            specifiedType: const FullType(ForceAlignment)));
     }
     if (object.courage != null) {
       result
@@ -119,6 +125,10 @@ class _$UnitSerializer implements StructuredSerializer<Unit> {
         case 'faction':
           result.faction = serializers.deserialize(value,
               specifiedType: const FullType(Faction)) as Faction;
+          break;
+        case 'force_alignment':
+          result.forceAlignment = serializers.deserialize(value,
+              specifiedType: const FullType(ForceAlignment)) as ForceAlignment;
           break;
         case 'type':
           result.type = serializers.deserialize(value,
@@ -180,8 +190,8 @@ class _$UnitSerializer implements StructuredSerializer<Unit> {
         case 'keywords':
           result.keywords.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltMap, const [
-                const FullType(Keyword),
-                const FullType(String)
+                const FullType(UnitKeyword),
+                const FullType(Object)
               ])) as BuiltMap);
           break;
       }
@@ -202,6 +212,8 @@ class _$Unit extends Unit {
   final String subTitle;
   @override
   final Faction faction;
+  @override
+  final ForceAlignment forceAlignment;
   @override
   final UnitType type;
   @override
@@ -229,7 +241,7 @@ class _$Unit extends Unit {
   @override
   final BuiltSet<Weapon> weapons;
   @override
-  final BuiltMap<Keyword, String> keywords;
+  final BuiltMap<UnitKeyword, Object> keywords;
 
   factory _$Unit([void updates(UnitBuilder b)]) =>
       (new UnitBuilder()..update(updates)).build();
@@ -240,6 +252,7 @@ class _$Unit extends Unit {
       this.isUnique,
       this.subTitle,
       this.faction,
+      this.forceAlignment,
       this.type,
       this.points,
       this.rank,
@@ -328,6 +341,7 @@ class _$Unit extends Unit {
           ..add('isUnique', isUnique)
           ..add('subTitle', subTitle)
           ..add('faction', faction)
+          ..add('forceAlignment', forceAlignment)
           ..add('type', type)
           ..add('points', points)
           ..add('rank', rank)
@@ -368,6 +382,11 @@ class UnitBuilder implements Builder<Unit, UnitBuilder> {
   Faction _faction;
   Faction get faction => _$this._faction;
   set faction(Faction faction) => _$this._faction = faction;
+
+  ForceAlignment _forceAlignment;
+  ForceAlignment get forceAlignment => _$this._forceAlignment;
+  set forceAlignment(ForceAlignment forceAlignment) =>
+      _$this._forceAlignment = forceAlignment;
 
   UnitType _type;
   UnitType get type => _$this._type;
@@ -425,10 +444,10 @@ class UnitBuilder implements Builder<Unit, UnitBuilder> {
       _$this._weapons ??= new SetBuilder<Weapon>();
   set weapons(SetBuilder<Weapon> weapons) => _$this._weapons = weapons;
 
-  MapBuilder<Keyword, String> _keywords;
-  MapBuilder<Keyword, String> get keywords =>
-      _$this._keywords ??= new MapBuilder<Keyword, String>();
-  set keywords(MapBuilder<Keyword, String> keywords) =>
+  MapBuilder<UnitKeyword, Object> _keywords;
+  MapBuilder<UnitKeyword, Object> get keywords =>
+      _$this._keywords ??= new MapBuilder<UnitKeyword, Object>();
+  set keywords(MapBuilder<UnitKeyword, Object> keywords) =>
       _$this._keywords = keywords;
 
   UnitBuilder();
@@ -440,6 +459,7 @@ class UnitBuilder implements Builder<Unit, UnitBuilder> {
       _isUnique = _$v.isUnique;
       _subTitle = _$v.subTitle;
       _faction = _$v.faction;
+      _forceAlignment = _$v.forceAlignment;
       _type = _$v.type;
       _points = _$v.points;
       _rank = _$v.rank;
@@ -483,6 +503,7 @@ class UnitBuilder implements Builder<Unit, UnitBuilder> {
               isUnique: isUnique,
               subTitle: subTitle,
               faction: faction,
+              forceAlignment: forceAlignment,
               type: type,
               points: points,
               rank: rank,

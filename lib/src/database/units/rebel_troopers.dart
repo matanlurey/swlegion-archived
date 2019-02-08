@@ -6,7 +6,7 @@ import '../weapons/unarmed.dart';
 final rebelTroopers = Unit(
   id: 'rebel-troopers',
   name: 'Rebel Troopers',
-  faction: Faction.lightSide,
+  faction: Faction.rebels,
   miniatures: 4,
   rank: Rank.corps,
   type: UnitType.trooper,
@@ -16,7 +16,7 @@ final rebelTroopers = Unit(
   hasDefenseSurge: true,
   speed: 2,
   points: 40,
-  upgrades: {
+  upgrades: const {
     UpgradeSlot.personnel: 1,
     UpgradeSlot.heavyWeapon: 1,
     UpgradeSlot.gear: 1,
@@ -26,7 +26,7 @@ final rebelTroopers = Unit(
     unarmed,
     a280BlasterRifle,
   ],
-  keywords: {
-    Keyword.nimble: '',
+  keywords: const {
+    UnitKeyword.kNimble: '',
   },
 );

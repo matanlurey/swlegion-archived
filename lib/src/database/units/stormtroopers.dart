@@ -6,7 +6,7 @@ import '../weapons/unarmed.dart';
 final stormtroopers = Unit(
   id: 'stormtroopers',
   name: 'Stormtroopers',
-  faction: Faction.darkSide,
+  faction: Faction.imperials,
   miniatures: 4,
   rank: Rank.corps,
   type: UnitType.trooper,
@@ -16,7 +16,7 @@ final stormtroopers = Unit(
   attackSurge: AttackSurge.hit,
   speed: 2,
   points: 44,
-  upgrades: {
+  upgrades: const {
     UpgradeSlot.personnel: 1,
     UpgradeSlot.heavyWeapon: 1,
     UpgradeSlot.gear: 1,
@@ -26,7 +26,7 @@ final stormtroopers = Unit(
     unarmed,
     e11BlasterRifle,
   ],
-  keywords: {
-    Keyword.preciseX: '1',
+  keywords: const {
+    UnitKeyword.kPrecise: 1,
   },
 );

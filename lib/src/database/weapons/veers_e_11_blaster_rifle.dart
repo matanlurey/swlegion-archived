@@ -7,7 +7,7 @@ final veersE11BlasterRifle = Weapon(
   dice: {
     AttackDice.white: 3,
   },
-  keywords: {
-    Keyword.pierceX: '1',
+  keywords: const {
+    WeaponKeyword.kPierce: 1,
   },
 );

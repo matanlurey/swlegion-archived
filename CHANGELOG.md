@@ -1,6 +1,21 @@
+### Catalog
+
+- Renamed `database.dart` to `catalog.dart`. See the top-level field `catalog`.
+
 ### Data Model
 
 - Added `surge_override` (`AttackSurge`) field to `Weapon`.
+- Significant data model change for `Keyword`, now split into 3 new classes.
+- Changed the default `serializers` to always use standard JSON, fixed encoding
+  issues that would cause issues with Firebase or other database formats that
+  expect valid JSON. See `lib/catalog.json` for example output. Use the exported
+  `CustomJsonPlugin` instead of `StandardJsonPlugin`.
+- Added `ForceAlignment` (instead of just `Faction`).
+
+## Holodeck
+
+- `Holodeck` is now a utility class for executing simulations.
+- The existing database structure and reference lookups were moved to `Catalog`.
 
 ## 0.3.1
 

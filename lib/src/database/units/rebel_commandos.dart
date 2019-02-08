@@ -6,7 +6,7 @@ import '../weapons/unarmed.dart';
 final rebelCommandos = Unit(
   id: 'rebel-commandos',
   name: 'Rebel Commandos',
-  faction: Faction.lightSide,
+  faction: Faction.rebels,
   miniatures: 4,
   rank: Rank.specialForces,
   type: UnitType.trooper,
@@ -17,7 +17,7 @@ final rebelCommandos = Unit(
   hasDefenseSurge: true,
   speed: 2,
   points: 60,
-  upgrades: {
+  upgrades: const {
     UpgradeSlot.comms: 1,
     UpgradeSlot.elite: 1,
     UpgradeSlot.gear: 1,
@@ -28,9 +28,9 @@ final rebelCommandos = Unit(
     unarmed,
     a280BlasterRifle,
   ],
-  keywords: {
-    Keyword.lowProfile: '',
-    Keyword.scoutX: '2',
-    Keyword.sharpshooterX: '1',
+  keywords: const {
+    UnitKeyword.kLowProfile: '',
+    UnitKeyword.kScout: 2,
+    UnitKeyword.kSharpshooter: 1,
   },
 );

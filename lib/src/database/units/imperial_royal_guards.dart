@@ -6,7 +6,7 @@ import '../weapons/force_pike.dart';
 final imperialRoyalGuards = Unit(
   id: 'imperial-royal-guards',
   name: 'Imperial Royal Guards',
-  faction: Faction.darkSide,
+  faction: Faction.imperials,
   miniatures: 3,
   rank: Rank.specialForces,
   type: UnitType.trooper,
@@ -15,7 +15,7 @@ final imperialRoyalGuards = Unit(
   defense: DefenseDice.red,
   speed: 2,
   points: 75,
-  upgrades: {
+  upgrades: const {
     UpgradeSlot.elite: 2,
     UpgradeSlot.gear: 1,
     UpgradeSlot.grenades: 1,
@@ -25,9 +25,9 @@ final imperialRoyalGuards = Unit(
     forcePike,
     ec17HoldOutBlaster,
   ],
-  keywords: {
-    Keyword.charge: '',
-    Keyword.disciplinedX: '2',
-    Keyword.guardianX: '2',
+  keywords: const {
+    UnitKeyword.kCharge: '',
+    UnitKeyword.kDisciplined: 2,
+    UnitKeyword.kGuardian: 2,
   },
 );

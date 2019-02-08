@@ -1,4 +1,4 @@
-import 'package:swlegion/database.dart';
+import 'package:swlegion/catalog.dart';
 import 'package:swlegion/swlegion.dart';
 import 'package:test/test.dart';
 
@@ -11,7 +11,6 @@ void main() {
     expect(AttackSurge.values.map((d) => d.name), everyIdIsValid);
     expect(DefenseDice.values.map((d) => d.name), everyIdIsValid);
     expect(Faction.values.map((d) => d.name), everyIdIsValid);
-    expect(Keyword.values.map((d) => d.name), everyIdIsValid);
     expect(Rank.values.map((d) => d.name), everyIdIsValid);
     expect(UnitType.values.map((d) => d.name), everyIdIsValid);
     expect(UpgradeSlot.values.map((d) => d.name), everyIdIsValid);
@@ -19,12 +18,12 @@ void main() {
 
   test('every command should have a valid unique ID', () {
     final allIds = Set<String>();
-    for (final card in allCommands) {
+    for (final card in catalog.commandCards) {
       final id = card.id;
       expect(id, matches(isValidId));
       expect(allIds.add(id), isTrue, reason: 'Duplicate ID: $id');
     }
-    expect(allIds, hasLength(allCommands.length));
+    expect(allIds, hasLength(catalog.commandCards.length));
   });
 
   test('commands should be compared purely based on ID', () {
@@ -39,12 +38,12 @@ void main() {
   });
   test('every upgrade should have a valid unique ID', () {
     final allIds = Set<String>();
-    for (final upgrade in allUpgrades) {
+    for (final upgrade in catalog.upgrades) {
       final id = upgrade.id;
       expect(id, matches(isValidId));
       expect(allIds.add(id), isTrue, reason: 'Duplicate ID: $id');
     }
-    expect(allIds, hasLength(allUpgrades.length));
+    expect(allIds, hasLength(catalog.upgrades.length));
   });
 
   test('upgrades should be compared purely based on ID', () {
@@ -60,12 +59,12 @@ void main() {
 
   test('every unit should have a valid unique ID', () {
     final allIds = Set<String>();
-    for (final unit in allUnits) {
+    for (final unit in catalog.units) {
       final id = unit.id;
       expect(id, matches(isValidId));
       expect(allIds.add(id), isTrue, reason: 'Duplicate ID: $id');
     }
-    expect(allIds, hasLength(allUnits.length));
+    expect(allIds, hasLength(catalog.units.length));
   });
 
   test('units should be compared purely based on ID', () {
@@ -75,7 +74,7 @@ void main() {
       type: UnitType.trooper,
       name: 'Gonk Droid',
       defense: DefenseDice.white,
-      faction: Faction.lightSide,
+      faction: Faction.rebels,
       speed: 1,
       id: 'gonk-droid',
       wounds: 1,

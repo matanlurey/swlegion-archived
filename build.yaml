@@ -1,50 +1,5 @@
-# 1. Importable Libraries [$default] (which need aggregate_database)
-# 2. Models (which need built_value)
-# 3. Database (which don't need generators)
-# 4. Builders
-#
-# ... the reason for this complexity is basically ensuring built_value runs 1st.
-targets:
-  $default:
-    builders:
-      built_value_generator|built_value:
-        enabled: false
-      swlegion|_aggregate_database:
-        enabled: true
-    dependencies:
-      - :_database
-      - :_models
-  _database:
-    sources:
-      - lib/src/database/**.dart
-    dependencies:
-      - :_models
-  _models:
-    sources:
-      - lib/src/model/**.dart
-      - lib/src/all_models.dart
-      - test/entity/**.dart
-    dependencies:
-      - built_collection
-      - built_value
-    builders:
-      built_value_generator|built_value:
-        enabled: true
-        generate_for:
-          - lib/src/model/**.dart
-          - lib/src/all_models.dart
-          - test/entity/**.dart
-  _aggregate_database:
-    sources:
-      - tool/src/aggregate_database.dart
-    dependencies:
-      - build
-      - glob
-      - path
-
 builders:
   _aggregate_database:
-    target: "_aggregate_database"
     import: tool/src/aggregate_database.dart
     builder_factories:
       - aggregateDatabase
@@ -54,4 +9,15 @@ builders:
         - src/all_upgrades.dart
         - src/all_weapons.dart
     build_to: source
-    auto_apply: none
+    auto_apply: root_package
+    required_inputs:
+      - lib/src/model/**.g.dart
+  _aggregate_keywords:
+    import: tool/src/aggregate_keywords.dart
+    builder_factories:
+      - aggregateKeywords
+    build_extensions:
+      "src/model/keyword.dart":
+        - "keyword.aggregate.dart"
+    build_to: source
+    auto_apply: root_package
