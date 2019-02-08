@@ -6,42 +6,8 @@ import 'reference.dart';
 
 part 'keyword.aggregate.dart';
 
-class _Serializer<T extends Indexable<T>> implements PrimitiveSerializer<T> {
-  final BuiltMap<String, T> _index;
-
-  const _Serializer(
-    this._index, {
-    @required this.types,
-    @required this.wireName,
-  });
-
-  @override
-  Object serialize(
-    Serializers serializers,
-    T object, {
-    FullType specifiedType = FullType.unspecified,
-  }) {
-    return object.id;
-  }
-
-  @override
-  T deserialize(
-    Serializers serializers,
-    Object serialized, {
-    FullType specifiedType = FullType.unspecified,
-  }) {
-    return _index[serialized as String];
-  }
-
-  @override
-  final List<Type> types;
-
-  @override
-  final String wireName;
-}
-
 class UnitKeyword implements Indexable<UnitKeyword> {
-  static final Serializer<UnitKeyword> serializer = _Serializer(
+  static final Serializer<UnitKeyword> serializer = IndexableSerializer(
     _index,
     wireName: 'unitKeyword',
     types: const [UnitKeyword],
@@ -140,6 +106,16 @@ class UnitKeyword implements Indexable<UnitKeyword> {
       During the "Apply Dodge and Cover" step of a ranged attack, if the
       defender has the **COVER X** keyword, it improves its cover by a number
       equal to X.
+    ''',
+    isNumeric: true,
+  );
+
+  static const kDangerSense = UnitKeyword._(
+    id: 'danger-sense',
+    displayName: 'Danger Sense X',
+    description: r'''
+      You may choose not to remove your suppression tokens.
+      While defeinding against a ranged attack, roll 1 extra defence dice for each suppression token you have, adding up to X extra dice.
     ''',
     isNumeric: true,
   );
@@ -333,6 +309,14 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
+  static const kInfiltrate = UnitKeyword._(
+    id: 'infiltrate',
+    displayName: 'Infilitrate',
+    description: r'''
+      You may deploy anywhere beyond range 3 of all enemy units.
+    ''',
+  );
+
   static const kInspire = UnitKeyword._(
     id: 'inspire',
     displayName: 'Inspire',
@@ -365,6 +349,14 @@ class UnitKeyword implements Indexable<UnitKeyword> {
         base of any ground vehicle.
     ''',
     isNumeric: true,
+  );
+
+  static const kLeader = UnitKeyword._(
+    id: 'leader',
+    displayName: 'leader',
+    description: r'''
+      This mini is your unit leader.
+    ''',
   );
 
   static const kLowProfile = UnitKeyword._(
@@ -430,6 +422,14 @@ class UnitKeyword implements Indexable<UnitKeyword> {
       unit's activation. When a unit using the **PULLING THE STRINGS** ability,
       choose another friendly trooper unit at range 1 - 2. The chosen unit may
       perform a free attack action or free move action.
+    ''',
+  );
+
+  static const kQuickThinking = UnitKeyword._(
+    id: 'quick-thinking',
+    displayName: 'Quick Thinking',
+    description: r'''
+      (Gain 1 aim token and 1 dodge token)
     ''',
   );
 
@@ -659,7 +659,7 @@ class UnitKeyword implements Indexable<UnitKeyword> {
 }
 
 class WeaponKeyword implements Indexable<WeaponKeyword> {
-  static final Serializer<WeaponKeyword> serializer = _Serializer(
+  static final Serializer<WeaponKeyword> serializer = IndexableSerializer(
     _index,
     wireName: 'weaponKeyword',
     types: const [WeaponKeyword],
@@ -948,7 +948,7 @@ class WeaponKeyword implements Indexable<WeaponKeyword> {
 }
 
 class UpgradeKeyword implements Indexable<UpgradeKeyword> {
-  static final Serializer<UpgradeKeyword> serializer = _Serializer(
+  static final Serializer<UpgradeKeyword> serializer = IndexableSerializer(
     _index,
     wireName: 'upgradeKeyword',
     types: const [UpgradeKeyword],
@@ -978,6 +978,14 @@ class UpgradeKeyword implements Indexable<UpgradeKeyword> {
       If an upgrade that adds a miniature to a unit has the **NONCOMBATANT**
       keyword, the mini added by the upgrade cannot use any weapons and wounds
       must be assigned to the other non-unit leader minis.
+    ''',
+  );
+
+  static const kReconfigure = UpgradeKeyword._(
+    id: 'reconfigure',
+    displayName: 'Reconfigure',
+    description: r'''
+      When you recover, you may flip this card.
     ''',
   );
 

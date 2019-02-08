@@ -1,4 +1,6 @@
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/serializer.dart';
+import 'package:meta/meta.dart';
 import 'package:swlegion/swlegion.dart';
 
 /// Represents an object [T] that has a unique [id] field and can be [toRef]'d.
@@ -31,6 +33,41 @@ class Reference<T extends Indexable<T>> implements Indexable<T> {
 
   @override
   String toString() => 'Reference<$T>: $id';
+}
+
+class IndexableSerializer<T extends Indexable<T>>
+    implements PrimitiveSerializer<T> {
+  final BuiltMap<String, T> _index;
+
+  const IndexableSerializer(
+    this._index, {
+    @required this.types,
+    @required this.wireName,
+  });
+
+  @override
+  Object serialize(
+    Serializers serializers,
+    T object, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return object.id;
+  }
+
+  @override
+  T deserialize(
+    Serializers serializers,
+    Object serialized, {
+    FullType specifiedType = FullType.unspecified,
+  }) {
+    return _index[serialized as String];
+  }
+
+  @override
+  final List<Type> types;
+
+  @override
+  final String wireName;
 }
 
 class _ReferenceSerializer implements PrimitiveSerializer<Reference> {

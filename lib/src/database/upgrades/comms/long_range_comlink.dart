@@ -8,4 +8,11 @@ final longRangeComlink = Upgrade(
   text: r'''
     During the command phase, you may be issued orders as though you are in range of the nominated commander.
   ''',
+  waves: const [
+    Wave.wCore,
+    Wave.w74ZSpeederBikesUnitExpansion,
+    Wave.wAtRtUnitExpansion,
+    Wave.wAtStUnitExpansion,
+    Wave.wT47AirspeederUnitExpansion,
+  ],
 );

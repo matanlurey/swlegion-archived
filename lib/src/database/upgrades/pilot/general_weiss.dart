@@ -14,4 +14,7 @@ final generalWeiss = Upgrade(
   keywordsForUnit: const {
     UnitKeyword.kArsenal: 2,
   },
+  waves: const [
+    Wave.wAtStUnitExpansion,
+  ],
 );

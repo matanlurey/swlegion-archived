@@ -11,4 +11,7 @@ final saberThrow = Upgrade(
     Perform a ranged attack with that weapon against an enemy at range 1-2, using half of that weapon's dice, rounded up.
     This is treated as an attack action.
   ''',
+  waves: const [
+    Wave.wCore,
+  ],
 );

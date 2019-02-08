@@ -10,4 +10,7 @@ final forcePush = Upgrade(
     Action: Choose an enemy trooper unit at range 1.
     Perform a speed-1 move with that unit, even if it is engaged.
   ''',
+  waves: const [
+    Wave.wCore,
+  ],
 );

@@ -8,4 +8,10 @@ final fragmentationGrenades = Upgrade(
   type: UpgradeSlot.grenades,
   weapon: weapon.fragmentationGrenades,
   points: 5,
+  waves: const [
+    Wave.wImperialDeathTroopersUnitExpansion,
+    Wave.wImperialRoyalGuardsUnitExpansion,
+    Wave.wWookieWarriorsUnitExpansion,
+    Wave.wRebelPathfindersUnitExpansion,
+  ],
 );

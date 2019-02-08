@@ -11,4 +11,7 @@ final targetingScopes = Upgrade(
   keywordsForUnit: const {
     UnitKeyword.kPrecise: 1,
   },
+  waves: const [
+    Wave.wCore,
+  ],
 );

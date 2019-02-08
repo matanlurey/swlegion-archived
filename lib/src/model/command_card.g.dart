@@ -29,12 +29,22 @@ class _$CommandCardSerializer implements StructuredSerializer<CommandCard> {
       'activated',
       serializers.serialize(object.unitsActivated,
           specifiedType: const FullType(String)),
-      'required',
+      'units_required',
       serializers.serialize(object.unitsRequired,
           specifiedType: const FullType(BuiltSet, const [
             const FullType(Reference, const [const FullType(Unit)])
           ])),
+      'waves',
+      serializers.serialize(object.waves,
+          specifiedType:
+              const FullType(BuiltList, const [const FullType(Wave)])),
     ];
+    if (object.factionRequired != null) {
+      result
+        ..add('faction_required')
+        ..add(serializers.serialize(object.factionRequired,
+            specifiedType: const FullType(Faction)));
+    }
     if (object.weapon != null) {
       result
         ..add('weapon')
@@ -76,11 +86,21 @@ class _$CommandCardSerializer implements StructuredSerializer<CommandCard> {
           result.unitsActivated = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
-        case 'required':
+        case 'faction_required':
+          result.factionRequired = serializers.deserialize(value,
+              specifiedType: const FullType(Faction)) as Faction;
+          break;
+        case 'units_required':
           result.unitsRequired.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltSet, const [
                 const FullType(Reference, const [const FullType(Unit)])
               ])) as BuiltSet);
+          break;
+        case 'waves':
+          result.waves.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(BuiltList, const [const FullType(Wave)]))
+              as BuiltList);
           break;
         case 'weapon':
           result.weapon.replace(serializers.deserialize(value,
@@ -105,7 +125,11 @@ class _$CommandCard extends CommandCard {
   @override
   final String unitsActivated;
   @override
+  final Faction factionRequired;
+  @override
   final BuiltSet<Reference<Unit>> unitsRequired;
+  @override
+  final BuiltList<Wave> waves;
   @override
   final Weapon weapon;
 
@@ -118,7 +142,9 @@ class _$CommandCard extends CommandCard {
       this.text,
       this.pips,
       this.unitsActivated,
+      this.factionRequired,
       this.unitsRequired,
+      this.waves,
       this.weapon})
       : super._() {
     if (id == null) {
@@ -138,6 +164,9 @@ class _$CommandCard extends CommandCard {
     }
     if (unitsRequired == null) {
       throw new BuiltValueNullFieldError('CommandCard', 'unitsRequired');
+    }
+    if (waves == null) {
+      throw new BuiltValueNullFieldError('CommandCard', 'waves');
     }
   }
 
@@ -167,7 +196,9 @@ class _$CommandCard extends CommandCard {
           ..add('text', text)
           ..add('pips', pips)
           ..add('unitsActivated', unitsActivated)
+          ..add('factionRequired', factionRequired)
           ..add('unitsRequired', unitsRequired)
+          ..add('waves', waves)
           ..add('weapon', weapon))
         .toString();
   }
@@ -197,11 +228,20 @@ class CommandCardBuilder implements Builder<CommandCard, CommandCardBuilder> {
   set unitsActivated(String unitsActivated) =>
       _$this._unitsActivated = unitsActivated;
 
+  Faction _factionRequired;
+  Faction get factionRequired => _$this._factionRequired;
+  set factionRequired(Faction factionRequired) =>
+      _$this._factionRequired = factionRequired;
+
   SetBuilder<Reference<Unit>> _unitsRequired;
   SetBuilder<Reference<Unit>> get unitsRequired =>
       _$this._unitsRequired ??= new SetBuilder<Reference<Unit>>();
   set unitsRequired(SetBuilder<Reference<Unit>> unitsRequired) =>
       _$this._unitsRequired = unitsRequired;
+
+  ListBuilder<Wave> _waves;
+  ListBuilder<Wave> get waves => _$this._waves ??= new ListBuilder<Wave>();
+  set waves(ListBuilder<Wave> waves) => _$this._waves = waves;
 
   WeaponBuilder _weapon;
   WeaponBuilder get weapon => _$this._weapon ??= new WeaponBuilder();
@@ -216,7 +256,9 @@ class CommandCardBuilder implements Builder<CommandCard, CommandCardBuilder> {
       _text = _$v.text;
       _pips = _$v.pips;
       _unitsActivated = _$v.unitsActivated;
+      _factionRequired = _$v.factionRequired;
       _unitsRequired = _$v.unitsRequired?.toBuilder();
+      _waves = _$v.waves?.toBuilder();
       _weapon = _$v.weapon?.toBuilder();
       _$v = null;
     }
@@ -247,13 +289,17 @@ class CommandCardBuilder implements Builder<CommandCard, CommandCardBuilder> {
               text: text,
               pips: pips,
               unitsActivated: unitsActivated,
+              factionRequired: factionRequired,
               unitsRequired: unitsRequired.build(),
+              waves: waves.build(),
               weapon: _weapon?.build());
     } catch (_) {
       String _$failedField;
       try {
         _$failedField = 'unitsRequired';
         unitsRequired.build();
+        _$failedField = 'waves';
+        waves.build();
         _$failedField = 'weapon';
         _weapon?.build();
       } catch (e) {

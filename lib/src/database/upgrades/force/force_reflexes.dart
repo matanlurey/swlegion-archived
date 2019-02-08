@@ -9,4 +9,7 @@ final forceReflexes = Upgrade(
   text: r'''
     Action: Gain 1 dodge token.
   ''',
+  waves: const [
+    Wave.wCore,
+  ],
 );

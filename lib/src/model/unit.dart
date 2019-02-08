@@ -11,6 +11,7 @@ import 'rank.dart';
 import 'reference.dart';
 import 'unit_type.dart';
 import 'upgrade_slot.dart';
+import 'wave.dart';
 import 'weapon.dart';
 
 part 'unit.g.dart';
@@ -44,6 +45,7 @@ abstract class Unit extends Object
     Map<UpgradeSlot, int> upgrades = const {},
     List<Weapon> weapons = const [],
     Map<UnitKeyword, Object> keywords = const {},
+    @required List<Wave> waves,
   }) =>
       Unit._builder((b) => b
         ..id = id
@@ -65,7 +67,8 @@ abstract class Unit extends Object
         ..speed = speed
         ..upgrades.addAll(upgrades)
         ..weapons.addAll(weapons)
-        ..keywords.addAll(keywords));
+        ..keywords.addAll(keywords)
+        ..waves.addAll(waves));
 
   Unit._();
 
@@ -168,4 +171,11 @@ abstract class Unit extends Object
   /// Keywords on the unit.
   @BuiltValueField(compare: false)
   BuiltMap<UnitKeyword, Object> get keywords;
+
+  /// Wave(s) of the unit's release.
+  @BuiltValueField(compare: false)
+  BuiltList<Wave> get waves;
+
+  /// Whether this unit is considered released.
+  bool get isReleased => waves.any((w) => w.isReleased);
 }

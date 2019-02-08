@@ -7,6 +7,7 @@ import 'database/weapons/ax_20_blaster_cannon.dart' as _i;
 import 'database/weapons/boot_spikes.dart' as _i;
 import 'database/weapons/brawl.dart' as _i;
 import 'database/weapons/chewbaccas_bowcaster.dart' as _i;
+import 'database/weapons/collapsible_tonfa.dart' as _i;
 import 'database/weapons/combat_expertise.dart' as _i;
 import 'database/weapons/commands/coordinated_bombardment.dart' as _i;
 import 'database/weapons/commands/maximum_firepower.dart' as _i;
@@ -27,9 +28,13 @@ import 'database/weapons/leias_defender_sporting_blaster.dart' as _i;
 import 'database/weapons/lukes_dl_44_blaster_pistol.dart' as _i;
 import 'database/weapons/martial_arts.dart' as _i;
 import 'database/weapons/ms_4_twin_blaster_cannon.dart' as _i;
+import 'database/weapons/officers_a_180_blaster_pistol.dart' as _i;
+import 'database/weapons/officers_rk_3_blaster_pistol.dart' as _i;
 import 'database/weapons/overpower.dart' as _i;
 import 'database/weapons/ryyk_blade.dart' as _i;
 import 'database/weapons/unarmed.dart' as _i;
+import 'database/weapons/upgrades/a_180_blaster_pistol.dart' as _i;
+import 'database/weapons/upgrades/a_180_blaster_rifle.dart' as _i;
 import 'database/weapons/upgrades/bowcaster.dart' as _i;
 import 'database/weapons/upgrades/dh_447_sniper_rifle.dart' as _i;
 import 'database/weapons/upgrades/dlt_19_heavy_blaster_rifle.dart' as _i;
@@ -71,6 +76,7 @@ final aggregate = [
   _i.bootSpikes,
   _i.brawl,
   _i.chewbaccasBowcaster,
+  _i.collapsibleTonfa,
   _i.combatExpertise,
   _i.coordinatedBombardment,
   _i.maximumFirepower,
@@ -91,9 +97,13 @@ final aggregate = [
   _i.lukesDl44BlasterPistol,
   _i.martialArts,
   _i.ms4TwinBlasterCannon,
+  _i.officersA180BlasterPistol,
+  _i.officersRK3BlasterPistol,
   _i.overpower,
   _i.ryykBlade,
   _i.unarmed,
+  _i.a180BlasterPistol,
+  _i.a180BlasterRifle,
   _i.bowcaster,
   _i.dh447SniperRifle,
   _i.dlt19HHeavyBlasterRifle,
@@ -135,6 +145,7 @@ class Weapons {
   static final bootSpikes = _i.bootSpikes;
   static final brawl = _i.brawl;
   static final chewbaccasBowcaster = _i.chewbaccasBowcaster;
+  static final collapsibleTonfa = _i.collapsibleTonfa;
   static final combatExpertise = _i.combatExpertise;
   static final coordinatedBombardment = _i.coordinatedBombardment;
   static final maximumFirepower = _i.maximumFirepower;
@@ -155,9 +166,13 @@ class Weapons {
   static final lukesDl44BlasterPistol = _i.lukesDl44BlasterPistol;
   static final martialArts = _i.martialArts;
   static final ms4TwinBlasterCannon = _i.ms4TwinBlasterCannon;
+  static final officersA180BlasterPistol = _i.officersA180BlasterPistol;
+  static final officersRK3BlasterPistol = _i.officersRK3BlasterPistol;
   static final overpower = _i.overpower;
   static final ryykBlade = _i.ryykBlade;
   static final unarmed = _i.unarmed;
+  static final a180BlasterPistol = _i.a180BlasterPistol;
+  static final a180BlasterRifle = _i.a180BlasterRifle;
   static final bowcaster = _i.bowcaster;
   static final dh447SniperRifle = _i.dh447SniperRifle;
   static final dlt19HHeavyBlasterRifle = _i.dlt19HHeavyBlasterRifle;

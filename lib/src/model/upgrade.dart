@@ -9,6 +9,7 @@ import 'reference.dart';
 import 'unit.dart';
 import 'unit_type.dart';
 import 'upgrade_slot.dart';
+import 'wave.dart';
 import 'weapon.dart';
 
 part 'upgrade.g.dart';
@@ -23,6 +24,7 @@ abstract class Upgrade extends Object
 
   factory Upgrade({
     bool addsMiniature = false,
+    Map<UpgradeSlot, int> addsUpgradeSlots = const {},
     bool isExhaustible = false,
     @required int points,
     Map<UnitKeyword, Object> keywordsForUnit = const {},
@@ -35,10 +37,12 @@ abstract class Upgrade extends Object
     @required String name,
     String text = '',
     @required UpgradeSlot type,
+    @required List<Wave> waves,
     Weapon weapon,
   }) =>
       Upgrade._builder((b) => b
         ..addsMiniature = addsMiniature
+        ..addsUpgradeSlots.addAll(addsUpgradeSlots)
         ..isExhaustible = isExhaustible
         ..points = points
         ..keywordsForUnit.addAll(keywordsForUnit)
@@ -51,6 +55,7 @@ abstract class Upgrade extends Object
         ..name = name
         ..text = text
         ..type = type
+        ..waves.addAll(waves)
         ..weapon = weapon?.toBuilder());
 
   factory Upgrade._builder(void Function(UpgradeBuilder) build) = _$Upgrade;
@@ -59,6 +64,10 @@ abstract class Upgrade extends Object
   /// Whether this upgrade adds a miniature.
   @BuiltValueField(compare: false, wireName: 'adds_miniature')
   bool get addsMiniature;
+
+  /// Upgrade slots that are added as a result of this upgrade.
+  @BuiltValueField(compare: false, wireName: 'adds_upgrade_slots')
+  BuiltMap<UpgradeSlot, int> get addsUpgradeSlots;
 
   /// Whether this upgrade is exhausted upon use.
   @BuiltValueField(compare: false, wireName: 'is_exhaustible')
@@ -139,4 +148,11 @@ abstract class Upgrade extends Object
   @nullable
   @BuiltValueField(compare: false, wireName: 'weapon')
   Weapon get weapon;
+
+  /// Wave(s) of the upgrade's release.
+  @BuiltValueField(compare: false)
+  BuiltList<Wave> get waves;
+
+  /// Whether this upgrade is considered released.
+  bool get isReleased => waves.any((w) => w.isReleased);
 }

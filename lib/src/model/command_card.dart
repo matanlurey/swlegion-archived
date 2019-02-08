@@ -3,8 +3,10 @@ import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:meta/meta.dart';
 
+import 'faction.dart';
 import 'reference.dart';
 import 'unit.dart';
+import 'wave.dart';
 import 'weapon.dart';
 
 part 'command_card.g.dart';
@@ -22,7 +24,9 @@ abstract class CommandCard extends Object
     @required int pips,
     @required String unitsActivated,
     String text = '',
+    Faction factionRequired,
     List<Unit> unitsRequired = const [],
+    @required List<Wave> waves,
     Weapon weapon,
   }) =>
       CommandCard._build((b) => b
@@ -31,7 +35,9 @@ abstract class CommandCard extends Object
         ..pips = pips
         ..unitsActivated = unitsActivated
         ..text = text
+        ..factionRequired = factionRequired
         ..unitsRequired.addAll(unitsRequired.map((u) => u.toRef()))
+        ..waves.addAll(waves)
         ..weapon = weapon?.toBuilder());
 
   factory CommandCard._build(
@@ -60,9 +66,23 @@ abstract class CommandCard extends Object
   @BuiltValueField(compare: false, wireName: 'activated')
   String get unitsActivated;
 
+  /// Faction required to use this command card.
+  ///
+  /// If `null`, but [unitsRequired] is non-empty, this is implicit to the unit.
+  @BuiltValueField(compare: false, wireName: 'faction_required')
+  @nullable
+  Faction get factionRequired;
+
   /// Unit(s) required to use this command card.
-  @BuiltValueField(compare: false, wireName: 'required')
+  @BuiltValueField(compare: false, wireName: 'units_required')
   BuiltSet<Reference<Unit>> get unitsRequired;
+
+  /// Wave(s) this command card is in.
+  @BuiltValueField(compare: false)
+  BuiltList<Wave> get waves;
+
+  /// Whether this command card is in a released wave.
+  bool get isReleased => waves.any((w) => w.isReleased);
 
   /// Weapon attached to this command card.
   @BuiltValueField(compare: false)

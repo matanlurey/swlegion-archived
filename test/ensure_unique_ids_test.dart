@@ -32,6 +32,7 @@ void main() {
       name: 'Command A',
       unitsActivated: '',
       pips: 1,
+      waves: [],
     );
     final commandB = commandA.rebuild((b) => b..name = 'Command B');
     expect(commandA, equals(commandB));
@@ -52,6 +53,7 @@ void main() {
       name: 'Force Sprint',
       id: 'force-sprint',
       points: 25,
+      waves: [],
     );
     final upgradeB = upgradeA.rebuild((b) => b..points = 26);
     expect(upgradeA, equals(upgradeB));
@@ -79,6 +81,7 @@ void main() {
       id: 'gonk-droid',
       wounds: 1,
       points: 20,
+      waves: [],
     );
     final unitB = unitA.rebuild((b) => b..points = 25);
     expect(unitA, equals(unitB));

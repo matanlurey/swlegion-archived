@@ -11,4 +11,7 @@ final jediMindTrick = Upgrade(
     Action: Choose an enemy trooper at range 1-2.
     It gains 2 suppression tokens.
   ''',
+  waves: const [
+    Wave.wCore,
+  ],
 );

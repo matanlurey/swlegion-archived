@@ -8,4 +8,10 @@ final commandingPresence = Upgrade(
   text: r'''
     When issuing orders, you can issue orders at range 4.
   ''',
+  waves: const [
+    Wave.wGeneralVeersCommanderExpansion,
+    Wave.wImperialSpecialistsPersonnelExpansion,
+    Wave.wLeiaOrganaCommanderExpansion,
+    Wave.wRebelSpecialistsPersonnelExpansion,
+  ],
 );

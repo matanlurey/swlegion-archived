@@ -36,7 +36,7 @@ abstract class Weapon implements Built<Weapon, WeaponBuilder> {
   factory Weapon.melee({
     @required String name,
     @required Map<AttackDice, int> dice,
-    Map<WeaponKeyword, int> keywords = const {},
+    Map<WeaponKeyword, Object> keywords = const {},
   }) =>
       Weapon(
         name: name,

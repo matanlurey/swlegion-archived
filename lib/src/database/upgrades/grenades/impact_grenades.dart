@@ -8,4 +8,10 @@ final impactGrenades = Upgrade(
   type: UpgradeSlot.grenades,
   weapon: weapon.impactGrenades,
   points: 5,
+  waves: const [
+    Wave.wFleetTroopersUnitExpansion,
+    Wave.wRebelTroopersUnitExpansion,
+    Wave.wSnowtroopersUnitExpansion,
+    Wave.wStormtroopersUnitExpansion,
+  ],
 );

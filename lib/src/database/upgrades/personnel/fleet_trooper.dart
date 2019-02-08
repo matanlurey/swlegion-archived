@@ -1,12 +1,14 @@
+import 'package:swlegion/catalog.dart';
 import 'package:swlegion/swlegion.dart';
-
-import '../../units/fleet_troopers.dart' as unit;
 
 final fleetTrooper = Upgrade(
   id: 'fleet-trooper',
   name: 'Fleet Trooper',
   type: UpgradeSlot.personnel,
   addsMiniature: true,
-  restrictedToUnit: [unit.fleetTroopers.toRef()],
+  restrictedToUnit: [Units.fleetTroopers.toRef()],
   points: 11,
+  waves: const [
+    Wave.wFleetTroopersUnitExpansion,
+  ],
 );
