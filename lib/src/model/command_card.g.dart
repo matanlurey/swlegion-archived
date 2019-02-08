@@ -29,12 +29,18 @@ class _$CommandCardSerializer implements StructuredSerializer<CommandCard> {
       'activated',
       serializers.serialize(object.unitsActivated,
           specifiedType: const FullType(String)),
-      'required',
+      'units_required',
       serializers.serialize(object.unitsRequired,
           specifiedType: const FullType(BuiltSet, const [
             const FullType(Reference, const [const FullType(Unit)])
           ])),
     ];
+    if (object.factionRequired != null) {
+      result
+        ..add('faction_required')
+        ..add(serializers.serialize(object.factionRequired,
+            specifiedType: const FullType(Faction)));
+    }
     if (object.weapon != null) {
       result
         ..add('weapon')
@@ -76,7 +82,11 @@ class _$CommandCardSerializer implements StructuredSerializer<CommandCard> {
           result.unitsActivated = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
-        case 'required':
+        case 'faction_required':
+          result.factionRequired = serializers.deserialize(value,
+              specifiedType: const FullType(Faction)) as Faction;
+          break;
+        case 'units_required':
           result.unitsRequired.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltSet, const [
                 const FullType(Reference, const [const FullType(Unit)])
@@ -105,6 +115,8 @@ class _$CommandCard extends CommandCard {
   @override
   final String unitsActivated;
   @override
+  final Faction factionRequired;
+  @override
   final BuiltSet<Reference<Unit>> unitsRequired;
   @override
   final Weapon weapon;
@@ -118,6 +130,7 @@ class _$CommandCard extends CommandCard {
       this.text,
       this.pips,
       this.unitsActivated,
+      this.factionRequired,
       this.unitsRequired,
       this.weapon})
       : super._() {
@@ -167,6 +180,7 @@ class _$CommandCard extends CommandCard {
           ..add('text', text)
           ..add('pips', pips)
           ..add('unitsActivated', unitsActivated)
+          ..add('factionRequired', factionRequired)
           ..add('unitsRequired', unitsRequired)
           ..add('weapon', weapon))
         .toString();
@@ -197,6 +211,11 @@ class CommandCardBuilder implements Builder<CommandCard, CommandCardBuilder> {
   set unitsActivated(String unitsActivated) =>
       _$this._unitsActivated = unitsActivated;
 
+  Faction _factionRequired;
+  Faction get factionRequired => _$this._factionRequired;
+  set factionRequired(Faction factionRequired) =>
+      _$this._factionRequired = factionRequired;
+
   SetBuilder<Reference<Unit>> _unitsRequired;
   SetBuilder<Reference<Unit>> get unitsRequired =>
       _$this._unitsRequired ??= new SetBuilder<Reference<Unit>>();
@@ -216,6 +235,7 @@ class CommandCardBuilder implements Builder<CommandCard, CommandCardBuilder> {
       _text = _$v.text;
       _pips = _$v.pips;
       _unitsActivated = _$v.unitsActivated;
+      _factionRequired = _$v.factionRequired;
       _unitsRequired = _$v.unitsRequired?.toBuilder();
       _weapon = _$v.weapon?.toBuilder();
       _$v = null;
@@ -247,6 +267,7 @@ class CommandCardBuilder implements Builder<CommandCard, CommandCardBuilder> {
               text: text,
               pips: pips,
               unitsActivated: unitsActivated,
+              factionRequired: factionRequired,
               unitsRequired: unitsRequired.build(),
               weapon: _weapon?.build());
     } catch (_) {

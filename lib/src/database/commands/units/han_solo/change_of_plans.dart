@@ -1,0 +1,13 @@
+import 'package:swlegion/catalog.dart';
+import 'package:swlegion/swlegion.dart';
+
+final changeOfPlans = CommandCard(
+  id: 'change-of-plans',
+  name: 'Change of Plans',
+  unitsActivated: '${Units.hanSolo.name} and 2 Troopers',
+  unitsRequired: [Units.hanSolo],
+  pips: 3,
+  text: r'''
+    When this card is revealed, you may discard it to return an opponent's command card to their hand. If you do, return to the Select Command Card step. That opponent cannot select the command card that was returned to their hand.
+  ''',
+);

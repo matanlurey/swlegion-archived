@@ -1,38 +1,54 @@
-import 'database/commands/ambush.dart' as _i;
-import 'database/commands/assault.dart' as _i;
-import 'database/commands/boba_fett/whipcord_launcher.dart' as _i;
-import 'database/commands/boba_fett/z_6_jetpack_launcher.dart' as _i;
-import 'database/commands/boba_fett/zx_flame_projector.dart' as _i;
-import 'database/commands/chewbacca/brains_and_brawn.dart' as _i;
-import 'database/commands/chewbacca/common_cause.dart' as _i;
-import 'database/commands/chewbacca/notorious_scoundrels.dart' as _i;
-import 'database/commands/darth_vader/implacable.dart' as _i;
-import 'database/commands/darth_vader/master_of_evil.dart' as _i;
-import 'database/commands/darth_vader/new_ways_to_motivate_them.dart' as _i;
-import 'database/commands/emperor_palpatine.dart/an_entire_legion.dart' as _i;
-import 'database/commands/emperor_palpatine.dart/and_now_you_will_die.dart'
+import 'database/commands/faction/imperials/coordinated_fire.dart' as _i;
+import 'database/commands/faction/imperials/covert_observation.dart' as _i;
+import 'database/commands/faction/imperials/pinned_down.dart' as _i;
+import 'database/commands/faction/rebels/covering_fire.dart' as _i;
+import 'database/commands/faction/rebels/sabotaged_communications.dart' as _i;
+import 'database/commands/faction/rebels/turning_the_tide.dart' as _i;
+import 'database/commands/neutral/ambush.dart' as _i;
+import 'database/commands/neutral/assault.dart' as _i;
+import 'database/commands/neutral/push.dart' as _i;
+import 'database/commands/neutral/standing_orders.dart' as _i;
+import 'database/commands/units/boba_fett/whipcord_launcher.dart' as _i;
+import 'database/commands/units/boba_fett/z_6_jetpack_launcher.dart' as _i;
+import 'database/commands/units/boba_fett/zx_flame_projector.dart' as _i;
+import 'database/commands/units/chewbacca/brains_and_brawn.dart' as _i;
+import 'database/commands/units/chewbacca/common_cause.dart' as _i;
+import 'database/commands/units/chewbacca/notorious_scoundrels.dart' as _i;
+import 'database/commands/units/darth_vader/implacable.dart' as _i;
+import 'database/commands/units/darth_vader/master_of_evil.dart' as _i;
+import 'database/commands/units/darth_vader/new_ways_to_motivate_them.dart'
     as _i;
-import 'database/commands/emperor_palpatine.dart/give_in_to_your_anger.dart'
+import 'database/commands/units/emperor_palpatine.dart/an_entire_legion.dart'
     as _i;
-import 'database/commands/general_veers/evasive_maneuvers.dart' as _i;
-import 'database/commands/general_veers/imperial_discipline.dart' as _i;
-import 'database/commands/general_veers/maximum_firepower.dart' as _i;
-import 'database/commands/han_solo/change_of_plans.dart' as _i;
-import 'database/commands/han_solo/reckless_diversion.dart' as _i;
-import 'database/commands/han_solo/sorry_about_the_mess.dart' as _i;
-import 'database/commands/leia_organa/coordinated_bombardment.dart' as _i;
-import 'database/commands/leia_organa/no_time_for_sorrows.dart' as _i;
-import 'database/commands/leia_organa/somebody_has_to_save_our_skins.dart'
+import 'database/commands/units/emperor_palpatine.dart/and_now_you_will_die.dart'
     as _i;
-import 'database/commands/luke_skywalker/my_ally_is_the_force.dart' as _i;
-import 'database/commands/luke_skywalker/return_of_the_jedi.dart' as _i;
-import 'database/commands/luke_skywalker/son_of_skywalker.dart' as _i;
-import 'database/commands/push.dart' as _i;
-import 'database/commands/standing_orders.dart' as _i;
+import 'database/commands/units/emperor_palpatine.dart/give_in_to_your_anger.dart'
+    as _i;
+import 'database/commands/units/general_veers/evasive_maneuvers.dart' as _i;
+import 'database/commands/units/general_veers/imperial_discipline.dart' as _i;
+import 'database/commands/units/general_veers/maximum_firepower.dart' as _i;
+import 'database/commands/units/han_solo/change_of_plans.dart' as _i;
+import 'database/commands/units/han_solo/reckless_diversion.dart' as _i;
+import 'database/commands/units/han_solo/sorry_about_the_mess.dart' as _i;
+import 'database/commands/units/leia_organa/coordinated_bombardment.dart' as _i;
+import 'database/commands/units/leia_organa/no_time_for_sorrows.dart' as _i;
+import 'database/commands/units/leia_organa/somebody_has_to_save_our_skins.dart'
+    as _i;
+import 'database/commands/units/luke_skywalker/my_ally_is_the_force.dart' as _i;
+import 'database/commands/units/luke_skywalker/return_of_the_jedi.dart' as _i;
+import 'database/commands/units/luke_skywalker/son_of_skywalker.dart' as _i;
 
 final aggregate = [
+  _i.coordinatedFire,
+  _i.covertObservation,
+  _i.pinnedDown,
+  _i.coveringFire,
+  _i.sabotagedCommunications,
+  _i.turningTheTide,
   _i.ambush,
   _i.assault,
+  _i.push,
+  _i.standingOrders,
   _i.whipcordLauncher,
   _i.z6JetpackLauncher,
   _i.zxFlameProjector,
@@ -56,15 +72,21 @@ final aggregate = [
   _i.somebodyHasToSaveOurSkins,
   _i.myAllyIsTheForce,
   _i.returnOfTheJedi,
-  _i.sonOfSkywalker,
-  _i.push,
-  _i.standingOrders
+  _i.sonOfSkywalker
 ];
 
 class Commands {
   const Commands._();
+  static final coordinatedFire = _i.coordinatedFire;
+  static final covertObservation = _i.covertObservation;
+  static final pinnedDown = _i.pinnedDown;
+  static final coveringFire = _i.coveringFire;
+  static final sabotagedCommunications = _i.sabotagedCommunications;
+  static final turningTheTide = _i.turningTheTide;
   static final ambush = _i.ambush;
   static final assault = _i.assault;
+  static final push = _i.push;
+  static final standingOrders = _i.standingOrders;
   static final whipcordLauncher = _i.whipcordLauncher;
   static final z6JetpackLauncher = _i.z6JetpackLauncher;
   static final zxFlameProjector = _i.zxFlameProjector;
@@ -89,6 +111,4 @@ class Commands {
   static final myAllyIsTheForce = _i.myAllyIsTheForce;
   static final returnOfTheJedi = _i.returnOfTheJedi;
   static final sonOfSkywalker = _i.sonOfSkywalker;
-  static final push = _i.push;
-  static final standingOrders = _i.standingOrders;
 }

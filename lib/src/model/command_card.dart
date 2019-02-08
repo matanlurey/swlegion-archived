@@ -3,6 +3,7 @@ import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:meta/meta.dart';
 
+import 'faction.dart';
 import 'reference.dart';
 import 'unit.dart';
 import 'weapon.dart';
@@ -22,6 +23,7 @@ abstract class CommandCard extends Object
     @required int pips,
     @required String unitsActivated,
     String text = '',
+    Faction factionRequired,
     List<Unit> unitsRequired = const [],
     Weapon weapon,
   }) =>
@@ -31,6 +33,7 @@ abstract class CommandCard extends Object
         ..pips = pips
         ..unitsActivated = unitsActivated
         ..text = text
+        ..factionRequired = factionRequired
         ..unitsRequired.addAll(unitsRequired.map((u) => u.toRef()))
         ..weapon = weapon?.toBuilder());
 
@@ -60,8 +63,15 @@ abstract class CommandCard extends Object
   @BuiltValueField(compare: false, wireName: 'activated')
   String get unitsActivated;
 
+  /// Faction required to use this command card.
+  ///
+  /// If `null`, but [unitsRequired] is non-empty, this is implicit to the unit.
+  @BuiltValueField(compare: false, wireName: 'faction_required')
+  @nullable
+  Faction get factionRequired;
+
   /// Unit(s) required to use this command card.
-  @BuiltValueField(compare: false, wireName: 'required')
+  @BuiltValueField(compare: false, wireName: 'units_required')
   BuiltSet<Reference<Unit>> get unitsRequired;
 
   /// Weapon attached to this command card.
