@@ -9,7 +9,7 @@ final trustGoesBothWays = CommandCard(
   pips: 2,
   text: r'''
     Jyn Erso gains INSPIRE 2.
-    When Jyn Erso issues an order to another friendly trooper, that unit gainst TEARMWORK: JYN ERSO.
+    When Jyn Erso issues an order to another friendly trooper, that unit gains TEARMWORK: JYN ERSO.
   ''',
   waves: const [
     Wave.wJynErsoCommanderExpansion,

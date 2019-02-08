@@ -1,9 +1,12 @@
+import 'dart:io';
+
 import 'package:built_value/serializer.dart';
 import 'package:swlegion/catalog.dart';
 import 'package:swlegion/swlegion.dart';
 import 'package:test/test.dart';
 
 import 'entity/sample.dart';
+import '../tool/json.dart' as tool_json;
 
 /// Ensures all entries can be serialized and deserialized to equal instances.
 void main() {
@@ -84,5 +87,14 @@ void main() {
       },
     });
     expect(json.deserializeWith(Sample.serializer, data), sample);
+  });
+
+  test('should keep lib/catalog.json up to date', () async {
+    final catalogJson = await File(tool_json.outputName).readAsString();
+    expect(
+      catalogJson,
+      '${tool_json.outputJson()}\n',
+      reason: 'Run dart tool/json.dart',
+    );
   });
 }
