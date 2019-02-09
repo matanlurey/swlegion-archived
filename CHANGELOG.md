@@ -1,3 +1,7 @@
+### Assets
+
+- Added initial assets in `lib/assets` (including thumbnails `.thumb.png`).
+
 ### Catalog
 
 - Store `text` fields with trailing and preceding whitespace removed.
