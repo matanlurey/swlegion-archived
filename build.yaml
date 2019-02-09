@@ -23,3 +23,12 @@ builders:
         - "wave.aggregate.dart"
     build_to: source
     auto_apply: root_package
+  _generate_thumbs:
+    import: tool/src/generate_thumbnails.dart
+    builder_factories:
+      - generateThumbnails
+    build_extensions:
+      ".png":
+        - ".thumb.png"
+    build_to: source
+    auto_apply: root_package
