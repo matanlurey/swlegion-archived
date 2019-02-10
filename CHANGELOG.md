@@ -5,6 +5,7 @@
 ### Catalog
 
 - Store `text` fields with trailing and preceding whitespace removed.
+- `CommandCard.factionRequired` is now only `null` for neutral command cards.
 
 ## 0.4.0
 
