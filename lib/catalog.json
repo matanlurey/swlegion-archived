@@ -133,7 +133,7 @@
       "faction_required": "imperials"
     },
     {
-      "id": "z-6-jetplack-launcher",
+      "id": "z-6-jetpack-launcher",
       "name": "Z-6 Jetpack Launcher",
       "text": "During Boba Fett's activation he gains the following weapon:",
       "pips": 3,
@@ -360,7 +360,7 @@
       "faction_required": "imperials"
     },
     {
-      "id": "imperial-discpline",
+      "id": "imperial-discipline",
       "name": "Imperial Discipline",
       "text": "When a friendly unit is issued an order it may recover.",
       "pips": 3,
