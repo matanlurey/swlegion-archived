@@ -39,8 +39,9 @@ abstract class Upgrade extends Object
     @required UpgradeSlot type,
     @required List<Wave> waves,
     Weapon weapon,
-  }) =>
-      Upgrade._builder((b) => b
+  }) {
+    return Upgrade._builder(
+      (b) => b
         ..addsMiniature = addsMiniature
         ..addsUpgradeSlots.addAll(addsUpgradeSlots)
         ..isExhaustible = isExhaustible
@@ -56,7 +57,9 @@ abstract class Upgrade extends Object
         ..text = text.trim()
         ..type = type
         ..waves.addAll(waves)
-        ..weapon = weapon?.toBuilder());
+        ..weapon = weapon?.toBuilder(),
+    );
+  }
 
   factory Upgrade._builder(void Function(UpgradeBuilder) build) = _$Upgrade;
   Upgrade._();

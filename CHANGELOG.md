@@ -1,11 +1,8 @@
-### Assets
-
-- Added initial assets in `lib/assets` (including thumbnails `.thumb.png`).
-
 ### Catalog
 
 - Store `text` fields with trailing and preceding whitespace removed.
 - `CommandCard.factionRequired` is now only `null` for neutral command cards.
+- Fix mis-spelling in the ID of `Imperial Discipline` and `Z6 Jetpack Launcher`.
 
 ## 0.4.0
 

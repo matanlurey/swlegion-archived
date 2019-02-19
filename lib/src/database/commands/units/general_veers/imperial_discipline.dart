@@ -2,7 +2,7 @@ import 'package:swlegion/catalog.dart';
 import 'package:swlegion/swlegion.dart';
 
 final imperialDiscipline = CommandCard(
-  id: 'imperial-discpline',
+  id: 'imperial-discipline',
   name: 'Imperial Discipline',
   unitsActivated: '${Units.generalVeers.name} & 2 Units',
   unitsRequired: [Units.generalVeers],
