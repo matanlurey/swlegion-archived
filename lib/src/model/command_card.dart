@@ -28,8 +28,12 @@ abstract class CommandCard extends Object
     List<Unit> unitsRequired = const [],
     @required List<Wave> waves,
     Weapon weapon,
-  }) =>
-      CommandCard._build((b) => b
+  }) {
+    if (factionRequired == null && unitsRequired.isNotEmpty) {
+      factionRequired = unitsRequired.first.faction;
+    }
+    return CommandCard._build(
+      (b) => b
         ..id = id
         ..name = name
         ..pips = pips
@@ -38,7 +42,9 @@ abstract class CommandCard extends Object
         ..factionRequired = factionRequired
         ..unitsRequired.addAll(unitsRequired.map((u) => u.toRef()))
         ..waves.addAll(waves)
-        ..weapon = weapon?.toBuilder());
+        ..weapon = weapon?.toBuilder(),
+    );
+  }
 
   factory CommandCard._build(
     void Function(CommandCardBuilder) build,
@@ -67,8 +73,6 @@ abstract class CommandCard extends Object
   String get unitsActivated;
 
   /// Faction required to use this command card.
-  ///
-  /// If `null`, but [unitsRequired] is non-empty, this is implicit to the unit.
   @BuiltValueField(compare: false, wireName: 'faction_required')
   @nullable
   Faction get factionRequired;
