@@ -39,6 +39,7 @@ abstract class Upgrade extends Object
     @required UpgradeSlot type,
     @required List<Wave> waves,
     Weapon weapon,
+    bool isUnique = false,
   }) {
     return Upgrade._builder(
       (b) => b
@@ -53,6 +54,7 @@ abstract class Upgrade extends Object
         ..restrictedToUnit.addAll(restrictedToUnit)
         ..restrictedToType = restrictedToType
         ..id = id
+        ..isUnique = isUnique
         ..name = name
         ..text = text.trim()
         ..type = type
@@ -132,6 +134,10 @@ abstract class Upgrade extends Object
   /// Unique ID for the upgrade.
   @override
   String get id;
+
+  /// Whether this is a _unique_ upgrade (one per army).
+  @BuiltValueField(compare: false, wireName: 'is_unique')
+  bool get isUnique;
 
   /// Name of the upgrade card.
   @BuiltValueField(compare: false, wireName: 'name')

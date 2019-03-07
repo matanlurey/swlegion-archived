@@ -11,6 +11,9 @@ import 'database/commands/neutral/standing_orders.dart' as _i;
 import 'database/commands/units/boba_fett/whipcord_launcher.dart' as _i;
 import 'database/commands/units/boba_fett/z_6_jetpack_launcher.dart' as _i;
 import 'database/commands/units/boba_fett/zx_flame_projector.dart' as _i;
+import 'database/commands/units/bossk/lying_in_wait.dart' as _i;
+import 'database/commands/units/bossk/merciless_munititions.dart' as _i;
+import 'database/commands/units/bossk/reptilian_rampage.dart' as _i;
 import 'database/commands/units/chewbacca/brains_and_brawn.dart' as _i;
 import 'database/commands/units/chewbacca/common_cause.dart' as _i;
 import 'database/commands/units/chewbacca/notorious_scoundrels.dart' as _i;
@@ -55,6 +58,9 @@ final aggregate = [
   _i.whipcordLauncher,
   _i.z6JetpackLauncher,
   _i.zxFlameProjector,
+  _i.lyingInWait,
+  _i.mercilessMunitions,
+  _i.reptilianRampage,
   _i.brainsAndBrawn,
   _i.commonCause,
   _i.notoriousScoundrels,
@@ -96,6 +102,9 @@ class Commands {
   static final whipcordLauncher = _i.whipcordLauncher;
   static final z6JetpackLauncher = _i.z6JetpackLauncher;
   static final zxFlameProjector = _i.zxFlameProjector;
+  static final lyingInWait = _i.lyingInWait;
+  static final mercilessMunitions = _i.mercilessMunitions;
+  static final reptilianRampage = _i.reptilianRampage;
   static final brainsAndBrawn = _i.brainsAndBrawn;
   static final commonCause = _i.commonCause;
   static final notoriousScoundrels = _i.notoriousScoundrels;

@@ -1,5 +1,8 @@
 import 'database/upgrades/blaster/a_180_pistol_config.dart' as _i;
 import 'database/upgrades/blaster/a_180_rifle_config.dart' as _i;
+import 'database/upgrades/blaster/a_300_long_range_config.dart' as _i;
+import 'database/upgrades/blaster/a_300_short_range_config.dart' as _i;
+import 'database/upgrades/blaster/the_darksaber.dart' as _i;
 import 'database/upgrades/command/commanding_presence.dart' as _i;
 import 'database/upgrades/command/esteemed_leader.dart' as _i;
 import 'database/upgrades/command/improvised_orders.dart' as _i;
@@ -17,6 +20,7 @@ import 'database/upgrades/force/saber_throw.dart' as _i;
 import 'database/upgrades/gear/emergency_stims.dart' as _i;
 import 'database/upgrades/gear/environmental_gear.dart' as _i;
 import 'database/upgrades/gear/grappling_hooks.dart' as _i;
+import 'database/upgrades/gear/personal_combat_shield.dart' as _i;
 import 'database/upgrades/gear/recon_intel.dart' as _i;
 import 'database/upgrades/gear/targeting_scopes.dart' as _i;
 import 'database/upgrades/generator/barrage_generator.dart' as _i;
@@ -47,9 +51,11 @@ import 'database/upgrades/heavy_weapon/sonic_charge_saboteur.dart' as _i;
 import 'database/upgrades/heavy_weapon/t_7_ion_snowtrooper.dart' as _i;
 import 'database/upgrades/heavy_weapon/z_6_trooper.dart' as _i;
 import 'database/upgrades/personnel/2_1_b_medical_droid.dart' as _i;
+import 'database/upgrades/personnel/bistan.dart' as _i;
 import 'database/upgrades/personnel/fleet_trooper.dart' as _i;
 import 'database/upgrades/personnel/fx_9_medical_droid.dart' as _i;
 import 'database/upgrades/personnel/imperial_comms_technician.dart' as _i;
+import 'database/upgrades/personnel/pao.dart' as _i;
 import 'database/upgrades/personnel/r_4_astromech_droid.dart' as _i;
 import 'database/upgrades/personnel/r_5_astromech_droid.dart' as _i;
 import 'database/upgrades/personnel/rebel_comms_technician.dart' as _i;
@@ -61,11 +67,15 @@ import 'database/upgrades/pilot/general_weiss.dart' as _i;
 import 'database/upgrades/pilot/wedge_antilles.dart' as _i;
 import 'database/upgrades/training/duck_and_cover.dart' as _i;
 import 'database/upgrades/training/hunter.dart' as _i;
+import 'database/upgrades/training/overwatch.dart' as _i;
 import 'database/upgrades/training/tenacity.dart' as _i;
 
 final aggregate = [
   _i.a180PistolConfig,
   _i.a180RifleConfig,
+  _i.a300LongRangeConfig,
+  _i.a300ShortRangeConfig,
+  _i.theDarksaber,
   _i.commandingPresence,
   _i.estmeedLeader,
   _i.improvisedOrders,
@@ -83,6 +93,7 @@ final aggregate = [
   _i.emergencyStims,
   _i.environmentalGear,
   _i.grapplingHooks,
+  _i.personalCombatShield,
   _i.reconIntel,
   _i.targetingScopes,
   _i.barrageGenerator,
@@ -113,9 +124,11 @@ final aggregate = [
   _i.t7IonSnowtrooper,
   _i.z6Trooper,
   _i.$21BMedicalDroid,
+  _i.bistan,
   _i.fleetTrooper,
   _i.fx9MedicalDroid,
   _i.imperialCommsTechnician,
+  _i.pao,
   _i.r4AstromechDroid,
   _i.r5AstromechDroid,
   _i.rebelCommsTechnician,
@@ -127,6 +140,7 @@ final aggregate = [
   _i.wedgeAntilles,
   _i.duckAndCover,
   _i.hunter,
+  _i.overwatch,
   _i.tenacity
 ];
 
@@ -134,6 +148,9 @@ class Upgrades {
   const Upgrades._();
   static final a180PistolConfig = _i.a180PistolConfig;
   static final a180RifleConfig = _i.a180RifleConfig;
+  static final a300LongRangeConfig = _i.a300LongRangeConfig;
+  static final a300ShortRangeConfig = _i.a300ShortRangeConfig;
+  static final theDarksaber = _i.theDarksaber;
   static final commandingPresence = _i.commandingPresence;
   static final estmeedLeader = _i.estmeedLeader;
   static final improvisedOrders = _i.improvisedOrders;
@@ -151,6 +168,7 @@ class Upgrades {
   static final emergencyStims = _i.emergencyStims;
   static final environmentalGear = _i.environmentalGear;
   static final grapplingHooks = _i.grapplingHooks;
+  static final personalCombatShield = _i.personalCombatShield;
   static final reconIntel = _i.reconIntel;
   static final targetingScopes = _i.targetingScopes;
   static final barrageGenerator = _i.barrageGenerator;
@@ -181,9 +199,11 @@ class Upgrades {
   static final t7IonSnowtrooper = _i.t7IonSnowtrooper;
   static final z6Trooper = _i.z6Trooper;
   static final $21BMedicalDroid = _i.$21BMedicalDroid;
+  static final bistan = _i.bistan;
   static final fleetTrooper = _i.fleetTrooper;
   static final fx9MedicalDroid = _i.fx9MedicalDroid;
   static final imperialCommsTechnician = _i.imperialCommsTechnician;
+  static final pao = _i.pao;
   static final r4AstromechDroid = _i.r4AstromechDroid;
   static final r5AstromechDroid = _i.r5AstromechDroid;
   static final rebelCommsTechnician = _i.rebelCommsTechnician;
@@ -195,5 +215,6 @@ class Upgrades {
   static final wedgeAntilles = _i.wedgeAntilles;
   static final duckAndCover = _i.duckAndCover;
   static final hunter = _i.hunter;
+  static final overwatch = _i.overwatch;
   static final tenacity = _i.tenacity;
 }
