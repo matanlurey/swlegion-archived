@@ -4,6 +4,10 @@
 - `CommandCard.factionRequired` is now only `null` for neutral command cards.
 - Fix mis-spelling in the ID of `Imperial Discipline` and `Z6 Jetpack Launcher`.
 
+### Data Model
+
+- Added meaningful `toString()`'s to `Wave` and `...Keyword` enum-like classes.
+
 ## 0.4.0
 
 Large set of breaking changes and new content!

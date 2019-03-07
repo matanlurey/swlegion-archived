@@ -38,6 +38,9 @@ class Wave implements Comparable<Wave>, Indexable<Wave> {
   @override
   toRef() => Reference(id);
 
+  @override
+  toString() => 'Wave: $id';
+
   static const wCore = Wave._(1);
   static const wDicePack = Wave._(2);
   static const wMovementToolsAndRangeRulerPack = Wave._(3);

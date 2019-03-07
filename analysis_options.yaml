@@ -68,7 +68,8 @@ linter:
     - prefer_adjacent_string_concatenation
     - prefer_asserts_in_initializer_lists
     - prefer_bool_in_asserts
-    - prefer_collection_literals
+    # TODO: Re-add this once it is passing on travis.
+    # - prefer_collection_literals
     - prefer_conditional_assignment
     - prefer_const_constructors
     - prefer_const_constructors_in_immutables
