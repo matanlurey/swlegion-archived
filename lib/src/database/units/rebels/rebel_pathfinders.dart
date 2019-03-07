@@ -2,8 +2,8 @@ import 'package:swlegion/catalog.dart';
 import 'package:swlegion/swlegion.dart';
 
 final rebelPathfinders = Unit(
-  id: 'rebel-commandos',
-  name: 'Rebel Commandos',
+  id: 'rebel-pathfinders',
+  name: 'Rebel Pathfinders',
   faction: Faction.rebels,
   miniatures: 4,
   rank: Rank.specialForces,

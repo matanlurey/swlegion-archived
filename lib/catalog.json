@@ -191,6 +191,68 @@
       }
     },
     {
+      "id": "lying-in-wait",
+      "name": "Lying In Wait",
+      "text": "Bossk gains SHARPSHOOTER 1. After an enemy unit activates, Bossk gains 1\n    aim token.",
+      "pips": 3,
+      "activated": "Bossk",
+      "units_required": [
+        {
+          "id": "bossk"
+        }
+      ],
+      "waves": [
+        "SWL38"
+      ],
+      "faction_required": "imperials"
+    },
+    {
+      "id": "merciless-munititions",
+      "name": "Merciless Munititions",
+      "text": "During the round this card is played, Bossk gains ARM: 1 DIOXIS CHARGE.\n    After he performs this action, he may perform a speed-1 move. Until the end\n    of the game, Bossk gains DETONATE 1: DIOXIS CHARGE. After a trooper unit\n    defends against an attack made by your dioxis charge, it gains 1 poison\n    token. Do not discard this card from play.",
+      "pips": 1,
+      "activated": "Bossk",
+      "units_required": [
+        {
+          "id": "bossk"
+        }
+      ],
+      "waves": [
+        "SWL38"
+      ],
+      "faction_required": "imperials",
+      "weapon": {
+        "name": "Dioxis Charge",
+        "dice": {
+          "red": 1,
+          "black": 1
+        },
+        "area_of_effect": 1,
+        "min_range": 1,
+        "keywords": {
+          "blast": ""
+        },
+        "max_range": 1,
+        "surge_override": "critical"
+      }
+    },
+    {
+      "id": "reptilian-rampage",
+      "name": "Reptilian Rampage",
+      "text": "During Bossk's Activation, he can perform up to 2 attack actions and he may\n    suffer 1 wound to perform a free move action.",
+      "pips": 2,
+      "activated": "Bossk",
+      "units_required": [
+        {
+          "id": "bossk"
+        }
+      ],
+      "waves": [
+        "SWL38"
+      ],
+      "faction_required": "imperials"
+    },
+    {
       "id": "brains-and-brawn",
       "name": "Brains and Brawn",
       "text": "When Leia Organa is performing a ranged attack, if Chewbacca is not engaged and has line of sight to and is range 1-3 of the defender, add one\n    of his ranged weapons to the attack pool.",
@@ -781,6 +843,67 @@
       ],
       "sub_title": "Infamous Bounty Hunter",
       "courage": 3,
+      "attack_surge": "critical"
+    },
+    {
+      "id": "bossk",
+      "name": "Bossk",
+      "is_unique": true,
+      "faction": "imperials",
+      "type": "trooper",
+      "points": 115,
+      "rank": "operative",
+      "miniatures": 1,
+      "wounds": 7,
+      "defense": "white",
+      "has_defense_surge": false,
+      "speed": 2,
+      "upgrades": {
+        "training": 2,
+        "gear": 1
+      },
+      "weapons": [
+        {
+          "name": "Frenzy",
+          "dice": {
+            "red": 1,
+            "black": 2,
+            "white": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {
+            "pierce": 1
+          },
+          "max_range": 0
+        },
+        {
+          "name": "Relby-v10 Mortar Rifle",
+          "dice": {
+            "red": 1,
+            "white": 4
+          },
+          "area_of_effect": 0,
+          "min_range": 2,
+          "keywords": {
+            "pierce": 1,
+            "suppressive": ""
+          },
+          "max_range": 4
+        }
+      ],
+      "keywords": {
+        "bounty": "",
+        "enrange": 3,
+        "expert-climber": "",
+        "regenerate": 3,
+        "unhindererd": ""
+      },
+      "waves": [
+        "SWL38"
+      ],
+      "sub_title": "Trandoshan Hunter",
+      "courage": 2,
       "attack_surge": "critical"
     },
     {
@@ -1887,6 +2010,60 @@
       "attack_surge": "hit"
     },
     {
+      "id": "rebel-pathfinders",
+      "name": "Rebel Pathfinders",
+      "is_unique": false,
+      "faction": "rebels",
+      "type": "trooper",
+      "points": 60,
+      "rank": "special-forces",
+      "miniatures": 4,
+      "wounds": 1,
+      "defense": "white",
+      "has_defense_surge": true,
+      "speed": 2,
+      "upgrades": {
+        "personnel": 1,
+        "training": 1,
+        "comms": 1,
+        "gear": 1,
+        "blaster": 1,
+        "grenades": 1
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "dice": {
+            "black": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {},
+          "max_range": 0
+        },
+        {
+          "name": "A-300 Blaster Rifle",
+          "dice": {
+            "white": 2
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {},
+          "max_range": 3
+        }
+      ],
+      "keywords": {
+        "danger-sense": 3,
+        "dauntless": "",
+        "infiltrate": ""
+      },
+      "waves": [
+        "SWL32"
+      ],
+      "courage": 2,
+      "attack_surge": "hit"
+    },
+    {
       "id": "rebel-troopers",
       "name": "Rebel Troopers",
       "is_unique": false,
@@ -1935,6 +2112,63 @@
         "SWL05"
       ],
       "courage": 1
+    },
+    {
+      "id": "sabrine-wren",
+      "name": "Sabrine Wren",
+      "is_unique": true,
+      "faction": "rebels",
+      "type": "trooper",
+      "points": 125,
+      "rank": "operative",
+      "miniatures": 1,
+      "wounds": 5,
+      "defense": "red",
+      "has_defense_surge": true,
+      "speed": 3,
+      "upgrades": {
+        "training": 1,
+        "gear": 2,
+        "blaster": 1
+      },
+      "weapons": [
+        {
+          "name": "Combat Expertise",
+          "dice": {
+            "black": 2
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {},
+          "max_range": 0
+        },
+        {
+          "name": "Dual Westar-35 Blaster Pistols",
+          "dice": {
+            "red": 1,
+            "black": 1,
+            "white": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {
+            "pierce": 1
+          },
+          "max_range": 2
+        }
+      ],
+      "keywords": {
+        "jump": 2,
+        "gunslinger": "",
+        "impervious": "",
+        "nimble": ""
+      },
+      "waves": [
+        "SWL18"
+      ],
+      "sub_title": "Explosive Artist",
+      "courage": 3,
+      "attack_surge": "critical"
     },
     {
       "id": "t-47-airspeeder",
@@ -2052,6 +2286,7 @@
         }
       ],
       "id": "a-180-pistol-config",
+      "is_unique": false,
       "name": "A-180 Pistol Config",
       "text": "",
       "type": "blaster",
@@ -2085,6 +2320,7 @@
         }
       ],
       "id": "a-180-rifle-config",
+      "is_unique": false,
       "name": "A-180 Rifle Config",
       "text": "",
       "type": "blaster",
@@ -2109,11 +2345,115 @@
       "adds_miniature": false,
       "adds_upgrade_slots": {},
       "is_exhaustible": false,
+      "points": 6,
+      "keywords": {
+        "reconfigure": ""
+      },
+      "keywords_for_unit": {},
+      "restricted_to_unit": [
+        {
+          "id": "rebel-pathfinders"
+        }
+      ],
+      "id": "a-300-long-range-config",
+      "is_unique": false,
+      "name": "A-300 long Range Config",
+      "text": "",
+      "type": "blaster",
+      "waves": [
+        "SWL32"
+      ],
+      "weapon": {
+        "name": "A-300 Long-Range Blaster Rifle",
+        "dice": {
+          "white": 1
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {},
+        "max_range": 4
+      }
+    },
+    {
+      "adds_miniature": false,
+      "adds_upgrade_slots": {},
+      "is_exhaustible": false,
+      "points": 6,
+      "keywords": {
+        "reconfigure": ""
+      },
+      "keywords_for_unit": {},
+      "restricted_to_unit": [
+        {
+          "id": "rebel-pathfinders"
+        }
+      ],
+      "id": "a-300-short-range-config",
+      "is_unique": false,
+      "name": "A-300 Short Range Config",
+      "text": "",
+      "type": "blaster",
+      "waves": [
+        "SWL32"
+      ],
+      "weapon": {
+        "name": "A-300 Short-Range Blaster Rifle",
+        "dice": {
+          "red": 1
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {},
+        "max_range": 2
+      }
+    },
+    {
+      "adds_miniature": false,
+      "adds_upgrade_slots": {},
+      "is_exhaustible": false,
+      "points": 25,
+      "keywords": {},
+      "keywords_for_unit": {
+        "dauntless": "",
+        "immune-pierce": "Melee"
+      },
+      "restricted_to_unit": [
+        {
+          "id": "sabrine-wren"
+        }
+      ],
+      "id": "the-darksaber",
+      "is_unique": true,
+      "name": "The Darksaber",
+      "text": "",
+      "type": "blaster",
+      "waves": [
+        "SWL37"
+      ],
+      "weapon": {
+        "name": "The Darksaber",
+        "dice": {
+          "black": 5
+        },
+        "area_of_effect": 0,
+        "min_range": 0,
+        "keywords": {
+          "impact": 1,
+          "pierce": 1
+        },
+        "max_range": 0
+      }
+    },
+    {
+      "adds_miniature": false,
+      "adds_upgrade_slots": {},
+      "is_exhaustible": false,
       "points": 10,
       "keywords": {},
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "commanding-presence",
+      "is_unique": false,
       "name": "Commanding Presence",
       "text": "When issuing orders, you can issue orders at range 4.",
       "type": "command",
@@ -2133,6 +2473,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "esteemed-leader",
+      "is_unique": false,
       "name": "Esteemed Leader",
       "text": "While you are defending, each friendly corps trooper unit at range 1 gains Guardian 1.",
       "type": "command",
@@ -2151,6 +2492,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "improvised-orders",
+      "is_unique": false,
       "name": "Improvised Orders",
       "text": "After an order token is drawn from a friendly order pool, draw a second order token from that pool.\n    Choose 1 to use and shuffle the other back into the order pool. If you do, during the End Phase, ready this card.",
       "type": "command",
@@ -2168,6 +2510,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "comms-jammer",
+      "is_unique": false,
       "name": "Comms Jammer",
       "text": "Enemy units at range 1 cannot be issued orders, unless they are issuing an order to themselves.",
       "type": "comms",
@@ -2187,6 +2530,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "comms-relay",
+      "is_unique": false,
       "name": "Comms Relay",
       "text": "When you would be issued an order, you may choose a friendly unit at range 1-2.\n    Issue an order to the chosen unit instead.",
       "type": "comms",
@@ -2204,6 +2548,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "hq-uplink",
+      "is_unique": false,
       "name": "HQ Uplink",
       "text": "During the Issue Orders step of the Command Phase, issue an order to yourself.",
       "type": "comms",
@@ -2223,6 +2568,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "long-range-comlink",
+      "is_unique": false,
       "name": "Long-Range Comlink",
       "text": "During the command phase, you may be issued orders as though you are in range of the nominated commander.",
       "type": "comms",
@@ -2243,6 +2589,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "anger",
+      "is_unique": false,
       "name": "Anger",
       "text": "After you suffer 1 or more wounds, gain 1 aim token.",
       "type": "force",
@@ -2260,6 +2607,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "battle-meditation",
+      "is_unique": false,
       "name": "Battle Meditation",
       "text": "When you issue orders, one of those orders can be issued to any friendly unit on the battlefield.",
       "type": "force",
@@ -2276,6 +2624,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "force-choke",
+      "is_unique": false,
       "name": "Force Choke",
       "text": "Choose an enemy trooper mini at range 1 that is not a commander.\n    It suffers 1 wound.",
       "type": "force",
@@ -2294,6 +2643,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "force-push",
+      "is_unique": false,
       "name": "Force Push",
       "text": "Action: Choose an enemy trooper unit at range 1.\n    Perform a speed-1 move with that unit, even if it is engaged.",
       "type": "force",
@@ -2310,6 +2660,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "force-reflexes",
+      "is_unique": false,
       "name": "Force Reflexes",
       "text": "Action: Gain 1 dodge token.",
       "type": "force",
@@ -2326,6 +2677,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "jedi-mind-trick",
+      "is_unique": false,
       "name": "Jedi Mind Trick",
       "text": "Action: Choose an enemy trooper at range 1-2.\n    It gains 2 suppression tokens.",
       "type": "force",
@@ -2343,6 +2695,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "saber-throw",
+      "is_unique": false,
       "name": "Saber Throw",
       "text": "Action: Choose 1 of your melee weapons.\n    Perform a ranged attack with that weapon against an enemy at range 1-2, using half of that weapon's dice, rounded up.\n    This is treated as an attack action.",
       "type": "force",
@@ -2359,6 +2712,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "emergency-stims",
+      "is_unique": false,
       "name": "Emergency Stims",
       "text": "During an attack, when you would suffer wounds, prevent up to 2 wounds and place an equal number of wound tokens on this card instead.\n    If you do, at the end of your next activation, discard each token on this card and suffer wounds equal to the number of tokens discarded.",
       "type": "gear",
@@ -2382,6 +2736,7 @@
       },
       "restricted_to_unit": [],
       "id": "environmental-gear",
+      "is_unique": false,
       "name": "Environmental Gear",
       "text": "You gain Unhindered.",
       "type": "gear",
@@ -2401,6 +2756,7 @@
       },
       "restricted_to_unit": [],
       "id": "grappling-hooks",
+      "is_unique": false,
       "name": "Grappling Hooks",
       "text": "You gain Expert Climber.",
       "type": "gear",
@@ -2415,6 +2771,26 @@
       "adds_miniature": false,
       "adds_upgrade_slots": {},
       "is_exhaustible": false,
+      "points": 10,
+      "keywords": {},
+      "keywords_for_unit": {
+        "shielded": 1,
+        "recharge": 1
+      },
+      "restricted_to_unit": [],
+      "id": "personal-combat-shield",
+      "is_unique": false,
+      "name": "Personal Combat Shield",
+      "text": "You gain SHIELDED 1 (You have 1 shield token) and RECHARGE 1 (When you\n    recover, flip 1 inactive shield token).",
+      "type": "gear",
+      "waves": [
+        "SWL37"
+      ]
+    },
+    {
+      "adds_miniature": false,
+      "adds_upgrade_slots": {},
+      "is_exhaustible": false,
       "points": 2,
       "keywords": {},
       "keywords_for_unit": {
@@ -2422,6 +2798,7 @@
       },
       "restricted_to_unit": [],
       "id": "recon-intel",
+      "is_unique": false,
       "name": "Recon Intel",
       "text": "You gain Scout 1.",
       "type": "gear",
@@ -2443,6 +2820,7 @@
       },
       "restricted_to_unit": [],
       "id": "targeting-scopes",
+      "is_unique": false,
       "name": "Targeting Scopes",
       "text": "You gain Precise 1.",
       "type": "gear",
@@ -2459,6 +2837,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "barrage-generator",
+      "is_unique": false,
       "name": "Barrage Generator",
       "text": "While performing a ranged attack with a weapon that has FIXED, add 2 white attack dice and apply SUPPRESSIVE to your attack pool.",
       "type": "generator",
@@ -2476,6 +2855,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "overcharged-generator",
+      "is_unique": false,
       "name": "Overcharged Generator",
       "text": "While performing a ranged attack with a weapon that has FIXED, add 1 black attack dice and apply IMPACT 1 to your attack pool.",
       "type": "generator",
@@ -2493,6 +2873,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "concussion-grenades",
+      "is_unique": false,
       "name": "Concussion Grenades",
       "text": "",
       "type": "grenades",
@@ -2521,6 +2902,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "fragmentation-grenades",
+      "is_unique": false,
       "name": "Fragmentation Grenades",
       "text": "",
       "type": "grenades",
@@ -2550,6 +2932,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "impact-grenades",
+      "is_unique": false,
       "name": "Impact Grenades",
       "text": "",
       "type": "grenades",
@@ -2585,6 +2968,7 @@
         }
       ],
       "id": "88-twin-light-blaster-cannon",
+      "is_unique": false,
       "name": "88 Twin Light Blaster Cannon",
       "text": "",
       "type": "hard-point",
@@ -2620,6 +3004,7 @@
         }
       ],
       "id": "at-rt-flamethrower",
+      "is_unique": false,
       "name": "AT-RT Flamethrower",
       "text": "",
       "type": "hard-point",
@@ -2655,6 +3040,7 @@
         }
       ],
       "id": "at-rt-laser-cannon",
+      "is_unique": false,
       "name": "AT-RT Laser Cannon",
       "text": "",
       "type": "hard-point",
@@ -2690,6 +3076,7 @@
         }
       ],
       "id": "at-rt-rotary-blaster",
+      "is_unique": false,
       "name": "AT-RT Rotary Blaster",
       "text": "",
       "type": "hard-point",
@@ -2723,6 +3110,7 @@
         }
       ],
       "id": "at-st-mortar-launcher",
+      "is_unique": false,
       "name": "AT-ST Mortar Launcher",
       "text": "",
       "type": "hard-point",
@@ -2755,6 +3143,7 @@
         }
       ],
       "id": "ax-108-ground-buzzer",
+      "is_unique": false,
       "name": "AX108 \"Ground Buzzer\"",
       "text": "",
       "type": "hard-point",
@@ -2787,6 +3176,7 @@
         }
       ],
       "id": "dw-3-concussion-grenade-launcher",
+      "is_unique": false,
       "name": "DW-3 Concussion Grenade Launcher",
       "text": "",
       "type": "hard-point",
@@ -2820,6 +3210,7 @@
         }
       ],
       "id": "mo-dk-power-harpoon",
+      "is_unique": false,
       "name": "Mo/DK Power Harpoon",
       "text": "",
       "type": "hard-point",
@@ -2854,6 +3245,7 @@
         }
       ],
       "id": "bowcaster-wookie",
+      "is_unique": false,
       "name": "Bowcaster Wookie",
       "text": "",
       "type": "heavy-weapon",
@@ -2891,6 +3283,7 @@
         }
       ],
       "id": "dh-447-sniper",
+      "is_unique": false,
       "name": "DH-447 Sniper",
       "text": "",
       "type": "heavy-weapon",
@@ -2924,6 +3317,7 @@
         }
       ],
       "id": "dlt-19-stormtrooper",
+      "is_unique": false,
       "name": "DLT-19 Stormtrooper",
       "text": "",
       "type": "heavy-weapon",
@@ -2960,6 +3354,7 @@
         }
       ],
       "id": "dlt-19-x-sniper",
+      "is_unique": false,
       "name": "DLT-19x Sniper",
       "text": "",
       "type": "heavy-weapon",
@@ -2994,6 +3389,7 @@
         }
       ],
       "id": "electrostaff-guard",
+      "is_unique": false,
       "name": "Electrostaff Guard",
       "text": "",
       "type": "heavy-weapon",
@@ -3024,6 +3420,7 @@
         }
       ],
       "id": "flametrooper",
+      "is_unique": false,
       "name": "Flametrooper",
       "text": "",
       "type": "heavy-weapon",
@@ -3057,6 +3454,7 @@
         }
       ],
       "id": "hh-12-stormtrooper",
+      "is_unique": false,
       "name": "HH-12 Stormtrooper",
       "text": "",
       "type": "heavy-weapon",
@@ -3091,6 +3489,7 @@
         }
       ],
       "id": "mpl-57-barrage-trooper",
+      "is_unique": false,
       "name": "MPL-57 Barrage Trooper",
       "text": "",
       "type": "heavy-weapon",
@@ -3125,6 +3524,7 @@
         }
       ],
       "id": "mpl-57-ion-trooper",
+      "is_unique": false,
       "name": "MPL-57 Ion Trooper",
       "text": "",
       "type": "heavy-weapon",
@@ -3162,6 +3562,7 @@
         }
       ],
       "id": "proton-charge-saboteur",
+      "is_unique": false,
       "name": "Proton Charge Saboteur",
       "text": "",
       "type": "heavy-weapon",
@@ -3199,6 +3600,7 @@
         }
       ],
       "id": "scatter-gun-trooper",
+      "is_unique": false,
       "name": "Scatter Gun Trooper",
       "text": "",
       "type": "heavy-weapon",
@@ -3234,6 +3636,7 @@
         }
       ],
       "id": "sonic-charge-saboteur",
+      "is_unique": false,
       "name": "Sonic Charge Saboteur",
       "text": "",
       "type": "heavy-weapon",
@@ -3271,6 +3674,7 @@
         }
       ],
       "id": "t-7-ion-snowtrooper",
+      "is_unique": false,
       "name": "T-7 Ion Snowtrooper",
       "text": "",
       "type": "heavy-weapon",
@@ -3305,6 +3709,7 @@
         }
       ],
       "id": "z-6-trooper",
+      "is_unique": false,
       "name": "Z-6 Trooper",
       "text": "",
       "type": "heavy-weapon",
@@ -3334,6 +3739,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "2-1-b-medical-droid",
+      "is_unique": false,
       "name": "2-1B Medical Droid",
       "text": "Adds a 1 2-1B medical droid mini.",
       "type": "personnel",
@@ -3341,6 +3747,41 @@
         "SWL26"
       ],
       "restricted_to_faction": "rebels"
+    },
+    {
+      "adds_miniature": true,
+      "adds_upgrade_slots": {},
+      "is_exhaustible": true,
+      "points": 32,
+      "keywords": {},
+      "keywords_for_unit": {},
+      "restricted_to_unit": [
+        {
+          "id": "rebel-pathfinders"
+        }
+      ],
+      "id": "bistan",
+      "is_unique": true,
+      "name": "Bistan",
+      "text": "",
+      "type": "personnel",
+      "waves": [
+        "SWL32"
+      ],
+      "weapon": {
+        "name": "Bistan",
+        "dice": {
+          "black": 1,
+          "white": 4
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {
+          "impact": 1,
+          "ion": 1
+        },
+        "max_range": 4
+      }
     },
     {
       "adds_miniature": true,
@@ -3355,6 +3796,7 @@
         }
       ],
       "id": "fleet-trooper",
+      "is_unique": false,
       "name": "Fleet Trooper",
       "text": "",
       "type": "personnel",
@@ -3374,6 +3816,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "fx-9-medical-droid",
+      "is_unique": false,
       "name": "FX-9 Medical Droid",
       "text": "Adds a 1 FX-9 medical droid mini.",
       "type": "personnel",
@@ -3393,6 +3836,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "imperial-comms-technician",
+      "is_unique": false,
       "name": "Imperial Comms Technician",
       "text": "Adds a 1 Imperial comms technician mini.\n    You gain a comms upgrade icon.\n    You must equip a comms upgrade card.",
       "type": "personnel",
@@ -3400,6 +3844,41 @@
         "SWL27"
       ],
       "restricted_to_faction": "imperials"
+    },
+    {
+      "adds_miniature": true,
+      "adds_upgrade_slots": {},
+      "is_exhaustible": false,
+      "points": 22,
+      "keywords": {},
+      "keywords_for_unit": {
+        "inspire": 1,
+        "leader": ""
+      },
+      "restricted_to_unit": [
+        {
+          "id": "rebel-pathfinders"
+        }
+      ],
+      "id": "pao",
+      "is_unique": true,
+      "name": "Pao",
+      "text": "",
+      "type": "personnel",
+      "waves": [
+        "SWL32"
+      ],
+      "weapon": {
+        "name": "Pao",
+        "dice": {
+          "red": 1,
+          "white": 1
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {},
+        "max_range": 4
+      }
     },
     {
       "adds_miniature": true,
@@ -3413,6 +3892,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "r-4-astromech-droid",
+      "is_unique": false,
       "name": "R4 Astromech Droid",
       "text": "Adds a 1 R4 atromech droid mini.",
       "type": "personnel",
@@ -3433,6 +3913,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "r-5-astromech-droid",
+      "is_unique": false,
       "name": "R5 Astromech Droid",
       "text": "Adds a 1 R5 atromech droid mini.",
       "type": "personnel",
@@ -3452,6 +3933,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "rebel-comms-technician",
+      "is_unique": false,
       "name": "Rebel Comms Technician",
       "text": "Adds a 1 Rebel comms technician mini.\n    You gain a comms upgrade icon.\n    You must equip a comms upgrade card.",
       "type": "personnel",
@@ -3472,6 +3954,7 @@
       },
       "restricted_to_unit": [],
       "id": "rebel-officer",
+      "is_unique": false,
       "name": "Rebel Officer",
       "text": "",
       "type": "personnel",
@@ -3493,6 +3976,7 @@
         }
       ],
       "id": "rebel-trooper",
+      "is_unique": false,
       "name": "Rebel Trooper",
       "text": "",
       "type": "personnel",
@@ -3513,6 +3997,7 @@
         }
       ],
       "id": "snowtrooper",
+      "is_unique": false,
       "name": "Snowtrooper",
       "text": "",
       "type": "personnel",
@@ -3533,6 +4018,7 @@
         }
       ],
       "id": "stormtrooper",
+      "is_unique": false,
       "name": "Stormtrooper",
       "text": "",
       "type": "personnel",
@@ -3552,6 +4038,7 @@
       },
       "restricted_to_unit": [],
       "id": "general-weiss",
+      "is_unique": false,
       "name": "General Weiss",
       "text": "Exhaust Action: Until the end of your activation, you gain Arsenal 2.",
       "type": "pilot",
@@ -3572,6 +4059,7 @@
       },
       "restricted_to_unit": [],
       "id": "wedge-antilles",
+      "is_unique": false,
       "name": "Wedge Antilles",
       "text": "Exhaust Action: Until the end of your activation, you gain Full Pivot.",
       "type": "pilot",
@@ -3590,6 +4078,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "duck-and-cover",
+      "is_unique": false,
       "name": "Duck and Cover",
       "text": "When defending from a Ranged Attack, during the Apply Cover and Dodge tokens step, you may assign yourself 1 Suppression token.",
       "type": "training",
@@ -3612,6 +4101,7 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [],
       "id": "hunter",
+      "is_unique": false,
       "name": "Hunter",
       "text": "While attacking a wounded trooper unit, during the Roll Attack Dice step, you may gain 1 aim token.",
       "type": "training",
@@ -3630,7 +4120,26 @@
       "keywords": {},
       "keywords_for_unit": {},
       "restricted_to_unit": [],
+      "id": "overwatch",
+      "is_unique": false,
+      "name": "Overwatch",
+      "text": "You gain SENTINEL (Your standby range is 1-3.)",
+      "type": "training",
+      "waves": [
+        "SWL34",
+        "SWL32"
+      ]
+    },
+    {
+      "adds_miniature": false,
+      "adds_upgrade_slots": {},
+      "is_exhaustible": false,
+      "points": 4,
+      "keywords": {},
+      "keywords_for_unit": {},
+      "restricted_to_unit": [],
       "id": "tenacity",
+      "is_unique": false,
       "name": "Tenacity",
       "text": "While performing a melee attack, if you are wounded or if one or more of your minis have been defeated, add 1 red attack die to your attack pool.",
       "type": "training",
