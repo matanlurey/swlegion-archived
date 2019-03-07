@@ -659,6 +659,9 @@ class UnitKeyword implements Indexable<UnitKeyword> {
 
   @override
   toRef() => Reference(id);
+
+  @override
+  toString() => 'UnitKeyword: $id';
 }
 
 class WeaponKeyword implements Indexable<WeaponKeyword> {
@@ -949,6 +952,9 @@ class WeaponKeyword implements Indexable<WeaponKeyword> {
 
   @override
   toRef() => Reference(id);
+
+  @override
+  toString() => 'WeaponKeyword: $id';
 }
 
 class UpgradeKeyword implements Indexable<UpgradeKeyword> {
@@ -1095,4 +1101,7 @@ class UpgradeKeyword implements Indexable<UpgradeKeyword> {
 
   @override
   toRef() => Reference(id);
+
+  @override
+  toString() => 'WeaponKeyword: $id';
 }
