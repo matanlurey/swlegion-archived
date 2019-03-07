@@ -3,10 +3,12 @@
 - Store `text` fields with trailing and preceding whitespace removed.
 - `CommandCard.factionRequired` is now only `null` for neutral command cards.
 - Fix mis-spelling in the ID of `Imperial Discipline` and `Z6 Jetpack Launcher`.
+- Added `Bossk`, `Rebel Pathfinders`, and started on `Sabrine Wren`.
 
 ### Data Model
 
 - Added meaningful `toString()`'s to `Wave` and `...Keyword` enum-like classes.
+- `Upgrade` now has a `isUnique` field (for `Pao`, `Bistan`, `The Darksaber`).
 
 ## 0.4.0
 

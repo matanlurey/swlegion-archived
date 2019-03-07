@@ -45,6 +45,9 @@ class _$UpgradeSerializer implements StructuredSerializer<Upgrade> {
           ])),
       'id',
       serializers.serialize(object.id, specifiedType: const FullType(String)),
+      'is_unique',
+      serializers.serialize(object.isUnique,
+          specifiedType: const FullType(bool)),
       'name',
       serializers.serialize(object.name, specifiedType: const FullType(String)),
       'text',
@@ -151,6 +154,10 @@ class _$UpgradeSerializer implements StructuredSerializer<Upgrade> {
           result.id = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'is_unique':
+          result.isUnique = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
         case 'name':
           result.name = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -204,6 +211,8 @@ class _$Upgrade extends Upgrade {
   @override
   final String id;
   @override
+  final bool isUnique;
+  @override
   final String name;
   @override
   final String text;
@@ -229,6 +238,7 @@ class _$Upgrade extends Upgrade {
       this.restrictedToUnit,
       this.restrictedToType,
       this.id,
+      this.isUnique,
       this.name,
       this.text,
       this.type,
@@ -258,6 +268,9 @@ class _$Upgrade extends Upgrade {
     }
     if (id == null) {
       throw new BuiltValueNullFieldError('Upgrade', 'id');
+    }
+    if (isUnique == null) {
+      throw new BuiltValueNullFieldError('Upgrade', 'isUnique');
     }
     if (name == null) {
       throw new BuiltValueNullFieldError('Upgrade', 'name');
@@ -305,6 +318,7 @@ class _$Upgrade extends Upgrade {
           ..add('restrictedToUnit', restrictedToUnit)
           ..add('restrictedToType', restrictedToType)
           ..add('id', id)
+          ..add('isUnique', isUnique)
           ..add('name', name)
           ..add('text', text)
           ..add('type', type)
@@ -375,6 +389,10 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
   String get id => _$this._id;
   set id(String id) => _$this._id = id;
 
+  bool _isUnique;
+  bool get isUnique => _$this._isUnique;
+  set isUnique(bool isUnique) => _$this._isUnique = isUnique;
+
   String _name;
   String get name => _$this._name;
   set name(String name) => _$this._name = name;
@@ -410,6 +428,7 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
       _restrictedToUnit = _$v.restrictedToUnit?.toBuilder();
       _restrictedToType = _$v.restrictedToType;
       _id = _$v.id;
+      _isUnique = _$v.isUnique;
       _name = _$v.name;
       _text = _$v.text;
       _type = _$v.type;
@@ -450,6 +469,7 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
               restrictedToUnit: restrictedToUnit.build(),
               restrictedToType: restrictedToType,
               id: id,
+              isUnique: isUnique,
               name: name,
               text: text,
               type: type,
@@ -484,4 +504,4 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new

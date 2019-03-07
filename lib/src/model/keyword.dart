@@ -122,6 +122,15 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     isNumeric: true,
   );
 
+  static final kDauntless = UnitKeyword._(
+    id: 'dauntless',
+    displayName: 'Dauntless',
+    description: r'''
+      After you rally, if you are suppressed but not panicked, you may gain 1
+      suppression token to perform a free move action.
+    ''',
+  );
+
   static final kDeflect = UnitKeyword._(
     id: 'deflect',
     displayName: 'Deflect',
@@ -448,6 +457,26 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     isNumeric: true,
   );
 
+  static final kRecharge = UnitKeyword._(
+    id: 'recharge',
+    displayName: 'recharge',
+    description: r'''
+      When you recover, flip X inactive shield tokens.
+    ''',
+    isNumeric: true,
+  );
+
+  static final kRegenerate = UnitKeyword._(
+    id: 'regenerate',
+    displayName: 'Regenerate',
+    description: r'''
+      At the end of your activation, roll 1 whitre defense dice for each wound
+      token you have up to 3. For reach [BLOCK] or [SURGE], remove 1 wound
+      token.
+    ''',
+    isNumeric: true,
+  );
+
   static final kRelentless = UnitKeyword._(
     id: 'relentless',
     displayName: 'Relentless',
@@ -521,6 +550,15 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     description: r'''
       During the "Apply Dodge and Cover" step of an attack, a unit with the
       **SHARPSHOOTER X** keyword subtracts X from the defender's cover.
+    ''',
+    isNumeric: true,
+  );
+
+  static final kShielded = UnitKeyword._(
+    id: 'shielded',
+    displayName: 'shielded',
+    description: r'''
+      You have X shield tokens.
     ''',
     isNumeric: true,
   );

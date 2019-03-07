@@ -3,8 +3,7 @@ analyzer:
     implicit-casts: false
     implicit-dynamic: false
   errors:
-    # https://github.com/google/built_value.dart/issues/558
-    deprecated_member_use: ignore
+    deprecated_member_use_from_same_package: ignore
   exclude:
     - ".dart_tool/**"
 
@@ -67,7 +66,6 @@ linter:
     - package_api_docs
     - prefer_adjacent_string_concatenation
     - prefer_asserts_in_initializer_lists
-    - prefer_bool_in_asserts
     # TODO: Re-add this once it is passing on travis.
     # - prefer_collection_literals
     - prefer_conditional_assignment
@@ -86,7 +84,6 @@ linter:
     - prefer_initializing_formals
     - prefer_interpolation_to_compose_strings
     - prefer_is_empty
-    - prefer_is_not_empty
     - prefer_single_quotes
     - prefer_typing_uninitialized_variables
     - recursive_getters

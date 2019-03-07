@@ -10,10 +10,12 @@ import 'database/weapons/chewbaccas_bowcaster.dart' as _i;
 import 'database/weapons/collapsible_tonfa.dart' as _i;
 import 'database/weapons/combat_expertise.dart' as _i;
 import 'database/weapons/commands/coordinated_bombardment.dart' as _i;
+import 'database/weapons/commands/dioxis_charge.dart' as _i;
 import 'database/weapons/commands/maximum_firepower.dart' as _i;
 import 'database/weapons/commands/z_6_jetpack_launcher.dart' as _i;
 import 'database/weapons/commands/zx_flame_projector.dart' as _i;
 import 'database/weapons/dh_17_blaster_pistol.dart' as _i;
+import 'database/weapons/dual_wester_35_blaster_pistols.dart' as _i;
 import 'database/weapons/e_11_blaster_rifle.dart' as _i;
 import 'database/weapons/e_web_heavy_blaster.dart' as _i;
 import 'database/weapons/ec_17_hold_out_blaster.dart' as _i;
@@ -21,9 +23,12 @@ import 'database/weapons/fence_cutting_blades.dart' as _i;
 import 'database/weapons/fetts_ee_3_carbine.dart' as _i;
 import 'database/weapons/force_lightning.dart' as _i;
 import 'database/weapons/force_pike.dart' as _i;
+import 'database/weapons/forward_twin_mk_2_e_w_cannons.dart' as _i;
+import 'database/weapons/frenzy.dart' as _i;
 import 'database/weapons/grappling_claws.dart' as _i;
 import 'database/weapons/hans_dl_44_blaster_pistol.dart' as _i;
 import 'database/weapons/kashyyyk_pistol.dart' as _i;
+import 'database/weapons/lateral_quad_mk_2_e_w_cannons.dart' as _i;
 import 'database/weapons/leias_defender_sporting_blaster.dart' as _i;
 import 'database/weapons/lukes_dl_44_blaster_pistol.dart' as _i;
 import 'database/weapons/martial_arts.dart' as _i;
@@ -31,10 +36,14 @@ import 'database/weapons/ms_4_twin_blaster_cannon.dart' as _i;
 import 'database/weapons/officers_a_180_blaster_pistol.dart' as _i;
 import 'database/weapons/officers_rk_3_blaster_pistol.dart' as _i;
 import 'database/weapons/overpower.dart' as _i;
+import 'database/weapons/relby-v-10-mortar-rifle.dart' as _i;
 import 'database/weapons/ryyk_blade.dart' as _i;
 import 'database/weapons/unarmed.dart' as _i;
 import 'database/weapons/upgrades/a_180_blaster_pistol.dart' as _i;
 import 'database/weapons/upgrades/a_180_blaster_rifle.dart' as _i;
+import 'database/weapons/upgrades/a_300_long_range_config.dart' as _i;
+import 'database/weapons/upgrades/a_300_short_range_config.dart' as _i;
+import 'database/weapons/upgrades/bistan.dart' as _i;
 import 'database/weapons/upgrades/bowcaster.dart' as _i;
 import 'database/weapons/upgrades/dh_447_sniper_rifle.dart' as _i;
 import 'database/weapons/upgrades/dlt_19_heavy_blaster_rifle.dart' as _i;
@@ -57,10 +66,12 @@ import 'database/weapons/upgrades/hardpoints/mo_dk_power_harpoon.dart' as _i;
 import 'database/weapons/upgrades/hh_12_rocket_launcher.dart' as _i;
 import 'database/weapons/upgrades/mpl_57_barrage_launcher.dart' as _i;
 import 'database/weapons/upgrades/mpl_57_ion_launcher.dart' as _i;
+import 'database/weapons/upgrades/pao.dart' as _i;
 import 'database/weapons/upgrades/proton_charge.dart' as _i;
 import 'database/weapons/upgrades/scatter_gun.dart' as _i;
 import 'database/weapons/upgrades/sonic_charge.dart' as _i;
 import 'database/weapons/upgrades/t_7_ion_disrupter_rifle.dart' as _i;
+import 'database/weapons/upgrades/the_darksaber.dart' as _i;
 import 'database/weapons/upgrades/z_6_rotary_blaster_cannon.dart' as _i;
 import 'database/weapons/vaders_lightsaber.dart' as _i;
 import 'database/weapons/veers_e_11_blaster_rifle.dart' as _i;
@@ -79,10 +90,12 @@ final aggregate = [
   _i.collapsibleTonfa,
   _i.combatExpertise,
   _i.coordinatedBombardment,
+  _i.dioxisCharge,
   _i.maximumFirepower,
   _i.z6JetpackLauncher,
   _i.zxFlameProjector,
   _i.dh17BlasterPistol,
+  _i.dualWestar35BlasterPistols,
   _i.e11BlasterRifle,
   _i.eWebHeavyBlaster,
   _i.ec17HoldOutBlaster,
@@ -90,9 +103,12 @@ final aggregate = [
   _i.fettsEE3Carbine,
   _i.forceLightning,
   _i.forcePike,
+  _i.forwardTwinMk2EWCannons,
+  _i.frenzy,
   _i.grapplingClaws,
   _i.hansDl44BlasterPistol,
   _i.kashyyykPistol,
+  _i.lateralQuadMK2EWCannons,
   _i.leiasDefenderSportingBlaster,
   _i.lukesDl44BlasterPistol,
   _i.martialArts,
@@ -100,10 +116,14 @@ final aggregate = [
   _i.officersA180BlasterPistol,
   _i.officersRK3BlasterPistol,
   _i.overpower,
+  _i.relbyV10MortarRifle,
   _i.ryykBlade,
   _i.unarmed,
   _i.a180BlasterPistol,
   _i.a180BlasterRifle,
+  _i.a300LongRangeBlasterRifle,
+  _i.a300ShortRangeBlasterRifle,
+  _i.bistan,
   _i.bowcaster,
   _i.dh447SniperRifle,
   _i.dlt19HHeavyBlasterRifle,
@@ -124,10 +144,12 @@ final aggregate = [
   _i.hh12RocketLauncher,
   _i.mpl57BarrageLauncher,
   _i.mpl57IonLauncher,
+  _i.pao,
   _i.protonCharge,
   _i.scatterGun,
   _i.sonicCharge,
   _i.t7IonDisrupterRifle,
+  _i.theDarksaber,
   _i.z6RotaryBlaster,
   _i.vadersLightsaber,
   _i.veersE11BlasterRifle,
@@ -148,10 +170,12 @@ class Weapons {
   static final collapsibleTonfa = _i.collapsibleTonfa;
   static final combatExpertise = _i.combatExpertise;
   static final coordinatedBombardment = _i.coordinatedBombardment;
+  static final dioxisCharge = _i.dioxisCharge;
   static final maximumFirepower = _i.maximumFirepower;
   static final z6JetpackLauncher = _i.z6JetpackLauncher;
   static final zxFlameProjector = _i.zxFlameProjector;
   static final dh17BlasterPistol = _i.dh17BlasterPistol;
+  static final dualWestar35BlasterPistols = _i.dualWestar35BlasterPistols;
   static final e11BlasterRifle = _i.e11BlasterRifle;
   static final eWebHeavyBlaster = _i.eWebHeavyBlaster;
   static final ec17HoldOutBlaster = _i.ec17HoldOutBlaster;
@@ -159,9 +183,12 @@ class Weapons {
   static final fettsEE3Carbine = _i.fettsEE3Carbine;
   static final forceLightning = _i.forceLightning;
   static final forcePike = _i.forcePike;
+  static final forwardTwinMk2EWCannons = _i.forwardTwinMk2EWCannons;
+  static final frenzy = _i.frenzy;
   static final grapplingClaws = _i.grapplingClaws;
   static final hansDl44BlasterPistol = _i.hansDl44BlasterPistol;
   static final kashyyykPistol = _i.kashyyykPistol;
+  static final lateralQuadMK2EWCannons = _i.lateralQuadMK2EWCannons;
   static final leiasDefenderSportingBlaster = _i.leiasDefenderSportingBlaster;
   static final lukesDl44BlasterPistol = _i.lukesDl44BlasterPistol;
   static final martialArts = _i.martialArts;
@@ -169,10 +196,14 @@ class Weapons {
   static final officersA180BlasterPistol = _i.officersA180BlasterPistol;
   static final officersRK3BlasterPistol = _i.officersRK3BlasterPistol;
   static final overpower = _i.overpower;
+  static final relbyV10MortarRifle = _i.relbyV10MortarRifle;
   static final ryykBlade = _i.ryykBlade;
   static final unarmed = _i.unarmed;
   static final a180BlasterPistol = _i.a180BlasterPistol;
   static final a180BlasterRifle = _i.a180BlasterRifle;
+  static final a300LongRangeBlasterRifle = _i.a300LongRangeBlasterRifle;
+  static final a300ShortRangeBlasterRifle = _i.a300ShortRangeBlasterRifle;
+  static final bistan = _i.bistan;
   static final bowcaster = _i.bowcaster;
   static final dh447SniperRifle = _i.dh447SniperRifle;
   static final dlt19HHeavyBlasterRifle = _i.dlt19HHeavyBlasterRifle;
@@ -193,10 +224,12 @@ class Weapons {
   static final hh12RocketLauncher = _i.hh12RocketLauncher;
   static final mpl57BarrageLauncher = _i.mpl57BarrageLauncher;
   static final mpl57IonLauncher = _i.mpl57IonLauncher;
+  static final pao = _i.pao;
   static final protonCharge = _i.protonCharge;
   static final scatterGun = _i.scatterGun;
   static final sonicCharge = _i.sonicCharge;
   static final t7IonDisrupterRifle = _i.t7IonDisrupterRifle;
+  static final theDarksaber = _i.theDarksaber;
   static final z6RotaryBlaster = _i.z6RotaryBlaster;
   static final vadersLightsaber = _i.vadersLightsaber;
   static final veersE11BlasterRifle = _i.veersE11BlasterRifle;
