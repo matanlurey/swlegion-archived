@@ -4,8 +4,8 @@ import 'package:swlegion/swlegion.dart';
 final giveInToYourAnger = CommandCard(
   id: 'give-in-to-your-anger',
   name: 'Give in to Your Anger',
-  unitsActivated: Units.emperorPalpatine.name,
-  unitsRequired: [Units.emperorPalpatine],
+  activated: Units.emperorPalpatine.name,
+  required: [Units.emperorPalpatine],
   pips: 2,
   text: r'''
     Before an opponent would activate their first unit, you may choose an enemy trooper unit.

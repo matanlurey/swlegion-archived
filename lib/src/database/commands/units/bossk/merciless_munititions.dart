@@ -4,8 +4,8 @@ import 'package:swlegion/swlegion.dart';
 final mercilessMunitions = CommandCard(
   id: 'merciless-munititions',
   name: 'Merciless Munititions',
-  unitsActivated: Units.bossk.name,
-  unitsRequired: [Units.bossk],
+  activated: Units.bossk.name,
+  required: [Units.bossk],
   pips: 1,
   text: r'''
     During the round this card is played, Bossk gains ARM: 1 DIOXIS CHARGE.

@@ -4,8 +4,8 @@ import 'package:swlegion/swlegion.dart';
 final rebellious = CommandCard(
   id: 'rebellious',
   name: 'Rebellious',
-  unitsActivated: Units.jynErso.name,
-  unitsRequired: [Units.jynErso],
+  activated: Units.jynErso.name,
+  required: [Units.jynErso],
   pips: 1,
   text: r'''
     Jyn Erso gains CHARGE.

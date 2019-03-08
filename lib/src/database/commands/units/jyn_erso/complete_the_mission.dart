@@ -4,8 +4,8 @@ import 'package:swlegion/swlegion.dart';
 final completeTheMission = CommandCard(
   id: 'complete-the-mission',
   name: 'Complete The Mission',
-  unitsActivated: '3 Troopers',
-  unitsRequired: [Units.jynErso],
+  activated: '3 Troopers',
+  required: [Units.jynErso],
   pips: 3,
   text: r'''
     Jyn Erso gains LOW PROFILE.

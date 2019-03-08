@@ -4,8 +4,8 @@ import 'package:swlegion/swlegion.dart';
 final imperialDiscipline = CommandCard(
   id: 'imperial-discipline',
   name: 'Imperial Discipline',
-  unitsActivated: '${Units.generalVeers.name} & 2 Units',
-  unitsRequired: [Units.generalVeers],
+  activated: '${Units.generalVeers.name} & 2 Units',
+  required: [Units.generalVeers],
   pips: 3,
   text: r'''
     When a friendly unit is issued an order it may recover.

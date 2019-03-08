@@ -4,8 +4,8 @@ import 'package:swlegion/swlegion.dart';
 final notoriousScoundrels = CommandCard(
   id: 'notorious-scoundrels',
   name: 'Notorious Scoundrels',
-  unitsActivated: Units.chewbacca.name,
-  unitsRequired: [
+  activated: Units.chewbacca.name,
+  required: [
     Units.chewbacca,
     Units.hanSolo,
   ],

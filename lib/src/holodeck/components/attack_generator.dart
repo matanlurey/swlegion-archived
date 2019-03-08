@@ -65,8 +65,8 @@ abstract class AttackGenerator {
   BuiltSetMultimap<Reference<Unit>, Weapon> get _commandCardWeapons {
     final results = SetMultimapBuilder<Reference<Unit>, Weapon>();
     for (final card in catalog.commandCards) {
-      if (card.weapon != null && card.unitsRequired.isNotEmpty) {
-        results.add(card.unitsRequired.first, card.weapon);
+      if (card.weapon != null && card.required.isNotEmpty) {
+        results.add(card.required.first, card.weapon);
       }
     }
     return results.build();

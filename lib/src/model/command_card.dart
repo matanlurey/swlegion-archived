@@ -1,7 +1,7 @@
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
-import 'package:meta/meta.dart';
+import 'package:meta/meta.dart' as meta;
 
 import 'faction.dart';
 import 'reference.dart';
@@ -19,28 +19,32 @@ abstract class CommandCard extends Object
   static Serializer<CommandCard> get serializer => _$commandCardSerializer;
 
   factory CommandCard({
-    @required String id,
-    @required String name,
-    @required int pips,
-    @required String unitsActivated,
+    @meta.required String id,
+    @meta.required String name,
+    @meta.required int pips,
+    @meta.required String activated,
     String text = '',
-    Faction factionRequired,
-    List<Unit> unitsRequired = const [],
-    @required List<Wave> waves,
+    Faction faction,
+    List<Unit> required = const [],
+    @meta.required List<Wave> waves,
     Weapon weapon,
   }) {
-    if (factionRequired == null && unitsRequired.isNotEmpty) {
-      factionRequired = unitsRequired.first.faction;
+    if (faction == null) {
+      if (required.isEmpty) {
+        faction = Faction.neutral;
+      } else {
+        faction = required.first.faction;
+      }
     }
     return CommandCard._build(
       (b) => b
         ..id = id
         ..name = name
         ..pips = pips
-        ..unitsActivated = unitsActivated
+        ..activated = activated
         ..text = text.trim()
-        ..factionRequired = factionRequired
-        ..unitsRequired.addAll(unitsRequired.map((u) => u.toRef()))
+        ..faction = faction
+        ..required.addAll(required.map((u) => u.toRef()))
         ..waves.addAll(waves)
         ..weapon = weapon?.toBuilder(),
     );
@@ -70,16 +74,17 @@ abstract class CommandCard extends Object
 
   /// Unit(s) activated as a result of this card.
   @BuiltValueField(compare: false, wireName: 'activated')
-  String get unitsActivated;
+  String get activated;
 
   /// Faction required to use this command card.
-  @BuiltValueField(compare: false, wireName: 'faction_required')
-  @nullable
-  Faction get factionRequired;
+  ///
+  /// May be [Faction.neutral] in order to be used by any faction.
+  @BuiltValueField(compare: false, wireName: 'faction')
+  Faction get faction;
 
   /// Unit(s) required to use this command card.
-  @BuiltValueField(compare: false, wireName: 'units_required')
-  BuiltSet<Reference<Unit>> get unitsRequired;
+  @BuiltValueField(compare: false, wireName: 'required')
+  BuiltSet<Reference<Unit>> get required;
 
   /// Wave(s) this command card is in.
   @BuiltValueField(compare: false)

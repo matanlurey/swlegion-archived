@@ -6,11 +6,11 @@
       "text": "After a friendly corps unit spends an aim token, another friendly unit at range 1-2 may gain 1 aim token.",
       "pips": 3,
       "activated": "3 Corps Unit",
-      "units_required": [],
+      "faction": "imperials",
+      "required": [],
       "waves": [
         "SWL27"
-      ],
-      "faction_required": "imperials"
+      ]
     },
     {
       "id": "covert-observation",
@@ -18,11 +18,11 @@
       "text": "Look at up to 2 random command cards from an opponent's hand.",
       "pips": 1,
       "activated": "1 Special Forces or Operative Unit",
-      "units_required": [],
+      "faction": "imperials",
+      "required": [],
       "waves": [
         "SWL27"
-      ],
-      "faction_required": "imperials"
+      ]
     },
     {
       "id": "pinned-down",
@@ -30,11 +30,11 @@
       "text": "After a friendly supoport or heavy unit performs an attack against a unit with a faceup order token, shuffle that token back into its order pool.",
       "pips": 2,
       "activated": "2 Support or Heavy Units",
-      "units_required": [],
+      "faction": "imperials",
+      "required": [],
       "waves": [
         "SWL27"
-      ],
-      "faction_required": "imperials"
+      ]
     },
     {
       "id": "covering-fire",
@@ -42,11 +42,11 @@
       "text": "After a friendly corps unit performs a ranged attack, another friendly unit at range 1-2 may gain 1 dodge token.",
       "pips": 3,
       "activated": "3 Corps Unit",
-      "units_required": [],
+      "faction": "rebels",
+      "required": [],
       "waves": [
         "SWL26"
-      ],
-      "faction_required": "rebels"
+      ]
     },
     {
       "id": "sabotaged-communications",
@@ -54,11 +54,11 @@
       "text": "Your opponent must issue orders to 1 fewer unit than is indicated on their command card, to a minimum of 1.",
       "pips": 1,
       "activated": "1 Special Forces or Operative Unit",
-      "units_required": [],
+      "faction": "rebels",
+      "required": [],
       "waves": [
         "SWL26"
-      ],
-      "faction_required": "rebels"
+      ]
     },
     {
       "id": "turning-the-tide",
@@ -66,11 +66,11 @@
       "text": "Each friendly support and heavy unit gains INSPIRE 2.",
       "pips": 2,
       "activated": "2 Support or Heavy Units",
-      "units_required": [],
+      "faction": "rebels",
+      "required": [],
       "waves": [
         "SWL26"
-      ],
-      "faction_required": "rebels"
+      ]
     },
     {
       "id": "ambush",
@@ -78,7 +78,8 @@
       "text": "",
       "pips": 1,
       "activated": "1 Unit",
-      "units_required": [],
+      "faction": "neutral",
+      "required": [],
       "waves": [
         "SWL01"
       ]
@@ -89,7 +90,8 @@
       "text": "",
       "pips": 3,
       "activated": "3 Units",
-      "units_required": [],
+      "faction": "neutral",
+      "required": [],
       "waves": [
         "SWL01"
       ]
@@ -100,7 +102,8 @@
       "text": "",
       "pips": 2,
       "activated": "2 Units",
-      "units_required": [],
+      "faction": "neutral",
+      "required": [],
       "waves": [
         "SWL01"
       ]
@@ -111,7 +114,8 @@
       "text": "At the end of the Command Phase, return this card to your hand.",
       "pips": 4,
       "activated": "1 Unit",
-      "units_required": [],
+      "faction": "neutral",
+      "required": [],
       "waves": [
         "SWL01"
       ]
@@ -122,15 +126,15 @@
       "text": "Boba Fett can perform moves while engaged with a unit that has 1 or more immobilized tokens. During Boba Fett's activation he gains:\n    Choose an enemy trooper unit at range 1 and in line of sight. It gains 2 immobilized tokens and 2 suppression tokens.",
       "pips": 1,
       "activated": "Boba Fett",
-      "units_required": [
+      "faction": "imperials",
+      "required": [
         {
           "id": "boba-fett"
         }
       ],
       "waves": [
         "SWL18"
-      ],
-      "faction_required": "imperials"
+      ]
     },
     {
       "id": "z-6-jetpack-launcher",
@@ -138,7 +142,8 @@
       "text": "During Boba Fett's activation he gains the following weapon:",
       "pips": 3,
       "activated": "Boba Fett",
-      "units_required": [
+      "faction": "imperials",
+      "required": [
         {
           "id": "boba-fett"
         }
@@ -146,7 +151,6 @@
       "waves": [
         "SWL18"
       ],
-      "faction_required": "imperials",
       "weapon": {
         "name": "Z-6 Jetpack Launcher",
         "dice": {
@@ -167,7 +171,8 @@
       "text": "During Boba Fett's activation he gains the following weapon:",
       "pips": 2,
       "activated": "Boba Fett",
-      "units_required": [
+      "faction": "imperials",
+      "required": [
         {
           "id": "boba-fett"
         }
@@ -175,7 +180,6 @@
       "waves": [
         "SWL18"
       ],
-      "faction_required": "imperials",
       "weapon": {
         "name": "ZX Flame Projector",
         "dice": {
@@ -196,15 +200,15 @@
       "text": "Bossk gains SHARPSHOOTER 1. After an enemy unit activates, Bossk gains 1\n    aim token.",
       "pips": 3,
       "activated": "Bossk",
-      "units_required": [
+      "faction": "imperials",
+      "required": [
         {
           "id": "bossk"
         }
       ],
       "waves": [
         "SWL38"
-      ],
-      "faction_required": "imperials"
+      ]
     },
     {
       "id": "merciless-munititions",
@@ -212,7 +216,8 @@
       "text": "During the round this card is played, Bossk gains ARM: 1 DIOXIS CHARGE.\n    After he performs this action, he may perform a speed-1 move. Until the end\n    of the game, Bossk gains DETONATE 1: DIOXIS CHARGE. After a trooper unit\n    defends against an attack made by your dioxis charge, it gains 1 poison\n    token. Do not discard this card from play.",
       "pips": 1,
       "activated": "Bossk",
-      "units_required": [
+      "faction": "imperials",
+      "required": [
         {
           "id": "bossk"
         }
@@ -220,7 +225,6 @@
       "waves": [
         "SWL38"
       ],
-      "faction_required": "imperials",
       "weapon": {
         "name": "Dioxis Charge",
         "dice": {
@@ -242,15 +246,15 @@
       "text": "During Bossk's Activation, he can perform up to 2 attack actions and he may\n    suffer 1 wound to perform a free move action.",
       "pips": 2,
       "activated": "Bossk",
-      "units_required": [
+      "faction": "imperials",
+      "required": [
         {
           "id": "bossk"
         }
       ],
       "waves": [
         "SWL38"
-      ],
-      "faction_required": "imperials"
+      ]
     },
     {
       "id": "brains-and-brawn",
@@ -258,7 +262,8 @@
       "text": "When Leia Organa is performing a ranged attack, if Chewbacca is not engaged and has line of sight to and is range 1-3 of the defender, add one\n    of his ranged weapons to the attack pool.",
       "pips": 2,
       "activated": "Chewbacca",
-      "units_required": [
+      "faction": "rebels",
+      "required": [
         {
           "id": "chewbacca"
         },
@@ -268,8 +273,7 @@
       ],
       "waves": [
         "SWL24"
-      ],
-      "faction_required": "rebels"
+      ]
     },
     {
       "id": "common-cause",
@@ -277,7 +281,8 @@
       "text": "After Chewbacca activates, if Luke Skywalker has a faceup order token, he may activate.\n    After Luke Skywalker activates, if Chewbacca has a faceup order token, he may activate.",
       "pips": 1,
       "activated": "Chewbacca",
-      "units_required": [
+      "faction": "rebels",
+      "required": [
         {
           "id": "chewbacca"
         },
@@ -287,8 +292,7 @@
       ],
       "waves": [
         "SWL24"
-      ],
-      "faction_required": "rebels"
+      ]
     },
     {
       "id": "notorious-scoundrels",
@@ -296,7 +300,8 @@
       "text": "Choose one of Han Solo's command cards in your discard pile. Return that card to your hand.",
       "pips": 3,
       "activated": "Chewbacca",
-      "units_required": [
+      "faction": "rebels",
+      "required": [
         {
           "id": "chewbacca"
         },
@@ -306,8 +311,7 @@
       ],
       "waves": [
         "SWL24"
-      ],
-      "faction_required": "rebels"
+      ]
     },
     {
       "id": "implacable",
@@ -315,15 +319,15 @@
       "text": "At the end of Darth Vader’s first activation, he may suffer 1 wound to shuffle his order token into the order pool. During Darth Vader's second activation, he performs 1 fewer action.",
       "pips": 1,
       "activated": "Darth Vader",
-      "units_required": [
+      "faction": "imperials",
+      "required": [
         {
           "id": "darth-vader"
         }
       ],
       "waves": [
         "SWL01"
-      ],
-      "faction_required": "imperials"
+      ]
     },
     {
       "id": "master-of-evil",
@@ -331,15 +335,15 @@
       "text": "When Darth Vader is issued an order, he gains 1 dodge token. When Darth Vader activates, each enemy trooper at range 1-2 of him gains 3 suppression tokens.",
       "pips": 3,
       "activated": "2 Units & Darth Vader",
-      "units_required": [
+      "faction": "imperials",
+      "required": [
         {
           "id": "darth-vader"
         }
       ],
       "waves": [
         "SWL01"
-      ],
-      "faction_required": "imperials"
+      ]
     },
     {
       "id": "new-ways-to-motivate-them",
@@ -347,15 +351,15 @@
       "text": "When a friendly non-Darth Vader trooper unit with a faceup order token activates, it may suffer 1 wound to perform 1 free action.",
       "pips": 2,
       "activated": "2 Troopers",
-      "units_required": [
+      "faction": "imperials",
+      "required": [
         {
           "id": "darth-vader"
         }
       ],
       "waves": [
         "SWL01"
-      ],
-      "faction_required": "imperials"
+      ]
     },
     {
       "id": "an-entire-legion",
@@ -363,15 +367,15 @@
       "text": "",
       "pips": 3,
       "activated": "Each Eligible Unit",
-      "units_required": [
+      "faction": "imperials",
+      "required": [
         {
           "id": "emperor-palpatine"
         }
       ],
       "waves": [
         "SWL22"
-      ],
-      "faction_required": "imperials"
+      ]
     },
     {
       "id": "and-now-you-will-die",
@@ -379,15 +383,15 @@
       "text": "During Emperor Palpatine's activation, he may suffer 1 wound and gain 1 suppression token to perform an attack. He may do this any number of times. After Emperor Palpatine performs an attack, the defender gains 1 immobilized token.",
       "pips": 1,
       "activated": "Emperor Palpatine",
-      "units_required": [
+      "faction": "imperials",
+      "required": [
         {
           "id": "emperor-palpatine"
         }
       ],
       "waves": [
         "SWL22"
-      ],
-      "faction_required": "imperials"
+      ]
     },
     {
       "id": "give-in-to-your-anger",
@@ -395,15 +399,15 @@
       "text": "Before an opponent would activate their first unit, you may choose an enemy trooper unit.\n    If you do, your opponent must activate that unit instread.\n    Assign it an order token from its order pool unless it has a faceup order token.\n    At the end of that units's activation, if it did not perform an attack, it gains 4 suppression tokens.",
       "pips": 2,
       "activated": "Emperor Palpatine",
-      "units_required": [
+      "faction": "imperials",
+      "required": [
         {
           "id": "emperor-palpatine"
         }
       ],
       "waves": [
         "SWL22"
-      ],
-      "faction_required": "imperials"
+      ]
     },
     {
       "id": "evasive-maneuvers",
@@ -411,15 +415,15 @@
       "text": "When a friendly vehicle unit is issued an order it gains 1 dodge token.\n    Friendly vehicle units can spend dodge tokens to cancel critical hit results.",
       "pips": 2,
       "activated": "2 Vehicles",
-      "units_required": [
+      "faction": "imperials",
+      "required": [
         {
           "id": "general-veers"
         }
       ],
       "waves": [
         "SWL10"
-      ],
-      "faction_required": "imperials"
+      ]
     },
     {
       "id": "imperial-discipline",
@@ -427,15 +431,15 @@
       "text": "When a friendly unit is issued an order it may recover.",
       "pips": 3,
       "activated": "General Veers & 2 Units",
-      "units_required": [
+      "faction": "imperials",
+      "required": [
         {
           "id": "general-veers"
         }
       ],
       "waves": [
         "SWL10"
-      ],
-      "faction_required": "imperials"
+      ]
     },
     {
       "id": "maximum-firepower",
@@ -443,7 +447,8 @@
       "text": "At the end of General Veers’ activation, he may perform an attacking using the following weapon.",
       "pips": 1,
       "activated": "General Veers",
-      "units_required": [
+      "faction": "imperials",
+      "required": [
         {
           "id": "general-veers"
         }
@@ -451,7 +456,6 @@
       "waves": [
         "SWL10"
       ],
-      "faction_required": "imperials",
       "weapon": {
         "name": "Maximum Firepower",
         "dice": {
@@ -471,15 +475,15 @@
       "text": "When this card is revealed, you may discard it to return an opponent's command card to their hand. If you do, return to the Select Command Card step. That opponent cannot select the command card that was returned to their hand.",
       "pips": 3,
       "activated": "Han Solo and 2 Troopers",
-      "units_required": [
+      "faction": "rebels",
+      "required": [
         {
           "id": "han-solo"
         }
       ],
       "waves": [
         "SWL20"
-      ],
-      "faction_required": "rebels"
+      ]
     },
     {
       "id": "reckless-diversion",
@@ -487,15 +491,15 @@
       "text": "When an enemy unit performs an attack, it must attack a trooper unit that has a faceup order token, if available.",
       "pips": 2,
       "activated": "Han Solo and 1 Trooper",
-      "units_required": [
+      "faction": "rebels",
+      "required": [
         {
           "id": "han-solo"
         }
       ],
       "waves": [
         "SWL20"
-      ],
-      "faction_required": "rebels"
+      ]
     },
     {
       "id": "sorry-about-the-mess",
@@ -503,15 +507,15 @@
       "text": "While building a command hand, treat this card as though it has 1 pip. When Han Solo is issued an order, he gains 1 aim token and 1 dodge token.",
       "pips": 0,
       "activated": "Han Solo",
-      "units_required": [
+      "faction": "rebels",
+      "required": [
         {
           "id": "han-solo"
         }
       ],
       "waves": [
         "SWL20"
-      ],
-      "faction_required": "rebels"
+      ]
     },
     {
       "id": "complete-the-mission",
@@ -519,15 +523,15 @@
       "text": "Jyn Erso gains LOW PROFILE.\n    When a friendly trooper unit is issued an order, it may gain 1 suppression token.\n    When a friendly trooper unit with a faceup order token activates, during its activation, it cannot become panicked or suppressed.\n    At the end of that unit's activation, it may remove 1 suppression token.",
       "pips": 3,
       "activated": "3 Troopers",
-      "units_required": [
+      "faction": "rebels",
+      "required": [
         {
           "id": "jyn-erso"
         }
       ],
       "waves": [
         "SWL31"
-      ],
-      "faction_required": "rebels"
+      ]
     },
     {
       "id": "rebellious",
@@ -535,15 +539,15 @@
       "text": "Jyn Erso gains CHARGE.\n    Once per round, when an enemy unit at range 1-2 and in line of sight of Jyn Erso activates, before it performs its Rally Step, Jyn Erso may gain 1 suppression token to either perform an attack against that unit or perform a free move action.",
       "pips": 1,
       "activated": "Jyn Erso",
-      "units_required": [
+      "faction": "rebels",
+      "required": [
         {
           "id": "jyn-erso"
         }
       ],
       "waves": [
         "SWL31"
-      ],
-      "faction_required": "rebels"
+      ]
     },
     {
       "id": "trust-goes-both-ways",
@@ -551,15 +555,15 @@
       "text": "Jyn Erso gains INSPIRE 2.\n    When Jyn Erso issues an order to another friendly trooper, that unit gains TEARMWORK: JYN ERSO.",
       "pips": 2,
       "activated": "Jyn Erso & 1 Trooper",
-      "units_required": [
+      "faction": "rebels",
+      "required": [
         {
           "id": "jyn-erso"
         }
       ],
       "waves": [
         "SWL31"
-      ],
-      "faction_required": "rebels"
+      ]
     },
     {
       "id": "coordinated-bombardment",
@@ -567,7 +571,8 @@
       "text": "At the end of Leia Organa's activation, you may perform up to 3 attacks against different enemy units using the following weapon.",
       "pips": 1,
       "activated": "Leia Organa",
-      "units_required": [
+      "faction": "rebels",
+      "required": [
         {
           "id": "leia-organa"
         }
@@ -575,7 +580,6 @@
       "waves": [
         "SWL12"
       ],
-      "faction_required": "rebels",
       "weapon": {
         "name": "Coordinated Bombardment",
         "dice": {
@@ -594,15 +598,15 @@
       "text": "When a friendly Trooper unit is issued an order, it may perform a speed-1 move.",
       "pips": 2,
       "activated": "2 Troopers",
-      "units_required": [
+      "faction": "rebels",
+      "required": [
         {
           "id": "leia-organa"
         }
       ],
       "waves": [
         "SWL12"
-      ],
-      "faction_required": "rebels"
+      ]
     },
     {
       "id": "somebody-has-to-save-our-skins",
@@ -610,15 +614,15 @@
       "text": "After Leia Organa's activation, you may choose a friendly unit at range 1-2 with a faceup order token and activate it.",
       "pips": 3,
       "activated": "Leia Organa & 2 Troopers",
-      "units_required": [
+      "faction": "rebels",
+      "required": [
         {
           "id": "leia-organa"
         }
       ],
       "waves": [
         "SWL12"
-      ],
-      "faction_required": "rebels"
+      ]
     },
     {
       "id": "my-ally-is-the-force",
@@ -626,15 +630,15 @@
       "text": "When a friendly trooper unit is issued an order, it gains 1 dodge token.",
       "pips": 2,
       "activated": "2 Troopers",
-      "units_required": [
+      "faction": "rebels",
+      "required": [
         {
           "id": "luke-skywalker"
         }
       ],
       "waves": [
         "SWL01"
-      ],
-      "faction_required": "rebels"
+      ]
     },
     {
       "id": "return-of-the-jedi",
@@ -642,15 +646,15 @@
       "text": "When Luke Skywalker is issued an order, he gains 1 dodge token. When Luke Skywalker activates, each friendly trooper at range 1-3 of him may remove 1 suppression token.",
       "pips": 3,
       "activated": "2 Units & Luke Skywalker",
-      "units_required": [
+      "faction": "rebels",
+      "required": [
         {
           "id": "luke-skywalker"
         }
       ],
       "waves": [
         "SWL01"
-      ],
-      "faction_required": "rebels"
+      ]
     },
     {
       "id": "son-of-skywalker",
@@ -658,15 +662,15 @@
       "text": "After Luke Skywalker performs his first attack he may perform 1 additional attack.",
       "pips": 1,
       "activated": "Luke Skywalker",
-      "units_required": [
+      "faction": "rebels",
+      "required": [
         {
           "id": "luke-skywalker"
         }
       ],
       "waves": [
         "SWL01"
-      ],
-      "faction_required": "rebels"
+      ]
     }
   ],
   "units": [

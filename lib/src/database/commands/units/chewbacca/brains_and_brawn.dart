@@ -4,8 +4,8 @@ import 'package:swlegion/swlegion.dart';
 final brainsAndBrawn = CommandCard(
   id: 'brains-and-brawn',
   name: 'Brains and Brawn',
-  unitsActivated: Units.chewbacca.name,
-  unitsRequired: [
+  activated: Units.chewbacca.name,
+  required: [
     Units.chewbacca,
     Units.leiaOrgana,
   ],
