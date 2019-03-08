@@ -4,8 +4,8 @@ import 'package:swlegion/swlegion.dart';
 final maximumFirepower = CommandCard(
   id: 'maximum-firepower',
   name: 'Maximum Firepower',
-  unitsActivated: Units.generalVeers.name,
-  unitsRequired: [Units.generalVeers],
+  activated: Units.generalVeers.name,
+  required: [Units.generalVeers],
   pips: 1,
   text: r'''
     At the end of General Veers’ activation, he may perform an attacking using the following weapon.

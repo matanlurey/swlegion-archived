@@ -6,11 +6,14 @@ part of 'faction.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
+const Faction _$neutral = const Faction._('neutral');
 const Faction _$rebelAlliance = const Faction._('rebels');
 const Faction _$galacticEmpire = const Faction._('imperials');
 
 Faction _$valueOfFaction(String name) {
   switch (name) {
+    case 'neutral':
+      return _$neutral;
     case 'rebels':
       return _$rebelAlliance;
     case 'imperials':
@@ -21,6 +24,7 @@ Faction _$valueOfFaction(String name) {
 }
 
 final BuiltSet<Faction> _$valuesFaction = new BuiltSet<Faction>(const <Faction>[
+  _$neutral,
   _$rebelAlliance,
   _$galacticEmpire,
 ]);
@@ -51,10 +55,12 @@ Serializer<ForceAlignment> _$forceAlignmentSerializer =
 
 class _$FactionSerializer implements PrimitiveSerializer<Faction> {
   static const Map<String, String> _toWire = const <String, String>{
+    'neutral': 'neutral',
     'rebels': 'rebels',
     'imperials': 'imperials',
   };
   static const Map<String, String> _fromWire = const <String, String>{
+    'neutral': 'neutral',
     'rebels': 'rebels',
     'imperials': 'imperials',
   };

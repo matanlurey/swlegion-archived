@@ -4,8 +4,8 @@ import 'package:swlegion/swlegion.dart';
 final evasiveManeuvers = CommandCard(
   id: 'evasive-maneuvers',
   name: 'Evasive Maneuvers',
-  unitsActivated: '2 Vehicles',
-  unitsRequired: [Units.generalVeers],
+  activated: '2 Vehicles',
+  required: [Units.generalVeers],
   pips: 2,
   text: r'''
     When a friendly vehicle unit is issued an order it gains 1 dodge token.

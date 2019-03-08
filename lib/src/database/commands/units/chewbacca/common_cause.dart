@@ -4,8 +4,8 @@ import 'package:swlegion/swlegion.dart';
 final commonCause = CommandCard(
   id: 'common-cause',
   name: 'Common Cause',
-  unitsActivated: Units.chewbacca.name,
-  unitsRequired: [
+  activated: Units.chewbacca.name,
+  required: [
     Units.chewbacca,
     Units.lukeSkywalker,
   ],

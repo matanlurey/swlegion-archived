@@ -6,6 +6,10 @@ part 'faction.g.dart';
 
 /// Represents possible factions in the game.
 class Faction extends EnumClass {
+  /// Neutral.
+  @BuiltValueEnumConst(wireName: 'neutral')
+  static const Faction neutral = _$neutral;
+
   /// Rebels.
   @BuiltValueEnumConst(wireName: 'rebels')
   static const Faction rebels = _$rebelAlliance;

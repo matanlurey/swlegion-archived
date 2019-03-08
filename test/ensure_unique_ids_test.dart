@@ -30,7 +30,7 @@ void main() {
     final commandA = CommandCard(
       id: 'command-a',
       name: 'Command A',
-      unitsActivated: '',
+      activated: '',
       pips: 1,
       waves: [],
     );
