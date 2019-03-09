@@ -261,7 +261,7 @@
       "name": "Brains and Brawn",
       "text": "When Leia Organa is performing a ranged attack, if Chewbacca is not engaged and has line of sight to and is range 1-3 of the defender, add one\n    of his ranged weapons to the attack pool.",
       "pips": 2,
-      "activated": "Chewbacca",
+      "activated": "Chewbacca & Leia Organa",
       "faction": "rebels",
       "required": [
         {
@@ -280,7 +280,7 @@
       "name": "Common Cause",
       "text": "After Chewbacca activates, if Luke Skywalker has a faceup order token, he may activate.\n    After Luke Skywalker activates, if Chewbacca has a faceup order token, he may activate.",
       "pips": 1,
-      "activated": "Chewbacca",
+      "activated": "Chewbacca & Luke Skywalker",
       "faction": "rebels",
       "required": [
         {
@@ -299,7 +299,7 @@
       "name": "Notorious Scoundrels",
       "text": "Choose one of Han Solo's command cards in your discard pile. Return that card to your hand.",
       "pips": 3,
-      "activated": "Chewbacca",
+      "activated": "Chewbacca & Han Solo",
       "faction": "rebels",
       "required": [
         {

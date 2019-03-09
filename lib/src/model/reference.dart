@@ -20,7 +20,7 @@ class Reference<T extends Indexable<T>> implements Indexable<T> {
   @override
   final String id;
 
-  const Reference(this.id);
+  const Reference(this.id) : assert(id != null);
 
   @override
   bool operator ==(Object o) => o is Reference<T> && o.id == id;
