@@ -2,6 +2,7 @@
 
 - Store `text` fields with trailing and preceding whitespace removed.
 - Fix mis-spelling in the ID of `Imperial Discipline` and `Z6 Jetpack Launcher`.
+- Fix `Chewbacca`'s `.activations` for his command cards.
 - Added `Bossk`, `Rebel Pathfinders`, and started on `Sabrine Wren`.
 
 ### Data Model
@@ -12,6 +13,7 @@
 - `CommandCard`:
   - `.unitsActivated` renamed to `.activated`.
   - `.factionRequired` renamed to `.faction`
+- All the `...Keyword` classes now extend a base `Keyword` class.
 
 ## 0.4.0
 
