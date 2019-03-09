@@ -8,7 +8,31 @@ part 'keyword.aggregate.dart';
 
 String _normalize(String text) => text.trim();
 
-class UnitKeyword implements Indexable<UnitKeyword> {
+abstract class Keyword<T extends Keyword<T>> extends Reference<T> {
+  /// Display name of the keyword.
+  final String displayName;
+
+  /// Full description of the keyword.
+  final String description;
+
+  /// Whether this keyword has a numeric value that can be accumulated.
+  ///
+  /// For example `'Pierce 1'` + `'Pierce 1'` should result in `'Pierce 2'`.
+  final bool isNumeric;
+
+  Keyword({
+    @required String id,
+    @required this.displayName,
+    @required String description,
+    this.isNumeric = false,
+  })  : assert(displayName != null),
+        assert(description != null),
+        assert(isNumeric != null),
+        description = _normalize(description),
+        super(id);
+}
+
+class UnitKeyword extends Keyword<UnitKeyword> {
   static final Serializer<UnitKeyword> serializer = IndexableSerializer(
     _index,
     wireName: 'unitKeyword',
@@ -670,39 +694,23 @@ class UnitKeyword implements Indexable<UnitKeyword> {
     ''',
   );
 
-  @override
-  final String id;
-
-  /// Display name of the keyword.
-  final String displayName;
-
-  /// Full description of the keyword.
-  final String description;
-
-  /// Whether this keyword has a numeric value that can be accumulated.
-  ///
-  /// For example `'Pierce 1'` + `'Pierce 1'` should result in `'Pierce 2'`.
-  final bool isNumeric;
-
   UnitKeyword._({
-    @required this.id,
-    @required this.displayName,
+    @required String id,
+    @required String displayName,
     @required String description,
-    this.isNumeric = false,
-  })  : assert(id != null),
-        assert(displayName != null),
-        assert(description != null),
-        assert(isNumeric != null),
-        description = _normalize(description);
-
-  @override
-  toRef() => Reference(id);
+    bool isNumeric = false,
+  }) : super(
+          id: id,
+          displayName: displayName,
+          description: description,
+          isNumeric: isNumeric,
+        );
 
   @override
   toString() => 'UnitKeyword: $id';
 }
 
-class WeaponKeyword implements Indexable<WeaponKeyword> {
+class WeaponKeyword extends Keyword<WeaponKeyword> {
   static final Serializer<WeaponKeyword> serializer = IndexableSerializer(
     _index,
     wireName: 'weaponKeyword',
@@ -963,39 +971,23 @@ class WeaponKeyword implements Indexable<WeaponKeyword> {
     ''',
   );
 
-  @override
-  final String id;
-
-  /// Display name of the keyword.
-  final String displayName;
-
-  /// Full description of the keyword.
-  final String description;
-
-  /// Whether this keyword has a numeric value that can be accumulated.
-  ///
-  /// For example `'Pierce 1'` + `'Pierce 1'` should result in `'Pierce 2'`.
-  final bool isNumeric;
-
   WeaponKeyword._({
-    @required this.id,
-    @required this.displayName,
+    @required String id,
+    @required String displayName,
     @required String description,
-    this.isNumeric = false,
-  })  : assert(id != null),
-        assert(displayName != null),
-        assert(description != null),
-        assert(isNumeric != null),
-        description = _normalize(description);
-
-  @override
-  toRef() => Reference(id);
+    bool isNumeric = false,
+  }) : super(
+          id: id,
+          displayName: displayName,
+          description: description,
+          isNumeric: isNumeric,
+        );
 
   @override
   toString() => 'WeaponKeyword: $id';
 }
 
-class UpgradeKeyword implements Indexable<UpgradeKeyword> {
+class UpgradeKeyword extends Keyword<UpgradeKeyword> {
   static final Serializer<UpgradeKeyword> serializer = IndexableSerializer(
     _index,
     wireName: 'upgradeKeyword',
@@ -1112,30 +1104,17 @@ class UpgradeKeyword implements Indexable<UpgradeKeyword> {
     isNumeric: true,
   );
 
-  @override
-  final String id;
-
-  /// Display name of the keyword.
-  final String displayName;
-
-  /// Full description of the keyword.
-  final String description;
-
-  /// Whether this keyword has a numeric value that can be accumulated.
-  ///
-  /// For example `'Pierce 1'` + `'Pierce 1'` should result in `'Pierce 2'`.
-  final bool isNumeric;
-
   UpgradeKeyword._({
-    @required this.id,
-    @required this.displayName,
+    @required String id,
+    @required String displayName,
     @required String description,
-    this.isNumeric = false,
-  })  : assert(id != null),
-        assert(displayName != null),
-        assert(description != null),
-        assert(isNumeric != null),
-        description = _normalize(description);
+    bool isNumeric = false,
+  }) : super(
+          id: id,
+          displayName: displayName,
+          description: description,
+          isNumeric: isNumeric,
+        );
 
   @override
   toRef() => Reference(id);
