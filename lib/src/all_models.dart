@@ -13,7 +13,8 @@ export 'model/catalog.dart' show Catalog;
 export 'model/command_card.dart' show CommandCard;
 export 'model/defense_dice.dart' show DefenseDice, DefenseDiceSide;
 export 'model/faction.dart' show Faction, ForceAlignment;
-export 'model/keyword.dart' show UnitKeyword, UpgradeKeyword, WeaponKeyword;
+export 'model/keyword.dart'
+    show Keyword, UnitKeyword, UpgradeKeyword, WeaponKeyword;
 export 'model/rank.dart' show Rank;
 export 'model/reference.dart' show Indexable, Reference;
 export 'model/unit.dart' show Unit, UnitBuilder;
