@@ -362,6 +362,54 @@
       ]
     },
     {
+      "id": "annihilation-looms",
+      "name": "Annihilation Looms",
+      "text": "Each trooper unit gains 1 suppression token. If it is round 5 or 6, each\n    trooper unit gains 1 additional suppression token.",
+      "pips": 3,
+      "activated": "Director Krennic & 2 Units",
+      "faction": "imperials",
+      "required": [
+        {
+          "id": "director-krennic"
+        }
+      ],
+      "waves": [
+        "SWL33"
+      ]
+    },
+    {
+      "id": "deploy-the-garrison",
+      "name": "Deploy The Garrison",
+      "text": "At the start of the Activation Phase, choose up to 2 friendly trooper\n    units that have faceup order tokens. Each chosen unit may perform a free\n    standby action.",
+      "pips": 2,
+      "activated": "2 Troopers",
+      "faction": "imperials",
+      "required": [
+        {
+          "id": "director-krennic"
+        }
+      ],
+      "waves": [
+        "SWL33"
+      ]
+    },
+    {
+      "id": "voracious-ambition",
+      "name": "Voracious Ambition",
+      "text": "At the start of the Activation Phase, place 3 random order tokens from your\n    order pool facedown on this card. You may look at these order tokens at any\n    time. When you would draw an order token from your order pool, you may\n    choose 1 of the order tokens on this card and use that order token instead.",
+      "pips": 1,
+      "activated": "Director Krennic",
+      "faction": "imperials",
+      "required": [
+        {
+          "id": "director-krennic"
+        }
+      ],
+      "waves": [
+        "SWL33"
+      ]
+    },
+    {
       "id": "an-entire-legion",
       "name": "An Entire Legion",
       "text": "",
@@ -954,6 +1002,62 @@
       "force_alignment": "dark"
     },
     {
+      "id": "director-krennic",
+      "name": "Director Krennic",
+      "is_unique": true,
+      "faction": "imperials",
+      "type": "trooper",
+      "points": 90,
+      "rank": "commander",
+      "miniatures": 1,
+      "wounds": 6,
+      "defense": "white",
+      "has_defense_surge": false,
+      "speed": 2,
+      "upgrades": {
+        "command": 2,
+        "gear": 1
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "dice": {
+            "black": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {},
+          "max_range": 0
+        },
+        {
+          "name": "Krennic' DT-29 Blaster Pistol",
+          "dice": {
+            "red": 1,
+            "black": 1,
+            "white": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {
+            "pierce": 1
+          },
+          "max_range": 2
+        }
+      ],
+      "keywords": {
+        "compel": "",
+        "cunning": "",
+        "entourage": "Death Troopers",
+        "sharpshooter": 1
+      },
+      "waves": [
+        "SWL33"
+      ],
+      "sub_title": "Architect of Terror",
+      "courage": 2,
+      "attack_surge": "critical"
+    },
+    {
       "id": "e-web-heavy-blaster-team",
       "name": "E-Web Heavy Blaster Team",
       "is_unique": false,
@@ -1120,6 +1224,70 @@
       "sub_title": "Master Tactician",
       "courage": 2,
       "attack_surge": "critical"
+    },
+    {
+      "id": "imperial-death-troopers",
+      "name": "Imperial Death Troopers",
+      "is_unique": false,
+      "faction": "imperials",
+      "type": "trooper",
+      "points": 76,
+      "rank": "corps",
+      "miniatures": 4,
+      "wounds": 1,
+      "defense": "red",
+      "has_defense_surge": true,
+      "speed": 2,
+      "upgrades": {
+        "heavy-weapon": 1,
+        "training": 1,
+        "comms": 1,
+        "gear": 1,
+        "armament": 1,
+        "grenades": 1
+      },
+      "weapons": [
+        {
+          "name": "Close Quarters Combat",
+          "dice": {
+            "red": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 0,
+          "keywords": {},
+          "max_range": 0
+        },
+        {
+          "name": "SE-14n Light Blaster",
+          "dice": {
+            "white": 2
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {},
+          "max_range": 2
+        },
+        {
+          "name": "E-11D Blaster Rifle",
+          "dice": {
+            "black": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {},
+          "max_range": 3
+        }
+      ],
+      "keywords": {
+        "discplined": 1,
+        "precise": 2,
+        "ready": 1
+      },
+      "waves": [
+        "SWL34"
+      ],
+      "courage": 1,
+      "attack_surge": "hit"
     },
     {
       "id": "imperial-officer",
@@ -1433,6 +1601,66 @@
       "attack_surge": "hit"
     },
     {
+      "id": "tx-225-gav-w-occupier-combat-assault-tank",
+      "name": "TX-225 GAVw Occupier Combat Assault Tank",
+      "is_unique": false,
+      "faction": "imperials",
+      "type": "ground-vehicle",
+      "points": 155,
+      "rank": "heavy",
+      "miniatures": 1,
+      "wounds": 8,
+      "defense": "red",
+      "has_defense_surge": false,
+      "speed": 1,
+      "upgrades": {
+        "comms": 1,
+        "hard-point": 3,
+        "pilot": 1
+      },
+      "weapons": [
+        {
+          "name": "Forward Twin MK 2E/W Cannons",
+          "dice": {
+            "red": 1,
+            "black": 1
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {
+            "fixed": "",
+            "suppressive": ""
+          },
+          "max_range": 2
+        },
+        {
+          "name": "Lateral Quad MK 2E/W Cannons",
+          "dice": {
+            "red": 2,
+            "black": 2
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {
+            "fixed": "",
+            "impact": 2
+          },
+          "max_range": 4
+        }
+      ],
+      "keywords": {
+        "armor": "",
+        "arsenal": 2,
+        "reposition": "",
+        "transport-open": 1,
+        "weak-point-sides": 1
+      },
+      "waves": [
+        "SWL08"
+      ],
+      "resilience": 6
+    },
+    {
       "id": "1-4-fd-laser-cannon-team",
       "name": "1.4 FD Laser Cannon Team",
       "is_unique": false,
@@ -1723,7 +1951,7 @@
         "command": 1,
         "gear": 1,
         "training": 1,
-        "blaster": 1
+        "armament": 1
       },
       "weapons": [
         {
@@ -2031,7 +2259,7 @@
         "training": 1,
         "comms": 1,
         "gear": 1,
-        "blaster": 1,
+        "armament": 1,
         "grenades": 1
       },
       "weapons": [
@@ -2133,7 +2361,7 @@
       "upgrades": {
         "training": 1,
         "gear": 2,
-        "blaster": 1
+        "armament": 1
       },
       "weapons": [
         {
@@ -2293,7 +2521,7 @@
       "is_unique": false,
       "name": "A-180 Pistol Config",
       "text": "",
-      "type": "blaster",
+      "type": "armament",
       "waves": [
         "SWL31"
       ],
@@ -2327,7 +2555,7 @@
       "is_unique": false,
       "name": "A-180 Rifle Config",
       "text": "",
-      "type": "blaster",
+      "type": "armament",
       "waves": [
         "SWL31"
       ],
@@ -2363,7 +2591,7 @@
       "is_unique": false,
       "name": "A-300 long Range Config",
       "text": "",
-      "type": "blaster",
+      "type": "armament",
       "waves": [
         "SWL32"
       ],
@@ -2396,7 +2624,7 @@
       "is_unique": false,
       "name": "A-300 Short Range Config",
       "text": "",
-      "type": "blaster",
+      "type": "armament",
       "waves": [
         "SWL32"
       ],
@@ -2408,6 +2636,76 @@
         "area_of_effect": 0,
         "min_range": 1,
         "keywords": {},
+        "max_range": 2
+      }
+    },
+    {
+      "adds_miniature": false,
+      "adds_upgrade_slots": {},
+      "is_exhaustible": true,
+      "points": 8,
+      "keywords": {
+        "reconfigure": ""
+      },
+      "keywords_for_unit": {},
+      "restricted_to_unit": [
+        {
+          "id": "imperial-death-troopers"
+        }
+      ],
+      "id": "e-11-d-focused-fire-config",
+      "is_unique": false,
+      "name": "E-11D Focused Fire Config",
+      "text": "",
+      "type": "armament",
+      "waves": [
+        "SWL34"
+      ],
+      "weapon": {
+        "name": "E-11D Focused Fire",
+        "dice": {
+          "black": 1
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {
+          "suppressive": ""
+        },
+        "max_range": 4
+      }
+    },
+    {
+      "adds_miniature": false,
+      "adds_upgrade_slots": {},
+      "is_exhaustible": true,
+      "points": 8,
+      "keywords": {
+        "reconfigure": ""
+      },
+      "keywords_for_unit": {},
+      "restricted_to_unit": [
+        {
+          "id": "imperial-death-troopers"
+        }
+      ],
+      "id": "e-11-d-grenade-launcher-config",
+      "is_unique": false,
+      "name": "E-11D Grenade Launcher Config",
+      "text": "",
+      "type": "armament",
+      "waves": [
+        "SWL34"
+      ],
+      "weapon": {
+        "name": "E-11D Grenade Launcher",
+        "dice": {
+          "red": 1
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {
+          "blast": ""
+        },
         "max_range": 2
       }
     },
@@ -2430,7 +2728,7 @@
       "is_unique": true,
       "name": "The Darksaber",
       "text": "",
-      "type": "blaster",
+      "type": "armament",
       "waves": [
         "SWL37"
       ],
@@ -3171,6 +3469,39 @@
       "adds_miniature": false,
       "adds_upgrade_slots": {},
       "is_exhaustible": false,
+      "points": 18,
+      "keywords": {},
+      "keywords_for_unit": {},
+      "restricted_to_unit": [
+        {
+          "id": "tx-225-gav-w-occupier-combat-assault-tank"
+        }
+      ],
+      "id": "dlt-19-rifle-pintle",
+      "is_unique": false,
+      "name": "DLT-19 Rifle Pintle",
+      "text": "",
+      "type": "hard-point",
+      "waves": [
+        "SWL35"
+      ],
+      "weapon": {
+        "name": "DLT-19 Heavy Blaster Rifle",
+        "dice": {
+          "red": 2
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {
+          "impact": 1
+        },
+        "max_range": 4
+      }
+    },
+    {
+      "adds_miniature": false,
+      "adds_upgrade_slots": {},
+      "is_exhaustible": false,
       "points": 15,
       "keywords": {},
       "keywords_for_unit": {},
@@ -3234,6 +3565,38 @@
           "tow-cable": ""
         },
         "max_range": 2
+      }
+    },
+    {
+      "adds_miniature": false,
+      "adds_upgrade_slots": {},
+      "is_exhaustible": false,
+      "points": 14,
+      "keywords": {},
+      "keywords_for_unit": {},
+      "restricted_to_unit": [
+        {
+          "id": "tx-225-gav-w-occupier-combat-assault-tank"
+        }
+      ],
+      "id": "rt-97-c-rifle-pintle",
+      "is_unique": false,
+      "name": "RT-97C Rifle Pintle",
+      "text": "",
+      "type": "hard-point",
+      "waves": [
+        "SWL35"
+      ],
+      "weapon": {
+        "name": "RT-97C Blaster Rifle",
+        "dice": {
+          "red": 1,
+          "white": 3
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {},
+        "max_range": 4
       }
     },
     {
@@ -3312,6 +3675,40 @@
       "adds_miniature": true,
       "adds_upgrade_slots": {},
       "is_exhaustible": false,
+      "points": 34,
+      "keywords": {},
+      "keywords_for_unit": {},
+      "restricted_to_unit": [
+        {
+          "id": "imperial-death-troopers"
+        }
+      ],
+      "id": "dlt-19-d-trooper",
+      "is_unique": false,
+      "name": "DLT-19D Trooper",
+      "text": "",
+      "type": "heavy-weapon",
+      "waves": [
+        "SWL34"
+      ],
+      "weapon": {
+        "name": "DLT-19 Heavy Blaster Rifle",
+        "dice": {
+          "red": 2,
+          "white": 1
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {
+          "impact": 1
+        },
+        "max_range": 4
+      }
+    },
+    {
+      "adds_miniature": true,
+      "adds_upgrade_slots": {},
+      "is_exhaustible": false,
       "points": 24,
       "keywords": {},
       "keywords_for_unit": {},
@@ -3376,6 +3773,42 @@
           "high-velocity": "",
           "pierce": 1
         }
+      }
+    },
+    {
+      "adds_miniature": true,
+      "adds_upgrade_slots": {},
+      "is_exhaustible": false,
+      "points": 22,
+      "keywords": {
+        "leader": ""
+      },
+      "keywords_for_unit": {
+        "compel": ""
+      },
+      "restricted_to_unit": [
+        {
+          "id": "imperial-death-troopers"
+        }
+      ],
+      "id": "dt-f-16",
+      "is_unique": true,
+      "name": "DT-F16",
+      "text": "",
+      "type": "heavy-weapon",
+      "waves": [
+        "SWL34"
+      ],
+      "weapon": {
+        "name": "DT-F16's Blaster Rifle",
+        "dice": {
+          "black": 1,
+          "white": 1
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {},
+        "max_range": 3
       }
     },
     {
@@ -4034,6 +4467,27 @@
     {
       "adds_miniature": false,
       "adds_upgrade_slots": {},
+      "is_exhaustible": false,
+      "points": 5,
+      "keywords": {},
+      "keywords_for_unit": {
+        "tactical": 1
+      },
+      "restricted_to_unit": [],
+      "id": "first-seargant-arbmab",
+      "is_unique": true,
+      "name": "First Sergeant Arbmab",
+      "text": "You gain TACTICAL 1.",
+      "type": "pilot",
+      "waves": [
+        "SWL35"
+      ],
+      "restricted_to_faction": "imperials",
+      "restricted_to_type": "ground-vehicle"
+    },
+    {
+      "adds_miniature": false,
+      "adds_upgrade_slots": {},
       "is_exhaustible": true,
       "points": 10,
       "keywords": {},
@@ -4048,6 +4502,25 @@
       "type": "pilot",
       "waves": [
         "SWL08"
+      ],
+      "restricted_to_faction": "imperials",
+      "restricted_to_type": "ground-vehicle"
+    },
+    {
+      "adds_miniature": false,
+      "adds_upgrade_slots": {},
+      "is_exhaustible": false,
+      "points": 10,
+      "keywords": {},
+      "keywords_for_unit": {},
+      "restricted_to_unit": [],
+      "id": "imperial-hammers-elite-armor-pilot",
+      "is_unique": false,
+      "name": "Imperial Hammers Elite Armor Pilot",
+      "text": "You gain SURGE: HIT.",
+      "type": "pilot",
+      "waves": [
+        "SWL35"
       ],
       "restricted_to_faction": "imperials",
       "restricted_to_type": "ground-vehicle"
