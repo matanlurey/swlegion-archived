@@ -7,7 +7,7 @@ final dlt19Stormtrooper = Upgrade(
   type: UpgradeSlot.heavyWeapon,
   restrictedToUnit: [Units.stormtroopers.toRef()],
   addsMiniature: true,
-  weapon: Weapons.dlt19HHeavyBlasterRifle,
+  weapon: Weapons.dlt19HeavyBlasterRifle,
   points: 24,
   waves: const [
     Wave.wCore,

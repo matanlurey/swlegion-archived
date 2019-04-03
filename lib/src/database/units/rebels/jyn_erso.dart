@@ -21,7 +21,7 @@ final jynErso = Unit(
     UpgradeSlot.command: 1,
     UpgradeSlot.gear: 1,
     UpgradeSlot.training: 1,
-    UpgradeSlot.blaster: 1,
+    UpgradeSlot.armament: 1,
   },
   weapons: [
     Weapons.collapsibleTonfa,

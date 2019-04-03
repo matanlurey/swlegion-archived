@@ -6,7 +6,9 @@ final _$unitKeywordValues = [
   UnitKeyword.kBounty,
   UnitKeyword.kCharge,
   UnitKeyword.kClimbingVehicle,
+  UnitKeyword.kCompel,
   UnitKeyword.kCover,
+  UnitKeyword.kCunning,
   UnitKeyword.kDangerSense,
   UnitKeyword.kDauntless,
   UnitKeyword.kDeflect,
@@ -47,11 +49,14 @@ final _$unitKeywordValues = [
   UnitKeyword.kSpotter,
   UnitKeyword.kStationary,
   UnitKeyword.kSteady,
+  UnitKeyword.kTactical,
   UnitKeyword.kTakeCover,
   UnitKeyword.kTeamwork,
+  UnitKeyword.kTransportOpen,
   UnitKeyword.kUncannyLuck,
   UnitKeyword.kUnhindered,
   UnitKeyword.kWeakPointRear,
+  UnitKeyword.kWeakPointSides,
 ];
 
 final _$weaponKeywordValues = [

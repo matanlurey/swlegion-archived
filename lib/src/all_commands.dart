@@ -21,6 +21,10 @@ import 'database/commands/units/darth_vader/implacable.dart' as _i;
 import 'database/commands/units/darth_vader/master_of_evil.dart' as _i;
 import 'database/commands/units/darth_vader/new_ways_to_motivate_them.dart'
     as _i;
+import 'database/commands/units/director_krennic/annihilation_looms.dart' as _i;
+import 'database/commands/units/director_krennic/deploy_the_garrison.dart'
+    as _i;
+import 'database/commands/units/director_krennic/voracious_ambition.dart' as _i;
 import 'database/commands/units/emperor_palpatine.dart/an_entire_legion.dart'
     as _i;
 import 'database/commands/units/emperor_palpatine.dart/and_now_you_will_die.dart'
@@ -67,6 +71,9 @@ final aggregate = [
   _i.implacable,
   _i.masterOfEvil,
   _i.newWaysToMovivateThem,
+  _i.annihilationLooms,
+  _i.deployTheGarrison,
+  _i.voraciousAmbition,
   _i.anEntireLegion,
   _i.andNowYouWillDie,
   _i.giveInToYourAnger,
@@ -111,6 +118,9 @@ class Commands {
   static final implacable = _i.implacable;
   static final masterOfEvil = _i.masterOfEvil;
   static final newWaysToMovivateThem = _i.newWaysToMovivateThem;
+  static final annihilationLooms = _i.annihilationLooms;
+  static final deployTheGarrison = _i.deployTheGarrison;
+  static final voraciousAmbition = _i.voraciousAmbition;
   static final anEntireLegion = _i.anEntireLegion;
   static final andNowYouWillDie = _i.andNowYouWillDie;
   static final giveInToYourAnger = _i.giveInToYourAnger;

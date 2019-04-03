@@ -17,7 +17,7 @@ const UpgradeSlot _$comms = const UpgradeSlot._('comms');
 const UpgradeSlot _$pilot = const UpgradeSlot._('pilot');
 const UpgradeSlot _$training = const UpgradeSlot._('training');
 const UpgradeSlot _$generator = const UpgradeSlot._('generator');
-const UpgradeSlot _$blaster = const UpgradeSlot._('blaster');
+const UpgradeSlot _$armament = const UpgradeSlot._('armament');
 
 UpgradeSlot _$valueOf(String name) {
   switch (name) {
@@ -43,8 +43,8 @@ UpgradeSlot _$valueOf(String name) {
       return _$training;
     case 'generator':
       return _$generator;
-    case 'blaster':
-      return _$blaster;
+    case 'armament':
+      return _$armament;
     default:
       throw new ArgumentError(name);
   }
@@ -63,7 +63,7 @@ final BuiltSet<UpgradeSlot> _$values =
   _$pilot,
   _$training,
   _$generator,
-  _$blaster,
+  _$armament,
 ]);
 
 Serializer<UpgradeSlot> _$upgradeSlotSerializer = new _$UpgradeSlotSerializer();
@@ -81,7 +81,7 @@ class _$UpgradeSlotSerializer implements PrimitiveSerializer<UpgradeSlot> {
     'pilot': 'pilot',
     'training': 'training',
     'generator': 'generator',
-    'blaster': 'blaster',
+    'armament': 'armament',
   };
   static const Map<String, String> _fromWire = const <String, String>{
     'heavy-weapon': 'heavyWeapon',
@@ -95,7 +95,7 @@ class _$UpgradeSlotSerializer implements PrimitiveSerializer<UpgradeSlot> {
     'pilot': 'pilot',
     'training': 'training',
     'generator': 'generator',
-    'blaster': 'blaster',
+    'armament': 'armament',
   };
 
   @override

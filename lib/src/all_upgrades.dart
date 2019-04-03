@@ -2,6 +2,8 @@ import 'database/upgrades/blaster/a_180_pistol_config.dart' as _i;
 import 'database/upgrades/blaster/a_180_rifle_config.dart' as _i;
 import 'database/upgrades/blaster/a_300_long_range_config.dart' as _i;
 import 'database/upgrades/blaster/a_300_short_range_config.dart' as _i;
+import 'database/upgrades/blaster/e_11_d_focused_fire_config.dart' as _i;
+import 'database/upgrades/blaster/e_11_d_grenade_launcher_config.dart' as _i;
 import 'database/upgrades/blaster/the_darksaber.dart' as _i;
 import 'database/upgrades/command/commanding_presence.dart' as _i;
 import 'database/upgrades/command/esteemed_leader.dart' as _i;
@@ -34,12 +36,16 @@ import 'database/upgrades/hardpoint/at_rt_laser_cannon.dart' as _i;
 import 'database/upgrades/hardpoint/at_rt_rotary_blaster.dart' as _i;
 import 'database/upgrades/hardpoint/at_st_mortar_launcher.dart' as _i;
 import 'database/upgrades/hardpoint/ax_108_ground_buzzer.dart' as _i;
+import 'database/upgrades/hardpoint/dlt_19_rifle_pintle.dart' as _i;
 import 'database/upgrades/hardpoint/dw3_concussion_grenade_launcher.dart' as _i;
 import 'database/upgrades/hardpoint/mo_dk_power_harpoon.dart' as _i;
+import 'database/upgrades/hardpoint/rt_97_c_rifle_pintle.dart' as _i;
 import 'database/upgrades/heavy_weapon/bowcaster_wookie.dart' as _i;
 import 'database/upgrades/heavy_weapon/dh_447_sniper.dart' as _i;
+import 'database/upgrades/heavy_weapon/dlt_19_d_trooper.dart' as _i;
 import 'database/upgrades/heavy_weapon/dlt_19_stormtrooper.dart' as _i;
 import 'database/upgrades/heavy_weapon/dlt_19_x_sniper.dart' as _i;
+import 'database/upgrades/heavy_weapon/dt_f_16.dart' as _i;
 import 'database/upgrades/heavy_weapon/electrostaff_guard.dart' as _i;
 import 'database/upgrades/heavy_weapon/flametrooper.dart' as _i;
 import 'database/upgrades/heavy_weapon/hh_12_stormtrooper.dart' as _i;
@@ -63,7 +69,9 @@ import 'database/upgrades/personnel/rebel_officer.dart' as _i;
 import 'database/upgrades/personnel/rebel_trooper.dart' as _i;
 import 'database/upgrades/personnel/snowtrooper.dart' as _i;
 import 'database/upgrades/personnel/stormtrooper.dart' as _i;
+import 'database/upgrades/pilot/first_seargant_arbmab.dart' as _i;
 import 'database/upgrades/pilot/general_weiss.dart' as _i;
+import 'database/upgrades/pilot/imperial_hammers_elite_armor_pilot.dart' as _i;
 import 'database/upgrades/pilot/wedge_antilles.dart' as _i;
 import 'database/upgrades/training/duck_and_cover.dart' as _i;
 import 'database/upgrades/training/hunter.dart' as _i;
@@ -75,6 +83,8 @@ final aggregate = [
   _i.a180RifleConfig,
   _i.a300LongRangeConfig,
   _i.a300ShortRangeConfig,
+  _i.e11DFocusedFireConfig,
+  _i.e11DGrenadeLauncherConfig,
   _i.theDarksaber,
   _i.commandingPresence,
   _i.estmeedLeader,
@@ -107,12 +117,16 @@ final aggregate = [
   _i.atRtRotaryBlaster,
   _i.atStMortarLauncher,
   _i.ax108GroundBuzzer,
+  _i.dlt19RiflePintle,
   _i.dw3ConcussionGrenadeLauncher,
   _i.moDkPowerHarpoon,
+  _i.rt97CRiflePintle,
   _i.bowcasterWookie,
   _i.dh447Sniper,
+  _i.dlt19DTrooper,
   _i.dlt19Stormtrooper,
   _i.dlt19XSniper,
+  _i.dtf16,
   _i.electrostaffGuard,
   _i.flametrooper,
   _i.hh12Stormtrooper,
@@ -136,7 +150,9 @@ final aggregate = [
   _i.rebelTrooper,
   _i.snowtrooper,
   _i.stormtrooper,
+  _i.firstSergeantArbmab,
   _i.generalWeiss,
+  _i.imperialHammersEliteArmorPilot,
   _i.wedgeAntilles,
   _i.duckAndCover,
   _i.hunter,
@@ -150,6 +166,8 @@ class Upgrades {
   static final a180RifleConfig = _i.a180RifleConfig;
   static final a300LongRangeConfig = _i.a300LongRangeConfig;
   static final a300ShortRangeConfig = _i.a300ShortRangeConfig;
+  static final e11DFocusedFireConfig = _i.e11DFocusedFireConfig;
+  static final e11DGrenadeLauncherConfig = _i.e11DGrenadeLauncherConfig;
   static final theDarksaber = _i.theDarksaber;
   static final commandingPresence = _i.commandingPresence;
   static final estmeedLeader = _i.estmeedLeader;
@@ -182,12 +200,16 @@ class Upgrades {
   static final atRtRotaryBlaster = _i.atRtRotaryBlaster;
   static final atStMortarLauncher = _i.atStMortarLauncher;
   static final ax108GroundBuzzer = _i.ax108GroundBuzzer;
+  static final dlt19RiflePintle = _i.dlt19RiflePintle;
   static final dw3ConcussionGrenadeLauncher = _i.dw3ConcussionGrenadeLauncher;
   static final moDkPowerHarpoon = _i.moDkPowerHarpoon;
+  static final rt97CRiflePintle = _i.rt97CRiflePintle;
   static final bowcasterWookie = _i.bowcasterWookie;
   static final dh447Sniper = _i.dh447Sniper;
+  static final dlt19DTrooper = _i.dlt19DTrooper;
   static final dlt19Stormtrooper = _i.dlt19Stormtrooper;
   static final dlt19XSniper = _i.dlt19XSniper;
+  static final dtf16 = _i.dtf16;
   static final electrostaffGuard = _i.electrostaffGuard;
   static final flametrooper = _i.flametrooper;
   static final hh12Stormtrooper = _i.hh12Stormtrooper;
@@ -211,7 +233,10 @@ class Upgrades {
   static final rebelTrooper = _i.rebelTrooper;
   static final snowtrooper = _i.snowtrooper;
   static final stormtrooper = _i.stormtrooper;
+  static final firstSergeantArbmab = _i.firstSergeantArbmab;
   static final generalWeiss = _i.generalWeiss;
+  static final imperialHammersEliteArmorPilot =
+      _i.imperialHammersEliteArmorPilot;
   static final wedgeAntilles = _i.wedgeAntilles;
   static final duckAndCover = _i.duckAndCover;
   static final hunter = _i.hunter;

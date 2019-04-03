@@ -125,6 +125,15 @@ class UnitKeyword extends Keyword<UnitKeyword> {
     ''',
   );
 
+  static final kCompel = UnitKeyword._(
+    id: 'compel',
+    displayName: 'Compel',
+    description: r'''
+      After another friendly unit at range 1-2 rallies, if it is suppressed but
+      not panicked, it may gain 1 suppression to perform a free move action.
+    ''',
+  );
+
   static final kCover = UnitKeyword._(
     id: 'cover',
     displayName: 'Cover X',
@@ -134,6 +143,15 @@ class UnitKeyword extends Keyword<UnitKeyword> {
       equal to X.
     ''',
     isNumeric: true,
+  );
+
+  static final kCunning = UnitKeyword._(
+    id: 'cunning',
+    displayName: 'Cunning',
+    description: r'''
+      When your commander-specific command cards are played, if there would be
+      a tie for priority, treat your command card as though it had 1 fewer pip.
+    ''',
   );
 
   static final kDangerSense = UnitKeyword._(
@@ -637,6 +655,15 @@ class UnitKeyword extends Keyword<UnitKeyword> {
     ''',
   );
 
+  static final kTactical = UnitKeyword._(
+    id: 'tactical',
+    displayName: 'Tactcal X',
+    description: r'''
+      After you perform a standard move, gain 1 aim token.
+    ''',
+    isNumeric: true,
+  );
+
   static final kTakeCover = UnitKeyword._(
     id: 'take-cover',
     displayName: 'Take Cover X',
@@ -661,6 +688,16 @@ class UnitKeyword extends Keyword<UnitKeyword> {
       if either unit gains an aim token or dodge token, the other unit gains a
       token of the same type.
     ''',
+  );
+
+  static final kTransportOpen = UnitKeyword._(
+    id: 'transport-open',
+    displayName: 'Transport (Open)',
+    description: r'''
+      You may freely transport X friendly trooper units. After defending, if you
+      suffered 1 or more wounds, each unit you are transporting suffers 1 wound.
+    ''',
+    isNumeric: true,
   );
 
   static final kUncannyLuck = UnitKeyword._(
@@ -691,6 +728,16 @@ class UnitKeyword extends Keyword<UnitKeyword> {
       While a unit with the **WEAK POINT X: REAR** keyword is defending, if the
       attacker's unit leader is inside the rear firing arc of the defender, the
       attack pool gains **IMPACT X** equal to the value of X.
+    ''',
+  );
+
+  static final kWeakPointSides = UnitKeyword._(
+    id: 'weak-point-sides',
+    displayName: 'Weak Point X: Sides',
+    description: r'''
+      While a unit with the **WEAK POINT X: SIDES** keyword is defending, if the
+      attacker's unit leader is inside either of your side arcs, the attack pool
+      gains **IMPACT X** equal to the value of X.
     ''',
   );
 

@@ -11,7 +11,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(AttackSurge.serializer)
       ..add(Catalog.serializer)
       ..add(CommandCard.serializer)
-      ..add(CommandCard.serializer)
       ..add(DefenseDice.serializer)
       ..add(Faction.serializer)
       ..add(ForceAlignment.serializer)
@@ -69,14 +68,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltMap,
               const [const FullType(UnitKeyword), const FullType(Object)]),
           () => new MapBuilder<UnitKeyword, Object>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(Wave)]),
-          () => new ListBuilder<Wave>())
-      ..addBuilderFactory(
-          const FullType(BuiltSet, const [
-            const FullType(Reference, const [const FullType(Unit)])
-          ]),
-          () => new SetBuilder<Reference<Unit>>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Wave)]),
           () => new ListBuilder<Wave>())

@@ -4,6 +4,7 @@
 - Fix mis-spelling in the ID of `Imperial Discipline` and `Z6 Jetpack Launcher`.
 - Fix `Chewbacca`'s `.activations` for his command cards.
 - Added `Bossk`, `Rebel Pathfinders`, and started on `Sabrine Wren`.
+- Added `Director Krennic`, `Imperial Death Troopers`, and the assault tank.
 
 ### Data Model
 
@@ -12,8 +13,9 @@
 - `Faction` added `Faction.neutral`, replacing the need for a sentinel `null`.
 - `CommandCard`:
   - `.unitsActivated` renamed to `.activated`.
-  - `.factionRequired` renamed to `.faction`
+  - `.factionRequired` renamed to `.faction`.
 - All the `...Keyword` classes now extend a base `Keyword` class.
+- Renamed `UpgradeSlot.blaster` to `.armament`.
 
 ## 0.4.0
 

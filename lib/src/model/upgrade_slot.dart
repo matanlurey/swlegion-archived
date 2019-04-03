@@ -40,9 +40,9 @@ class UpgradeSlot extends EnumClass {
   @BuiltValueEnumConst(wireName: 'generator')
   static const UpgradeSlot generator = _$generator;
 
-  @BuiltValueEnumConst(wireName: 'blaster')
+  @BuiltValueEnumConst(wireName: 'armament')
   @experimental
-  static const UpgradeSlot blaster = _$blaster;
+  static const UpgradeSlot armament = _$armament;
 
   const UpgradeSlot._(String name) : super(name);
 
