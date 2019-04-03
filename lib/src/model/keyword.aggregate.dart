@@ -85,4 +85,3 @@ final _$upgradeKeywordValues = [
   UpgradeKeyword.kSidearmRanged,
   UpgradeKeyword.kTreat,
 ];
-
