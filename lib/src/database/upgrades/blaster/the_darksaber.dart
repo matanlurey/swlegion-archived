@@ -4,7 +4,7 @@ import 'package:swlegion/swlegion.dart';
 final theDarksaber = Upgrade(
   id: 'the-darksaber',
   name: 'The Darksaber',
-  type: UpgradeSlot.blaster,
+  type: UpgradeSlot.armament,
   restrictedToUnit: [
     Units.sabrineWren.toRef(),
   ],

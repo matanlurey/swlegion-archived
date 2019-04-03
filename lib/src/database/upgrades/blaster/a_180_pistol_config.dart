@@ -4,7 +4,7 @@ import 'package:swlegion/swlegion.dart';
 final a180PistolConfig = Upgrade(
   id: 'a-180-pistol-config',
   name: 'A-180 Pistol Config',
-  type: UpgradeSlot.blaster,
+  type: UpgradeSlot.armament,
   restrictedToUnit: [
     Units.jynErso.toRef(),
   ],

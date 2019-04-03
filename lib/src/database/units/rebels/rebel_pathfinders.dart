@@ -20,7 +20,7 @@ final rebelPathfinders = Unit(
     UpgradeSlot.training: 1,
     UpgradeSlot.comms: 1,
     UpgradeSlot.gear: 1,
-    UpgradeSlot.blaster: 1,
+    UpgradeSlot.armament: 1,
     UpgradeSlot.grenades: 1,
   },
   weapons: [

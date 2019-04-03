@@ -40,3 +40,4 @@ final _$waveValues = [
   Wave.wSabineWrenOperativeExpansion,
   Wave.wBosskOperativeExpansion,
 ];
+

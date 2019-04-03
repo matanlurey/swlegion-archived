@@ -4,7 +4,7 @@ import 'package:swlegion/swlegion.dart';
 final a300LongRangeConfig = Upgrade(
   id: 'a-300-long-range-config',
   name: 'A-300 long Range Config',
-  type: UpgradeSlot.blaster,
+  type: UpgradeSlot.armament,
   restrictedToUnit: [
     Units.rebelPathfinders.toRef(),
   ],

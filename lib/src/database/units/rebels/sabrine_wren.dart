@@ -20,7 +20,7 @@ final sabrineWren = Unit(
   upgrades: const {
     UpgradeSlot.training: 1,
     UpgradeSlot.gear: 2,
-    UpgradeSlot.blaster: 1,
+    UpgradeSlot.armament: 1,
   },
   weapons: [
     Weapons.combatExpertise,

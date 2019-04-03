@@ -19,14 +19,13 @@ import 'database/commands/units/chewbacca/common_cause.dart' as _i;
 import 'database/commands/units/chewbacca/notorious_scoundrels.dart' as _i;
 import 'database/commands/units/darth_vader/implacable.dart' as _i;
 import 'database/commands/units/darth_vader/master_of_evil.dart' as _i;
-import 'database/commands/units/darth_vader/new_ways_to_motivate_them.dart'
-    as _i;
-import 'database/commands/units/emperor_palpatine.dart/an_entire_legion.dart'
-    as _i;
-import 'database/commands/units/emperor_palpatine.dart/and_now_you_will_die.dart'
-    as _i;
-import 'database/commands/units/emperor_palpatine.dart/give_in_to_your_anger.dart'
-    as _i;
+import 'database/commands/units/darth_vader/new_ways_to_motivate_them.dart' as _i;
+import 'database/commands/units/director_krennic/annihilation_looms.dart' as _i;
+import 'database/commands/units/director_krennic/deploy_the_garrison.dart' as _i;
+import 'database/commands/units/director_krennic/voracious_ambition.dart' as _i;
+import 'database/commands/units/emperor_palpatine.dart/an_entire_legion.dart' as _i;
+import 'database/commands/units/emperor_palpatine.dart/and_now_you_will_die.dart' as _i;
+import 'database/commands/units/emperor_palpatine.dart/give_in_to_your_anger.dart' as _i;
 import 'database/commands/units/general_veers/evasive_maneuvers.dart' as _i;
 import 'database/commands/units/general_veers/imperial_discipline.dart' as _i;
 import 'database/commands/units/general_veers/maximum_firepower.dart' as _i;
@@ -38,8 +37,7 @@ import 'database/commands/units/jyn_erso/rebellious.dart' as _i;
 import 'database/commands/units/jyn_erso/trust_goes_both_ways.dart' as _i;
 import 'database/commands/units/leia_organa/coordinated_bombardment.dart' as _i;
 import 'database/commands/units/leia_organa/no_time_for_sorrows.dart' as _i;
-import 'database/commands/units/leia_organa/somebody_has_to_save_our_skins.dart'
-    as _i;
+import 'database/commands/units/leia_organa/somebody_has_to_save_our_skins.dart' as _i;
 import 'database/commands/units/luke_skywalker/my_ally_is_the_force.dart' as _i;
 import 'database/commands/units/luke_skywalker/return_of_the_jedi.dart' as _i;
 import 'database/commands/units/luke_skywalker/son_of_skywalker.dart' as _i;
@@ -67,6 +65,9 @@ final aggregate = [
   _i.implacable,
   _i.masterOfEvil,
   _i.newWaysToMovivateThem,
+  _i.annihilationLooms,
+  _i.deployTheGarrison,
+  _i.voraciousAmbition,
   _i.anEntireLegion,
   _i.andNowYouWillDie,
   _i.giveInToYourAnger,
@@ -86,7 +87,6 @@ final aggregate = [
   _i.returnOfTheJedi,
   _i.sonOfSkywalker
 ];
-
 class Commands {
   const Commands._();
   static final coordinatedFire = _i.coordinatedFire;
@@ -111,6 +111,9 @@ class Commands {
   static final implacable = _i.implacable;
   static final masterOfEvil = _i.masterOfEvil;
   static final newWaysToMovivateThem = _i.newWaysToMovivateThem;
+  static final annihilationLooms = _i.annihilationLooms;
+  static final deployTheGarrison = _i.deployTheGarrison;
+  static final voraciousAmbition = _i.voraciousAmbition;
   static final anEntireLegion = _i.anEntireLegion;
   static final andNowYouWillDie = _i.andNowYouWillDie;
   static final giveInToYourAnger = _i.giveInToYourAnger;
@@ -130,3 +133,4 @@ class Commands {
   static final returnOfTheJedi = _i.returnOfTheJedi;
   static final sonOfSkywalker = _i.sonOfSkywalker;
 }
+
