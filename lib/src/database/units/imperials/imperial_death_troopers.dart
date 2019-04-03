@@ -6,7 +6,7 @@ final imperialDeathTroopers = Unit(
   name: 'Imperial Death Troopers',
   faction: Faction.imperials,
   miniatures: 4,
-  rank: Rank.corps,
+  rank: Rank.specialForces,
   type: UnitType.trooper,
   wounds: 1,
   courage: 1,
