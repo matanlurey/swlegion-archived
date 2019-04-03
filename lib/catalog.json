@@ -366,11 +366,11 @@
       "name": "Annihilation Looms",
       "text": "Each trooper unit gains 1 suppression token. If it is round 5 or 6, each\n    trooper unit gains 1 additional suppression token.",
       "pips": 3,
-      "activated": "Director Krennic & 2 Units",
+      "activated": "Director Orson Krennic & 2 Units",
       "faction": "imperials",
       "required": [
         {
-          "id": "director-krennic"
+          "id": "director-orson-krennic"
         }
       ],
       "waves": [
@@ -386,7 +386,7 @@
       "faction": "imperials",
       "required": [
         {
-          "id": "director-krennic"
+          "id": "director-orson-krennic"
         }
       ],
       "waves": [
@@ -398,11 +398,11 @@
       "name": "Voracious Ambition",
       "text": "At the start of the Activation Phase, place 3 random order tokens from your\n    order pool facedown on this card. You may look at these order tokens at any\n    time. When you would draw an order token from your order pool, you may\n    choose 1 of the order tokens on this card and use that order token instead.",
       "pips": 1,
-      "activated": "Director Krennic",
+      "activated": "Director Orson Krennic",
       "faction": "imperials",
       "required": [
         {
-          "id": "director-krennic"
+          "id": "director-orson-krennic"
         }
       ],
       "waves": [
@@ -1002,8 +1002,8 @@
       "force_alignment": "dark"
     },
     {
-      "id": "director-krennic",
-      "name": "Director Krennic",
+      "id": "director-orson-krennic",
+      "name": "Director Orson Krennic",
       "is_unique": true,
       "faction": "imperials",
       "type": "trooper",

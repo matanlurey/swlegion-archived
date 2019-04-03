@@ -1,9 +1,9 @@
 import 'package:swlegion/catalog.dart';
 import 'package:swlegion/swlegion.dart';
 
-final directorKrennic = Unit(
-  id: 'director-krennic',
-  name: 'Director Krennic',
+final directorOrsonKrennic = Unit(
+  id: 'director-orson-krennic',
+  name: 'Director Orson Krennic',
   subTitle: 'Architect of Terror',
   faction: Faction.imperials,
   isUnique: true,

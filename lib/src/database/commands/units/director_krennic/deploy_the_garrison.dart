@@ -5,7 +5,7 @@ final deployTheGarrison = CommandCard(
   id: 'deploy-the-garrison',
   name: 'Deploy The Garrison',
   activated: '2 Troopers',
-  required: [Units.directorKrennic],
+  required: [Units.directorOrsonKrennic],
   pips: 2,
   text: r'''
     At the start of the Activation Phase, choose up to 2 friendly trooper

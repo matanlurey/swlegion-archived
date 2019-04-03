@@ -4,8 +4,8 @@ import 'package:swlegion/swlegion.dart';
 final voraciousAmbition = CommandCard(
   id: 'voracious-ambition',
   name: 'Voracious Ambition',
-  activated: Units.directorKrennic.name,
-  required: [Units.directorKrennic],
+  activated: Units.directorOrsonKrennic.name,
+  required: [Units.directorOrsonKrennic],
   pips: 1,
   text: r'''
     At the start of the Activation Phase, place 3 random order tokens from your
