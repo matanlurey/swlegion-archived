@@ -949,7 +949,7 @@
         "enrange": 3,
         "expert-climber": "",
         "regenerate": 3,
-        "unhindererd": ""
+        "unhindered": ""
       },
       "waves": [
         "SWL38"
@@ -2346,8 +2346,8 @@
       "courage": 1
     },
     {
-      "id": "sabrine-wren",
-      "name": "Sabrine Wren",
+      "id": "sabine-wren",
+      "name": "Sabine Wren",
       "is_unique": true,
       "faction": "rebels",
       "type": "trooper",
@@ -2495,7 +2495,7 @@
         "charge": "",
         "expert-climber": "",
         "indomitable": "",
-        "unhindererd": ""
+        "unhindered": ""
       },
       "waves": [
         "SWL25"
@@ -2721,7 +2721,7 @@
       },
       "restricted_to_unit": [
         {
-          "id": "sabrine-wren"
+          "id": "sabine-wren"
         }
       ],
       "id": "the-darksaber",
@@ -3034,7 +3034,7 @@
       "points": 3,
       "keywords": {},
       "keywords_for_unit": {
-        "unhindererd": ""
+        "unhindered": ""
       },
       "restricted_to_unit": [],
       "id": "environmental-gear",

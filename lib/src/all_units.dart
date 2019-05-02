@@ -29,7 +29,7 @@ import 'database/units/rebels/rebel_commandos_strike_team.dart' as _i;
 import 'database/units/rebels/rebel_officer.dart' as _i;
 import 'database/units/rebels/rebel_pathfinders.dart' as _i;
 import 'database/units/rebels/rebel_troopers.dart' as _i;
-import 'database/units/rebels/sabrine_wren.dart' as _i;
+import 'database/units/rebels/sabine_wren.dart' as _i;
 import 'database/units/rebels/t_47_airspeeder.dart' as _i;
 import 'database/units/rebels/wookie_warriors.dart' as _i;
 
@@ -64,7 +64,7 @@ final aggregate = [
   _i.rebelOfficer,
   _i.rebelPathfinders,
   _i.rebelTroopers,
-  _i.sabrineWren,
+  _i.sabineWren,
   _i.t47Airspeeder,
   _i.wookieWarriors
 ];
@@ -102,7 +102,7 @@ class Units {
   static final rebelOfficer = _i.rebelOfficer;
   static final rebelPathfinders = _i.rebelPathfinders;
   static final rebelTroopers = _i.rebelTroopers;
-  static final sabrineWren = _i.sabrineWren;
+  static final sabineWren = _i.sabineWren;
   static final t47Airspeeder = _i.t47Airspeeder;
   static final wookieWarriors = _i.wookieWarriors;
 }

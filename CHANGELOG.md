@@ -2,6 +2,7 @@
 
 - Store `text` fields with trailing and preceding whitespace removed.
 - Fix mis-spelling in the ID of `Imperial Discipline` and `Z6 Jetpack Launcher`.
+- Fix mis-spelling in the ID of `unhindered` and `Sabine Wren`.
 - Fix `Chewbacca`'s `.activations` for his command cards.
 - Added `Bossk`, `Rebel Pathfinders`, and started on `Sabrine Wren`.
 - Added `Director Krennic`, `Imperial Death Troopers`, and the assault tank.

@@ -6,7 +6,7 @@ final theDarksaber = Upgrade(
   name: 'The Darksaber',
   type: UpgradeSlot.armament,
   restrictedToUnit: [
-    Units.sabrineWren.toRef(),
+    Units.sabineWren.toRef(),
   ],
   weapon: Weapons.theDarksaber,
   points: 25,

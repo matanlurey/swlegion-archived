@@ -711,7 +711,7 @@ class UnitKeyword extends Keyword<UnitKeyword> {
   );
 
   static final kUnhindered = UnitKeyword._(
-    id: 'unhindererd',
+    id: 'unhindered',
     displayName: 'Unhindered',
     description: r'''
       A unit that has the **UNHINDERED** keyword is not slowed by difficult
