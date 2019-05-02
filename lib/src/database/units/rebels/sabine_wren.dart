@@ -1,9 +1,9 @@
 import 'package:swlegion/catalog.dart';
 import 'package:swlegion/swlegion.dart';
 
-final sabrineWren = Unit(
-  id: 'sabrine-wren',
-  name: 'Sabrine Wren',
+final sabineWren = Unit(
+  id: 'sabine-wren',
+  name: 'Sabine Wren',
   subTitle: 'Explosive Artist',
   faction: Faction.rebels,
   isUnique: true,
