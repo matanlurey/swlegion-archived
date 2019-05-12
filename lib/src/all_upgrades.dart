@@ -171,6 +171,7 @@ final aggregate = [
   _i.overwatch,
   _i.tenacity
 ];
+
 class Upgrades {
   const Upgrades._();
   static final a180PistolConfig = _i.a180PistolConfig;
@@ -250,7 +251,8 @@ class Upgrades {
   static final stormtrooper = _i.stormtrooper;
   static final firstSergeantArbmab = _i.firstSergeantArbmab;
   static final generalWeiss = _i.generalWeiss;
-  static final imperialHammersEliteArmorPilot = _i.imperialHammersEliteArmorPilot;
+  static final imperialHammersEliteArmorPilot =
+      _i.imperialHammersEliteArmorPilot;
   static final outerRimSpeederJockey = _i.outerRimSpeederJockey;
   static final ryderAzadi = _i.ryderAzadi;
   static final wedgeAntilles = _i.wedgeAntilles;
@@ -259,4 +261,3 @@ class Upgrades {
   static final overwatch = _i.overwatch;
   static final tenacity = _i.tenacity;
 }
-
