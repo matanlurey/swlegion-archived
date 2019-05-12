@@ -2968,7 +2968,7 @@
           "id": "x-34-landspeeder"
         }
       ],
-      "id": "rprs-6-rocket-gunner",
+      "id": "rps-6-rocket-gunner",
       "is_unique": false,
       "name": "RPS-6 Rocket Gunner",
       "text": "",
@@ -4702,6 +4702,27 @@
       ],
       "restricted_to_faction": "imperials",
       "restricted_to_type": "ground-vehicle"
+    },
+    {
+      "adds_miniature": false,
+      "adds_upgrade_slots": {},
+      "is_exhaustible": false,
+      "points": 10,
+      "keywords": {},
+      "keywords_for_unit": {
+        "cover": 1
+      },
+      "restricted_to_unit": [],
+      "id": "outer-rim-speeder-jockey",
+      "is_unique": false,
+      "name": "Outer Rim Speeder Jockey",
+      "text": "",
+      "type": "pilot",
+      "waves": [
+        "SWL36"
+      ],
+      "restricted_to_faction": "rebels",
+      "restricted_to_type": "repulsor-vehicle"
     },
     {
       "adds_miniature": false,
