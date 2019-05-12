@@ -61,21 +61,22 @@ import 'database/weapons/upgrades/flamethrower.dart' as _i;
 import 'database/weapons/upgrades/grenades/concussion_grenades.dart' as _i;
 import 'database/weapons/upgrades/grenades/fragmentation_grenades.dart' as _i;
 import 'database/weapons/upgrades/grenades/impact_grenades.dart' as _i;
-import 'database/weapons/upgrades/hardpoints/88_twin_light_blaster_cannon.dart'
-    as _i;
+import 'database/weapons/upgrades/hardpoints/88_twin_light_blaster_cannon.dart' as _i;
 import 'database/weapons/upgrades/hardpoints/at_rt_flamethrower.dart' as _i;
 import 'database/weapons/upgrades/hardpoints/at_rt_laser_cannon.dart' as _i;
 import 'database/weapons/upgrades/hardpoints/at_rt_rotary_blaster.dart' as _i;
 import 'database/weapons/upgrades/hardpoints/at_st_mortar_launcher.dart' as _i;
 import 'database/weapons/upgrades/hardpoints/ax_108_ground_buzzer.dart' as _i;
-import 'database/weapons/upgrades/hardpoints/dw_3_concussion_grenade_launcher.dart'
-    as _i;
+import 'database/weapons/upgrades/hardpoints/dw_3_concussion_grenade_launcher.dart' as _i;
+import 'database/weapons/upgrades/hardpoints/m_45_ion_blaster.dart' as _i;
+import 'database/weapons/upgrades/hardpoints/mark_ii_medium_blaster.dart' as _i;
 import 'database/weapons/upgrades/hardpoints/mo_dk_power_harpoon.dart' as _i;
 import 'database/weapons/upgrades/hh_12_rocket_launcher.dart' as _i;
 import 'database/weapons/upgrades/mpl_57_barrage_launcher.dart' as _i;
 import 'database/weapons/upgrades/mpl_57_ion_launcher.dart' as _i;
 import 'database/weapons/upgrades/pao.dart' as _i;
 import 'database/weapons/upgrades/proton_charge.dart' as _i;
+import 'database/weapons/upgrades/rps_6_rocket_launcher.dart' as _i;
 import 'database/weapons/upgrades/rt_97_c_rifle_pintle.dart' as _i;
 import 'database/weapons/upgrades/scatter_gun.dart' as _i;
 import 'database/weapons/upgrades/sonic_charge.dart' as _i;
@@ -157,12 +158,15 @@ final aggregate = [
   _i.atStMortarLauncher,
   _i.ax108GroundBuzzer,
   _i.dw3ConcussionGrenadeLauncher,
+  _i.m45IonBlaster,
+  _i.markIIMediumBlaster,
   _i.moDkPowerHarpoon,
   _i.hh12RocketLauncher,
   _i.mpl57BarrageLauncher,
   _i.mpl57IonLauncher,
   _i.pao,
   _i.protonCharge,
+  _i.rps6RocketGunner,
   _i.rt97CBlasterRifle,
   _i.scatterGun,
   _i.sonicCharge,
@@ -173,7 +177,6 @@ final aggregate = [
   _i.veersE11BlasterRifle,
   _i.wristRocket
 ];
-
 class Weapons {
   const Weapons._();
   static final $1dot4FDLaserCannon = _i.$1dot4FDLaserCannon;
@@ -246,12 +249,15 @@ class Weapons {
   static final atStMortarLauncher = _i.atStMortarLauncher;
   static final ax108GroundBuzzer = _i.ax108GroundBuzzer;
   static final dw3ConcussionGrenadeLauncher = _i.dw3ConcussionGrenadeLauncher;
+  static final m45IonBlaster = _i.m45IonBlaster;
+  static final markIIMediumBlaster = _i.markIIMediumBlaster;
   static final moDkPowerHarpoon = _i.moDkPowerHarpoon;
   static final hh12RocketLauncher = _i.hh12RocketLauncher;
   static final mpl57BarrageLauncher = _i.mpl57BarrageLauncher;
   static final mpl57IonLauncher = _i.mpl57IonLauncher;
   static final pao = _i.pao;
   static final protonCharge = _i.protonCharge;
+  static final rps6RocketGunner = _i.rps6RocketGunner;
   static final rt97CBlasterRifle = _i.rt97CBlasterRifle;
   static final scatterGun = _i.scatterGun;
   static final sonicCharge = _i.sonicCharge;
@@ -262,3 +268,4 @@ class Weapons {
   static final veersE11BlasterRifle = _i.veersE11BlasterRifle;
   static final wristRocket = _i.wristRocket;
 }
+

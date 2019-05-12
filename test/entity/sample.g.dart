@@ -151,7 +151,7 @@ class _$Sample extends Sample {
   @override
   final BuiltMap<UnitKeyword, Object> keywords;
 
-  factory _$Sample([void updates(SampleBuilder b)]) =>
+  factory _$Sample([void Function(SampleBuilder) updates]) =>
       (new SampleBuilder()..update(updates)).build();
 
   _$Sample._(
@@ -165,7 +165,7 @@ class _$Sample extends Sample {
       : super._();
 
   @override
-  Sample rebuild(void updates(SampleBuilder b)) =>
+  Sample rebuild(void Function(SampleBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
@@ -275,7 +275,7 @@ class SampleBuilder implements Builder<Sample, SampleBuilder> {
   }
 
   @override
-  void update(void updates(SampleBuilder b)) {
+  void update(void Function(SampleBuilder) updates) {
     if (updates != null) updates(this);
   }
 

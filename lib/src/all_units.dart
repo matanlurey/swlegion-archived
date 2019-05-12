@@ -32,6 +32,7 @@ import 'database/units/rebels/rebel_troopers.dart' as _i;
 import 'database/units/rebels/sabine_wren.dart' as _i;
 import 'database/units/rebels/t_47_airspeeder.dart' as _i;
 import 'database/units/rebels/wookie_warriors.dart' as _i;
+import 'database/units/rebels/x_34_landspeeder.dart' as _i;
 
 final aggregate = [
   _i.$74ZSpeederBikes,
@@ -66,7 +67,8 @@ final aggregate = [
   _i.rebelTroopers,
   _i.sabineWren,
   _i.t47Airspeeder,
-  _i.wookieWarriors
+  _i.wookieeWarriors,
+  _i.x34Landspeeder
 ];
 
 class Units {
@@ -104,5 +106,6 @@ class Units {
   static final rebelTroopers = _i.rebelTroopers;
   static final sabineWren = _i.sabineWren;
   static final t47Airspeeder = _i.t47Airspeeder;
-  static final wookieWarriors = _i.wookieWarriors;
+  static final wookieeWarriors = _i.wookieeWarriors;
+  static final x34Landspeeder = _i.x34Landspeeder;
 }

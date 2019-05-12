@@ -2450,8 +2450,8 @@
       "resilience": 5
     },
     {
-      "id": "wookie-warriors",
-      "name": "Wookie Warriors",
+      "id": "wookiee-warriors",
+      "name": "Wookiee Warriors",
       "is_unique": false,
       "faction": "rebels",
       "type": "trooper",
@@ -2502,6 +2502,49 @@
       ],
       "courage": 2,
       "attack_surge": "hit"
+    },
+    {
+      "id": "x-34-landspeeder",
+      "name": "X-34 Landspeeder",
+      "is_unique": false,
+      "faction": "rebels",
+      "type": "repulsor-vehicle",
+      "points": 75,
+      "rank": "heavy",
+      "miniatures": 1,
+      "wounds": 6,
+      "defense": "white",
+      "has_defense_surge": true,
+      "speed": 3,
+      "upgrades": {
+        "comms": 1,
+        "crew": 2,
+        "hard-point": 1,
+        "pilot": 1
+      },
+      "weapons": [
+        {
+          "name": "DH-17 Blaster Pistol",
+          "dice": {
+            "white": 2
+          },
+          "area_of_effect": 0,
+          "min_range": 1,
+          "keywords": {},
+          "max_range": 2
+        }
+      ],
+      "keywords": {
+        "armor": 2,
+        "arsenal": 3,
+        "cover": 1,
+        "light-transport-1-open": "",
+        "speeder": 1
+      },
+      "waves": [
+        "SWL36"
+      ],
+      "resilience": 4
     }
   ],
   "upgrades": [
@@ -2881,6 +2924,72 @@
         "SWL08",
         "SWL09"
       ]
+    },
+    {
+      "adds_miniature": false,
+      "adds_upgrade_slots": {},
+      "is_exhaustible": false,
+      "points": 9,
+      "keywords": {},
+      "keywords_for_unit": {},
+      "restricted_to_unit": [
+        {
+          "id": "x-34-landspeeder"
+        }
+      ],
+      "id": "a-300-rifle-gunner",
+      "is_unique": false,
+      "name": "A-300 Rifle Gunner",
+      "text": "",
+      "type": "crew",
+      "waves": [
+        "SWL36"
+      ],
+      "weapon": {
+        "name": "A-300 Blaster Rifle",
+        "dice": {
+          "white": 2
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {},
+        "max_range": 3
+      }
+    },
+    {
+      "adds_miniature": false,
+      "adds_upgrade_slots": {},
+      "is_exhaustible": false,
+      "points": 36,
+      "keywords": {},
+      "keywords_for_unit": {},
+      "restricted_to_unit": [
+        {
+          "id": "x-34-landspeeder"
+        }
+      ],
+      "id": "rprs-6-rocket-gunner",
+      "is_unique": false,
+      "name": "RPS-6 Rocket Gunner",
+      "text": "",
+      "type": "crew",
+      "waves": [
+        "SWL36"
+      ],
+      "weapon": {
+        "name": "RPS-6 Rocket Gunner",
+        "dice": {
+          "red": 1,
+          "black": 1,
+          "white": 1
+        },
+        "area_of_effect": 0,
+        "min_range": 2,
+        "keywords": {
+          "impact": 2
+        },
+        "max_range": 4
+      }
     },
     {
       "adds_miniature": false,
@@ -3535,6 +3644,75 @@
     {
       "adds_miniature": false,
       "adds_upgrade_slots": {},
+      "is_exhaustible": true,
+      "points": 38,
+      "keywords": {},
+      "keywords_for_unit": {},
+      "restricted_to_unit": [
+        {
+          "id": "x-34-landspeeder"
+        }
+      ],
+      "id": "m-45-ion-blaster",
+      "is_unique": false,
+      "name": "M-45 Ion Blaster",
+      "text": "",
+      "type": "hard-point",
+      "waves": [
+        "SWL36"
+      ],
+      "weapon": {
+        "name": "M-45 Ion Blaster",
+        "dice": {
+          "black": 1,
+          "white": 4
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {
+          "fixed": "",
+          "impact": 1,
+          "ion": 1
+        },
+        "max_range": 4
+      }
+    },
+    {
+      "adds_miniature": false,
+      "adds_upgrade_slots": {},
+      "is_exhaustible": false,
+      "points": 34,
+      "keywords": {},
+      "keywords_for_unit": {},
+      "restricted_to_unit": [
+        {
+          "id": "x-34-landspeeder"
+        }
+      ],
+      "id": "mark-ii-medium-blaster",
+      "is_unique": false,
+      "name": "Mark II Medium Blaster",
+      "text": "",
+      "type": "hard-point",
+      "waves": [
+        "SWL36"
+      ],
+      "weapon": {
+        "name": "Mark II Medium Blaster",
+        "dice": {
+          "black": 4
+        },
+        "area_of_effect": 0,
+        "min_range": 1,
+        "keywords": {
+          "fixed": ""
+        },
+        "max_range": 3
+      }
+    },
+    {
+      "adds_miniature": false,
+      "adds_upgrade_slots": {},
       "is_exhaustible": false,
       "points": 8,
       "keywords": {},
@@ -3608,12 +3786,12 @@
       "keywords_for_unit": {},
       "restricted_to_unit": [
         {
-          "id": "wookie-warriors"
+          "id": "wookiee-warriors"
         }
       ],
-      "id": "bowcaster-wookie",
+      "id": "bowcaster-wookiee",
       "is_unique": false,
-      "name": "Bowcaster Wookie",
+      "name": "Bowcaster Wookiee",
       "text": "",
       "type": "heavy-weapon",
       "waves": [
@@ -4524,6 +4702,25 @@
       ],
       "restricted_to_faction": "imperials",
       "restricted_to_type": "ground-vehicle"
+    },
+    {
+      "adds_miniature": false,
+      "adds_upgrade_slots": {},
+      "is_exhaustible": false,
+      "points": 5,
+      "keywords": {},
+      "keywords_for_unit": {},
+      "restricted_to_unit": [],
+      "id": "ryder-azadi",
+      "is_unique": true,
+      "name": "Ryder Azadi",
+      "text": "While perorming a movie, increease or decrease your maximum speed by 1.",
+      "type": "pilot",
+      "waves": [
+        "SWL36"
+      ],
+      "restricted_to_faction": "rebels",
+      "restricted_to_type": "repulsor-vehicle"
     },
     {
       "adds_miniature": false,

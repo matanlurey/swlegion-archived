@@ -146,7 +146,7 @@ class _$DefensePool extends DefensePool {
   @override
   final int uncannyLuck;
 
-  factory _$DefensePool([void updates(DefensePoolBuilder b)]) =>
+  factory _$DefensePool([void Function(DefensePoolBuilder) updates]) =>
       (new DefensePoolBuilder()..update(updates)).build();
 
   _$DefensePool._(
@@ -202,7 +202,7 @@ class _$DefensePool extends DefensePool {
   }
 
   @override
-  DefensePool rebuild(void updates(DefensePoolBuilder b)) =>
+  DefensePool rebuild(void Function(DefensePoolBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
@@ -354,7 +354,7 @@ class DefensePoolBuilder implements Builder<DefensePool, DefensePoolBuilder> {
   }
 
   @override
-  void update(void updates(DefensePoolBuilder b)) {
+  void update(void Function(DefensePoolBuilder) updates) {
     if (updates != null) updates(this);
   }
 

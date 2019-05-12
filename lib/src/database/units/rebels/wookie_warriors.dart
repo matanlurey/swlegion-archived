@@ -1,9 +1,9 @@
 import 'package:swlegion/catalog.dart';
 import 'package:swlegion/swlegion.dart';
 
-final wookieWarriors = Unit(
-  id: 'wookie-warriors',
-  name: 'Wookie Warriors',
+final wookieeWarriors = Unit(
+  id: 'wookiee-warriors',
+  name: 'Wookiee Warriors',
   faction: Faction.rebels,
   miniatures: 3,
   rank: Rank.specialForces,

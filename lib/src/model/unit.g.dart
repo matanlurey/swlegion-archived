@@ -255,7 +255,7 @@ class _$Unit extends Unit {
   @override
   final BuiltList<Wave> waves;
 
-  factory _$Unit([void updates(UnitBuilder b)]) =>
+  factory _$Unit([void Function(UnitBuilder) updates]) =>
       (new UnitBuilder()..update(updates)).build();
 
   _$Unit._(
@@ -332,7 +332,7 @@ class _$Unit extends Unit {
   }
 
   @override
-  Unit rebuild(void updates(UnitBuilder b)) =>
+  Unit rebuild(void Function(UnitBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
@@ -510,7 +510,7 @@ class UnitBuilder implements Builder<Unit, UnitBuilder> {
   }
 
   @override
-  void update(void updates(UnitBuilder b)) {
+  void update(void Function(UnitBuilder) updates) {
     if (updates != null) updates(this);
   }
 

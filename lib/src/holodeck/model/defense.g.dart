@@ -68,7 +68,7 @@ class _$Defense extends Defense {
   @override
   final DefenseDice dice;
 
-  factory _$Defense([void updates(DefenseBuilder b)]) =>
+  factory _$Defense([void Function(DefenseBuilder) updates]) =>
       (new DefenseBuilder()..update(updates)).build();
 
   _$Defense._({this.blocks, this.blanks, this.dice}) : super._() {
@@ -84,7 +84,7 @@ class _$Defense extends Defense {
   }
 
   @override
-  Defense rebuild(void updates(DefenseBuilder b)) =>
+  Defense rebuild(void Function(DefenseBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
@@ -151,7 +151,7 @@ class DefenseBuilder implements Builder<Defense, DefenseBuilder> {
   }
 
   @override
-  void update(void updates(DefenseBuilder b)) {
+  void update(void Function(DefenseBuilder) updates) {
     if (updates != null) updates(this);
   }
 

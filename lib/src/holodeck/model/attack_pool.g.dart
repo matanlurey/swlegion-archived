@@ -149,7 +149,7 @@ class _$AttackPool extends AttackPool {
   @override
   final bool melee;
 
-  factory _$AttackPool([void updates(AttackPoolBuilder b)]) =>
+  factory _$AttackPool([void Function(AttackPoolBuilder) updates]) =>
       (new AttackPoolBuilder()..update(updates)).build();
 
   _$AttackPool._(
@@ -198,7 +198,7 @@ class _$AttackPool extends AttackPool {
   }
 
   @override
-  AttackPool rebuild(void updates(AttackPoolBuilder b)) =>
+  AttackPool rebuild(void Function(AttackPoolBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
@@ -341,7 +341,7 @@ class AttackPoolBuilder implements Builder<AttackPool, AttackPoolBuilder> {
   }
 
   @override
-  void update(void updates(AttackPoolBuilder b)) {
+  void update(void Function(AttackPoolBuilder) updates) {
     if (updates != null) updates(this);
   }
 

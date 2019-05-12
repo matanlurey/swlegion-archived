@@ -119,7 +119,7 @@ class _$Weapon extends Weapon {
   @override
   final AttackSurge surgeOverride;
 
-  factory _$Weapon([void updates(WeaponBuilder b)]) =>
+  factory _$Weapon([void Function(WeaponBuilder) updates]) =>
       (new WeaponBuilder()..update(updates)).build();
 
   _$Weapon._(
@@ -149,7 +149,7 @@ class _$Weapon extends Weapon {
   }
 
   @override
-  Weapon rebuild(void updates(WeaponBuilder b)) =>
+  Weapon rebuild(void Function(WeaponBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
@@ -256,7 +256,7 @@ class WeaponBuilder implements Builder<Weapon, WeaponBuilder> {
   }
 
   @override
-  void update(void updates(WeaponBuilder b)) {
+  void update(void Function(WeaponBuilder) updates) {
     if (updates != null) updates(this);
   }
 
