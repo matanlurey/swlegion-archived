@@ -12,6 +12,8 @@ import 'database/upgrades/comms/comms_jammer.dart' as _i;
 import 'database/upgrades/comms/comms_relay.dart' as _i;
 import 'database/upgrades/comms/hq_uplink.dart' as _i;
 import 'database/upgrades/comms/long_range_comlink.dart' as _i;
+import 'database/upgrades/crew/a_300_rifle_gunner.dart' as _i;
+import 'database/upgrades/crew/rps_6_rocket_gunner.dart' as _i;
 import 'database/upgrades/force/anger.dart' as _i;
 import 'database/upgrades/force/battle_meditation.dart' as _i;
 import 'database/upgrades/force/force_choke.dart' as _i;
@@ -38,6 +40,8 @@ import 'database/upgrades/hardpoint/at_st_mortar_launcher.dart' as _i;
 import 'database/upgrades/hardpoint/ax_108_ground_buzzer.dart' as _i;
 import 'database/upgrades/hardpoint/dlt_19_rifle_pintle.dart' as _i;
 import 'database/upgrades/hardpoint/dw3_concussion_grenade_launcher.dart' as _i;
+import 'database/upgrades/hardpoint/m_45_ion_blaster.dart' as _i;
+import 'database/upgrades/hardpoint/mark_ii_medium_blaster.dart' as _i;
 import 'database/upgrades/hardpoint/mo_dk_power_harpoon.dart' as _i;
 import 'database/upgrades/hardpoint/rt_97_c_rifle_pintle.dart' as _i;
 import 'database/upgrades/heavy_weapon/bowcaster_wookie.dart' as _i;
@@ -72,6 +76,7 @@ import 'database/upgrades/personnel/stormtrooper.dart' as _i;
 import 'database/upgrades/pilot/first_seargant_arbmab.dart' as _i;
 import 'database/upgrades/pilot/general_weiss.dart' as _i;
 import 'database/upgrades/pilot/imperial_hammers_elite_armor_pilot.dart' as _i;
+import 'database/upgrades/pilot/ryder_azadi.dart' as _i;
 import 'database/upgrades/pilot/wedge_antilles.dart' as _i;
 import 'database/upgrades/training/duck_and_cover.dart' as _i;
 import 'database/upgrades/training/hunter.dart' as _i;
@@ -93,6 +98,8 @@ final aggregate = [
   _i.commsRelay,
   _i.hqUplink,
   _i.longRangeComlink,
+  _i.a300RifleGunner,
+  _i.rps6RocketGunner,
   _i.anger,
   _i.battleMeditation,
   _i.forceChoke,
@@ -119,9 +126,11 @@ final aggregate = [
   _i.ax108GroundBuzzer,
   _i.dlt19RiflePintle,
   _i.dw3ConcussionGrenadeLauncher,
+  _i.m45IonBlaster,
+  _i.markIIMediumBlaster,
   _i.moDkPowerHarpoon,
   _i.rt97CRiflePintle,
-  _i.bowcasterWookie,
+  _i.bowcasterWookiee,
   _i.dh447Sniper,
   _i.dlt19DTrooper,
   _i.dlt19Stormtrooper,
@@ -153,6 +162,7 @@ final aggregate = [
   _i.firstSergeantArbmab,
   _i.generalWeiss,
   _i.imperialHammersEliteArmorPilot,
+  _i.ryderAzadi,
   _i.wedgeAntilles,
   _i.duckAndCover,
   _i.hunter,
@@ -176,6 +186,8 @@ class Upgrades {
   static final commsRelay = _i.commsRelay;
   static final hqUplink = _i.hqUplink;
   static final longRangeComlink = _i.longRangeComlink;
+  static final a300RifleGunner = _i.a300RifleGunner;
+  static final rps6RocketGunner = _i.rps6RocketGunner;
   static final anger = _i.anger;
   static final battleMeditation = _i.battleMeditation;
   static final forceChoke = _i.forceChoke;
@@ -202,9 +214,11 @@ class Upgrades {
   static final ax108GroundBuzzer = _i.ax108GroundBuzzer;
   static final dlt19RiflePintle = _i.dlt19RiflePintle;
   static final dw3ConcussionGrenadeLauncher = _i.dw3ConcussionGrenadeLauncher;
+  static final m45IonBlaster = _i.m45IonBlaster;
+  static final markIIMediumBlaster = _i.markIIMediumBlaster;
   static final moDkPowerHarpoon = _i.moDkPowerHarpoon;
   static final rt97CRiflePintle = _i.rt97CRiflePintle;
-  static final bowcasterWookie = _i.bowcasterWookie;
+  static final bowcasterWookiee = _i.bowcasterWookiee;
   static final dh447Sniper = _i.dh447Sniper;
   static final dlt19DTrooper = _i.dlt19DTrooper;
   static final dlt19Stormtrooper = _i.dlt19Stormtrooper;
@@ -237,6 +251,7 @@ class Upgrades {
   static final generalWeiss = _i.generalWeiss;
   static final imperialHammersEliteArmorPilot =
       _i.imperialHammersEliteArmorPilot;
+  static final ryderAzadi = _i.ryderAzadi;
   static final wedgeAntilles = _i.wedgeAntilles;
   static final duckAndCover = _i.duckAndCover;
   static final hunter = _i.hunter;

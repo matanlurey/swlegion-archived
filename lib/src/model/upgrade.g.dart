@@ -223,7 +223,7 @@ class _$Upgrade extends Upgrade {
   @override
   final BuiltList<Wave> waves;
 
-  factory _$Upgrade([void updates(UpgradeBuilder b)]) =>
+  factory _$Upgrade([void Function(UpgradeBuilder) updates]) =>
       (new UpgradeBuilder()..update(updates)).build();
 
   _$Upgrade._(
@@ -287,7 +287,7 @@ class _$Upgrade extends Upgrade {
   }
 
   @override
-  Upgrade rebuild(void updates(UpgradeBuilder b)) =>
+  Upgrade rebuild(void Function(UpgradeBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
@@ -448,7 +448,7 @@ class UpgradeBuilder implements Builder<Upgrade, UpgradeBuilder> {
   }
 
   @override
-  void update(void updates(UpgradeBuilder b)) {
+  void update(void Function(UpgradeBuilder) updates) {
     if (updates != null) updates(this);
   }
 

@@ -89,7 +89,7 @@ class _$Catalog extends Catalog {
   Map<Reference<Unit>, Unit> ___unitsIndexed;
   Map<Reference<Upgrade>, Upgrade> ___upgradesIndexed;
 
-  factory _$Catalog([void updates(CatalogBuilder b)]) =>
+  factory _$Catalog([void Function(CatalogBuilder) updates]) =>
       (new CatalogBuilder()..update(updates)).build();
 
   _$Catalog._({this.commandCards, this.units, this.upgrades, this.version})
@@ -121,7 +121,7 @@ class _$Catalog extends Catalog {
       ___upgradesIndexed ??= super._upgradesIndexed;
 
   @override
-  Catalog rebuild(void updates(CatalogBuilder b)) =>
+  Catalog rebuild(void Function(CatalogBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
@@ -200,7 +200,7 @@ class CatalogBuilder implements Builder<Catalog, CatalogBuilder> {
   }
 
   @override
-  void update(void updates(CatalogBuilder b)) {
+  void update(void Function(CatalogBuilder) updates) {
     if (updates != null) updates(this);
   }
 

@@ -76,7 +76,7 @@ class _$Attack extends Attack {
   @override
   final BuiltList<AttackDice> blanks;
 
-  factory _$Attack([void updates(AttackBuilder b)]) =>
+  factory _$Attack([void Function(AttackBuilder) updates]) =>
       (new AttackBuilder()..update(updates)).build();
 
   _$Attack._({this.hits, this.crits, this.blanks}) : super._() {
@@ -92,7 +92,7 @@ class _$Attack extends Attack {
   }
 
   @override
-  Attack rebuild(void updates(AttackBuilder b)) =>
+  Attack rebuild(void Function(AttackBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
@@ -162,7 +162,7 @@ class AttackBuilder implements Builder<Attack, AttackBuilder> {
   }
 
   @override
-  void update(void updates(AttackBuilder b)) {
+  void update(void Function(AttackBuilder) updates) {
     if (updates != null) updates(this);
   }
 

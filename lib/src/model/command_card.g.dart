@@ -130,7 +130,7 @@ class _$CommandCard extends CommandCard {
   @override
   final Weapon weapon;
 
-  factory _$CommandCard([void updates(CommandCardBuilder b)]) =>
+  factory _$CommandCard([void Function(CommandCardBuilder) updates]) =>
       (new CommandCardBuilder()..update(updates)).build();
 
   _$CommandCard._(
@@ -171,7 +171,7 @@ class _$CommandCard extends CommandCard {
   }
 
   @override
-  CommandCard rebuild(void updates(CommandCardBuilder b)) =>
+  CommandCard rebuild(void Function(CommandCardBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
@@ -272,7 +272,7 @@ class CommandCardBuilder implements Builder<CommandCard, CommandCardBuilder> {
   }
 
   @override
-  void update(void updates(CommandCardBuilder b)) {
+  void update(void Function(CommandCardBuilder) updates) {
     if (updates != null) updates(this);
   }
 

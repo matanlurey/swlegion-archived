@@ -29,6 +29,7 @@ final _$unitKeywordValues = [
   UnitKeyword.kInspire,
   UnitKeyword.kJump,
   UnitKeyword.kLeader,
+  UnitKeyword.kLightTransport1Open,
   UnitKeyword.kLowProfile,
   UnitKeyword.kMasterOfTheForce,
   UnitKeyword.kNimble,

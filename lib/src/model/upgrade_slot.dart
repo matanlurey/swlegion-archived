@@ -1,7 +1,6 @@
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
-import 'package:meta/meta.dart';
 
 part 'upgrade_slot.g.dart';
 
@@ -41,8 +40,10 @@ class UpgradeSlot extends EnumClass {
   static const UpgradeSlot generator = _$generator;
 
   @BuiltValueEnumConst(wireName: 'armament')
-  @experimental
   static const UpgradeSlot armament = _$armament;
+
+  @BuiltValueEnumConst(wireName: 'crew')
+  static const UpgradeSlot crew = _$crew;
 
   const UpgradeSlot._(String name) : super(name);
 

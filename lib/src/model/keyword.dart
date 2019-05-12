@@ -412,6 +412,15 @@ class UnitKeyword extends Keyword<UnitKeyword> {
     ''',
   );
 
+  static final kLightTransport1Open = UnitKeyword._(
+    id: 'light-transport-1-open',
+    displayName: 'Light Transport 1: Open',
+    description: r'''
+      You may freely transport 1 friendly trooper miniatures. After defending, if you
+      suffered 1 or more wounds, each unit you are transporting suffers 1 wound.
+    ''',
+  );
+
   static final kLowProfile = UnitKeyword._(
     id: 'low-profile',
     displayName: 'Low Profile',

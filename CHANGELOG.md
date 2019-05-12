@@ -6,6 +6,9 @@
 - Fix `Chewbacca`'s `.activations` for his command cards.
 - Added `Bossk`, `Rebel Pathfinders`, and started on `Sabrine Wren`.
 - Added `Director Krennic`, `Imperial Death Troopers`, and the assault tank.
+- Added `UpgradeSlot.crew`.
+- Added `UnitKeyword.kLightTransport1Open`.
+- Added cards and upgrades related to the `X-34 Landspeeder`.
 
 ### Data Model
 
