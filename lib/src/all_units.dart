@@ -14,8 +14,7 @@ import 'database/units/imperials/scout_troopers.dart' as _i;
 import 'database/units/imperials/scout_troopers_strike_team.dart' as _i;
 import 'database/units/imperials/snowtroopers.dart' as _i;
 import 'database/units/imperials/stormtroopers.dart' as _i;
-import 'database/units/imperials/tx_225_gav_w_occupier_combat_assault_tank.dart'
-    as _i;
+import 'database/units/imperials/tx_225_gav_w_occupier_combat_assault_tank.dart' as _i;
 import 'database/units/rebels/1.4_fd_laser_cannon_team.dart' as _i;
 import 'database/units/rebels/at_rt.dart' as _i;
 import 'database/units/rebels/chewbacca.dart' as _i;
@@ -70,7 +69,6 @@ final aggregate = [
   _i.wookieeWarriors,
   _i.x34Landspeeder
 ];
-
 class Units {
   const Units._();
   static final $74ZSpeederBikes = _i.$74ZSpeederBikes;
@@ -89,8 +87,7 @@ class Units {
   static final scoutTroopersStrikeTeam = _i.scoutTroopersStrikeTeam;
   static final snowtroopers = _i.snowtroopers;
   static final stormtroopers = _i.stormtroopers;
-  static final tx225GavWOccupierCombatAssaultTank =
-      _i.tx225GavWOccupierCombatAssaultTank;
+  static final tx225GavWOccupierCombatAssaultTank = _i.tx225GavWOccupierCombatAssaultTank;
   static final $1dot4FDLaserCannonTeam = _i.$1dot4FDLaserCannonTeam;
   static final atRt = _i.atRt;
   static final chewbacca = _i.chewbacca;
@@ -109,3 +106,4 @@ class Units {
   static final wookieeWarriors = _i.wookieeWarriors;
   static final x34Landspeeder = _i.x34Landspeeder;
 }
+

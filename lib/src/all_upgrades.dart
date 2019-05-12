@@ -44,7 +44,7 @@ import 'database/upgrades/hardpoint/m_45_ion_blaster.dart' as _i;
 import 'database/upgrades/hardpoint/mark_ii_medium_blaster.dart' as _i;
 import 'database/upgrades/hardpoint/mo_dk_power_harpoon.dart' as _i;
 import 'database/upgrades/hardpoint/rt_97_c_rifle_pintle.dart' as _i;
-import 'database/upgrades/heavy_weapon/bowcaster_wookie.dart' as _i;
+import 'database/upgrades/heavy_weapon/bowcaster_wookiee.dart' as _i;
 import 'database/upgrades/heavy_weapon/dh_447_sniper.dart' as _i;
 import 'database/upgrades/heavy_weapon/dlt_19_d_trooper.dart' as _i;
 import 'database/upgrades/heavy_weapon/dlt_19_stormtrooper.dart' as _i;
@@ -76,6 +76,7 @@ import 'database/upgrades/personnel/stormtrooper.dart' as _i;
 import 'database/upgrades/pilot/first_seargant_arbmab.dart' as _i;
 import 'database/upgrades/pilot/general_weiss.dart' as _i;
 import 'database/upgrades/pilot/imperial_hammers_elite_armor_pilot.dart' as _i;
+import 'database/upgrades/pilot/outer_rim_speeder_jockey.dart' as _i;
 import 'database/upgrades/pilot/ryder_azadi.dart' as _i;
 import 'database/upgrades/pilot/wedge_antilles.dart' as _i;
 import 'database/upgrades/training/duck_and_cover.dart' as _i;
@@ -162,6 +163,7 @@ final aggregate = [
   _i.firstSergeantArbmab,
   _i.generalWeiss,
   _i.imperialHammersEliteArmorPilot,
+  _i.outerRimSpeederJockey,
   _i.ryderAzadi,
   _i.wedgeAntilles,
   _i.duckAndCover,
@@ -169,7 +171,6 @@ final aggregate = [
   _i.overwatch,
   _i.tenacity
 ];
-
 class Upgrades {
   const Upgrades._();
   static final a180PistolConfig = _i.a180PistolConfig;
@@ -249,8 +250,8 @@ class Upgrades {
   static final stormtrooper = _i.stormtrooper;
   static final firstSergeantArbmab = _i.firstSergeantArbmab;
   static final generalWeiss = _i.generalWeiss;
-  static final imperialHammersEliteArmorPilot =
-      _i.imperialHammersEliteArmorPilot;
+  static final imperialHammersEliteArmorPilot = _i.imperialHammersEliteArmorPilot;
+  static final outerRimSpeederJockey = _i.outerRimSpeederJockey;
   static final ryderAzadi = _i.ryderAzadi;
   static final wedgeAntilles = _i.wedgeAntilles;
   static final duckAndCover = _i.duckAndCover;
@@ -258,3 +259,4 @@ class Upgrades {
   static final overwatch = _i.overwatch;
   static final tenacity = _i.tenacity;
 }
+
