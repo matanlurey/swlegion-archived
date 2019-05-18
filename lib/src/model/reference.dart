@@ -15,7 +15,9 @@ abstract class Indexable<T extends Indexable<T>> {
 /// Represents a weak reference to the full entity [T] by [id].
 class Reference<T extends Indexable<T>> implements Indexable<T> {
   /// Custom [Serializer] implementation for [Reference].
-  static const Serializer<Reference> serializer = const _ReferenceSerializer();
+  ///
+  /// Register additional references with [ReferenceSerializer.register].
+  static final serializer = ReferenceSerializer._();
 
   @override
   final String id;
@@ -70,14 +72,24 @@ class IndexableSerializer<T extends Indexable<T>>
   final String wireName;
 }
 
-class _ReferenceSerializer implements PrimitiveSerializer<Reference> {
-  const _ReferenceSerializer();
+class ReferenceSerializer implements PrimitiveSerializer<Reference> {
+  final _types = <FullType, Reference<Indexable> Function(String)>{};
+
+  ReferenceSerializer._() {
+    register(CommandCard, (idField) => Reference<CommandCard>(idField));
+    register(Unit, (idField) => Reference<Unit>(idField));
+    register(Upgrade, (idField) => Reference<Upgrade>(idField));
+  }
 
   @override
   final types = const [Reference];
 
   @override
   final wireName = 'Reference';
+
+  void register(Type type, Reference<Indexable> Function(String) factory) {
+    _types[FullType(Reference, [FullType(type)])] = factory;
+  }
 
   @override
   Object serialize(
@@ -100,16 +112,10 @@ class _ReferenceSerializer implements PrimitiveSerializer<Reference> {
     if (specifiedType == FullType.unspecified) {
       throw ArgumentError('Missing "specifiedType".');
     }
-    final idField = (serialized as Iterable).last as String;
-    if (specifiedType == const FullType(Reference, [FullType(CommandCard)])) {
-      return Reference<CommandCard>(idField);
+    final factory = _types[specifiedType];
+    if (factory == null) {
+      throw ArgumentError('Invalid "specifiedType": $specifiedType.');
     }
-    if (specifiedType == const FullType(Reference, [FullType(Unit)])) {
-      return Reference<Unit>(idField);
-    }
-    if (specifiedType == const FullType(Reference, [FullType(Upgrade)])) {
-      return Reference<Upgrade>(idField);
-    }
-    throw ArgumentError('Invalid "specifiedType": $specifiedType.');
+    return factory((serialized as Iterable).last as String);
   }
 }
