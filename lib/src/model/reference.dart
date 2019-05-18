@@ -88,9 +88,7 @@ class _ReferenceSerializer implements PrimitiveSerializer<Reference> {
     if (specifiedType == FullType.unspecified) {
       throw ArgumentError('Missing "specifiedType".');
     }
-    return {
-      'id': object.id,
-    };
+    return ['id', object.id];
   }
 
   @override

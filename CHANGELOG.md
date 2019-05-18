@@ -20,6 +20,7 @@
   - `.factionRequired` renamed to `.faction`.
 - All the `...Keyword` classes now extend a base `Keyword` class.
 - Renamed `UpgradeSlot.blaster` to `.armament`.
+- Fixed a bug where serializing/deserializing a `Reference` failed.
 
 ## 0.4.0
 

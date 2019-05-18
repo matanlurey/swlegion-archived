@@ -19,6 +19,33 @@ void main() {
         .build();
   });
 
+  group('CustomJsonPlugin', () {
+    _test(
+      (serializers.toBuilder()
+            ..addPlugin(CustomJsonPlugin())
+            ..add(Sample.serializer))
+          .build(),
+    );
+  });
+
+  group('BuiltJsonPlugin', () {
+    _test(
+      (serializers.toBuilder()..add(Sample.serializer)).build(),
+      isStandardJson: false,
+    );
+  });
+
+  test('should keep lib/catalog.json up to date', () async {
+    final catalogJson = await File(tool_json.outputName).readAsString();
+    expect(
+      catalogJson,
+      '${tool_json.outputJson()}\n',
+      reason: 'Run dart tool/json.dart',
+    );
+  });
+}
+
+void _test(Serializers json, {bool isStandardJson = true}) {
   for (final card in catalog.commandCards) {
     test('should serialize/deserialize "${card.name}"', () {
       final text = json.serializeWith(CommandCard.serializer, card);
@@ -74,7 +101,7 @@ void main() {
         ],
       },
     );
-  });
+  }, skip: !isStandardJson);
 
   test('should serialize keywords as simple JSON', () {
     final sample = Sample(
@@ -87,14 +114,5 @@ void main() {
       },
     });
     expect(json.deserializeWith(Sample.serializer, data), sample);
-  });
-
-  test('should keep lib/catalog.json up to date', () async {
-    final catalogJson = await File(tool_json.outputName).readAsString();
-    expect(
-      catalogJson,
-      '${tool_json.outputJson()}\n',
-      reason: 'Run dart tool/json.dart',
-    );
-  });
+  }, skip: !isStandardJson);
 }
